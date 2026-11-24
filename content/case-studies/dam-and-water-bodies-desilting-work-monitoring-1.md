@@ -12,6 +12,7 @@ date: '2020-02-20'
 author: Avni Team
 readTime: 2 min read
 sector: Water & Sanitation
+logo: /logos/ATECF-logo.webp
 tags:
   - Water
   - Government

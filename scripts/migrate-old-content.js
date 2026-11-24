@@ -101,6 +101,14 @@ const CASE_STUDY_OVERRIDES = {
   '2024-11-11-jal-jeevan-mission-arghyam': { logo: '/logos/ARGHYAM.webp' },
   '2025-08-01-empowering-waste-pickers': { logo: '/logos/HD-Main-Logo.webp' },
   'avni-for-sickle-cell-disease-screening-and-treatment': { logo: '/logos/JSS-Logo-new-Hindi-2.webp' },
+  // logos taken from each partner's official website
+  '2025-04-30-restoring-waterbodies-avni-atecf': { logo: '/logos/ATECF-logo.webp' },
+  'dam-and-water-bodies-desilting-work-monitoring-1': { logo: '/logos/ATECF-logo.webp' },
+  'calcutta-kids-avni-implemented-for-maternal-and-child-health-program': { logo: '/logos/Calcutta-Kids-logo.webp' },
+  '2024-09-19-Scaling-Rural-Education': { logo: '/logos/CInI-logo.webp' },
+  '2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study': { logo: '/logos/Project-Potential-logo.webp' },
+  '2025-05-28-bridging-the-nutrition-gap-apf-odisha': { logo: '/logos/Azim-Premji-Foundation-logo.webp' },
+  '2025-07-31-scoring-for-equality': { sector: 'Sports', logo: '/logos/Maitrayana-logo.webp' },
 };
 
 const redirects = {};

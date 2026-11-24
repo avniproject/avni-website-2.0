@@ -12,6 +12,7 @@ date: '2025-04-30'
 author: Avni Team
 readTime: 5 min read
 sector: Water & Sanitation
+logo: /logos/ATECF-logo.webp
 image: /img/2025-04-30-restoring-waterbodies-avni-atecf/R1.webp
 tags:
   - Water

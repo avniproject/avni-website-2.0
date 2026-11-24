@@ -10,6 +10,7 @@ date: '2025-07-31'
 author: Avni Team
 readTime: 3 min read
 sector: Sports
+logo: /logos/Maitrayana-logo.webp
 tags:
   - Sports
   - Skill Development

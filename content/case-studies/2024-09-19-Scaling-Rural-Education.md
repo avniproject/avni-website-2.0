@@ -11,6 +11,7 @@ date: '2024-09-19'
 author: The Avni Team
 readTime: 4 min read
 sector: Education
+logo: /logos/CInI-logo.webp
 image: /img/2024-09-19-Scaling-Rural-Education/CInI-1.webp
 tags:
   - Education

@@ -12,6 +12,7 @@ date: '2025-05-28'
 author: Avni Team
 readTime: 4 min read
 sector: Healthcare
+logo: /logos/Azim-Premji-Foundation-logo.webp
 tags:
   - Health
 ---

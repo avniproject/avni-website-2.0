@@ -11,6 +11,7 @@ date: '2024-11-27'
 author: A Ashok Kumar
 readTime: 8 min read
 sector: Social Security
+logo: /logos/Project-Potential-logo.webp
 image: >-
   /img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/featured.webp
 tags:

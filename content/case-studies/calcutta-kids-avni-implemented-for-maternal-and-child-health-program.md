@@ -9,6 +9,7 @@ date: '2019-11-06'
 author: Avni Team
 readTime: 3 min read
 sector: Healthcare
+logo: /logos/Calcutta-Kids-logo.webp
 tags:
   - Health
 ---
