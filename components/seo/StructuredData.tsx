@@ -50,7 +50,7 @@ export function OrganizationSchema() {
     },
     sameAs: [
       'https://github.com/avniproject',
-      'https://www.linkedin.com/company/avni-project',
+      'https://www.linkedin.com/showcase/avniproject/',
       'https://twitter.com/avniproject',
       'https://www.youtube.com/@avniproject',
     ],

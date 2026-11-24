@@ -29,7 +29,7 @@ export const siteConfig = {
     },
     sameAs: [
       'https://github.com/avniproject',
-      'https://www.linkedin.com/company/avni-project',
+      'https://www.linkedin.com/showcase/avniproject/',
       'https://twitter.com/avniproject',
     ],
   },
@@ -54,7 +54,7 @@ export const siteConfig = {
   // Social media
   social: {
     twitter: 'https://twitter.com/avniproject',
-    linkedin: 'https://www.linkedin.com/company/avni-project',
+    linkedin: 'https://www.linkedin.com/showcase/avniproject/',
     github: 'https://github.com/avniproject',
     youtube: 'https://www.youtube.com/@avniproject',
   },
