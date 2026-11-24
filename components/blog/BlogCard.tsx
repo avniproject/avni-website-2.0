@@ -3,10 +3,10 @@
  * Individual blog post card with image, category, title, and read more button
  */
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
 import BlogCoverFallback from './BlogCoverFallback';
-import CoverImage from '@/components/ui/CoverImage';
 
 interface BlogCardProps {
   blog: Blog;
@@ -31,11 +31,11 @@ export default function BlogCard({ blog }: BlogCardProps) {
       {/* Image */}
       <div className="relative w-full h-[240px] overflow-hidden">
         {frontmatter.image ? (
-          <CoverImage
+          <Image
             src={frontmatter.image}
             alt={frontmatter.title}
-            aspect={frontmatter.imageAspect}
-            className="hover:scale-105 transition-transform duration-500"
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (

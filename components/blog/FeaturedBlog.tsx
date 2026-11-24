@@ -3,10 +3,10 @@
  * Displays the featured blog post with prominent styling
  */
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
 import BlogCoverFallback from './BlogCoverFallback';
-import CoverImage from '@/components/ui/CoverImage';
 
 interface FeaturedBlogProps {
   blog: Blog;
@@ -22,10 +22,11 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
         <div className="w-full lg:w-[400px] flex-shrink-0">
           <div className="relative w-full h-[280px] lg:h-[320px] rounded-[16px] overflow-hidden">
             {frontmatter.image ? (
-              <CoverImage
+              <Image
                 src={frontmatter.image}
                 alt={frontmatter.title}
-                aspect={frontmatter.imageAspect}
+                fill
+                className="object-cover"
                 priority
                 sizes="(max-width: 1024px) 100vw, 400px"
               />

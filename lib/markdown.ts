@@ -8,7 +8,6 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
-import sharp from 'sharp';
 import { FEATURED_CASE_STUDIES, FEATURED_BLOGS } from '@/config/featured-content';
 
 const caseStudiesDirectory = path.join(process.cwd(), 'content/case-studies');
@@ -21,7 +20,6 @@ export interface CaseStudyFrontmatter {
   logo?: string;
   image?: string; // listing thumbnail and share preview
   showCover?: boolean; // also show image as a banner at the top of the page
-  imageAspect?: number; // width / height of image, read at build time
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;
@@ -35,17 +33,6 @@ export interface CaseStudy {
   frontmatter: CaseStudyFrontmatter;
   content: string;
   htmlContent?: string;
-}
-
-// Cards lay out tall images differently, so they need the cover's shape
-async function getImageAspect(src?: string): Promise<number | undefined> {
-  if (!src) return undefined;
-  try {
-    const { width, height } = await sharp(path.join(process.cwd(), 'public', src)).metadata();
-    return width && height ? width / height : undefined;
-  } catch {
-    return undefined;
-  }
 }
 
 // Article bodies can hold dozens of images; load them only as the reader scrolls
@@ -96,7 +83,6 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
       frontmatter: {
         ...data,
         featured: isFeatured, // Override with centralized config
-        imageAspect: await getImageAspect(data.image),
       } as CaseStudyFrontmatter,
       content,
       htmlContent,
@@ -187,7 +173,6 @@ export interface BlogFrontmatter {
   category: string;
   image?: string; // listing thumbnail and share preview
   showCover?: boolean; // also show image as a banner at the top of the post
-  imageAspect?: number; // width / height of image, read at build time
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;
@@ -250,7 +235,6 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
       frontmatter: {
         ...data,
         featured: isFeatured, // Override with centralized config
-        imageAspect: await getImageAspect(data.image),
       } as BlogFrontmatter,
       content,
       htmlContent,
