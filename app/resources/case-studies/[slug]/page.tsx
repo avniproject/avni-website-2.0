@@ -190,7 +190,6 @@ export default async function CaseStudyPage({
                   prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
                   prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
                   prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6 prose-p:font-noto
-                  prose-a:text-[#419372] prose-a:no-underline hover:prose-a:underline prose-a:font-medium
                   prose-strong:text-gray-900 prose-strong:font-semibold
                   prose-ul:my-6 prose-ol:my-6
                   prose-li:text-gray-700 prose-li:mb-2 prose-li:font-noto

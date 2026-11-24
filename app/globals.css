@@ -120,3 +120,20 @@
   object-fit: contain;
   border-radius: 0.5rem;
 }
+
+/* Links inside blog and case study bodies: always underlined, in a darker green than the brand
+   colour so they pass text contrast (#419372 on white doesn't) */
+.article-body a {
+  color: #2a7559;
+  font-weight: 500;
+  text-decoration-line: underline;
+  text-decoration-color: rgba(65, 147, 114, 0.5);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+.article-body a:hover {
+  color: #1f5a43;
+  text-decoration-color: currentColor;
+}
