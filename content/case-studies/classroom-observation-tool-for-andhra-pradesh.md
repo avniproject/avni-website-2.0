@@ -9,7 +9,6 @@ date: '2024-05-13'
 author: Vinay Venu
 readTime: 4 min read
 sector: Education
-image: /img/classroom-observation-tool-for-andhra-pradesh/classroom.webp
 tags:
   - Education
   - Government

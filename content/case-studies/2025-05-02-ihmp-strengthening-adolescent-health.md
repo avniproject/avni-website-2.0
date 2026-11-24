@@ -9,7 +9,6 @@ date: '2025-05-02'
 author: Avni Team
 readTime: 6 min read
 sector: Healthcare
-image: /img/2025-05-02-ihmp-strengthening-adolescent-health/I1.webp
 tags:
   - Health
 ---

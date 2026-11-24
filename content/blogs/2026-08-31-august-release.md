@@ -9,7 +9,6 @@ date: '2026-08-31'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2026-08-31-august-release/avni-autopilot.webp
 tags:
   - release
 ---

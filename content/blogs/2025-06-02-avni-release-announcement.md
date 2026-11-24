@@ -11,7 +11,6 @@ date: '2025-06-02'
 author: Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/2025-06-02-avni-release-announcement/hero.webp
 tags:
   - release
 ---

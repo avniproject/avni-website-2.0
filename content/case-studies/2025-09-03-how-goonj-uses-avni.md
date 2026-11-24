@@ -14,7 +14,6 @@ author: Avni Team
 readTime: 4 min read
 sector: Livelihood
 logo: /logos/Goonj-logo-10June20.webp
-image: /img/2025-09-03-how-goonj-uses-avni/goonj_1.webp
 tags: []
 ---
 ## Introduction

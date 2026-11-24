@@ -9,7 +9,6 @@ date: '2019-11-06'
 author: Avni Team
 readTime: 3 min read
 sector: Healthcare
-image: /img/ck-case-study.webp
 tags:
   - Health
 ---

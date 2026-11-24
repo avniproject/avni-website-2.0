@@ -10,7 +10,6 @@ date: '2025-07-31'
 author: Avni Team
 readTime: 3 min read
 sector: Sports
-image: /img/2025-07-31-scoring-for-equality/1.webp
 tags:
   - Sports
   - Skill Development

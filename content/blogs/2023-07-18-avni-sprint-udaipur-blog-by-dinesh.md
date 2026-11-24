@@ -6,7 +6,6 @@ date: '2023-07-19'
 author: Dinesh G
 readTime: 4 min read
 category: Events
-image: /img/2023-07-18-avni-sprint-udaipur-blog-by-dinesh/dicussion.webp
 tags:
   - Udaipur Sprint 2023 July
 ---

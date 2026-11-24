@@ -6,7 +6,6 @@ date: '2023-07-05'
 author: The Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2023-07-05-avni-release-announcement/media_viewer_home_screen.webp
 tags: []
 ---
 Release 3.40.0 is now live.  

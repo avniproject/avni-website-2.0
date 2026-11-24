@@ -9,7 +9,6 @@ date: '2026-02-06'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2026-02-06-features-released-january-february/error.webp
 tags:
   - release
 ---

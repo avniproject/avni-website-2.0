@@ -10,7 +10,6 @@ date: '2025-06-12'
 author: Pooja Harmalkar
 readTime: 7 min read
 category: Knowledge
-image: /img/2025-06-12-no-more-fake-data-headaches/1.webp
 tags:
   - Knowledge
 ---

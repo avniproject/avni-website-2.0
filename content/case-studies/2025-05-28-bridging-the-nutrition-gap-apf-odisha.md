@@ -12,8 +12,6 @@ date: '2025-05-28'
 author: Avni Team
 readTime: 4 min read
 sector: Healthcare
-image: >-
-  /img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/why-child-nutrition-matters.webp
 tags:
   - Health
 ---

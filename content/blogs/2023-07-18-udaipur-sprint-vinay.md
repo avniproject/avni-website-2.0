@@ -8,7 +8,6 @@ date: '2023-07-18'
 author: Vinay Venu
 readTime: 2 min read
 category: Events
-image: /img/2023-07-18-udaipur-sprint-vinay/team-pic.webp
 tags:
   - Udaipur Sprint 2023 July
 ---

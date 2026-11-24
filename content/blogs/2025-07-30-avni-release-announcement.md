@@ -9,7 +9,6 @@ date: '2025-07-30'
 author: Avni Team
 readTime: 1 min read
 category: Avni News
-image: /img/2025-07-30-avni-release-announcement/storage_management.webp
 tags:
   - release
 ---

@@ -12,7 +12,6 @@ author: Avni Team
 readTime: 4 min read
 sector: Waste Management
 logo: /logos/HD-Main-Logo.webp
-image: /img/2025-08-01-empowering-waste-pickers/123.webp
 tags:
   - Waste Management
 ---

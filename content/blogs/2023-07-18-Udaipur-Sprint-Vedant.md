@@ -6,7 +6,6 @@ date: '2023-07-18'
 author: Vedant Raval
 readTime: 1 min read
 category: Events
-image: /img/2023-07-18-Udaipur-Sprint-Vedant/avni-team.webp
 tags:
   - Udaipur Sprint 2023 July
 ---

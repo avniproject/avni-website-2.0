@@ -9,7 +9,6 @@ date: '2025-12-23'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2025-12-23-avni-release-announcement/TemplatesFirstLogin.webp
 tags:
   - release
 ---

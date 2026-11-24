@@ -8,7 +8,6 @@ date: '2026-06-30'
 author: Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/2026-06-30-june-release/mark-attendance-demo.webp
 tags:
   - release
 ---

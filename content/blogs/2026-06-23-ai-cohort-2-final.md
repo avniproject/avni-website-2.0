@@ -8,7 +8,6 @@ date: '2026-06-23'
 author: Maha Lakshme S
 readTime: 6 min read
 category: Avni News
-image: /img/2026-06-23-ai-cohort-2-final/team_pic_with_mentor.webp
 tags:
   - AI
   - AI cohort

@@ -9,8 +9,6 @@ date: '2024-05-22'
 author: The Avni Team
 readTime: 4 min read
 sector: Healthcare
-image: >-
-  /img/2024-05-22-Empowering-vision-care-Chashma-tech4dev/avni-block-diagram.webp
 tags:
   - Health
 ---

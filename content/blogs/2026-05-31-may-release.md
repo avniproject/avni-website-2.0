@@ -8,7 +8,6 @@ date: '2026-05-31'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2026-05-31-may-release/share-feature.webp
 tags: []
 ---
 The Avni May releases (v16.13.0 through v16.14.0) bring powerful new capabilities to the platform. Here's what's new.

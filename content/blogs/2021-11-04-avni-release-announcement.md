@@ -11,7 +11,6 @@ date: '2021-11-04'
 author: The Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2021-11-04-avni-release-announcement/rulefailures.webp
 tags: []
 ---
 ### New features

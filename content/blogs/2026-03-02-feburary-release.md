@@ -8,7 +8,6 @@ date: '2026-03-02'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2026-03-02-feburary-release/ged.webp
 tags: []
 ---
 Here's what's new in the Avni February release — covering updates for field users, self-service users, DEA users, and internal infrastructure.

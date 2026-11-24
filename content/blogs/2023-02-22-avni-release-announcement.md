@@ -9,8 +9,6 @@ date: '2023-02-22'
 author: The Avni Team
 readTime: 1 min read
 category: Avni News
-image: >-
-  /img/2023-02-22-avni-release-announcement/MyDashboardWithTotalOnSelectingProgram.webp
 tags: []
 ---
 Patch Release 3.37.15 is now live. This release includes a minor code change to make "Show total count in MyDashboard on filter by Program" a configurable functionality.

@@ -9,7 +9,6 @@ date: '2024-10-14'
 author: The Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2024-10-14-avni-release-announcement/2.webp
 tags: []
 ---
 <div style="width: 70%">

@@ -9,7 +9,6 @@ date: '2026-09-30'
 author: Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2026-09-30-september-release/rejection-reasons-summary@2x.webp
 tags:
   - release
 ---

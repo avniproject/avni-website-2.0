@@ -39,7 +39,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
-          <BlogCoverFallback category={frontmatter.category} />
+          <BlogCoverFallback category={frontmatter.category} title={frontmatter.title} date={frontmatter.date} />
         )}
       </div>
 

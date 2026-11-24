@@ -6,7 +6,6 @@ date: '2022-09-02'
 author: The Avni Team
 readTime: 1 min read
 category: Avni News
-image: /img/2022-09-02-avni-release-announcement/middle_name_1.webp
 tags: []
 ---
 ## New features

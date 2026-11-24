@@ -8,7 +8,6 @@ date: '2023-01-09'
 author: The Avni Team
 readTime: 4 min read
 category: Avni News
-image: /img/2023-01-09-avni-release-announcement/sync_work_flows.webp
 tags: []
 ---
 Release 3.36 is now live. Please note that this is a major release. Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.36.5) for more information.

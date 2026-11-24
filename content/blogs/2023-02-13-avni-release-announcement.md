@@ -8,7 +8,6 @@ date: '2023-02-13'
 author: The Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/2023-02-13-avni-release-announcement/whatsapp-480.webp
 tags: []
 ---
 Release 3.37 is now live. This release includes App Stability, Whatsapp (Glific) Integration, Feature Enhancements and Bug fixes. 

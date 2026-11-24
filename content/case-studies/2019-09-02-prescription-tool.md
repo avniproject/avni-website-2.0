@@ -9,7 +9,6 @@ date: '2019-09-02'
 author: Avni Team
 readTime: 3 min read
 sector: Healthcare
-image: /img/lbp-case-study-1-.webp
 tags:
   - Health
 ---

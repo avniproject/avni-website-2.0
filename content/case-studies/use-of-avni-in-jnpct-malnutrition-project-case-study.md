@@ -10,7 +10,6 @@ date: '2021-02-08'
 author: Dr Dhiren Modi
 readTime: 6 min read
 sector: Healthcare
-image: /img/jnpct_case_study/jnpct_scenic_surrounding.webp
 tags:
   - Health
 ---

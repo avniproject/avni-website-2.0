@@ -6,7 +6,6 @@ date: '2020-05-29'
 author: The Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/app_designer_entry.webp
 tags: []
 ---
 A new release of Avni field app and Avni admin app is available.

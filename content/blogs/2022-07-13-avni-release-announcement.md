@@ -6,7 +6,6 @@ date: '2022-07-14'
 author: The Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/features/location-search.webp
 tags: []
 ---
 ### New features

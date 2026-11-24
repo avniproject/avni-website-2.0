@@ -9,7 +9,6 @@ date: '2026-06-20'
 author: Mohit Kumar
 readTime: 5 min read
 category: Knowledge
-image: /img/2026-06-20-t4d-ecosystem-partners-meet/partners-meet-2.webp
 tags:
   - Knowledge
   - Social Sector

@@ -8,7 +8,6 @@ date: '2023-08-21'
 author: The Avni Team
 readTime: 1 min read
 category: Avni News
-image: /img/Access-control-in-Avni.webp
 tags: []
 ---
 Major Release 4.0.0 is now live, it includes the following modifications to the Avni application

@@ -6,7 +6,6 @@ date: '2022-05-30'
 author: The Avni Team
 readTime: 1 min read
 category: Avni News
-image: /img/features/Subject_type_help_text.webp
 tags: []
 ---
 ### New features

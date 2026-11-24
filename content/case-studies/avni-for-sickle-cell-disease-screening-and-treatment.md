@@ -18,7 +18,6 @@ author: Avni Team
 readTime: 3 min read
 sector: Healthcare
 logo: /logos/JSS-Logo-new-Hindi-2.webp
-image: /img/jss-sickle-sample-collection.webp
 tags:
   - Health
   - Government

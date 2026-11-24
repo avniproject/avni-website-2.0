@@ -13,7 +13,6 @@ date: '2023-07-19'
 author: Salil Arora
 readTime: 3 min read
 category: Events
-image: /img/2023-07-18-avni-sprint-udaipur-blog-by-Salil/Airport.webp
 tags:
   - Udaipur Sprint 2023 July
 ---

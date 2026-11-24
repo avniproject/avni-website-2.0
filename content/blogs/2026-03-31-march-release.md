@@ -8,7 +8,6 @@ date: '2026-03-31'
 author: Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/2026-03-31-march-release/hello.webp
 tags: []
 ---
 Here's what's new in the Avni March release — covering minor enhancements, bug fixes, infrastructure maintenance, and a look at what's coming next.

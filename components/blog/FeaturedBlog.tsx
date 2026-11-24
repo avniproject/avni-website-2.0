@@ -31,7 +31,7 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
                 sizes="(max-width: 1024px) 100vw, 400px"
               />
             ) : (
-              <BlogCoverFallback category={frontmatter.category} />
+              <BlogCoverFallback category={frontmatter.category} title={frontmatter.title} date={frontmatter.date} />
             )}
           </div>
         </div>

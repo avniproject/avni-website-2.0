@@ -6,7 +6,6 @@ date: '2021-03-04'
 author: The Avni Team
 readTime: 2 min read
 category: Avni News
-image: /img/2021-03-04-avni-release-announcement/approval.webp
 tags: []
 ---
 A new release of Avni field app and Avni admin app is available.

@@ -8,7 +8,6 @@ date: '2024-05-14'
 author: The Avni Team
 readTime: 3 min read
 category: Avni News
-image: /img/2024-05-14-ReleaseBlogpost/secondary-dashboard.webp
 tags: []
 ---
 Major Release 8.0.0 is now live, it includes the following modifications to the Avni application

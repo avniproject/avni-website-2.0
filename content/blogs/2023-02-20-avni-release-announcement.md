@@ -8,7 +8,6 @@ date: '2023-02-20'
 author: The Avni Team
 readTime: 1 min read
 category: Avni News
-image: /img/2023-02-20-avni-release-announcement/before-after-translation.webp
 tags: []
 ---
 Patch Release 3.37.12 is now live. This release includes Support translations in growth chart, 12hr time format support and minor Bug fixes.

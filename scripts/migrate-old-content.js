@@ -228,11 +228,6 @@ function toSlug(oldSlug) {
     .replace(/^-+|-+$/g, '');
 }
 
-function firstBodyImage(body) {
-  const match = body.match(/!\[[^\]]*\]\((\/img\/[^)\s"]+\.webp)|<img[^>]*src=["'](\/img\/[^"']+\.webp)["']/);
-  return match ? match[1] || match[2] : undefined;
-}
-
 function toDateString(value) {
   const date = value instanceof Date ? value : new Date(value);
   return date.toISOString().slice(0, 10);
@@ -258,9 +253,12 @@ async function migrateFile(type, file, oldSite) {
   const { data, content } = matter(fs.readFileSync(path.join(oldSite, 'src/pages', type, file), 'utf8'));
   const tags = (data.tags || []).map(clean).filter(Boolean);
   const body = await migrateBody(content, oldSite, file);
-  const image = COVER_OVERRIDES[slug] || (data.featuredimage
+  // Release posts get a generated release-notes card instead (see BlogCoverFallback); posts
+  // without a cover get a branded card rather than an image picked from the body
+  const isRelease = type === 'blog' && /releas/i.test(clean(data.title));
+  const image = COVER_OVERRIDES[slug] || (data.featuredimage && !isRelease
     ? await migrateImage(data.featuredimage, oldSite, file, { allowVideo: false })
-    : firstBodyImage(body)); // listing cards need a cover; most old posts without one have images in the body
+    : undefined);
 
   const frontmatter = {
     title: clean(data.title),
