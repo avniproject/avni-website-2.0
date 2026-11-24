@@ -116,7 +116,7 @@ export default async function BlogPostPage({
           </div>
 
           {/* Featured Image */}
-          {frontmatter.image && (
+          {frontmatter.image && frontmatter.showCover && (
             <div className="relative aspect-video w-full mb-12 rounded-xl overflow-hidden">
               <Image
                 src={frontmatter.image}

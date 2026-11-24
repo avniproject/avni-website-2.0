@@ -18,7 +18,8 @@ export interface CaseStudyFrontmatter {
   slug: string;
   sector: string;
   logo?: string;
-  image?: string;
+  image?: string; // listing thumbnail and share preview
+  showCover?: boolean; // also show image as a banner at the top of the page
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;
@@ -170,7 +171,8 @@ export interface BlogFrontmatter {
   title: string;
   slug: string;
   category: string;
-  image?: string;
+  image?: string; // listing thumbnail and share preview
+  showCover?: boolean; // also show image as a banner at the top of the post
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;

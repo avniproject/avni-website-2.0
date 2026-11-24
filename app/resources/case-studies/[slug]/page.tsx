@@ -172,7 +172,7 @@ export default async function CaseStudyPage({
         <Section spacing="lg">
           <Container>
             <article className="max-w-4xl mx-auto">
-              {frontmatter.image && (
+              {frontmatter.image && frontmatter.showCover && (
                 <div className="relative aspect-video w-full mb-12 rounded-xl overflow-hidden">
                   <Image
                     src={frontmatter.image}
