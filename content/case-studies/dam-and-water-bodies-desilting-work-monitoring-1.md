@@ -24,14 +24,12 @@ Given the large distributed scale of the activity, monitoring of work is difficu
 
 The data collection involved registering each dam/water-body and then collecting various types of information like - baseline status, work details of vehicle's (JCBs) used, fuel consumed, issues faced, the beneficiary details and end-line. This data is collected in the field during the complete process of desilting and distribution of silt. The collected data allowed for monitoring, spotting gaps in reporting, and anomalies in data. The monitoring team could contact the ground team to understand the reasons.
 
-`youtube: uwwyzrOHOwI`
-
+<iframe class="video-embed" src="https://www.youtube.com/embed/uwwyzrOHOwI" title="YouTube video" loading="lazy" allowfullscreen></iframe>
 <p align="center"><b>Dashboard for the monitoring team</b></p>
 
 ``
 
-`youtube: tqR226jt8Oo`
-
+<iframe class="video-embed" src="https://www.youtube.com/embed/tqR226jt8Oo" title="YouTube video" loading="lazy" allowfullscreen></iframe>
 <p align="center"><b>Demo of the field app</b></p>
 
 - - -

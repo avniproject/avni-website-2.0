@@ -219,6 +219,9 @@ async function migrateBody(body, oldSite, file) {
   // <img> tags whose GIF became a video keep their attributes (width etc.)
   out = out.replace(/<img\b([^>]*?\ssrc=["'][^"']+\.mp4["'][^>]*?)\s*\/?>/g, (all, attrs) =>
     `<video${attrs.replace(/\balt=/, 'aria-label=')} autoplay loop muted playsinline></video>`);
+  // The old site's YouTube shorthand `youtube: <id>` becomes an embed
+  out = out.replace(/^`youtube:\s*([\w-]+)`\s*$/gm, (all, id) =>
+    `<iframe class="video-embed" src="https://www.youtube.com/embed/${id}" title="YouTube video" loading="lazy" allowfullscreen></iframe>`);
   // Case studies moved under /resources
   return out.replace(/(\]\(|href=["'])\/case-studies\b/g, '$1/resources/case-studies');
 }
