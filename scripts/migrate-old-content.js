@@ -148,6 +148,7 @@ async function migrateImage(rawRef, oldSite, file, { allowVideo = true } = {}) {
         report.videos++;
       } else if (CONVERTIBLE.includes(ext)) {
         await sharp(src, { animated: ext === '.gif' || ext === '.webp', limitInputPixels: false })
+          .rotate() // apply the camera's orientation tag, or phone photos come out sideways
           .resize({ width: MAX_WIDTH, withoutEnlargement: true })
           .webp({ quality: WEBP_QUALITY, effort: 4 })
           .toFile(dest);
