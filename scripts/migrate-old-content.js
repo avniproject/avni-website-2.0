@@ -51,6 +51,11 @@ const DEFAULT_BLOG_CATEGORY = 'Knowledge';
 const SLUG_RENAMES = {
   '2022-10-20-avni-release-announcement copy': '2022-10-20-avni-release-announcement',
 };
+// Listing thumbnails chosen on the new site (files in public/img), kept when the script is re-run
+const COVER_OVERRIDES = {
+  '2026-10-29-camp-mode': '/img/camp-mode/camp-mode-cover.webp',
+};
+
 // Every renamed URL is recorded here, for the old-site redirects
 const REDIRECTS_FILE = path.join(ROOT, 'config/old-site-redirects.json');
 const OLD_PATH = { blog: '/blog', 'case-studies': '/case-studies' };
@@ -252,9 +257,9 @@ async function migrateFile(type, file, oldSite) {
   const { data, content } = matter(fs.readFileSync(path.join(oldSite, 'src/pages', type, file), 'utf8'));
   const tags = (data.tags || []).map(clean).filter(Boolean);
   const body = await migrateBody(content, oldSite, file);
-  const image = data.featuredimage
+  const image = COVER_OVERRIDES[slug] || (data.featuredimage
     ? await migrateImage(data.featuredimage, oldSite, file, { allowVideo: false })
-    : firstBodyImage(body); // listing cards need a cover; most old posts without one have images in the body
+    : firstBodyImage(body)); // listing cards need a cover; most old posts without one have images in the body
 
   const frontmatter = {
     title: clean(data.title),
