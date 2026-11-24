@@ -10,6 +10,7 @@ author: A Ashok Kumar
 readTime: 3 min read
 category: Events
 image: /img/2025-01-31-my-reflections-from-avni-conf-2025/AASHOKPOST.webp
+imagePosition: top
 tags:
   - Avni Conference 2025
 ---

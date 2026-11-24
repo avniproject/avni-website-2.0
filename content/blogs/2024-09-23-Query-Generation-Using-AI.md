@@ -9,7 +9,6 @@ date: '2024-09-23'
 author: Vivek Singh
 readTime: 1 min read
 category: Technical Story
-image: /img/2024-09-23-Query-Generation-Using-AI/with-ai.webp
 tags:
   - Technology
 ---

@@ -8,6 +8,9 @@ import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
 import BlogCoverFallback from './BlogCoverFallback';
 
+// Tailwind needs the full class names written out
+const IMAGE_POSITION = { top: 'object-top', center: 'object-center', bottom: 'object-bottom' };
+
 interface FeaturedBlogProps {
   blog: Blog;
 }
@@ -26,7 +29,7 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
                 src={frontmatter.image}
                 alt={frontmatter.title}
                 fill
-                className="object-cover"
+                className={`object-cover ${IMAGE_POSITION[frontmatter.imagePosition ?? 'center']}`}
                 priority
                 sizes="(max-width: 1024px) 100vw, 400px"
               />

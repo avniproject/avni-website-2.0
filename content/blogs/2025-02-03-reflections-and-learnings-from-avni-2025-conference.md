@@ -8,6 +8,7 @@ readTime: 2 min read
 category: Events
 image: >-
   /img/2025-02-03-reflections-and-learnings-from-avni-2025-conference/BhushanKothalkar.webp
+imagePosition: top
 tags:
   - Avni Conference 2025
 ---

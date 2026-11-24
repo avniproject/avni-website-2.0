@@ -6,7 +6,6 @@ date: '2026-07-10'
 author: Himesh R
 readTime: 8 min read
 category: Technical Story
-image: /img/2026-07-10-ai-across-the-avni-lifecycle/lifecycle.webp
 tags:
   - AI
   - Software Engineering

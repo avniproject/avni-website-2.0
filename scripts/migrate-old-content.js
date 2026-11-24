@@ -51,9 +51,25 @@ const DEFAULT_BLOG_CATEGORY = 'Knowledge';
 const SLUG_RENAMES = {
   '2022-10-20-avni-release-announcement copy': '2022-10-20-avni-release-announcement',
 };
-// Listing thumbnails chosen on the new site (files in public/img), kept when the script is re-run
+// Listing thumbnails chosen on the new site, kept when the script is re-run.
+// A path (file in public/img) replaces the cover; null drops it so the branded card shows.
 const COVER_OVERRIDES = {
   '2026-10-29-camp-mode': '/img/camp-mode/camp-mode-cover.webp',
+  // text graphics and screenshots that don't work as a full-cover thumbnail
+  'avni-appsheet-comparison': null,
+  '2024-09-23-Query-Generation-Using-AI': null,
+  '2026-07-10-ai-across-the-avni-lifecycle': null,
+  '2026-04-29-deterministic-rails-agentic-judgement': null,
+  '2025-06-12-no-more-fake-data-headaches': null,
+};
+
+// Which part of the cover the card shows (default: middle)
+const IMAGE_POSITION_OVERRIDES = {
+  '2025-02-11-reflections-of-the-avni-conference-2025': 'top',
+  '2025-02-03-reflections-and-learnings-from-avni-2025-conference': 'top',
+  '2025-01-31-my-reflections-from-avni-conf-2025': 'top',
+  '2025-01-29-avni-conf-2025-pooja-aggarwal': 'top',
+  '2025-01-29-avni-conference-blog-kamesh': 'top',
 };
 
 // Every renamed URL is recorded here, for the old-site redirects
@@ -256,7 +272,7 @@ async function migrateFile(type, file, oldSite) {
   // Release posts get a generated release-notes card instead (see BlogCoverFallback); posts
   // without a cover get a branded card rather than an image picked from the body
   const isRelease = type === 'blog' && /releas/i.test(clean(data.title));
-  const image = COVER_OVERRIDES[slug] || (data.featuredimage && !isRelease
+  const image = slug in COVER_OVERRIDES ? COVER_OVERRIDES[slug] : (data.featuredimage && !isRelease
     ? await migrateImage(data.featuredimage, oldSite, file, { allowVideo: false })
     : undefined);
 
@@ -283,6 +299,7 @@ async function migrateFile(type, file, oldSite) {
     report.sectors[frontmatter.sector] = (report.sectors[frontmatter.sector] || 0) + 1;
   }
   if (image) frontmatter.image = image;
+  if (image && IMAGE_POSITION_OVERRIDES[slug]) frontmatter.imagePosition = IMAGE_POSITION_OVERRIDES[slug];
   frontmatter.tags = tags.filter(t => !/^case ?study$/i.test(t));
 
   fs.writeFileSync(path.join(OUT[type], slug + '.md'), matter.stringify(body.trimStart(), frontmatter));

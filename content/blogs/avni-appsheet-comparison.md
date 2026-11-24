@@ -13,7 +13,6 @@ date: '2021-06-22'
 author: The Avni Team
 readTime: 3 min read
 category: Knowledge
-image: /img/avni_appsheet_product_comparison.webp
 tags:
   - Knowledge
 ---

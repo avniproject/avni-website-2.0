@@ -173,6 +173,7 @@ export interface BlogFrontmatter {
   category: string;
   image?: string; // listing thumbnail and share preview
   showCover?: boolean; // also show image as a banner at the top of the post
+  imagePosition?: 'top' | 'center' | 'bottom'; // which part of image the listing card shows
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;

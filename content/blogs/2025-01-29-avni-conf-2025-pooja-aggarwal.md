@@ -10,6 +10,7 @@ author: Pooja Aggarwal
 readTime: 2 min read
 category: Events
 image: /img/2025-01-29-avni-conf-2025-pooja-aggarwal/POOJAPOST.webp
+imagePosition: top
 tags:
   - Avni Conference 2025
 ---

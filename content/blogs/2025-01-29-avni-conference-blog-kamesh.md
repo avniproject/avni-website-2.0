@@ -10,6 +10,7 @@ author: Kamesh Bhariya
 readTime: 4 min read
 category: Events
 image: /img/2025-01-29-avni-conference-blog-kamesh/KameshBhariya.webp
+imagePosition: top
 tags:
   - Avni Conference 2025
 ---

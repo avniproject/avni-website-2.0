@@ -8,6 +8,9 @@ import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
 import BlogCoverFallback from './BlogCoverFallback';
 
+// Tailwind needs the full class names written out
+const IMAGE_POSITION = { top: 'object-top', center: 'object-center', bottom: 'object-bottom' };
+
 interface BlogCardProps {
   blog: Blog;
 }
@@ -35,7 +38,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
             src={frontmatter.image}
             alt={frontmatter.title}
             fill
-            className="object-cover hover:scale-105 transition-transform duration-500"
+            className={`object-cover ${IMAGE_POSITION[frontmatter.imagePosition ?? 'center']} hover:scale-105 transition-transform duration-500`}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (

@@ -9,6 +9,7 @@ author: Shivangi Desai
 readTime: 2 min read
 category: Events
 image: /img/2025-02-11-reflections-of-the-avni-conference-2025/shivangi-post-(1).webp
+imagePosition: top
 tags:
   - Avni Conference 2025
 ---

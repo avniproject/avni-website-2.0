@@ -10,7 +10,6 @@ date: '2026-04-29'
 author: Himesh R
 readTime: 10 min read
 category: Avni News
-image: /img/2026-04-29-deterministic-rails-agentic-judgement/cover-agents.webp
 tags:
   - AI
   - Tech4Dev
