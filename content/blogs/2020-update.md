@@ -9,6 +9,7 @@ author: The Avni Team
 readTime: 4 min read
 category: Avni News
 image: /img/2020-update/avni_update_impact_and_usage.webp
+imagePosition: top
 tags:
   - Annual Update
 ---

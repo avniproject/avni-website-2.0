@@ -55,6 +55,11 @@ const SLUG_RENAMES = {
 // A path (file in public/img) replaces the cover; null drops it so the branded card shows.
 const COVER_OVERRIDES = {
   '2026-10-29-camp-mode': '/img/camp-mode/camp-mode-cover.webp',
+  // better photos from inside the post (or a crop of one)
+  '2026-06-16-inside-ashwini-community-healthcare-nilgiris': '/img/2026-06-16-inside-ashwini-community-healthcare-nilgiris/ashwini-2.webp',
+  '2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection': '/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/jss-card.webp',
+  '2025-05-19-field-visit-to-iph': '/img/2025-05-19-siddharth-iph-blog/s2.webp',
+  '2025-06-12-field-visit-to-kollegal-government-hospital': '/img/2025-06-12-field-visit-to-kollegal-government-hospital/R2.webp',
   // text graphics and screenshots that don't work as a full-cover thumbnail
   'avni-appsheet-comparison': null,
   '2024-09-23-Query-Generation-Using-AI': null,
@@ -70,6 +75,7 @@ const IMAGE_POSITION_OVERRIDES = {
   '2025-01-31-my-reflections-from-avni-conf-2025': 'top',
   '2025-01-29-avni-conf-2025-pooja-aggarwal': 'top',
   '2025-01-29-avni-conference-blog-kamesh': 'top',
+  '2020-update': 'top',
 };
 
 // Every renamed URL is recorded here, for the old-site redirects

@@ -12,7 +12,7 @@ date: '2025-05-19'
 author: Siddharth Harsh Raj
 readTime: 2 min read
 category: User Story
-image: /img/2025-05-19-siddharth-iph-blog/s1.webp
+image: /img/2025-05-19-siddharth-iph-blog/s2.webp
 tags:
   - Public Health
   - Field Visit

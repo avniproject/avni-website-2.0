@@ -9,7 +9,7 @@ date: '2026-06-16'
 author: Anjali Bhagabati
 readTime: 8 min read
 category: Knowledge
-image: /img/2026-06-16-inside-ashwini-community-healthcare-nilgiris/ashwini-1.webp
+image: /img/2026-06-16-inside-ashwini-community-healthcare-nilgiris/ashwini-2.webp
 tags:
   - Health
   - Community Health
