@@ -35,6 +35,16 @@ export interface CaseStudy {
   htmlContent?: string;
 }
 
+// The CMS writes unquoted dates, which YAML parses as Date objects
+function toDateString(value: unknown): string {
+  return value instanceof Date ? value.toISOString().slice(0, 10) : String(value ?? '');
+}
+
+function estimateReadTime(markdown: string): string {
+  const words = markdown.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+  return `${Math.max(1, Math.round(words / 200))} min read`;
+}
+
 // Article bodies can hold dozens of images; load them only as the reader scrolls
 function lazyLoadImages(html: string): string {
   return html.replace(/<img (?![^>]*\bloading=)/g, '<img loading="lazy" decoding="async" ');
@@ -83,6 +93,8 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
       frontmatter: {
         ...data,
         featured: isFeatured, // Override with centralized config
+        readTime: data.readTime || estimateReadTime(content), // posts written in the CMS don't set it
+        date: toDateString(data.date),
       } as CaseStudyFrontmatter,
       content,
       htmlContent,
@@ -236,6 +248,8 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
       frontmatter: {
         ...data,
         featured: isFeatured, // Override with centralized config
+        readTime: data.readTime || estimateReadTime(content), // posts written in the CMS don't set it
+        date: toDateString(data.date),
       } as BlogFrontmatter,
       content,
       htmlContent,
