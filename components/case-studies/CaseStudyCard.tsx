@@ -18,18 +18,20 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
   return (
     <div className="bg-white rounded-[20px] p-6 md:p-8 flex flex-col shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow h-full">
       {/* Logo */}
-      <div className="mb-6">
-        <div className="relative w-28 h-14 md:w-32 md:h-16">
-          <Image
-            src={frontmatter.logo}
-            alt={frontmatter.title}
-            fill
-            className="object-contain object-left"
-            loading="lazy"
-            sizes="128px"
-          />
+      {frontmatter.logo && (
+        <div className="mb-6">
+          <div className="relative w-28 h-14 md:w-32 md:h-16">
+            <Image
+              src={frontmatter.logo}
+              alt={frontmatter.title}
+              fill
+              className="object-contain object-left"
+              loading="lazy"
+              sizes="128px"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Sector Badge */}
       <div className="mb-4">

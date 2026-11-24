@@ -30,18 +30,20 @@ export default function FeaturedCaseStudy({ caseStudy }: FeaturedCaseStudyProps)
         {/* Left: Logo and Content */}
         <div className="flex-1">
           {/* Logo */}
-          <div className="mb-6">
-            <div className="relative w-32 h-16 md:w-40 md:h-20">
-              <Image
-                src={frontmatter.logo}
-                alt={frontmatter.title}
-                fill
-                className="object-contain object-left"
-                priority
-                sizes="160px"
-              />
+          {frontmatter.logo && (
+            <div className="mb-6">
+              <div className="relative w-32 h-16 md:w-40 md:h-20">
+                <Image
+                  src={frontmatter.logo}
+                  alt={frontmatter.title}
+                  fill
+                  className="object-contain object-left"
+                  priority
+                  sizes="160px"
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Sector Badge */}
           <div className="mb-4">

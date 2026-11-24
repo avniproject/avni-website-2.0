@@ -26,8 +26,8 @@
  * Example:
  * "Empowering Waste Pickers: Hasiru Dala's Digital Transformation"
  */
+// Leave empty to feature the most recent case study
 export const FEATURED_CASE_STUDIES: string[] = [
-  "How Goonj Uses Avni To Digitise Offline Data Collection And Inventory Flow",
   // Add exact case study titles here
   // Example: "Your Exact Case Study Title Here"
 ];
@@ -39,8 +39,8 @@ export const FEATURED_CASE_STUDIES: string[] = [
  * Example:
  * "Technical Deep Dive: Offline-First Architecture"
  */
+// Leave empty to feature the most recent blog
 export const FEATURED_BLOGS: string[] = [
-  "How Goonj Uses Avni To Digitise Offline Data Collection And Inventory Flow",
   // Add more exact blog titles here
   // Example: "Your Exact Blog Title Here"
 ];

@@ -15,15 +15,18 @@ import { getBlogBySlug, getAllBlogSlugs } from '@/lib/markdown';
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const blog = await getBlogBySlug(params.slug);
+  const { slug } = await params;
+  const blog = await getBlogBySlug(slug);
 
   if (!blog) {
     return {
       title: 'Blog Post Not Found',
     };
   }
+
+  const shareImage = blog.frontmatter.image || '/images/hero-image.jpg';
 
   return {
     title: `${blog.frontmatter.title} - Avni Blog`,
@@ -38,9 +41,7 @@ export async function generateMetadata({
       authors: [blog.frontmatter.author || 'Avni Team'],
       images: [
         {
-          url: blog.frontmatter.image,
-          width: 1200,
-          height: 630,
+          url: shareImage,
           alt: blog.frontmatter.title,
         },
       ],
@@ -49,7 +50,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: blog.frontmatter.title,
       description: blog.frontmatter.description,
-      images: [blog.frontmatter.image],
+      images: [shareImage],
     },
   };
 }
@@ -63,9 +64,10 @@ export async function generateStaticParams() {
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const blog = await getBlogBySlug(params.slug);
+  const { slug } = await params;
+  const blog = await getBlogBySlug(slug);
 
   if (!blog) {
     notFound();
@@ -129,7 +131,7 @@ export default async function BlogPostPage({
 
           {/* Content */}
           <div
-            className="prose prose-lg max-w-none
+            className="article-body prose prose-lg max-w-none
               prose-headings:font-anek prose-headings:font-bold prose-headings:text-[#0b2540]
               prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
               prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
@@ -138,7 +140,7 @@ export default async function BlogPostPage({
               prose-strong:text-gray-900 prose-strong:font-semibold
               prose-ul:my-6 prose-ol:my-6
               prose-li:text-gray-700 prose-li:mb-2
-              prose-img:rounded-lg prose-img:shadow-lg
+              prose-img:rounded-lg
               prose-code:text-[#419372] prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
               prose-blockquote:border-l-4 prose-blockquote:border-[#FFD84D] prose-blockquote:pl-4 prose-blockquote:italic"
             dangerouslySetInnerHTML={{ __html: htmlContent || '' }}

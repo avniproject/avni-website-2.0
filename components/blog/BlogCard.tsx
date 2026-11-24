@@ -6,6 +6,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
+import BlogCoverFallback from './BlogCoverFallback';
 
 interface BlogCardProps {
   blog: Blog;
@@ -15,7 +16,8 @@ const getCategoryColor = (category: string): string => {
   const colors: Record<string, string> = {
     'User Story': 'bg-[#FEF3F2] text-[#B42318]',
     'Technical Story': 'bg-[#FFF4ED] text-[#C4320A]',
-    'Sector': 'bg-[#FFF6ED] text-[#C4320A]',
+    'Knowledge': 'bg-[#FFF6ED] text-[#C4320A]',
+    'Events': 'bg-[#EEF4FF] text-[#3538CD]',
     'Avni News': 'bg-[#FFF1F3] text-[#C01048]',
   };
   return colors[category] || 'bg-gray-100 text-gray-700';
@@ -28,13 +30,17 @@ export default function BlogCard({ blog }: BlogCardProps) {
     <div className="bg-white rounded-[16px] overflow-hidden shadow-[0_2px_12px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-shadow duration-300">
       {/* Image */}
       <div className="relative w-full h-[240px] overflow-hidden">
-        <Image
-          src={frontmatter.image}
-          alt={frontmatter.title}
-          fill
-          className="object-cover hover:scale-105 transition-transform duration-500"
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
+        {frontmatter.image ? (
+          <Image
+            src={frontmatter.image}
+            alt={frontmatter.title}
+            fill
+            className="object-cover hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : (
+          <BlogCoverFallback category={frontmatter.category} />
+        )}
       </div>
 
       {/* Content */}

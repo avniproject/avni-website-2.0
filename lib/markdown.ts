@@ -17,7 +17,8 @@ export interface CaseStudyFrontmatter {
   title: string;
   slug: string;
   sector: string;
-  logo: string;
+  logo?: string;
+  image?: string;
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;
@@ -31,6 +32,11 @@ export interface CaseStudy {
   frontmatter: CaseStudyFrontmatter;
   content: string;
   htmlContent?: string;
+}
+
+// Article bodies can hold dozens of images; load them only as the reader scrolls
+function lazyLoadImages(html: string): string {
+  return html.replace(/<img (?![^>]*\bloading=)/g, '<img loading="lazy" decoding="async" ');
 }
 
 /**
@@ -66,7 +72,7 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
     const processedContent = await remark()
       .use(html, { sanitize: false })
       .process(content);
-    const htmlContent = processedContent.toString();
+    const htmlContent = lazyLoadImages(processedContent.toString());
 
     // Determine featured status from centralized config
     const isFeatured = FEATURED_CASE_STUDIES.includes(data.title);
@@ -111,18 +117,16 @@ export async function getAllCaseStudies(): Promise<CaseStudy[]> {
  */
 export async function getFeaturedCaseStudy(): Promise<CaseStudy | null> {
   const allCaseStudies = await getAllCaseStudies();
-  const featured = allCaseStudies.filter(cs => cs.frontmatter.featured);
-  
-  // Return the most recent featured case study
-  return featured.length > 0 ? featured[0] : null;
+  // The configured featured case study, or else the most recent one
+  return allCaseStudies.find(cs => cs.frontmatter.featured) ?? allCaseStudies[0] ?? null;
 }
 
 /**
  * Get non-featured case studies
  */
 export async function getNonFeaturedCaseStudies(): Promise<CaseStudy[]> {
-  const allCaseStudies = await getAllCaseStudies();
-  return allCaseStudies.filter(cs => !cs.frontmatter.featured);
+  const [allCaseStudies, featured] = await Promise.all([getAllCaseStudies(), getFeaturedCaseStudy()]);
+  return allCaseStudies.filter(cs => cs.slug !== featured?.slug);
 }
 
 /**
@@ -166,7 +170,7 @@ export interface BlogFrontmatter {
   title: string;
   slug: string;
   category: string;
-  image: string;
+  image?: string;
   featured?: boolean; // Optional - determined by centralized config
   description: string;
   date: string;
@@ -219,7 +223,7 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
     const processedContent = await remark()
       .use(html, { sanitize: false })
       .process(content);
-    const htmlContent = processedContent.toString();
+    const htmlContent = lazyLoadImages(processedContent.toString());
 
     // Determine featured status from centralized config
     const isFeatured = FEATURED_BLOGS.includes(data.title);
@@ -264,18 +268,16 @@ export async function getAllBlogs(): Promise<Blog[]> {
  */
 export async function getFeaturedBlog(): Promise<Blog | null> {
   const allBlogs = await getAllBlogs();
-  const featured = allBlogs.filter(blog => blog.frontmatter.featured);
-  
-  // Return the most recent featured blog (in case multiple are marked as featured)
-  return featured.length > 0 ? featured[0] : null;
+  // The configured featured blog, or else the most recent one
+  return allBlogs.find(blog => blog.frontmatter.featured) ?? allBlogs[0] ?? null;
 }
 
 /**
  * Get non-featured blogs
  */
 export async function getNonFeaturedBlogs(): Promise<Blog[]> {
-  const allBlogs = await getAllBlogs();
-  return allBlogs.filter(blog => !blog.frontmatter.featured);
+  const [allBlogs, featured] = await Promise.all([getAllBlogs(), getFeaturedBlog()]);
+  return allBlogs.filter(blog => blog.slug !== featured?.slug);
 }
 
 /**

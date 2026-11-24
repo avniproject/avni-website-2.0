@@ -242,7 +242,7 @@ export const resourcesItems: ResourceItem[] = [
  * TODO: Replace with API call to fetch latest featured blog when blog pages are built
  */
 export const featuredBlog: FeaturedBlog = {
-  title: 'How Goonj Uses Avni To Digitise Offline Data Collection And Inventory Flow >',
+  title: 'How Goonj Uses Avni to Digitise Offline Data Collection and Inventory Flow',
   image: '/images/goonj-featured.jpg',
-  link: '/blog/goonj-case-study',
+  link: '/resources/case-studies/2025-09-03-how-goonj-uses-avni/',
 };

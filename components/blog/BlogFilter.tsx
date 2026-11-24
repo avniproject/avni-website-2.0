@@ -16,8 +16,9 @@ interface BlogFilterProps {
 const BLOG_CATEGORIES = [
   'User Story',
   'Technical Story',
-  'Sector',
-  'Avni News'
+  'Knowledge',
+  'Avni News',
+  'Events'
 ];
 
 export default function BlogFilter({ selectedCategories, onFilterChange }: BlogFilterProps) {

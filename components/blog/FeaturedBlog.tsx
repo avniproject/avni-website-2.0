@@ -6,6 +6,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Blog } from '@/lib/markdown';
+import BlogCoverFallback from './BlogCoverFallback';
 
 interface FeaturedBlogProps {
   blog: Blog;
@@ -20,14 +21,18 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
         {/* Left: Image */}
         <div className="w-full lg:w-[400px] flex-shrink-0">
           <div className="relative w-full h-[280px] lg:h-[320px] rounded-[16px] overflow-hidden">
-            <Image
-              src={frontmatter.image}
-              alt={frontmatter.title}
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1024px) 100vw, 400px"
-            />
+            {frontmatter.image ? (
+              <Image
+                src={frontmatter.image}
+                alt={frontmatter.title}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 400px"
+              />
+            ) : (
+              <BlogCoverFallback category={frontmatter.category} />
+            )}
           </div>
         </div>
 

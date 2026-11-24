@@ -106,3 +106,17 @@
 .animate-scaleIn {
   animation: scaleIn 0.3s ease-out;
 }
+
+/* Images and videos inside blog and case study bodies: a fixed frame whatever the uploaded size,
+   so tall screenshots or wide banners don't take over the page. Smaller sizes set in the post are kept. */
+.article-body img,
+.article-body video {
+  display: block;
+  max-width: 100%;
+  max-height: min(70vh, 560px);
+  width: auto;
+  height: auto;
+  margin: 2rem auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}

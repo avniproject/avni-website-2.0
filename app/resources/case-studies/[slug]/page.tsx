@@ -24,9 +24,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const caseStudy = await getCaseStudyBySlug(params.slug);
+  const { slug } = await params;
+  const caseStudy = await getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     return {
@@ -35,6 +36,7 @@ export async function generateMetadata({
   }
 
   const { frontmatter } = caseStudy;
+  const shareImage = frontmatter.image || frontmatter.logo || '/images/hero-image.jpg';
 
   return {
     title: `${frontmatter.title} - Avni Case Study`,
@@ -43,13 +45,13 @@ export async function generateMetadata({
     openGraph: {
       title: frontmatter.title,
       description: frontmatter.description,
-      url: `/resources/case-studies/${params.slug}`,
+      url: `/resources/case-studies/${slug}`,
       type: 'article',
       publishedTime: frontmatter.date,
       authors: [frontmatter.author || 'Avni Team'],
       images: [
         {
-          url: frontmatter.logo,
+          url: shareImage,
           alt: frontmatter.title,
         },
       ],
@@ -58,7 +60,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: frontmatter.title,
       description: frontmatter.description,
-      images: [frontmatter.logo],
+      images: [shareImage],
     },
   };
 }
@@ -66,9 +68,10 @@ export async function generateMetadata({
 export default async function CaseStudyPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const caseStudy = await getCaseStudyBySlug(params.slug);
+  const { slug } = await params;
+  const caseStudy = await getCaseStudyBySlug(slug);
 
   if (!caseStudy) {
     notFound();
@@ -103,18 +106,20 @@ export default async function CaseStudyPage({
           <Container>
             <div className="max-w-4xl mx-auto">
               {/* Logo */}
-              <div className="mb-6">
-                <div className="relative w-40 h-20">
-                  <Image
-                    src={frontmatter.logo}
-                    alt={frontmatter.title}
-                    fill
-                    className="object-contain object-left"
-                    priority
-                    sizes="160px"
-                  />
+              {frontmatter.logo && (
+                <div className="mb-6">
+                  <div className="relative w-40 h-20">
+                    <Image
+                      src={frontmatter.logo}
+                      alt={frontmatter.title}
+                      fill
+                      className="object-contain object-left"
+                      priority
+                      sizes="160px"
+                    />
+                  </div>
                 </div>
-              </div>
+              )}
 
               {/* Sector Badge */}
               <div className="mb-6">
@@ -167,8 +172,20 @@ export default async function CaseStudyPage({
         <Section spacing="lg">
           <Container>
             <article className="max-w-4xl mx-auto">
+              {frontmatter.image && (
+                <div className="relative aspect-video w-full mb-12 rounded-xl overflow-hidden">
+                  <Image
+                    src={frontmatter.image}
+                    alt={frontmatter.title}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 768px) 100vw, 896px"
+                  />
+                </div>
+              )}
               <div
-                className="prose prose-lg max-w-none
+                className="article-body prose prose-lg max-w-none
                   prose-headings:font-anek prose-headings:font-bold prose-headings:text-[#0b2540]
                   prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-4
                   prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-3
@@ -177,7 +194,7 @@ export default async function CaseStudyPage({
                   prose-strong:text-gray-900 prose-strong:font-semibold
                   prose-ul:my-6 prose-ol:my-6
                   prose-li:text-gray-700 prose-li:mb-2 prose-li:font-noto
-                  prose-img:rounded-lg prose-img:shadow-lg prose-img:my-8
+                  prose-img:rounded-lg prose-img:my-8
                   prose-blockquote:border-l-4 prose-blockquote:border-[#419372] prose-blockquote:pl-6 prose-blockquote:italic prose-blockquote:text-gray-700 prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:my-8"
                 dangerouslySetInnerHTML={{ __html: htmlContent || '' }}
               />
