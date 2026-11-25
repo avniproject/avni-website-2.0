@@ -12,6 +12,7 @@ date: '2026-05-05'
 author: Nupoor Khandelwal
 readTime: 4 min read
 sector: Healthcare
+logo: /logos/TIDE-logo.webp
 image: /img/2026-05-05-purna-clinic-tide-trust-dangs/purna-clinic-morzira.webp
 tags:
   - Health

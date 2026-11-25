@@ -20,14 +20,14 @@ export default function CaseStudyCard({ caseStudy }: CaseStudyCardProps) {
       {/* Logo */}
       {frontmatter.logo && (
         <div className="mb-6">
-          <div className="relative w-28 h-14 md:w-32 md:h-16">
+          <div className="relative w-full max-w-[240px] h-14 md:h-16">
             <Image
               src={frontmatter.logo}
               alt={frontmatter.title}
               fill
               className="object-contain object-left"
               loading="lazy"
-              sizes="128px"
+              sizes="240px"
             />
           </div>
         </div>

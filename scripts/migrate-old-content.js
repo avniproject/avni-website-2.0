@@ -114,6 +114,7 @@ const CASE_STUDY_OVERRIDES = {
   '2024-05-22-empowering-vision-care-chashma-tech4dev': { logo: '/logos/Sarva-Mangal-Family-Trust-logo.webp' },
   // JNPCT has no logo of its own; SEWA Rural is its tech partner on this project
   'use-of-avni-in-jnpct-malnutrition-project-case-study': { logo: '/logos/SEWA-Rural-logo.webp' },
+  '2026-05-05-purna-clinic-tide-trust-dangs': { logo: '/logos/TIDE-logo.webp' },
 };
 
 const redirects = {};

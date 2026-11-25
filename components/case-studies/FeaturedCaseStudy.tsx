@@ -32,14 +32,14 @@ export default function FeaturedCaseStudy({ caseStudy }: FeaturedCaseStudyProps)
           {/* Logo */}
           {frontmatter.logo && (
             <div className="mb-6">
-              <div className="relative w-32 h-16 md:w-40 md:h-20">
+              <div className="relative w-full max-w-[300px] h-16 md:h-20">
                 <Image
                   src={frontmatter.logo}
                   alt={frontmatter.title}
                   fill
                   className="object-contain object-left"
                   priority
-                  sizes="160px"
+                  sizes="320px"
                 />
               </div>
             </div>

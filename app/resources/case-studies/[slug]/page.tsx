@@ -108,14 +108,14 @@ export default async function CaseStudyPage({
               {/* Logo */}
               {frontmatter.logo && (
                 <div className="mb-6">
-                  <div className="relative w-40 h-20">
+                  <div className="relative w-full max-w-[320px] h-20">
                     <Image
                       src={frontmatter.logo}
                       alt={frontmatter.title}
                       fill
                       className="object-contain object-left"
                       priority
-                      sizes="160px"
+                      sizes="320px"
                     />
                   </div>
                 </div>
