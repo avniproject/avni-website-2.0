@@ -112,6 +112,8 @@ const CASE_STUDY_OVERRIDES = {
   'classroom-observation-tool-for-andhra-pradesh': { logo: '/logos/LFE-logo.webp' },
   '2025-05-02-ihmp-strengthening-adolescent-health': { logo: '/logos/IHMP-logo.webp' },
   '2024-05-22-empowering-vision-care-chashma-tech4dev': { logo: '/logos/Sarva-Mangal-Family-Trust-logo.webp' },
+  // JNPCT has no logo of its own; SEWA Rural is its tech partner on this project
+  'use-of-avni-in-jnpct-malnutrition-project-case-study': { logo: '/logos/SEWA-Rural-logo.webp' },
 };
 
 const redirects = {};

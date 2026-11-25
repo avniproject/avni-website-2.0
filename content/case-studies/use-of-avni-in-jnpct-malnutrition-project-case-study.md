@@ -10,6 +10,7 @@ date: '2021-02-08'
 author: Dr Dhiren Modi
 readTime: 6 min read
 sector: Healthcare
+logo: /logos/SEWA-Rural-logo.webp
 tags:
   - Health
 ---
