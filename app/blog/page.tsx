@@ -86,7 +86,7 @@ export default async function BlogPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/trial"
+                  href="/signup"
                   className="px-8 py-3 bg-[#419372] text-white rounded-full font-anek font-medium text-base hover:bg-[#357a5e] transition-colors"
                 >
                   Start Free Trial

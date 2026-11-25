@@ -26,7 +26,7 @@ export async function generateMetadata({
     };
   }
 
-  const shareImage = blog.frontmatter.image || '/images/hero-image.jpg';
+  const shareImage = blog.frontmatter.image || '/og-image.jpg';
 
   return {
     title: `${blog.frontmatter.title} - Avni Blog`,

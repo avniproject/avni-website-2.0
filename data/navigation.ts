@@ -95,7 +95,7 @@ export const useCasesItems: UseCaseItem[] = [
     title: 'Mobile Medical Units & Camps',
     description: 'Empower Field Teams To Collect Data Offline During Visits And Community Camps With Ease',
     icon: '/icons/navigation/mmu-units.svg',
-    link: '/use-cases#mobile-medical-units',
+    link: '/use-cases#mobile-medical',
   },
   {
     id: 'surveys',
@@ -109,7 +109,7 @@ export const useCasesItems: UseCaseItem[] = [
     title: 'Cohort Based Research Studies',
     description: 'Manage Longitudinal Studies With Structured Data Collection And Built-In Participant Tracking',
     icon: '/icons/navigation/cohort.svg',
-    link: '/use-cases#cohort-research',
+    link: '/use-cases#cohort-studies',
   },
 ];
 
@@ -225,7 +225,7 @@ export const resourcesItems: ResourceItem[] = [
     title: 'Documentation',
     description: 'Explore In-Depth Guides And Implementation Details',
     icon: '/icons/resources/documentation.svg',
-    link: '/resources/documentation',
+    link: 'https://avni.readme.io/docs/getting-started',
   },
   {
     id: 'faq',

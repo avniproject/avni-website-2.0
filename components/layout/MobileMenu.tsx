@@ -236,7 +236,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                   </Link>
                   
                   <Link
-                    href="/login"
+                    href="https://app.avniproject.org/"
                     onClick={handleCloseAll}
                     className="block w-full min-h-[48px] py-3 text-center font-anek font-semibold text-base text-[#0b2540] border-2 border-gray-300 rounded-full hover:bg-[#419372] hover:border-[#419372] hover:text-white transition-all"
                   >

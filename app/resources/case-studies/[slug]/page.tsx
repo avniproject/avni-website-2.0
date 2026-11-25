@@ -36,7 +36,7 @@ export async function generateMetadata({
   }
 
   const { frontmatter } = caseStudy;
-  const shareImage = frontmatter.image || frontmatter.logo || '/images/hero-image.jpg';
+  const shareImage = frontmatter.image || frontmatter.logo || '/og-image.jpg';
 
   return {
     title: `${frontmatter.title} - Avni Case Study`,
@@ -232,7 +232,7 @@ export default async function CaseStudyPage({
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/trial"
+                  href="/signup"
                   className="px-8 py-3 bg-white text-[#419372] font-anek font-medium rounded-full hover:bg-gray-100 transition-colors"
                 >
                   Start Free Trial

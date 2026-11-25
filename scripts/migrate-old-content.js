@@ -225,6 +225,9 @@ async function migrateBody(body, oldSite, file) {
     if (newRef.endsWith('.mp4')) return videoTag(newRef, alt ? ` aria-label="${alt.replace(/"/g, '&quot;')}"` : '');
     return `${open}${newRef}${title})`;
   });
+  // Plain links to Gatsby-processed images, e.g. [a dashboard](/static/my-dashboard-<hash>.gif)
+  out = await replaceAsync(out, /((?<!!)\[[^\]]*\]\()(\/static\/[^)\s]+)\)/g, async (all, open, ref) =>
+    `${open}${await migrateImage(ref, oldSite, file, { allowVideo: false })})`);
   // HTML <img>, <video>, <source>
   out = await replaceAsync(out, /(src=["'])([^"']+)(["'])/g, async (all, open, ref, close) => {
     if (!isLocalImage(ref) || migratedPaths.has(ref)) return all;

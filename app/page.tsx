@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
 import Header from "@/components/layout/Header";
-import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import { OrganizationSchema, WebsiteSchema, SoftwareApplicationSchema } from '@/components/seo/StructuredData';
@@ -53,7 +52,6 @@ export default function Home() {
       <SoftwareApplicationSchema />
       
       <Header />
-      <AnnouncementBanner />
       <main>
         <Hero />
         <TrustedBy />

@@ -155,7 +155,7 @@ export default function ProductServicesDropdown({ isOpen, onClose, onMouseEnter,
                   Speak To Our Sales Team For Further Details And Any Questions
                 </p>
                 <Link
-                  href="/contact-sales"
+                  href="/contact"
                   className="inline-block px-[24px] py-[12px] bg-[#419372] text-white rounded-[24px] font-anek font-semibold text-[16px] leading-[20px] hover:bg-[#357a5e] transition-colors"
                   onClick={onClose}
                 >
