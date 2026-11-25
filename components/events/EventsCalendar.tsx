@@ -235,7 +235,7 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
       {/* Event details pop-up */}
       {openEvents && (
         <div
-          className="fixed inset-0 z-50 bg-black/40 flex items-end sm:items-center justify-center p-0 sm:p-6"
+          className="fixed inset-0 z-[60] bg-black/40 flex items-end sm:items-center justify-center p-0 sm:p-6"
           onClick={() => setOpenEvents(null)}
           role="dialog"
           aria-modal="true"

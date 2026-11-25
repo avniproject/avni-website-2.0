@@ -53,6 +53,14 @@ function htmlToText(html: string): string {
     .trim();
 }
 
+// Cuts at the last full sentence (or word) within the limit
+function shorten(text: string, max: number): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max);
+  const sentenceEnd = cut.lastIndexOf('. ');
+  return sentenceEnd > max / 2 ? cut.slice(0, sentenceEnd + 1) : cut.slice(0, cut.lastIndexOf(' ')) + '…';
+}
+
 export function parseIcal(ics: string): CalendarEvent[] {
   // Long lines are folded onto continuation lines that start with a space
   const lines = ics.replace(/\r\n/g, '\n').replace(/\n[ \t]/g, '').split('\n');
@@ -75,7 +83,7 @@ export function parseIcal(ics: string): CalendarEvent[] {
           end: current.DTEND ? parseIcalDate(current.DTEND.value) : start,
           location: location && !/^https?:\/\//.test(location) ? location : null,
           registrationUrl: urls[0] ?? null,
-          summary: htmlToText(description).replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, '').slice(0, 600),
+          summary: shorten(htmlToText(description).replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, ''), 600),
         });
       }
       current = null;
