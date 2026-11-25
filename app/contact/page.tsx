@@ -4,7 +4,7 @@
  */
 
 import { Metadata } from 'next';
-import { CalendarDays, Handshake, LifeBuoy, MapPin, Rocket } from 'lucide-react';
+import { CalendarDays, Handshake, LifeBuoy, Mail, MapPin, Rocket } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
@@ -96,9 +96,13 @@ export default function ContactPage() {
                     <div className={iconClass}><Icon size={20} /></div>
                     <div className="min-w-0">
                       <h3 className="font-anek font-semibold text-lg text-[#0b2540]">{title}</h3>
-                      <p className="font-noto text-sm text-[#475467] mb-1">{description}</p>
-                      <a href={`mailto:${email}`} className="font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43] break-all">
-                        {email}
+                      <p className="font-noto text-sm text-[#475467] mb-3">{description}</p>
+                      <a
+                        href={`mailto:${email}`}
+                        className="inline-flex items-center gap-2 max-w-full px-3 py-2 rounded-lg bg-[#E8F3EE] font-noto text-[13px] font-semibold text-[#1f5a43] hover:bg-[#d3eadf] transition-colors"
+                      >
+                        <Mail size={16} className="flex-shrink-0" />
+                        <span>{email.split('@')[0]}@<wbr />{email.split('@')[1]}</span>
                       </a>
                     </div>
                   </div>
