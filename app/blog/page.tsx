@@ -11,6 +11,7 @@ import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import { getFeaturedBlog, getNonFeaturedBlogs } from '@/lib/markdown';
 import BlogClient from './BlogClient';
+import BookDemoLink from '@/components/ui/BookDemoLink';
 
 export const metadata: Metadata = {
   title: 'Blog - Real Stories Of Digital Transformation With Avni',
@@ -91,12 +92,11 @@ export default async function BlogPage() {
                 >
                   Start Free Trial
                 </a>
-                <a
-                  href="/contact"
+                <BookDemoLink
                   className="px-8 py-3 border-2 border-[#419372] text-[#419372] rounded-full font-anek font-medium text-base hover:bg-[#419372] hover:text-white transition-colors"
                 >
                   Schedule a Demo
-                </a>
+                </BookDemoLink>
               </div>
             </div>
           </Container>

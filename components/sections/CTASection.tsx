@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import BookDemoLink from '@/components/ui/BookDemoLink';
 
 export default function CTASection() {
   return (
@@ -52,12 +53,11 @@ export default function CTASection() {
               >
                 Sign Up for Free Trial
               </Link>
-              <Link
-                href="/demo"
+              <BookDemoLink
                 className="px-6 md:px-8 py-3 md:py-3.5 border-2 border-[#419372] text-[#419372] rounded-full font-anek font-semibold text-sm md:text-base leading-tight hover:bg-[#419372] hover:text-white transition-all text-center"
               >
                 Book A Demo
-              </Link>
+              </BookDemoLink>
               <Link
                 href="/contact"
                 className="px-6 md:px-8 py-3 md:py-3.5 border-2 border-[#419372] text-[#419372] rounded-full font-anek font-semibold text-sm md:text-base leading-tight hover:bg-[#419372] hover:text-white transition-all text-center"

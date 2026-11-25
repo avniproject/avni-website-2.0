@@ -10,6 +10,7 @@ import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import { getFeaturedCaseStudy, getNonFeaturedCaseStudies } from '@/lib/markdown';
 import CaseStudiesClient from './CaseStudiesClient';
+import BookDemoLink from '@/components/ui/BookDemoLink';
 
 export const metadata: Metadata = {
   title: 'Case Studies - Customer Journeys With Avni',
@@ -72,12 +73,11 @@ export default async function CaseStudiesPage() {
                 >
                   Start Free Trial
                 </a>
-                <a
-                  href="/contact"
+                <BookDemoLink
                   className="px-8 py-3 border-2 border-[#419372] text-[#419372] rounded-full font-anek font-medium text-base hover:bg-[#419372] hover:text-white transition-colors"
                 >
                   Schedule a Demo
-                </a>
+                </BookDemoLink>
               </div>
             </div>
           </Container>

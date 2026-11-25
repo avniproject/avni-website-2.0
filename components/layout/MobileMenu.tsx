@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { externalLinkProps } from '@/lib/utils';
 import Image from 'next/image';
 import { Menu, X, ChevronRight, ChevronLeft } from 'lucide-react';
+import BookDemoLink from '@/components/ui/BookDemoLink';
 import { 
   productServicesTabs,
   servicesItems,
@@ -228,13 +229,12 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                     Sign Up for Free Trial
                   </Link>
                   
-                  <Link
-                    href="/demo"
+                  <BookDemoLink
                     onClick={handleCloseAll}
                     className="block w-full py-3 text-center font-anek font-semibold text-base text-[#419372] border-2 border-[#419372] rounded-full hover:bg-[#419372] hover:text-white transition-all"
                   >
                     Request a Demo
-                  </Link>
+                  </BookDemoLink>
                   
                   <Link
                     href="https://app.avniproject.org/"

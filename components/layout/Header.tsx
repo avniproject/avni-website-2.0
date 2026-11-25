@@ -10,6 +10,7 @@ import SolutionsDropdown from "@/components/navigation/SolutionsDropdown";
 import ResourcesDropdown from "@/components/navigation/ResourcesDropdown";
 import MobileMenu from "@/components/layout/MobileMenu";
 import { useIsDesktop } from "@/hooks/useMediaQuery";
+import BookDemoLink from '@/components/ui/BookDemoLink';
 
 export default function Header() {
   const pathname = usePathname();
@@ -184,12 +185,11 @@ export default function Header() {
 
         {/* Request Demo Button */}
         <div>
-          <Link
-            href="/demo"
+          <BookDemoLink
             className="flex items-center justify-center w-[142px] h-[36px] border-2 border-primary rounded-[28px] font-anek font-medium text-[16px] leading-[16px] text-primary hover:bg-primary hover:text-white transition-all"
           >
             Request a Demo
-          </Link>
+          </BookDemoLink>
         </div>
         </div>
       </div>
