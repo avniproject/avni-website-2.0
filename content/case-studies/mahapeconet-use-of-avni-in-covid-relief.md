@@ -8,6 +8,7 @@ date: '2021-12-06'
 author: Avni Team
 readTime: 3 min read
 sector: Social Security
+logo: /logos/Maharashtra-PECOnet-logo.webp
 tags:
   - Survey
 ---

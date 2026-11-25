@@ -97,7 +97,7 @@ const CASE_STUDY_SECTOR_BY_TAG = {
 // Case studies whose tags don't name a sector, or that have a partner logo in public/logos
 const CASE_STUDY_OVERRIDES = {
   '2025-09-03-how-goonj-uses-avni': { sector: 'Livelihood', logo: '/logos/Goonj-logo-10June20.webp' },
-  'mahapeconet-use-of-avni-in-covid-relief': { sector: 'Social Security' },
+  'mahapeconet-use-of-avni-in-covid-relief': { sector: 'Social Security', logo: '/logos/Maharashtra-PECOnet-logo.webp' },
   '2024-11-11-jal-jeevan-mission-arghyam': { logo: '/logos/ARGHYAM.webp' },
   '2025-08-01-empowering-waste-pickers': { logo: '/logos/HD-Main-Logo.webp' },
   'avni-for-sickle-cell-disease-screening-and-treatment': { logo: '/logos/JSS-Logo-new-Hindi-2.webp' },
