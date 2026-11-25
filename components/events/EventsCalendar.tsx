@@ -1,13 +1,13 @@
 /**
  * Events Calendar
- * Month grid of Avni events with a side panel listing the month's events.
- * Clicking an event, in the grid or the list, shows its details.
+ * "Next up" strip for the next event, then a month grid of Avni events.
+ * Clicking an event (or, on phones, a day) opens its details in a pop-up.
  */
 
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Clock, MapPin, Video } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, MapPin, Video, X } from 'lucide-react';
 import { CalendarEvent, EventKind, eventKind } from '@/lib/events';
 
 interface EventsCalendarProps {
@@ -43,23 +43,65 @@ function shiftMonth({ year, month }: Month, by: number): Month {
   return { year: d.getUTCFullYear(), month: d.getUTCMonth() };
 }
 
-function timeRange(event: CalendarEvent) {
-  return `${ist(event.start, { hour: 'numeric', minute: '2-digit' })} – ${ist(event.end, { hour: 'numeric', minute: '2-digit' })} IST`;
+const shortTime = (iso: string) => ist(iso, { hour: 'numeric', minute: '2-digit' }).replace(/\s([ap]m)$/i, '$1');
+
+function RegisterButton({ event }: { event: CalendarEvent }) {
+  if (!event.registrationUrl) return null;
+  return (
+    <a
+      href={event.registrationUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-5 py-2 bg-[#419372] text-white rounded-full font-anek font-medium text-sm hover:bg-[#357a5e] transition-colors"
+    >
+      Register
+    </a>
+  );
+}
+
+function EventDetails({ event, isPast }: { event: CalendarEvent; isPast: boolean }) {
+  const kind = eventKind(event.title);
+  return (
+    <div className="space-y-3">
+      <span className="inline-flex items-center gap-1.5 font-noto text-xs text-[#667085]">
+        <span className={`w-2 h-2 rounded-full ${KIND_STYLES[kind].dot}`} />
+        {kind}{isPast ? ' · This event has ended' : ''}
+      </span>
+      <h3 className="font-anek font-bold text-xl md:text-2xl leading-snug text-[#0b2540]">{event.title}</h3>
+      <div className="space-y-1.5">
+        <p className="flex items-center gap-2 font-noto text-sm text-[#475467]">
+          <Clock size={15} className="flex-shrink-0" />
+          {ist(event.start, { weekday: 'long', day: 'numeric', month: 'long' })}, {shortTime(event.start)} – {shortTime(event.end)} IST
+        </p>
+        <p className="flex items-start gap-2 font-noto text-sm text-[#475467]">
+          {event.location ? <MapPin size={15} className="flex-shrink-0 mt-0.5" /> : <Video size={15} className="flex-shrink-0 mt-0.5" />}
+          {event.location ?? 'Online'}
+        </p>
+      </div>
+      {event.summary && <p className="font-noto text-sm leading-relaxed text-[#344054]">{event.summary}</p>}
+      {!isPast && <RegisterButton event={event} />}
+    </div>
+  );
 }
 
 export default function EventsCalendar({ events }: EventsCalendarProps) {
   const [now, setNow] = useState<string | null>(null);
   const [visible, setVisible] = useState<Month>(() => monthOf(events.at(-1)?.start ?? new Date().toISOString()));
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [openEvents, setOpenEvents] = useState<CalendarEvent[] | null>(null);
 
   // "Today" comes from the visitor's clock, not from when the site was built
   useEffect(() => {
     const today = new Date().toISOString();
     setNow(today);
     setVisible(monthOf(today));
-    const next = events.find(e => e.end >= today);
-    if (next) setSelectedId(next.id);
-  }, [events]);
+  }, []);
+
+  useEffect(() => {
+    if (!openEvents) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpenEvents(null);
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [openEvents]);
 
   const eventsByDay = useMemo(() => {
     const map = new Map<string, CalendarEvent[]>();
@@ -70,8 +112,9 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
     return map;
   }, [events]);
 
+  const nextEvent = now ? events.find(e => e.end >= now) : undefined;
+  const isPast = (event: CalendarEvent) => now !== null && event.end < now;
   const monthPrefix = `${visible.year}-${pad(visible.month + 1)}`;
-  const monthEvents = events.filter(e => dayKey(e.start).startsWith(monthPrefix));
   const todayKey = now ? dayKey(now) : null;
 
   // Grid cells from the Monday on or before the 1st to fill whole weeks
@@ -85,10 +128,26 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
   const monthLabel = new Intl.DateTimeFormat('en-IN', { month: 'long', year: 'numeric', timeZone: 'UTC' })
     .format(new Date(Date.UTC(visible.year, visible.month, 1)));
 
-  const select = (event: CalendarEvent) => setSelectedId(id => (id === event.id ? null : event.id));
-
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-6">
+    <div className="space-y-6">
+      {/* Next up */}
+      {nextEvent && (
+        <div className="bg-white rounded-2xl shadow-sm p-4 md:p-5 flex flex-col sm:flex-row sm:items-center gap-4 border-l-4 border-[#419372]">
+          <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-[#419372] text-white flex flex-col items-center justify-center">
+            <span className="font-anek font-bold text-xl leading-none">{ist(nextEvent.start, { day: 'numeric' })}</span>
+            <span className="font-anek text-[11px] uppercase tracking-wider">{ist(nextEvent.start, { month: 'short' })}</span>
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#fba47e] mb-0.5">Next up</p>
+            <p className="font-anek font-semibold text-lg leading-snug text-[#0b2540]">{nextEvent.title}</p>
+            <p className="font-noto text-sm text-[#475467]">
+              {ist(nextEvent.start, { weekday: 'long' })}, {shortTime(nextEvent.start)} IST · {nextEvent.location ?? 'Online'}
+            </p>
+          </div>
+          <RegisterButton event={nextEvent} />
+        </div>
+      )}
+
       {/* Month grid */}
       <div className="bg-white rounded-2xl shadow-sm p-4 md:p-6">
         <div className="flex items-center justify-between mb-4 md:mb-6">
@@ -119,106 +178,81 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
             const key = day ? `${monthPrefix}-${pad(day)}` : null;
             const dayEvents = key ? eventsByDay.get(key) ?? [] : [];
             const isToday = key === todayKey;
+            const cellClass = `border-r border-b border-[#EAECF0] min-h-[56px] md:min-h-[112px] p-1 md:p-1.5 text-left align-top ${day ? 'bg-white' : 'bg-[#FCFCFD]'}`;
+            const dayNumber = day && (
+              <span className={`inline-flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full font-noto text-xs md:text-sm ${isToday ? 'bg-[#419372] text-white font-semibold' : 'text-[#344054]'}`}>
+                {day}
+              </span>
+            );
             return (
-              <div key={i} className={`border-r border-b border-[#EAECF0] min-h-[56px] md:min-h-[104px] p-1 md:p-1.5 ${day ? 'bg-white' : 'bg-[#FCFCFD]'}`}>
-                {day && (
-                  <>
-                    <span className={`inline-flex items-center justify-center w-6 h-6 md:w-7 md:h-7 rounded-full font-noto text-xs md:text-sm ${isToday ? 'bg-[#419372] text-white font-semibold' : 'text-[#344054]'}`}>
-                      {day}
+              <div key={i} className={cellClass}>
+                {/* Phones: the whole day is a button with a dot per event */}
+                {dayEvents.length > 0 ? (
+                  <button onClick={() => setOpenEvents(dayEvents)} className="md:hidden w-full h-full text-left" aria-label={`Events on ${day} ${monthLabel}`}>
+                    {dayNumber}
+                    <span className="flex flex-wrap gap-1 mt-1 px-0.5">
+                      {dayEvents.map(event => <span key={event.id} className={`w-2 h-2 rounded-full ${KIND_STYLES[eventKind(event.title)].dot} ${isPast(event) ? 'opacity-40' : ''}`} />)}
                     </span>
-                    {/* Chips on larger screens, dots on phones */}
-                    <div className="hidden md:block space-y-1 mt-1">
-                      {dayEvents.map(event => (
-                        <button
-                          key={event.id}
-                          onClick={() => select(event)}
-                          className={`block w-full text-left truncate rounded px-1.5 py-0.5 font-noto text-[11px] leading-4 font-medium transition-colors ${KIND_STYLES[eventKind(event.title)].chip} ${selectedId === event.id ? 'ring-2 ring-[#419372]' : ''}`}
-                          title={event.title}
-                        >
-                          {ist(event.start, { hour: 'numeric', minute: '2-digit' }).replace(/\s?[ap]m$/i, m => m.trim().toLowerCase())} {event.title}
-                        </button>
-                      ))}
-                    </div>
-                    <div className="flex md:hidden flex-wrap gap-1 mt-1 px-0.5">
-                      {dayEvents.map(event => (
-                        <button key={event.id} onClick={() => select(event)} aria-label={event.title} className={`w-2 h-2 rounded-full ${KIND_STYLES[eventKind(event.title)].dot}`} />
-                      ))}
-                    </div>
-                  </>
+                  </button>
+                ) : (
+                  <span className="md:hidden">{dayNumber}</span>
                 )}
+                {/* Larger screens: a chip per event */}
+                <div className="hidden md:block">
+                  {dayNumber}
+                  <div className="space-y-1 mt-1">
+                    {dayEvents.map(event => (
+                      <button
+                        key={event.id}
+                        onClick={() => setOpenEvents([event])}
+                        className={`block w-full text-left rounded-md px-1.5 py-1 font-noto text-[11px] leading-[14px] font-medium transition-colors cursor-pointer ${KIND_STYLES[eventKind(event.title)].chip} ${isPast(event) ? 'opacity-60' : ''}`}
+                        title={event.title}
+                      >
+                        <span className="block opacity-75">{shortTime(event.start)}</span>
+                        <span className="line-clamp-2">{event.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
               </div>
             );
           })}
         </div>
 
-        <div className="flex flex-wrap gap-4 mt-4">
-          {(Object.keys(KIND_STYLES) as EventKind[]).map(kind => (
-            <span key={kind} className="inline-flex items-center gap-1.5 font-noto text-xs text-[#475467]">
-              <span className={`w-2.5 h-2.5 rounded-full ${KIND_STYLES[kind].dot}`} />
-              {kind}
-            </span>
-          ))}
+        <div className="flex flex-wrap items-center justify-between gap-3 mt-4">
+          <div className="flex flex-wrap gap-4">
+            {(Object.keys(KIND_STYLES) as EventKind[]).map(kind => (
+              <span key={kind} className="inline-flex items-center gap-1.5 font-noto text-xs text-[#475467]">
+                <span className={`w-2.5 h-2.5 rounded-full ${KIND_STYLES[kind].dot}`} />
+                {kind}
+              </span>
+            ))}
+          </div>
+          <span className="font-noto text-xs text-[#667085]">Click an event for details · Times in IST</span>
         </div>
       </div>
 
-      {/* This month's events */}
-      <div className="bg-white rounded-2xl shadow-sm p-4 md:p-6 lg:max-h-[760px] lg:overflow-y-auto">
-        <h3 className="font-anek font-bold text-lg md:text-xl text-[#0b2540] mb-4">
-          Events in {monthLabel.split(' ')[0]}
-        </h3>
-        {monthEvents.length === 0 && (
-          <p className="font-noto text-sm text-[#667085]">No events this month.</p>
-        )}
-        <ul className="space-y-3">
-          {monthEvents.map(event => {
-            const isOpen = selectedId === event.id;
-            const isPast = now !== null && event.end < now;
-            const kind = eventKind(event.title);
-            return (
-              <li key={event.id} className={`rounded-xl border transition-colors ${isOpen ? 'border-[#419372] bg-[#F6FBF8]' : 'border-[#EAECF0] hover:border-[#B7DCCB]'}`}>
-                <button onClick={() => select(event)} className="w-full text-left flex gap-3 p-3" aria-expanded={isOpen}>
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex flex-col items-center justify-center ${isPast ? 'bg-[#F2F4F7] text-[#667085]' : 'bg-[#419372] text-white'}`}>
-                    <span className="font-anek font-bold text-lg leading-none">{ist(event.start, { day: 'numeric' })}</span>
-                    <span className="font-anek text-[10px] uppercase tracking-wider">{ist(event.start, { weekday: 'short' })}</span>
-                  </div>
-                  <div className="min-w-0">
-                    <span className="inline-flex items-center gap-1.5 font-noto text-[11px] text-[#667085] mb-0.5">
-                      <span className={`w-1.5 h-1.5 rounded-full ${KIND_STYLES[kind].dot}`} />
-                      {kind}{isPast ? ' · Past' : ''}
-                    </span>
-                    <p className="font-anek font-semibold text-base leading-snug text-[#0b2540]">{event.title}</p>
-                  </div>
-                </button>
-
-                {isOpen && (
-                  <div className="px-3 pb-4 pl-[72px] space-y-2">
-                    <p className="flex items-center gap-1.5 font-noto text-sm text-[#475467]">
-                      <Clock size={14} className="flex-shrink-0" /> {timeRange(event)}
-                    </p>
-                    <p className="flex items-start gap-1.5 font-noto text-sm text-[#475467]">
-                      {event.location ? <MapPin size={14} className="flex-shrink-0 mt-0.5" /> : <Video size={14} className="flex-shrink-0 mt-0.5" />}
-                      {event.location ?? 'Online'}
-                    </p>
-                    {event.summary && (
-                      <p className="font-noto text-sm leading-relaxed text-[#344054] line-clamp-5">{event.summary}</p>
-                    )}
-                    {event.registrationUrl && !isPast && (
-                      <a
-                        href={event.registrationUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-5 py-2 mt-1 bg-[#419372] text-white rounded-full font-anek font-medium text-sm hover:bg-[#357a5e] transition-colors"
-                      >
-                        Register
-                      </a>
-                    )}
-                  </div>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      {/* Event details pop-up */}
+      {openEvents && (
+        <div
+          className="fixed inset-0 z-50 bg-black/40 flex items-end sm:items-center justify-center p-0 sm:p-6"
+          onClick={() => setOpenEvents(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="relative bg-white w-full sm:max-w-lg max-h-[85vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl shadow-xl p-6 md:p-8"
+            onClick={e => e.stopPropagation()}
+          >
+            <button onClick={() => setOpenEvents(null)} aria-label="Close" className="absolute top-4 right-4 p-1.5 rounded-full hover:bg-gray-100 text-[#667085]">
+              <X size={20} />
+            </button>
+            <div className="divide-y divide-[#EAECF0] [&>*:not(:first-child)]:pt-6 [&>*:not(:last-child)]:pb-6">
+              {openEvents.map(event => <EventDetails key={event.id} event={event} isPast={isPast(event)} />)}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
