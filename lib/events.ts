@@ -18,6 +18,7 @@ export interface CalendarEvent {
   end: string;
   location: string | null; // venue for in-person events, null when online
   registrationUrl: string | null;
+  recordingUrl: string | null; // YouTube recording of a past event
   summary: string; // plain-text description, shortened
 }
 
@@ -75,6 +76,7 @@ export function parseIcal(ics: string): CalendarEvent[] {
         const description = unescapeText(get('DESCRIPTION'));
         const location = unescapeText(get('LOCATION')).trim();
         const urls = `${location} ${description}`.match(/https?:\/\/[^\s"<>]+/g) ?? [];
+        const isYouTube = (url: string) => /youtube\.com|youtu\.be/.test(url);
         const start = parseIcalDate(current.DTSTART.value);
         events.push({
           id: get('UID'),
@@ -82,8 +84,12 @@ export function parseIcal(ics: string): CalendarEvent[] {
           start,
           end: current.DTEND ? parseIcalDate(current.DTEND.value) : start,
           location: location && !/^https?:\/\//.test(location) ? location : null,
-          registrationUrl: urls[0] ?? null,
-          summary: shorten(htmlToText(description).replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, ''), 600),
+          registrationUrl: urls.find(url => !isYouTube(url)) ?? null,
+          // Added to the calendar event by hand as "Recording: <YouTube link>"
+          recordingUrl: urls.find(isYouTube) ?? null,
+          summary: shorten(htmlToText(description)
+            .replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, '')
+            .replace(/Recording\s*[:-]\s*https?:\/\/\S+\s*/i, ''), 600),
         });
       }
       current = null;
@@ -98,10 +104,66 @@ export function parseIcal(ics: string): CalendarEvent[] {
   return events;
 }
 
+/*
+ * Recordings: past community meetups are matched to videos on the Avni YouTube channel.
+ * YouTube's public feeds list the latest 15 videos of the channel and of the meetup playlist.
+ */
+const YOUTUBE_FEEDS = [
+  'https://www.youtube.com/feeds/videos.xml?channel_id=UCShsfKJlw0B3B6Pg2DmQkSQ',
+  'https://www.youtube.com/feeds/videos.xml?playlist_id=PLEy8ff0CKDBl1qKXjYPFXH63MHnvogxyi', // Monthly Community Meetup
+];
+const RECORDING_UPLOAD_WINDOW_DAYS = 45;
+const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+interface Video { title: string; url: string; published: string }
+
+async function fetchVideos(): Promise<Video[]> {
+  const feeds = await Promise.all(YOUTUBE_FEEDS.map(async url => {
+    try {
+      const res = await fetch(url, { next: { revalidate: 3600 } });
+      return res.ok ? await res.text() : '';
+    } catch {
+      return '';
+    }
+  }));
+  const videos = new Map<string, Video>();
+  for (const xml of feeds) {
+    for (const [, entry] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
+      const id = entry.match(/<yt:videoId>([^<]+)/)?.[1];
+      const title = entry.match(/<title>([^<]*)/)?.[1];
+      const published = entry.match(/<published>([^<]+)/)?.[1];
+      if (id && title && published) {
+        videos.set(id, { title: htmlToText(title), url: `https://www.youtube.com/watch?v=${id}`, published });
+      }
+    }
+  }
+  return [...videos.values()];
+}
+
+// A meetup's recording: a "meetup" video naming the meetup's month, uploaded soon after it
+function findRecording(event: CalendarEvent, videos: Video[]): string | null {
+  const start = new Date(event.start);
+  const month = MONTHS[Number(new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', month: 'numeric' }).format(start)) - 1];
+  const latest = start.getTime() + RECORDING_UPLOAD_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+  const match = videos.find(video => {
+    const title = video.title.toLowerCase();
+    const published = new Date(video.published).getTime();
+    return /meet\s?up/.test(title)
+      && (title.includes(month) || new RegExp(`\\b${month.slice(0, 3)}\\b`).test(title))
+      && published >= start.getTime() && published <= latest;
+  });
+  return match?.url ?? null;
+}
+
 async function fetchEvents(): Promise<CalendarEvent[]> {
   const res = await fetch(ICAL_URL, { next: { revalidate: 3600 } });
   if (!res.ok) return [];
-  return parseIcal(await res.text()).sort((a, b) => a.start.localeCompare(b.start));
+  const events = parseIcal(await res.text()).sort((a, b) => a.start.localeCompare(b.start));
+  const videos = await fetchVideos();
+  return events.map(event =>
+    event.recordingUrl || eventKind(event.title) !== 'Community Meetup'
+      ? event
+      : { ...event, recordingUrl: findRecording(event, videos) });
 }
 
 /**

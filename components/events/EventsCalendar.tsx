@@ -7,7 +7,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight, Clock, MapPin, Video, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Clock, MapPin, PlayCircle, Video, X } from 'lucide-react';
 import { CalendarEvent, EventKind, eventKind } from '@/lib/events';
 
 interface EventsCalendarProps {
@@ -80,6 +80,17 @@ function EventDetails({ event, isPast }: { event: CalendarEvent; isPast: boolean
       </div>
       {event.summary && <p className="font-noto text-sm leading-relaxed text-[#344054]">{event.summary}</p>}
       {!isPast && <RegisterButton event={event} />}
+      {isPast && event.recordingUrl && (
+        <a
+          href={event.recordingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2 border-2 border-[#419372] text-[#2a7559] rounded-full font-anek font-medium text-sm hover:bg-[#419372] hover:text-white transition-colors"
+        >
+          <PlayCircle size={18} />
+          Watch recording
+        </a>
+      )}
     </div>
   );
 }
@@ -208,7 +219,10 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
                         className={`block w-full text-left rounded-md px-1.5 py-1 font-noto text-[11px] leading-[14px] font-medium transition-colors cursor-pointer ${KIND_STYLES[eventKind(event.title)].chip} ${isPast(event) ? 'opacity-60' : ''}`}
                         title={event.title}
                       >
-                        <span className="block opacity-75">{shortTime(event.start)}</span>
+                        <span className="flex items-center gap-1 opacity-75">
+                          {shortTime(event.start)}
+                          {isPast(event) && event.recordingUrl && <PlayCircle size={11} aria-label="Recording available" />}
+                        </span>
                         <span className="line-clamp-2">{event.title}</span>
                       </button>
                     ))}
