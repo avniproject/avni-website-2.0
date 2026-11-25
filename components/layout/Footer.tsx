@@ -108,7 +108,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/events" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="/resources/events" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Events
                 </Link>
               </li>
