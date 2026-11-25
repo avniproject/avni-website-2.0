@@ -67,9 +67,15 @@ export default function ContactForm() {
         </div>
       </div>
 
-      <div>
-        <label htmlFor="contact-organisation" className={labelClass}>Organisation</label>
-        <input id="contact-organisation" name="organisation" type="text" className={inputClass} placeholder="Your NGO or organisation" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label htmlFor="contact-phone" className={labelClass}>Phone / WhatsApp</label>
+          <input id="contact-phone" name="phone" type="tel" autoComplete="tel" className={inputClass} placeholder="+91 98765 43210" />
+        </div>
+        <div>
+          <label htmlFor="contact-organisation" className={labelClass}>Organisation</label>
+          <input id="contact-organisation" name="organisation" type="text" className={inputClass} placeholder="Your NGO or organisation" />
+        </div>
       </div>
 
       <div>

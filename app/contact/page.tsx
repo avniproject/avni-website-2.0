@@ -46,6 +46,8 @@ const EMAIL_CONTACTS = [
   },
 ];
 
+const OFFICE_ADDRESS = '1st Floor, 147, 10th Cross Rd, Binnamangala, Hoysala Nagar, Indiranagar, Bengaluru, Karnataka 560038';
+
 const cardClass = 'flex gap-4 bg-white rounded-2xl shadow-sm p-5';
 const iconClass = 'flex-shrink-0 w-10 h-10 rounded-xl bg-[#E8F3EE] text-[#2a7559] flex items-center justify-center';
 
@@ -112,11 +114,19 @@ export default function ContactPage() {
                   <div className={iconClass}><MapPin size={20} /></div>
                   <div>
                     <h3 className="font-anek font-semibold text-lg text-[#0b2540]">Office</h3>
-                    <p className="font-noto text-sm leading-relaxed text-[#475467]">
+                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-3">
                       Samanvay Research &amp; Development Foundation<br />
-                      1st Floor, 147, 10th Cross Rd, Binnamangala, Hoysala Nagar, Indiranagar,
-                      Bengaluru, Karnataka 560038
+                      {OFFICE_ADDRESS}
                     </p>
+                    <a
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Samanvay Research and Development Foundation, ${OFFICE_ADDRESS}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-[#E8F3EE] font-noto text-[13px] font-semibold text-[#1f5a43] hover:bg-[#d3eadf] transition-colors"
+                    >
+                      <MapPin size={16} />
+                      Open in Google Maps
+                    </a>
                   </div>
                 </div>
               </div>
