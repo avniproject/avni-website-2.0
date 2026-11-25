@@ -99,7 +99,7 @@ export function parseIcal(ics: string): CalendarEvent[] {
 }
 
 async function fetchEvents(): Promise<CalendarEvent[]> {
-  const res = await fetch(ICAL_URL, { cache: 'no-store' });
+  const res = await fetch(ICAL_URL, { next: { revalidate: 3600 } });
   if (!res.ok) return [];
   return parseIcal(await res.text()).sort((a, b) => a.start.localeCompare(b.start));
 }
