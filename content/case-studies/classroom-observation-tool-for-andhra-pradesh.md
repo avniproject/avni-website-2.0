@@ -9,6 +9,7 @@ date: '2024-05-13'
 author: Vinay Venu
 readTime: 4 min read
 sector: Education
+logo: /logos/LFE-logo.webp
 tags:
   - Education
   - Government

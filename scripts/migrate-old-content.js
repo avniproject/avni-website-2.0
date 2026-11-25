@@ -109,6 +109,7 @@ const CASE_STUDY_OVERRIDES = {
   '2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study': { logo: '/logos/Project-Potential-logo.webp' },
   '2025-05-28-bridging-the-nutrition-gap-apf-odisha': { logo: '/logos/Azim-Premji-Foundation-logo.webp' },
   '2025-07-31-scoring-for-equality': { sector: 'Sports', logo: '/logos/Maitrayana-logo.webp' },
+  'classroom-observation-tool-for-andhra-pradesh': { logo: '/logos/LFE-logo.webp' },
 };
 
 const redirects = {};
