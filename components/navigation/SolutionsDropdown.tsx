@@ -8,6 +8,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { externalLinkProps } from '@/lib/utils';
 import { solutionsItems } from '@/data/navigation';
 
 interface SolutionsDropdownProps {
@@ -42,6 +43,7 @@ export default function SolutionsDropdown({ isOpen, onClose, onMouseEnter, onMou
                 <Link
                   key={solution.id}
                   href={solution.link}
+                  {...externalLinkProps(solution.link)}
                   className="flex gap-[12px] group p-[6px] rounded-[12px] transition-all hover:bg-[#fff5f0] hover:shadow-sm"
                   onClick={onClose}
                 >

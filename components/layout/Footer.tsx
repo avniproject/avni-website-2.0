@@ -20,17 +20,17 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 md:space-y-4">
               <li>
-                <Link href="https://avni.readme.io/docs/getting-started" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="https://avni.readme.io/docs/getting-started" target="_blank" rel="noopener noreferrer" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Introduction
                 </Link>
               </li>
               <li>
-                <Link href="https://avni.readme.io/docs/architecture" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="https://avni.readme.io/docs/architecture" target="_blank" rel="noopener noreferrer" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Design
                 </Link>
               </li>
               <li>
-                <Link href="https://avni.readme.io/docs/database-guide" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="https://avni.readme.io/docs/database-guide" target="_blank" rel="noopener noreferrer" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Database Guide
                 </Link>
               </li>
@@ -40,7 +40,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://avni.readme.io/docs/roadmap" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="https://avni.readme.io/docs/roadmap" target="_blank" rel="noopener noreferrer" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Roadmap
                 </Link>
               </li>
@@ -74,7 +74,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://avni.readme.io/docs/avni-code-of-conduct" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="https://avni.readme.io/docs/avni-code-of-conduct" target="_blank" rel="noopener noreferrer" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   Code Of Conduct
                 </Link>
               </li>

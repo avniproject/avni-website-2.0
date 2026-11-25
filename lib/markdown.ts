@@ -50,6 +50,12 @@ function lazyLoadImages(html: string): string {
   return html.replace(/<img (?![^>]*\bloading=)/g, '<img loading="lazy" decoding="async" ');
 }
 
+// Links to other websites open in a new tab, so readers don't leave the post
+function openExternalLinksInNewTab(html: string): string {
+  return html.replace(/<a (?![^>]*\btarget=)([^>]*\bhref="https?:\/\/(?!(www\.)?avniproject\.org[/"])[^>]*)>/g,
+    '<a target="_blank" rel="noopener noreferrer" $1>');
+}
+
 /**
  * Get all case study slugs
  */
@@ -83,7 +89,7 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
     const processedContent = await remark()
       .use(html, { sanitize: false })
       .process(content);
-    const htmlContent = lazyLoadImages(processedContent.toString());
+    const htmlContent = openExternalLinksInNewTab(lazyLoadImages(processedContent.toString()));
 
     // Determine featured status from centralized config
     const isFeatured = FEATURED_CASE_STUDIES.includes(data.title);
@@ -238,7 +244,7 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
     const processedContent = await remark()
       .use(html, { sanitize: false })
       .process(content);
-    const htmlContent = lazyLoadImages(processedContent.toString());
+    const htmlContent = openExternalLinksInNewTab(lazyLoadImages(processedContent.toString()));
 
     // Determine featured status from centralized config
     const isFeatured = FEATURED_BLOGS.includes(data.title);

@@ -9,6 +9,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { externalLinkProps } from '@/lib/utils';
 import { productServicesTabs, servicesItems, useCasesItems, featuredBlog } from '@/data/navigation';
 
 interface ProductServicesDropdownProps {
@@ -76,6 +77,7 @@ export default function ProductServicesDropdown({ isOpen, onClose, onMouseEnter,
                   <Link
                     key={service.id}
                     href={service.link}
+                    {...externalLinkProps(service.link)}
                     className="flex gap-[16px] group p-[6px] rounded-[12px] transition-all hover:bg-[#fff5f0] hover:shadow-sm"
                     onClick={onClose}
                   >
@@ -112,6 +114,7 @@ export default function ProductServicesDropdown({ isOpen, onClose, onMouseEnter,
                   <Link
                     key={useCase.id}
                     href={useCase.link}
+                    {...externalLinkProps(useCase.link)}
                     className="flex gap-[16px] group p-[6px] rounded-[12px] transition-all hover:bg-[#fff5f0] hover:shadow-sm"
                     onClick={onClose}
                   >

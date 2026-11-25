@@ -143,3 +143,10 @@ export async function copyToClipboard(text: string): Promise<boolean> {
     return false;
   }
 }
+
+/**
+ * Props that make a link to another website open in a new tab
+ */
+export function externalLinkProps(href: string) {
+  return /^https?:\/\//.test(href) ? { target: '_blank', rel: 'noopener noreferrer' } : {};
+}

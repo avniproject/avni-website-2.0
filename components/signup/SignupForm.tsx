@@ -535,7 +535,7 @@ export default function SignupForm() {
         {/* Additional Info */}
         <p className="text-center font-noto text-xs text-[#999999] mt-6">
           Already have an account?{' '}
-          <a href="https://app.avniproject.org" className="text-[#419372] hover:underline font-medium">
+          <a href="https://app.avniproject.org" target="_blank" rel="noopener noreferrer" className="text-[#419372] hover:underline font-medium">
             Log in
           </a>
         </p>

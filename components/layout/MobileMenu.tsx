@@ -8,6 +8,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
+import { externalLinkProps } from '@/lib/utils';
 import Image from 'next/image';
 import { Menu, X, ChevronRight, ChevronLeft } from 'lucide-react';
 import { 
@@ -237,6 +238,8 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                   
                   <Link
                     href="https://app.avniproject.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={handleCloseAll}
                     className="block w-full min-h-[48px] py-3 text-center font-anek font-semibold text-base text-[#0b2540] border-2 border-gray-300 rounded-full hover:bg-[#419372] hover:border-[#419372] hover:text-white transition-all"
                   >
@@ -322,6 +325,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                     <Link
                       key={item.id}
                       href={item.link}
+                      {...externalLinkProps(item.link)}
                       onClick={handleCloseAll}
                       className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                     >
@@ -374,6 +378,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                       <Link
                         key={item.id}
                         href={item.link}
+                        {...externalLinkProps(item.link)}
                         onClick={handleCloseAll}
                         className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                       >
@@ -416,6 +421,7 @@ export default function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
                     <Link
                       key={item.id}
                       href={item.link}
+                      {...externalLinkProps(item.link)}
                       onClick={handleCloseAll}
                       className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                     >
