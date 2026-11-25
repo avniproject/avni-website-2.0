@@ -110,6 +110,8 @@ const CASE_STUDY_OVERRIDES = {
   '2025-05-28-bridging-the-nutrition-gap-apf-odisha': { logo: '/logos/Azim-Premji-Foundation-logo.webp' },
   '2025-07-31-scoring-for-equality': { sector: 'Sports', logo: '/logos/Maitrayana-logo.webp' },
   'classroom-observation-tool-for-andhra-pradesh': { logo: '/logos/LFE-logo.webp' },
+  '2025-05-02-ihmp-strengthening-adolescent-health': { logo: '/logos/IHMP-logo.webp' },
+  '2024-05-22-empowering-vision-care-chashma-tech4dev': { logo: '/logos/Sarva-Mangal-Family-Trust-logo.webp' },
 };
 
 const redirects = {};

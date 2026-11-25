@@ -9,6 +9,7 @@ date: '2024-05-22'
 author: The Avni Team
 readTime: 4 min read
 sector: Healthcare
+logo: /logos/Sarva-Mangal-Family-Trust-logo.webp
 tags:
   - Health
 ---

@@ -9,6 +9,7 @@ date: '2025-05-02'
 author: Avni Team
 readTime: 6 min read
 sector: Healthcare
+logo: /logos/IHMP-logo.webp
 tags:
   - Health
 ---
