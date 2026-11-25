@@ -1,68 +1,93 @@
 /**
  * Pricing Data
- * Prices and plan details for the Pricing page. Taken from the old site's pricing page;
- * edit here when the sales team updates them.
+ * Prices and plan details for the Pricing page. Taken from the old site's pricing and FAQ
+ * pages; edit here when the sales team updates them.
  */
+
+export interface PlanFeature {
+  label: string;
+  detail: string;
+}
+
+export interface HostingPrice {
+  size: string;
+  price: string;
+}
 
 export interface Plan {
   id: 'self-service' | 'assisted' | 'managed';
   name: string;
-  tagline: string;
+  bestFor: string;
   price: string;
   priceNote: string;
-  features: string[];
-  cta: { label: string; action: 'signup' | 'demo' | 'contact' };
-  highlighted?: boolean;
+  cta: { label: string; href: string };
+  features: PlanFeature[];
+  hostingTitle: string;
+  hosting: HostingPrice[];
+  badge?: string;
 }
 
+// Hosting limits per size: up to 20 users = 5,000 forms a month and 500 GB storage;
+// up to 100 users = 10,000 forms a month and 1 TB storage. Prices per month, paid upfront annually.
 export const plans: Plan[] = [
   {
     id: 'self-service',
     name: 'Self-Service',
-    tagline: 'Build your app and reports yourself',
+    bestFor: 'Simple projects: fewer than 5 forms with straightforward rules',
     price: 'Free',
-    priceNote: 'One month of free hosting',
+    priceNote: 'No setup fee',
+    cta: { label: 'Try for Free', href: '/signup' },
     features: [
-      'Build your app and reports on the Avni low-code platform',
-      'Support from the online community',
-      'One month of free hosting',
+      { label: 'Build it yourself', detail: 'Create your app and reports on the Avni low-code platform' },
+      { label: 'Community support', detail: 'Get help from the online Avni community' },
+      { label: 'Free first month', detail: 'One month of hosting at no cost' },
     ],
-    cta: { label: 'Try for Free', action: 'signup' },
+    hostingTitle: 'Hosting after the first month',
+    hosting: [
+      { size: 'Up to 20 users', price: '₹10,500' },
+      { size: 'Up to 100 users', price: '₹15,000' },
+      { size: 'More than 100 users', price: 'Custom quote' },
+    ],
   },
   {
     id: 'assisted',
     name: 'Assisted Self-Service',
-    tagline: 'Build it yourself, with training and expert help',
+    bestFor: 'Simple projects, with training so your team starts strong',
     price: '₹40,000',
     priceNote: 'One-time',
+    cta: { label: 'Sign Up', href: '/signup' },
     features: [
-      '12 hours of live training on the Avni low-code platform',
-      '8 hours of consulting support over the next month',
-      'One month of free hosting after training',
+      { label: 'Live training', detail: '12 hours of hands-on training on the Avni low-code platform' },
+      { label: 'Consulting support', detail: '8 hours of expert help over the following month' },
+      { label: 'Free first month', detail: 'One month of hosting at no cost after training' },
     ],
-    cta: { label: 'Sign Up', action: 'signup' },
-    highlighted: true,
+    hostingTitle: 'Hosting after the first month',
+    hosting: [
+      { size: 'Up to 20 users', price: '₹10,500' },
+      { size: 'Up to 100 users', price: '₹15,000' },
+      { size: 'More than 100 users', price: 'Custom quote' },
+    ],
+    badge: 'Includes training',
   },
   {
     id: 'managed',
     name: 'Avni Managed',
-    tagline: 'We build Avni to your needs',
+    bestFor: 'Complex programmes, or teams without time to build',
     price: 'Custom quote',
     priceNote: 'Based on your programme',
+    cta: { label: 'Talk to Us', href: '/contact' },
     features: [
-      'We build and configure Avni for your programme',
-      'Migration from your existing system, or integration with other systems',
-      'Training for your master trainers',
+      { label: 'Built for you', detail: 'We configure Avni to your programme’s needs' },
+      { label: 'Migration and integration', detail: 'Move from your existing system, or connect Avni to other systems' },
+      { label: 'Train the trainers', detail: 'We train your master trainers to roll Avni out' },
     ],
-    cta: { label: 'Talk to Us', action: 'contact' },
+    hostingTitle: 'Hosting after go-live',
+    hosting: [
+      { size: 'Up to 20 users', price: '₹7,000' },
+      { size: 'Up to 100 users', price: '₹10,000' },
+      { size: 'More than 100 users', price: 'Custom quote' },
+    ],
   },
-];
-
-// Avni Cloud Hosting, per month, paid upfront annually
-export const hostingTiers = [
-  { size: 'Up to 20 users', limits: '5,000 forms a month · 500 GB storage', selfService: '₹10,500', managed: '₹7,000' },
-  { size: 'Up to 100 users', limits: '10,000 forms a month · 1 TB storage', selfService: '₹15,000', managed: '₹10,000' },
-  { size: 'More than 100 users', limits: 'Higher limits to suit your programme', selfService: 'Custom quote', managed: 'Custom quote' },
 ];
 
 export const hostingIncludes = [
@@ -71,23 +96,50 @@ export const hostingIncludes = [
   'Data backups',
   'Maintenance of your app on the Play Store',
   'Priority support for your field users',
-  'Metabase or Superset for reports and dashboards, pre-installed',
+  'Metabase or Superset for reports, pre-installed',
 ];
 
-export const planGuidance = [
+// Shown as "Work with Avni experts"; descriptions match the Services page
+export const expertServices = [
   {
-    plan: 'Self-Service',
-    when: 'Your project is simple',
-    detail: 'A simple project has fewer than 5 forms with straightforward rules. If you could build it in Google Forms, you can build it in Avni on your own.',
+    title: 'Implementation',
+    detail: 'We turn your programme needs into a working Avni app, from mapping requirements to rollout.',
+    points: ['Requirement analysis and programme mapping', 'Form and workflow configuration', 'Data migration and testing', 'Go-live support'],
+    href: '/services#implementation',
   },
   {
-    plan: 'Assisted Self-Service',
-    when: 'Your project is simple, and you want a strong start',
-    detail: 'New users often need some hand-holding. The training and consulting hours help your team get the most out of Avni from day one.',
+    title: 'Training & Support',
+    detail: 'Hands-on training and ongoing support so your team can run Avni with confidence.',
+    points: ['Structured onboarding sessions', 'Admin and field worker training', 'Ongoing technical support'],
+    href: '/services#training-support',
   },
   {
-    plan: 'Avni Managed',
-    when: 'Your project is complex, or your team is stretched',
-    detail: 'If your programme has many forms and rules, or nobody on your team has the time to build it, we build it with you.',
+    title: 'Dedicated Hosting',
+    detail: 'Run Avni on your own servers or private cloud, for full control over data and infrastructure.',
+    points: ['Full control over data and infrastructure', 'Custom security and compliance settings', 'Optional technical guidance from the Avni team'],
+    href: '/services#dedicated-hosting',
+  },
+];
+
+export const pricingFaqs = [
+  {
+    question: 'If Avni is open source, why do I have to pay?',
+    answer: 'You don’t pay for the software, it is free. The plans cover the people and computing costs of building your app and hosting it on the Avni cloud.',
+  },
+  {
+    question: 'Can I host Avni myself?',
+    answer: 'Yes. You can run Avni on your own servers at no licence cost. A typical setup on AWS costs around ₹12,000 a month, excluding the people who manage it. Our documentation explains the components you need.',
+  },
+  {
+    question: 'How is hosting billed?',
+    answer: 'Hosting is priced per month and paid upfront for the year. Self-Service and Assisted plans include the first month free.',
+  },
+  {
+    question: 'Are taxes included?',
+    answer: 'No, all prices are exclusive of taxes.',
+  },
+  {
+    question: 'Can I modify Avni?',
+    answer: 'Yes, under the terms of the AGPL 3 licence.',
   },
 ];
