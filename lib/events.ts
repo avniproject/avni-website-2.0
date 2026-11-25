@@ -9,7 +9,7 @@ export const EVENTS_CALENDAR_ID = 'c_1f28563b52f3a01f8f7ceee9c339700e8dbb256a398
 const ICAL_URL = `https://calendar.google.com/calendar/ical/${encodeURIComponent(EVENTS_CALENDAR_ID)}/public/basic.ics`;
 
 // Opens Google Calendar with an "Add this calendar" prompt
-export const SUBSCRIBE_URL = `https://calendar.google.com/calendar/u/0?cid=${Buffer.from(EVENTS_CALENDAR_ID).toString('base64')}`;
+export const SUBSCRIBE_URL = `https://calendar.google.com/calendar/u/0?cid=${btoa(EVENTS_CALENDAR_ID)}`;
 
 export interface CalendarEvent {
   id: string;
@@ -19,6 +19,14 @@ export interface CalendarEvent {
   location: string | null; // venue for in-person events, null when online
   registrationUrl: string | null;
   summary: string; // plain-text description, shortened
+}
+
+export type EventKind = 'Webinar' | 'Community Meetup' | 'Workshop';
+
+export function eventKind(title: string): EventKind {
+  if (/meetup/i.test(title)) return 'Community Meetup';
+  if (/webinar|q&a/i.test(title)) return 'Webinar';
+  return 'Workshop';
 }
 
 // Turns an iCal date (20261124T093000Z, or 20250506T150000 with TZID=Asia/Kolkata, or 20250506) into ISO
@@ -67,7 +75,7 @@ export function parseIcal(ics: string): CalendarEvent[] {
           end: current.DTEND ? parseIcalDate(current.DTEND.value) : start,
           location: location && !/^https?:\/\//.test(location) ? location : null,
           registrationUrl: urls[0] ?? null,
-          summary: htmlToText(description).replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, '').slice(0, 220),
+          summary: htmlToText(description).replace(/^Registration\s*-\s*https?:\/\/\S+\s*/i, '').slice(0, 600),
         });
       }
       current = null;
@@ -82,19 +90,19 @@ export function parseIcal(ics: string): CalendarEvent[] {
   return events;
 }
 
+async function fetchEvents(): Promise<CalendarEvent[]> {
+  const res = await fetch(ICAL_URL, { cache: 'no-store' });
+  if (!res.ok) return [];
+  return parseIcal(await res.text()).sort((a, b) => a.start.localeCompare(b.start));
+}
+
 /**
- * Upcoming events, soonest first. Returns [] if the calendar can't be reached,
+ * All events, oldest first. Returns [] if the calendar can't be reached,
  * so the build never fails because of it.
  */
-export async function getUpcomingEvents(limit = 6): Promise<CalendarEvent[]> {
+export async function getAllEvents(): Promise<CalendarEvent[]> {
   try {
-    const res = await fetch(ICAL_URL, { cache: 'no-store' });
-    if (!res.ok) return [];
-    const now = Date.now();
-    return parseIcal(await res.text())
-      .filter(event => new Date(event.end).getTime() >= now)
-      .sort((a, b) => a.start.localeCompare(b.start))
-      .slice(0, limit);
+    return await fetchEvents();
   } catch {
     return [];
   }

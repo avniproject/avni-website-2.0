@@ -1,19 +1,20 @@
 /**
  * Events Page
- * Upcoming: read from the Avni Events Google Calendar when the site is built (lib/events.ts),
+ * Calendar: read from the Avni Events Google Calendar when the site is built (lib/events.ts),
  * so the team keeps adding events in Google Calendar.
  * Past: blog posts in the Events category.
  */
 
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { CalendarPlus, MapPin, Video } from 'lucide-react';
+import { CalendarPlus } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BlogCard from '@/components/blog/BlogCard';
-import { getUpcomingEvents, SUBSCRIBE_URL, CalendarEvent } from '@/lib/events';
+import EventsCalendar from '@/components/events/EventsCalendar';
+import { getAllEvents, SUBSCRIBE_URL } from '@/lib/events';
 import { getBlogsByCategory } from '@/lib/markdown';
 
 export const metadata: Metadata = {
@@ -31,46 +32,8 @@ export const metadata: Metadata = {
 
 const PAST_EVENTS_SHOWN = 6;
 
-const inIndia = (iso: string, options: Intl.DateTimeFormatOptions) =>
-  new Intl.DateTimeFormat('en-IN', { timeZone: 'Asia/Kolkata', ...options }).format(new Date(iso));
-
-function EventCard({ event }: { event: CalendarEvent }) {
-  const time = `${inIndia(event.start, { weekday: 'long', hour: 'numeric', minute: '2-digit' })} – ${inIndia(event.end, { hour: 'numeric', minute: '2-digit' })} IST`;
-
-  return (
-    <article className="flex gap-4 md:gap-6 bg-white rounded-2xl shadow-sm p-5 md:p-6">
-      <div className="flex-shrink-0 w-16 md:w-20 h-16 md:h-20 rounded-xl bg-[#419372] text-white flex flex-col items-center justify-center">
-        <span className="font-anek font-bold text-2xl md:text-3xl leading-none">{inIndia(event.start, { day: 'numeric' })}</span>
-        <span className="font-anek font-medium text-xs md:text-sm uppercase tracking-wider mt-1">{inIndia(event.start, { month: 'short' })}</span>
-      </div>
-
-      <div className="flex-1 min-w-0">
-        <h3 className="font-anek font-bold text-lg md:text-xl leading-snug text-[#0b2540] mb-2">{event.title}</h3>
-        <p className="font-noto text-sm text-[#475467] mb-1">{time}</p>
-        <p className="font-noto text-sm text-[#475467] flex items-center gap-1.5 mb-3">
-          {event.location ? <MapPin size={15} className="flex-shrink-0" /> : <Video size={15} className="flex-shrink-0" />}
-          <span className="truncate">{event.location ?? 'Online'}</span>
-        </p>
-        {event.summary && (
-          <p className="font-noto text-sm leading-relaxed text-[#344054] line-clamp-2 mb-4">{event.summary}</p>
-        )}
-        {event.registrationUrl && (
-          <a
-            href={event.registrationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2 bg-[#419372] text-white rounded-full font-anek font-medium text-sm hover:bg-[#357a5e] transition-colors"
-          >
-            Register
-          </a>
-        )}
-      </div>
-    </article>
-  );
-}
-
 export default async function EventsPage() {
-  const upcomingEvents = await getUpcomingEvents();
+  const events = await getAllEvents();
   const pastEvents = (await getBlogsByCategory('Events')).slice(0, PAST_EVENTS_SHOWN);
 
   return (
@@ -94,39 +57,22 @@ export default async function EventsPage() {
           </Container>
         </Section>
 
-        {/* Upcoming */}
+        {/* Calendar */}
         <Section spacing="md">
           <Container>
-            <div className="max-w-4xl mx-auto">
-              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
-                <h2 className="font-anek font-bold text-2xl md:text-3xl text-[#0b2540]">Upcoming Events</h2>
-                <a
-                  href={SUBSCRIBE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 font-noto font-medium text-sm text-[#2a7559] hover:text-[#1f5a43]"
-                >
-                  <CalendarPlus size={18} />
-                  Add Avni events to your Google Calendar
-                </a>
-              </div>
-
-              {upcomingEvents.length > 0 ? (
-                <div className="space-y-4">
-                  {upcomingEvents.map(event => <EventCard key={event.id} event={event} />)}
-                </div>
-              ) : (
-                <div className="bg-white rounded-2xl shadow-sm p-8 text-center">
-                  <p className="font-noto text-base text-[#344054]">
-                    No upcoming events right now. Follow us on{' '}
-                    <a href="https://www.linkedin.com/showcase/avniproject/" target="_blank" rel="noopener noreferrer" className="text-[#2a7559] font-medium underline underline-offset-2">
-                      LinkedIn
-                    </a>{' '}
-                    to hear about the next one.
-                  </p>
-                </div>
-              )}
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
+              <h2 className="font-anek font-bold text-2xl md:text-3xl text-[#0b2540]">Event Calendar</h2>
+              <a
+                href={SUBSCRIBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-noto font-medium text-sm text-[#2a7559] hover:text-[#1f5a43]"
+              >
+                <CalendarPlus size={18} />
+                Add Avni events to your Google Calendar
+              </a>
             </div>
+            <EventsCalendar events={events} />
           </Container>
         </Section>
 
