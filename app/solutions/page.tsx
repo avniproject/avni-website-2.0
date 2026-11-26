@@ -25,6 +25,10 @@ const solutions = [
   'Sports'
 ];
 
+// URL-friendly name for a solution, used in ?sector= so each tab can be shared,
+// e.g. 'Water & Sanitation' -> 'water-sanitation'
+const toSlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 // Content for each solution
 const solutionContent = {
   'Education': {
@@ -259,11 +263,19 @@ function SolutionsContent() {
 
   // Handle URL parameter for pre-selected solution
   useEffect(() => {
-    const solution = searchParams.get('solution');
+    // ?sector=water-sanitation; ?solution=Water & Sanitation is the older form of the same link
+    const sector = searchParams.get('sector');
+    const solution = solutions.find(s => toSlug(s) === sector) ?? searchParams.get('solution');
     if (solution && solutions.includes(solution)) {
       setActiveTab(solution);
     }
   }, [searchParams]);
+
+  // Selecting a tab updates the address, so the page can be shared open on that sector
+  const selectTab = (solution: string) => {
+    setActiveTab(solution);
+    window.history.replaceState(null, '', `?sector=${toSlug(solution)}`);
+  };
 
   const currentContent = solutionContent[activeTab as keyof typeof solutionContent];
 
@@ -284,7 +296,7 @@ function SolutionsContent() {
                 {solutions.map((solution) => (
                   <button
                     key={solution}
-                    onClick={() => setActiveTab(solution)}
+                    onClick={() => selectTab(solution)}
                     className={`px-4 py-2 font-anek text-[15px] whitespace-nowrap transition-all relative ${
                       activeTab === solution
                         ? 'font-bold text-[#0a1f3d]'
@@ -307,7 +319,7 @@ function SolutionsContent() {
                   {solutions.map((solution) => (
                     <button
                       key={solution}
-                      onClick={() => setActiveTab(solution)}
+                      onClick={() => selectTab(solution)}
                       className={`w-full text-left px-4 py-3 font-anek text-[16px] leading-[24px] transition-all ${
                         activeTab === solution
                           ? 'font-bold text-[#0a1f3d]'
