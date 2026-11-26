@@ -11,6 +11,7 @@ export interface PlanFeature {
 
 export interface HostingPrice {
   size: string;
+  limits?: string;
   price: string;
 }
 
@@ -27,8 +28,7 @@ export interface Plan {
   badge?: string;
 }
 
-// Hosting limits per size: up to 20 users = 5,000 forms a month and 500 GB storage;
-// up to 100 users = 10,000 forms a month and 1 TB storage. Prices per month, paid upfront annually.
+// Hosting prices are per month, paid upfront annually
 export const plans: Plan[] = [
   {
     id: 'self-service',
@@ -44,8 +44,8 @@ export const plans: Plan[] = [
     ],
     hostingTitle: 'Hosting after the first month',
     hosting: [
-      { size: 'Up to 20 users', price: '₹10,500' },
-      { size: 'Up to 100 users', price: '₹15,000' },
+      { size: 'Up to 20 users', limits: '5,000 forms a month · 500 GB', price: '₹10,500' },
+      { size: 'Up to 100 users', limits: '10,000 forms a month · 1 TB', price: '₹15,000' },
       { size: 'More than 100 users', price: 'Custom quote' },
     ],
   },
@@ -63,8 +63,8 @@ export const plans: Plan[] = [
     ],
     hostingTitle: 'Hosting after the first month',
     hosting: [
-      { size: 'Up to 20 users', price: '₹10,500' },
-      { size: 'Up to 100 users', price: '₹15,000' },
+      { size: 'Up to 20 users', limits: '5,000 forms a month · 500 GB', price: '₹10,500' },
+      { size: 'Up to 100 users', limits: '10,000 forms a month · 1 TB', price: '₹15,000' },
       { size: 'More than 100 users', price: 'Custom quote' },
     ],
     badge: 'Includes training',
@@ -83,8 +83,8 @@ export const plans: Plan[] = [
     ],
     hostingTitle: 'Hosting after go-live',
     hosting: [
-      { size: 'Up to 20 users', price: '₹7,000' },
-      { size: 'Up to 100 users', price: '₹10,000' },
+      { size: 'Up to 20 users', limits: '5,000 forms a month · 500 GB', price: '₹7,000' },
+      { size: 'Up to 100 users', limits: '10,000 forms a month · 1 TB', price: '₹10,000' },
       { size: 'More than 100 users', price: 'Custom quote' },
     ],
   },

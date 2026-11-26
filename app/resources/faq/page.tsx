@@ -11,7 +11,7 @@ import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BookDemoLink from '@/components/ui/BookDemoLink';
-import FaqList from '@/components/faq/FaqList';
+import FaqBrowser from '@/components/faq/FaqBrowser';
 import { faqCategories } from '@/data/faqs';
 
 export const metadata: Metadata = {
@@ -39,20 +39,9 @@ export default function FaqPage() {
               <p className="font-anek font-medium text-sm md:text-base leading-tight text-[#fba47e] uppercase mb-3">
                 FAQ
               </p>
-              <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540] mb-6">
+              <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540]">
                 Frequently Asked Questions
               </h1>
-              <nav aria-label="FAQ categories" className="flex flex-wrap justify-center gap-2 md:gap-3">
-                {faqCategories.map(category => (
-                  <a
-                    key={category.id}
-                    href={`#${category.id}`}
-                    className="px-4 py-2 rounded-full border border-[#D0D5DD] font-noto text-sm font-medium text-[#344054] hover:border-[#419372] hover:text-[#2a7559] transition-colors"
-                  >
-                    {category.title}
-                  </a>
-                ))}
-              </nav>
             </div>
           </Container>
         </Section>
@@ -60,12 +49,7 @@ export default function FaqPage() {
         <Section spacing="md" bg="gray">
           <Container>
             <div className="max-w-3xl mx-auto space-y-12">
-              {faqCategories.map(category => (
-                <section key={category.id} id={category.id} className="scroll-mt-28">
-                  <h2 className="font-anek font-bold text-2xl md:text-3xl text-[#0b2540] mb-5">{category.title}</h2>
-                  <FaqList faqs={category.faqs} />
-                </section>
-              ))}
+              <FaqBrowser categories={faqCategories} />
 
               <div className="bg-white rounded-2xl shadow-sm p-6 md:p-8 text-center">
                 <MessageCircle size={32} className="mx-auto text-[#419372] mb-3" />

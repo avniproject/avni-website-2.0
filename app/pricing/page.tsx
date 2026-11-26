@@ -133,7 +133,10 @@ export default function PricingPage() {
                     <dl className="space-y-2">
                       {plan.hosting.map(row => (
                         <div key={row.size} className="flex justify-between gap-4 font-noto text-sm">
-                          <dt className="text-[#475467]">{row.size}</dt>
+                          <dt className="text-[#475467]">
+                            {row.size}
+                            {row.limits && <span className="block text-xs text-[#98A2B3]">{row.limits}</span>}
+                          </dt>
                           <dd className="font-semibold text-[#0b2540] text-right">
                             {row.price}{row.price.startsWith('₹') && <span className="font-normal text-[#667085]"> /month</span>}
                           </dd>
@@ -145,24 +148,20 @@ export default function PricingPage() {
               ))}
             </div>
 
+            <p className="max-w-6xl mx-auto mt-4 text-center font-noto text-sm text-[#667085]">
+              Hosting is paid upfront for the year. All prices exclude taxes.
+            </p>
+
             <div className="max-w-6xl mx-auto mt-8 bg-white rounded-2xl shadow-sm p-6 md:p-8">
-              <div className="flex flex-col md:flex-row md:items-start gap-6 md:gap-10">
-                <div className="md:w-1/3">
-                  <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">Every hosting plan includes</h3>
-                  <p className="font-noto text-sm text-[#667085]">
-                    Up to 20 users: 5,000 forms a month, 500 GB storage. Up to 100 users: 10,000 forms a month, 1 TB storage.
-                    Paid upfront annually. Prices exclude taxes.
-                  </p>
-                </div>
-                <ul className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                  {hostingIncludes.map(item => (
-                    <li key={item} className="flex gap-3 font-noto text-sm text-[#344054]">
-                      <Check size={18} className="flex-shrink-0 text-[#419372] mt-0.5" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-5">Every hosting plan includes</h3>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+                {hostingIncludes.map(item => (
+                  <li key={item} className="flex gap-3 font-noto text-sm text-[#344054]">
+                    <Check size={18} className="flex-shrink-0 text-[#419372] mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Container>
         </Section>
