@@ -5,6 +5,7 @@
  */
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Check, ChevronDown } from 'lucide-react';
 import Header from '@/components/layout/Header';
@@ -167,9 +168,11 @@ export default function PricingPage() {
                     {addOn.integratedWith && (
                       <div className="mb-4">
                         <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#667085] mb-2">Already integrated with</p>
-                        <div className="flex flex-wrap gap-2">
-                          {addOn.integratedWith.map(name => (
-                            <span key={name} className="px-3 py-1 rounded-full bg-[#E8F3EE] font-noto text-sm font-semibold text-[#1f5a43]">{name}</span>
+                        <div className="grid grid-cols-2 gap-2">
+                          {addOn.integratedWith.map(({ name, logo }) => (
+                            <div key={name} className="relative h-14 rounded-lg border border-[#EAECF0] bg-white" title={name}>
+                              <Image src={logo} alt={name} fill sizes="160px" className="object-contain px-4 py-2.5" />
+                            </div>
                           ))}
                         </div>
                       </div>

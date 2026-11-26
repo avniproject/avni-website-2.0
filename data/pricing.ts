@@ -101,7 +101,7 @@ export const hostingIncludes = [
 
 // Extras on top of any plan. Each "Get a quote" opens the contact form with `quoteFor` pre-filled.
 // To confirm with the sales team: which of these are sold separately
-export const addOns: { title: string; detail: string; points: string[]; integratedWith?: string[]; quoteFor: string }[] = [
+export const addOns: { title: string; detail: string; points: string[]; integratedWith?: { name: string; logo: string }[]; quoteFor: string }[] = [
   {
     title: 'Dedicated Hosting',
     detail: 'Run Avni on your own servers or private cloud, for full control over your data.',
@@ -118,7 +118,12 @@ export const addOns: { title: string; detail: string; points: string[]; integrat
     title: 'Integrations',
     detail: 'Connect Avni to the other systems your programme relies on.',
     points: ['WhatsApp messaging through Glific or Wati', 'Calls and SMS through Exotel', 'Hospital records with Bahmni', 'Custom integrations with your own systems'],
-    integratedWith: ['Bahmni', 'Exotel', 'Glific', 'Wati'],
+    integratedWith: [
+      { name: 'Bahmni', logo: '/logos/integrations/bahmni.webp' },
+      { name: 'Exotel', logo: '/logos/integrations/exotel.svg' },
+      { name: 'Glific', logo: '/logos/integrations/glific.svg' },
+      { name: 'Wati', logo: '/logos/integrations/wati.svg' },
+    ],
     quoteFor: 'Integrations',
   },
 ];
