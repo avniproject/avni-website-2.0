@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
+import PartnersBySector from "@/components/sections/PartnersBySector";
 import { OrganizationSchema, WebsiteSchema, SoftwareApplicationSchema } from '@/components/seo/StructuredData';
 import { generateMetadata as generateSEOMetadata } from '@/lib/seo/metadata';
 import { pageMetadata } from '@/lib/seo/config';
@@ -16,9 +17,6 @@ export const metadata: Metadata = generateSEOMetadata({
 });
 
 // Dynamic imports for below-the-fold components
-const TrustedBy = dynamic(() => import("@/components/sections/TrustedBy"), {
-  loading: () => <div className="h-32" />
-});
 const WhatAvniDoes = dynamic(() => import("@/components/sections/WhatAvniDoes"), {
   loading: () => <div className="h-screen" />
 });
@@ -56,7 +54,7 @@ export default function Home() {
       <AnnouncementBanner />
       <main>
         <Hero />
-        <TrustedBy />
+        <PartnersBySector />
         <WhatAvniDoes />
         <ImpactStories />
         <WhyChooseAvni />
