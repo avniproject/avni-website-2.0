@@ -124,6 +124,11 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
   }, [events]);
 
   const nextEvent = now ? events.find(e => e.end >= now) : undefined;
+  // Newest first; only YouTube links we can show a thumbnail for
+  const recordings = events
+    .map(event => ({ event, videoId: event.recordingUrl?.match(/(?:v=|youtu\.be\/|embed\/)([\w-]{11})/)?.[1] }))
+    .filter((r): r is { event: CalendarEvent; videoId: string } => Boolean(r.videoId))
+    .reverse();
   const isPast = (event: CalendarEvent) => now !== null && event.end < now;
   const monthPrefix = `${visible.year}-${pad(visible.month + 1)}`;
   const todayKey = now ? dayKey(now) : null;
@@ -159,6 +164,7 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
         </div>
       )}
 
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_300px] gap-6">
       {/* Month grid */}
       <div className="bg-white rounded-2xl shadow-sm p-4 md:p-6">
         <div className="flex items-center justify-between mb-4 md:mb-6">
@@ -244,6 +250,34 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
           </div>
           <span className="font-noto text-xs text-[#667085]">Click an event for details · Times in IST</span>
         </div>
+      </div>
+
+      {/* Recordings: on larger screens a column as tall as the calendar, scrolling inside */}
+      {recordings.length > 0 && (
+        <div className="lg:relative">
+          <div className="lg:absolute lg:inset-0 flex flex-col bg-white rounded-2xl shadow-sm p-4 md:p-5">
+            <h3 className="font-anek font-bold text-lg text-[#0b2540] mb-1">Meetup recordings</h3>
+            <p className="font-noto text-xs text-[#667085] mb-4">Watch past community meetups on YouTube</p>
+            <ul className="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto -mx-1 px-1 pb-1 lg:flex-1 lg:min-h-0">
+              {recordings.map(({ event, videoId }) => (
+                <li key={event.id} className="flex-shrink-0 w-56 lg:w-auto">
+                  <a href={event.recordingUrl!} target="_blank" rel="noopener noreferrer" className="group block">
+                    <span className="relative block aspect-video rounded-lg overflow-hidden bg-[#EAECF0]">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- remote YouTube thumbnail */}
+                      <img src={`https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`} alt="" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                      <span className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                        <PlayCircle size={36} className="text-white drop-shadow" />
+                      </span>
+                    </span>
+                    <span className="block font-noto text-xs text-[#667085] mt-2">{ist(event.start, { month: 'long', year: 'numeric' })}</span>
+                    <span className="font-anek font-semibold text-sm leading-snug text-[#0b2540] group-hover:text-[#2a7559] line-clamp-2">{event.title}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
       </div>
 
       {/* Event details pop-up */}
