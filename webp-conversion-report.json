@@ -1,12 +1,12 @@
 {
-  "timestamp": "2025-11-11T20:05:14.069Z",
+  "timestamp": "2026-11-26T10:09:47.965Z",
   "stats": {
-    "total": 40,
-    "converted": 39,
-    "skipped": 0,
+    "total": 42,
+    "converted": 34,
+    "skipped": 7,
     "errors": 1,
-    "originalSize": 6128449,
-    "webpSize": 707052
+    "originalSize": 3165484,
+    "webpSize": 425342
   },
   "config": {
     "quality": 80,

@@ -1,0 +1,16 @@
+# Old avniproject.org URLs that changed in the new site (301 = permanent).
+# Renamed posts come from config/old-site-redirects.json, written by scripts/migrate-old-content.js
+
+/blog/2022-10-20-avni-release-announcement%20copy/  /blog/2022-10-20-avni-release-announcement/  301
+/blog/2024-09-17-My-First-Field-Visit-to-Harsha-Trust-Seeing-Avni%E2%80%99s-Impact-in-Action/  /blog/2024-09-17-my-first-field-visit-to-harsha-trust-seeing-avnis-impact-in-action/  301
+/blog/Visiting%20BHS%2C%20Udaipur%3A%20Phulwaris%2C%20Peacocks%2C%20and%20the%20Live%20Growth%20Chart/  /blog/visiting-bhs-udaipur-phulwaris-peacocks-and-the-live-growth-chart/  301
+/blog/Visiting%20SEWA%20Rural%2C%20Jhagadia%3A%20Data%2C%20Discipline%2C%20and%20the%20River%20Narmada/  /blog/visiting-sewa-rural-jhagadia-data-discipline-and-the-river-narmada/  301
+/case-studies/calcutta-kids-%E2%80%94-avni-implemented-for-maternal-and-child-health-program/  /resources/case-studies/calcutta-kids-avni-implemented-for-maternal-and-child-health-program/  301
+
+# Case studies moved under /resources
+/case-studies/*  /resources/case-studies/:splat  301
+/case-studies  /resources/case-studies/  301
+
+# Old site pages with a new home
+/events/  /resources/events/  301
+/events  /resources/events/  301

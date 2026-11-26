@@ -83,18 +83,8 @@
     Cache-Control = "public, max-age=0, must-revalidate"
     Link = "</fonts/*>; rel=preload; as=font; crossorigin"
 
-# Redirects for SPA routing
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = false
-
-# 404 redirect
-[[redirects]]
-  from = "/404"
-  to = "/404/index.html"
-  status = 404
+# Page redirects (old site URLs) live in public/_redirects. No catch-all rule: this is a
+# static site, so unknown URLs must show the 404 page, not the homepage.
 
 # Performance optimizations
 [build.processing]
@@ -113,7 +103,4 @@
 
 [build.processing.images]
   compress = true
-
-# Enable Brotli compression
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# No @netlify/plugin-nextjs: the site is a static export (output: "export"), served as plain files
