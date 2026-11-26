@@ -190,7 +190,7 @@ export default function PricingPage() {
           <Container>
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8 md:mb-10">
-                <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Add-ons</h2>
+                <h2 id="add-ons" className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3 scroll-mt-28">Add-ons</h2>
                 <p className="font-noto text-base text-[#475467]">Add these to any plan. Tell us what you need and we&apos;ll send a quote.</p>
               </div>
               {/* Short add-ons stack on the left, beside the taller Integrations card */}
