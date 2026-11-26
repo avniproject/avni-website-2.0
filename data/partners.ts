@@ -14,7 +14,7 @@ export interface Partner {
 export const partners: Partner[] = [
   {
     name: 'Calcutta Kids',
-    logo: '/logos/CK-logo-white-text-transparentbg.png',
+    logo: '/logos/Calcutta-Kids-logo.webp',
     url: 'https://www.calcuttakids.org/',
     width: 180,
     height: 80,

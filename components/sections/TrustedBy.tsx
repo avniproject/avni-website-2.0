@@ -41,15 +41,6 @@ export default function TrustedBy() {
                     loading="lazy"
                     sizes="(max-width: 768px) 140px, (max-width: 1024px) 160px, 180px"
                     quality={70}
-                    style={{
-                      filter: partner.name === "Calcutta Kids" ? "invert(1) grayscale(1)" : "grayscale(1)"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.filter = partner.name === "Calcutta Kids" ? "invert(1)" : "none";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.filter = partner.name === "Calcutta Kids" ? "invert(1) grayscale(1)" : "grayscale(1)";
-                    }}
                   />
                 </div>
               </Link>
@@ -76,15 +67,6 @@ export default function TrustedBy() {
                     loading="lazy"
                     sizes="(max-width: 768px) 140px, (max-width: 1024px) 160px, 180px"
                     quality={70}
-                    style={{
-                      filter: partner.name === "Calcutta Kids" ? "invert(1) grayscale(1)" : "grayscale(1)"
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.filter = partner.name === "Calcutta Kids" ? "invert(1)" : "none";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.filter = partner.name === "Calcutta Kids" ? "invert(1) grayscale(1)" : "grayscale(1)";
-                    }}
                   />
                 </div>
               </Link>
