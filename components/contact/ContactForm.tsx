@@ -7,7 +7,7 @@
 
 'use client';
 
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useRef, useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 const FORM_NAME = 'contact';
@@ -19,6 +19,15 @@ const labelClass = 'block font-anek font-semibold text-sm text-[#0b2540] mb-2';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>('idle');
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  // "Get a Quote" on the Pricing page links here as /contact?quote=<add-on>
+  useEffect(() => {
+    const quoteFor = new URLSearchParams(window.location.search).get('quote');
+    if (quoteFor && messageRef.current && !messageRef.current.value) {
+      messageRef.current.value = `I'd like a quote for ${quoteFor}.\n\nAbout our programme: `;
+    }
+  }, []);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -80,7 +89,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="contact-message" className={labelClass}>Message *</label>
-        <textarea id="contact-message" name="message" required rows={6} maxLength={6000} className={inputClass} placeholder="Tell us about your programme and how we can help" />
+        <textarea ref={messageRef} id="contact-message" name="message" required rows={6} maxLength={6000} className={inputClass} placeholder="Tell us about your programme and how we can help" />
       </div>
 
       {status === 'error' && (

@@ -99,25 +99,26 @@ export const hostingIncludes = [
   'Metabase or Superset for reports, pre-installed',
 ];
 
-// Shown as "Work with Avni experts"; descriptions match the Services page
-export const expertServices = [
-  {
-    title: 'Implementation',
-    detail: 'We turn your programme needs into a working Avni app, from mapping requirements to rollout.',
-    points: ['Requirement analysis and programme mapping', 'Form and workflow configuration', 'Data migration and testing', 'Go-live support'],
-    href: '/services#implementation',
-  },
-  {
-    title: 'Training & Support',
-    detail: 'Hands-on training and ongoing support so your team can run Avni with confidence.',
-    points: ['Structured onboarding sessions', 'Admin and field worker training', 'Ongoing technical support'],
-    href: '/services#training-support',
-  },
+// Extras on top of any plan. Each "Get a quote" opens the contact form with `quoteFor` pre-filled.
+// To confirm with the sales team: which of these are sold separately
+export const addOns = [
   {
     title: 'Dedicated Hosting',
-    detail: 'Run Avni on your own servers or private cloud, for full control over data and infrastructure.',
-    points: ['Full control over data and infrastructure', 'Custom security and compliance settings', 'Optional technical guidance from the Avni team'],
-    href: '/services#dedicated-hosting',
+    detail: 'Run Avni on your own servers or private cloud, for full control over your data.',
+    points: ['Full control over data and infrastructure', 'Custom security and compliance settings', 'Technical guidance from the Avni team'],
+    quoteFor: 'Dedicated Hosting',
+  },
+  {
+    title: 'Extra Training',
+    detail: 'More hands-on sessions for your admins and field workers, beyond what your plan includes.',
+    points: ['Admin and field worker training', 'Refresher sessions for new staff', 'Training for your master trainers'],
+    quoteFor: 'Extra Training',
+  },
+  {
+    title: 'Integrations',
+    detail: 'Connect Avni to the other systems your programme relies on.',
+    points: ['WhatsApp messaging with your beneficiaries', 'Data exchange with government or partner systems', 'Links to your existing MIS'],
+    quoteFor: 'Integrations',
   },
 ];
 

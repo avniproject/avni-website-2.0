@@ -12,7 +12,7 @@ import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BookDemoLink from '@/components/ui/BookDemoLink';
-import { plans, hostingIncludes, expertServices, pricingFaqs } from '@/data/pricing';
+import { plans, hostingIncludes, addOns, pricingFaqs } from '@/data/pricing';
 
 export const metadata: Metadata = {
   title: 'Pricing - Avni',
@@ -151,30 +151,29 @@ export default function PricingPage() {
           </Container>
         </section>
 
-        {/* Expert services */}
+        {/* Add-ons */}
         <Section spacing="md" className="bg-white">
           <Container>
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-8 md:mb-10">
-                <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Work With Avni Experts</h2>
-                <p className="font-noto text-base text-[#475467]">Services on top of any plan, quoted to your needs</p>
+                <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Add-ons</h2>
+                <p className="font-noto text-base text-[#475467]">Add these to any plan. Tell us what you need and we&apos;ll send a quote.</p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {expertServices.map(service => (
-                  <div key={service.title} className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
-                    <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-1">{service.title}</h3>
-                    <p className="font-anek font-semibold text-base text-[#2a7559] mb-3">Custom quote</p>
-                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{service.detail}</p>
+                {addOns.map(addOn => (
+                  <div key={addOn.title} className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
+                    <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">{addOn.title}</h3>
+                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{addOn.detail}</p>
                     <ul className="space-y-2 mb-6 flex-1">
-                      {service.points.map(point => (
+                      {addOn.points.map(point => (
                         <li key={point} className="flex gap-2 font-noto text-sm text-[#344054]">
                           <Check size={16} className="flex-shrink-0 text-[#419372] mt-0.5" />
                           {point}
                         </li>
                       ))}
                     </ul>
-                    <Link href={service.href} className="font-noto font-medium text-sm text-[#2a7559] hover:text-[#1f5a43]">
-                      Learn more →
+                    <Link href={`/contact?quote=${encodeURIComponent(addOn.quoteFor)}`} className={`${secondaryButton} w-full`}>
+                      Get a Quote
                     </Link>
                   </div>
                 ))}
