@@ -13,9 +13,9 @@ Avni is an open-source digital platform designed specifically for NGOs and socia
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **Content:** Markdown with gray-matter
-- **Forms:** React Hook Form with reCAPTCHA
+- **Forms:** sign-up via n8n webhook (with reCAPTCHA), contact via Netlify Forms
 - **Analytics:** Google Analytics 4 (ready)
-- **Deployment:** Netlify (Static Export) / Docker
+- **Deployment:** Netlify (static export, built from GitHub)
 - **SEO:** Complete Open Graph, Twitter Cards, JSON-LD
 
 ---
@@ -134,53 +134,24 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000)
 
-### Docker Installation
+### Editing content locally (CMS)
 
-#### Quick Start with Docker Compose
 ```bash
-# Build and run
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
-
-# Stop
-docker-compose down
+npm run dev   # site at http://localhost:3000
+npm run cms   # in a second terminal; editor at http://localhost:3000/admin/index.html
 ```
-
-#### Manual Docker Build
-```bash
-# Build image
-docker build -t avni-website .
-
-# Run container
-docker run -p 3000:3000 avni-website
-
-# With environment variables
-docker run -p 3000:3000 \
-  -e NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX \
-  -e NEXT_PUBLIC_SITE_URL=https://avniproject.org \
-  avni-website
-```
-
-Visit [http://localhost:3000](http://localhost:3000)
 
 ### Production Deployment (Netlify)
 
-```bash
-# 1. Build locally to test
-npm run build
+The site is hosted on Netlify (Samanvay Foundation team), connected to this GitHub repo:
+every push to the deployed branch rebuilds and publishes the site.
 
-# 2. Deploy via Netlify CLI
-netlify deploy --prod
-
-# Or connect GitHub repo to Netlify for auto-deploy
-```
-
-**Netlify Build Settings:**
+**Netlify Build Settings** (read from `netlify.toml`):
 - Build command: `npm run build`
 - Publish directory: `out`
 - Node version: `20` (required for Next.js 16)
+
+Old-site URLs that moved are redirected in `public/_redirects`; security headers are in `public/_headers`.
 
 ---
 
