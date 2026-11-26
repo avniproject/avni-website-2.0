@@ -13,7 +13,7 @@ import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BookDemoLink from '@/components/ui/BookDemoLink';
-import { plans, hostingIncludes, addOns, pricingFaqs } from '@/data/pricing';
+import { plans, hostingIncludes, addOns, pricingFaqs, AddOn } from '@/data/pricing';
 
 export const metadata: Metadata = {
   title: 'Pricing - Avni',
@@ -30,6 +30,43 @@ export const metadata: Metadata = {
 
 const primaryButton = 'inline-flex items-center justify-center px-8 py-3 bg-[#419372] text-white rounded-full font-anek font-semibold text-base hover:bg-[#357a5e] transition-colors';
 const secondaryButton = 'inline-flex items-center justify-center px-8 py-3 border-2 border-[#419372] text-[#2a7559] rounded-full font-anek font-semibold text-base hover:bg-[#419372] hover:text-white transition-colors';
+
+function AddOnCard({ addOn }: { addOn: AddOn }) {
+  return (
+    <div className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
+      <div className="flex items-start justify-between gap-4 mb-2">
+        <h3 className="font-anek font-bold text-xl text-[#0b2540] pt-1.5">{addOn.title}</h3>
+        <Link
+          href={`/contact?quote=${encodeURIComponent(addOn.quoteFor)}`}
+          className="flex-shrink-0 px-4 py-1.5 border-2 border-[#419372] text-[#2a7559] rounded-full font-anek font-semibold text-sm hover:bg-[#419372] hover:text-white transition-colors"
+        >
+          Get a Quote
+        </Link>
+      </div>
+      <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{addOn.detail}</p>
+      {addOn.integratedWith && (
+        <div className="mb-4">
+          <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#667085] mb-2">Already integrated with</p>
+          <div className="grid grid-cols-2 gap-2">
+            {addOn.integratedWith.map(({ name, logo }) => (
+              <div key={name} className="relative h-16 rounded-lg border border-[#EAECF0] bg-white" title={name}>
+                <Image src={logo} alt={name} fill sizes="160px" className="object-contain px-4 py-2.5" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+      <ul className="space-y-2">
+        {addOn.points.map(point => (
+          <li key={point} className="flex gap-2 font-noto text-sm text-[#344054]">
+            <Check size={16} className="flex-shrink-0 text-[#419372] mt-0.5" />
+            {point}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default function PricingPage() {
   return (
@@ -160,36 +197,12 @@ export default function PricingPage() {
                 <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Add-ons</h2>
                 <p className="font-noto text-base text-[#475467]">Add these to any plan. Tell us what you need and we&apos;ll send a quote.</p>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {addOns.map(addOn => (
-                  <div key={addOn.title} className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
-                    <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">{addOn.title}</h3>
-                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{addOn.detail}</p>
-                    {addOn.integratedWith && (
-                      <div className="mb-4">
-                        <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#667085] mb-2">Already integrated with</p>
-                        <div className="grid grid-cols-2 gap-2">
-                          {addOn.integratedWith.map(({ name, logo }) => (
-                            <div key={name} className="relative h-14 rounded-lg border border-[#EAECF0] bg-white" title={name}>
-                              <Image src={logo} alt={name} fill sizes="160px" className="object-contain px-4 py-2.5" />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                    <ul className="space-y-2 mb-6 flex-1">
-                      {addOn.points.map(point => (
-                        <li key={point} className="flex gap-2 font-noto text-sm text-[#344054]">
-                          <Check size={16} className="flex-shrink-0 text-[#419372] mt-0.5" />
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href={`/contact?quote=${encodeURIComponent(addOn.quoteFor)}`} className={`${secondaryButton} w-full`}>
-                      Get a Quote
-                    </Link>
-                  </div>
-                ))}
+              {/* Short add-ons stack on the left, beside the taller Integrations card */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex flex-col gap-6 [&>*]:flex-1">
+                  {addOns.filter(addOn => !addOn.integratedWith).map(addOn => <AddOnCard key={addOn.title} addOn={addOn} />)}
+                </div>
+                {addOns.filter(addOn => addOn.integratedWith).map(addOn => <AddOnCard key={addOn.title} addOn={addOn} />)}
               </div>
             </div>
           </Container>

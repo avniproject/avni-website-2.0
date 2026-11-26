@@ -101,7 +101,15 @@ export const hostingIncludes = [
 
 // Extras on top of any plan. Each "Get a quote" opens the contact form with `quoteFor` pre-filled.
 // To confirm with the sales team: which of these are sold separately
-export const addOns: { title: string; detail: string; points: string[]; integratedWith?: { name: string; logo: string }[]; quoteFor: string }[] = [
+export interface AddOn {
+  title: string;
+  detail: string;
+  points: string[];
+  integratedWith?: { name: string; logo: string }[];
+  quoteFor: string;
+}
+
+export const addOns: AddOn[] = [
   {
     title: 'Dedicated Hosting',
     detail: 'Run Avni on your own servers or private cloud, for full control over your data.',
