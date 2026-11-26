@@ -7,13 +7,15 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Check, ChevronDown } from 'lucide-react';
+import { Check } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BookDemoLink from '@/components/ui/BookDemoLink';
-import { plans, hostingIncludes, addOns, pricingFaqs, AddOn } from '@/data/pricing';
+import { plans, hostingIncludes, addOns, AddOn } from '@/data/pricing';
+import { faqCategories } from '@/data/faqs';
+import FaqList from '@/components/faq/FaqList';
 
 export const metadata: Metadata = {
   title: 'Pricing - Avni',
@@ -211,17 +213,7 @@ export default function PricingPage() {
               <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] text-center mb-8 md:mb-10">
                 Frequently Asked Questions
               </h2>
-              <div className="space-y-3">
-                {pricingFaqs.map(faq => (
-                  <details key={faq.question} className="group bg-white rounded-xl shadow-sm">
-                    <summary className="flex items-center justify-between gap-4 cursor-pointer list-none p-5 font-anek font-semibold text-lg text-[#0b2540] [&::-webkit-details-marker]:hidden">
-                      {faq.question}
-                      <ChevronDown size={20} className="flex-shrink-0 text-[#667085] transition-transform group-open:rotate-180" />
-                    </summary>
-                    <p className="px-5 pb-5 font-noto text-base leading-relaxed text-[#475467]">{faq.answer}</p>
-                  </details>
-                ))}
-              </div>
+              <FaqList faqs={faqCategories.find(c => c.id === 'pricing')?.faqs ?? []} />
             </div>
           </Container>
         </Section>

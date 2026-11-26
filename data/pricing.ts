@@ -1,7 +1,7 @@
 /**
  * Pricing Data
- * Prices and plan details for the Pricing page. Taken from the old site's pricing and FAQ
- * pages; edit here when the sales team updates them.
+ * Prices and plan details for the Pricing page. Taken from the old site's pricing page;
+ * edit here when the sales team updates them. Pricing FAQs are in data/faqs.ts
  */
 
 export interface PlanFeature {
@@ -133,28 +133,5 @@ export const addOns: AddOn[] = [
       { name: 'Wati', logo: '/logos/integrations/wati.svg' },
     ],
     quoteFor: 'Integrations',
-  },
-];
-
-export const pricingFaqs = [
-  {
-    question: 'If Avni is open source, why do I have to pay?',
-    answer: 'You don’t pay for the software, it is free. The plans cover the people and computing costs of building your app and hosting it on the Avni cloud.',
-  },
-  {
-    question: 'Can I host Avni myself?',
-    answer: 'Yes. You can run Avni on your own servers at no licence cost. A typical setup on AWS costs around ₹12,000 a month, excluding the people who manage it. Our documentation explains the components you need.',
-  },
-  {
-    question: 'How is hosting billed?',
-    answer: 'Hosting is priced per month and paid upfront for the year. Self-Service and Assisted plans include the first month free.',
-  },
-  {
-    question: 'Are taxes included?',
-    answer: 'No, all prices are exclusive of taxes.',
-  },
-  {
-    question: 'Can I modify Avni?',
-    answer: 'Yes, under the terms of the AGPL 3 licence.',
   },
 ];

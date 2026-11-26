@@ -108,7 +108,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
+                <Link href="/resources/faq" className="font-noto font-semibold text-sm md:text-base leading-relaxed text-white hover:text-[#419372] transition-colors">
                   FAQ
                 </Link>
               </li>

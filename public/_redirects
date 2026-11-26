@@ -14,3 +14,5 @@
 # Old site pages with a new home
 /events/  /resources/events/  301
 /events  /resources/events/  301
+/faq/  /resources/faq/  301
+/faq  /resources/faq/  301
