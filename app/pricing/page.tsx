@@ -164,6 +164,16 @@ export default function PricingPage() {
                   <div key={addOn.title} className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
                     <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">{addOn.title}</h3>
                     <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{addOn.detail}</p>
+                    {addOn.integratedWith && (
+                      <div className="mb-4">
+                        <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#667085] mb-2">Already integrated with</p>
+                        <div className="flex flex-wrap gap-2">
+                          {addOn.integratedWith.map(name => (
+                            <span key={name} className="px-3 py-1 rounded-full bg-[#E8F3EE] font-noto text-sm font-semibold text-[#1f5a43]">{name}</span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <ul className="space-y-2 mb-6 flex-1">
                       {addOn.points.map(point => (
                         <li key={point} className="flex gap-2 font-noto text-sm text-[#344054]">
