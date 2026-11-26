@@ -5,7 +5,9 @@
 backend:
   name: github
   repo: avniproject/avni-website-2.0
-  branch: main
+  # The branch the site is built from. Until the new site is merged into main, that is
+  # content-migration (the preview at avni-website-new.netlify.app); switch to main after the merge.
+  branch: content-migration
 
 # Local testing: run `npm run cms` next to `npm run dev`, then open
 # http://localhost:3000/admin/index.html. Edits go straight to the local files, no login.
@@ -17,7 +19,8 @@ local_backend: true
 media_folder: public/img/uploads
 public_folder: /img/uploads
 
-site_url: https://avniproject.org
+# Switch to https://avniproject.org at launch
+site_url: https://avni-website-new.netlify.app
 logo_url: /logos/avni-logo.png
 
 collections:
