@@ -34,15 +34,7 @@ const secondaryButton = 'inline-flex items-center justify-center px-8 py-3 borde
 function AddOnCard({ addOn }: { addOn: AddOn }) {
   return (
     <div className="flex flex-col rounded-2xl border border-[#EAECF0] p-6">
-      <div className="flex items-start justify-between gap-4 mb-2">
-        <h3 className="font-anek font-bold text-xl text-[#0b2540] pt-1.5">{addOn.title}</h3>
-        <Link
-          href={`/contact?quote=${encodeURIComponent(addOn.quoteFor)}`}
-          className="flex-shrink-0 px-4 py-1.5 border-2 border-[#419372] text-[#2a7559] rounded-full font-anek font-semibold text-sm hover:bg-[#419372] hover:text-white transition-colors"
-        >
-          Get a Quote
-        </Link>
-      </div>
+      <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">{addOn.title}</h3>
       <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{addOn.detail}</p>
       {addOn.integratedWith && (
         <div className="mb-4">
@@ -56,7 +48,7 @@ function AddOnCard({ addOn }: { addOn: AddOn }) {
           </div>
         </div>
       )}
-      <ul className="space-y-2">
+      <ul className="space-y-2 mb-6 flex-1">
         {addOn.points.map(point => (
           <li key={point} className="flex gap-2 font-noto text-sm text-[#344054]">
             <Check size={16} className="flex-shrink-0 text-[#419372] mt-0.5" />
@@ -64,6 +56,10 @@ function AddOnCard({ addOn }: { addOn: AddOn }) {
           </li>
         ))}
       </ul>
+      {/* Same button style as the plan cards, after the content */}
+      <Link href={`/contact?quote=${encodeURIComponent(addOn.quoteFor)}`} className={`${secondaryButton} self-start`}>
+        Get a Quote
+      </Link>
     </div>
   );
 }
