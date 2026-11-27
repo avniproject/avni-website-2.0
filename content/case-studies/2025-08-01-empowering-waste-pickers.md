@@ -8,6 +8,8 @@ author:
   - Avni Team
 sector: Waste Management
 logo: /logos/HD-Main-Logo.webp
+tags:
+  - Waste Management
 image: /img/2025-08-01-empowering-waste-pickers/123.webp
 ---
 In the bustling streets of Indian cities, waste often seems invisible. But behind every clean neighbourhood is a group of people whose labour remains largely unrecognised—the waste pickers.
@@ -112,7 +114,7 @@ Whether you are working on waterbody rejuvenation, improving access to health se
 
 ---
 
-👉 **[Schedule a call with us**](https://avniproject.org/)  
+👉 **[Schedule a call with us](https://avniproject.org/)**  
 📬 **[Subscribe to our newsletter](https://avniproject.us17.list-manage.com/subscribe?u=5f3876f49a7603817af2856b9&id=c9fdedc9e7)** to stay updated on new case studies, features, and implementation stories.
 
 ---

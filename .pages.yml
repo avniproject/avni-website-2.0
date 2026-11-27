@@ -58,6 +58,26 @@ content:
         label: Thumbnail
         type: image
         description: Pick a photo already in the post (open its folder in the library) or upload one. Landscape, about 1200 x 750 px.
+      - name: imagePosition
+        label: Thumbnail focus
+        type: select
+        description: Which part of the thumbnail the card shows when it has to be cropped
+        options:
+          values:
+            - { value: center, label: Middle }
+            - { value: top, label: Top }
+            - { value: bottom, label: Bottom }
+      - name: showCover
+        label: Show thumbnail at the top of the post
+        type: boolean
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: readTime
+        label: Read time
+        type: string
+        description: Optional, e.g. 4 min read. Worked out automatically if left empty.
       - name: body
         label: Body
         type: rich-text
@@ -106,6 +126,26 @@ content:
         label: Thumbnail
         type: image
         description: Pick a photo already in the case study (open its folder in the library) or upload one. Shown on the card and the homepage.
+      - name: imagePosition
+        label: Thumbnail focus
+        type: select
+        description: Which part of the thumbnail the card shows when it has to be cropped
+        options:
+          values:
+            - { value: center, label: Middle }
+            - { value: top, label: Top }
+            - { value: bottom, label: Bottom }
+      - name: showCover
+        label: Show thumbnail at the top of the post
+        type: boolean
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: readTime
+        label: Read time
+        type: string
+        description: Optional, e.g. 4 min read. Worked out automatically if left empty.
       - name: body
         label: Body
         type: rich-text
