@@ -6,8 +6,7 @@
  * Supports anchor links for direct navigation from dropdown
  */
 
-import { useEffect, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/layout/Header';
@@ -101,41 +100,39 @@ const useCases = [
   {
     id: 'mobile-medical',
     title: 'Mobile Medical Unit & Camps',
-    description: 'Track individuals, families, or groups with organized digital records accessible online and offline. Avni helps your team follow progress, ensure timely support, and manage programs efficiently.',
-    image: '/images/education_impactstory.png',
+    description: 'A health camp or mobile medical unit sees dozens of patients in a day, often with no internet. Registration, check-up, consultation and medicines happen at different desks, so on paper, or on phones that cannot share, the same patient gets registered twice and follow-up gets lost. With Avni’s camp mode, every phone in the camp shares records through one phone acting as a hub, without internet: a patient registered at the front desk appears straight away for the nurse, doctor and pharmacist. Each phone syncs with the server when the camp ends.',
+    image: '/img/camp-mode/camp-mode-cover.webp',
     features: [
-      'Beneficiary Registration',
-      'Visit Scheduling',
-      'Follow-Up Management',
-      'Progress Tracking',
-      'Automated Reminders',
-      'Case History'
+      'Camp Mode: Phones Share Records Offline',
+      'One Registration Per Patient',
+      'Desk-By-Desk Patient Flow',
+      'Screening And Consultation Forms',
+      'Referrals And Follow-Up After The Camp',
+      'Sync With The Server When The Camp Ends'
     ],
     commonUseCases: [
-      'HEALTH PROGRAMS',
-      'SOCIAL WELFARE',
-      'LIVELIHOOD PROGRAMS',
-      'EDUCATION TRACKING'
+      'MOBILE MEDICAL UNITS',
+      'HEALTH CAMPS',
+      'EYE CARE CAMPS',
+      'LEGAL AID AND SURVEY CAMPS'
+    ],
+    stories: [
+      { name: 'Camp mode: how it works', href: '/blog/2026-10-29-camp-mode/' },
+      { name: 'Project Chashma eye camps', href: '/resources/case-studies/2024-05-22-empowering-vision-care-chashma-tech4dev/' }
     ],
     imagePosition: 'right'
   }
 ];
 
 function UseCasesContent() {
-  const searchParams = useSearchParams();
-
-  // Handle anchor scrolling from dropdown
+  // Menu links use #section anchors; ?section= is an older form of the same link
   useEffect(() => {
-    const section = searchParams.get('section');
-    if (section) {
-      const element = document.getElementById(section);
-      if (element) {
-        setTimeout(() => {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
-      }
+    const section = new URLSearchParams(window.location.search).get('section');
+    const element = section ? document.getElementById(section) : null;
+    if (element) {
+      setTimeout(() => element.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
     }
-  }, [searchParams]);
+  }, []);
 
   return (
     <>
@@ -225,17 +222,32 @@ function UseCasesContent() {
                     </div>
                   </div>
 
+                  {/* Real examples */}
+                  {'stories' in useCase && useCase.stories && (
+                    <p className="font-noto text-[15px] text-[#5a6c7d]">
+                      <span className="font-anek font-semibold text-[14px] uppercase tracking-wide text-[#0a1f3d] mr-2">See it in action:</span>
+                      {useCase.stories.map((story, i) => (
+                        <span key={story.href}>
+                          {i > 0 && ' · '}
+                          <Link href={story.href} className="font-medium text-[#2a7559] underline decoration-[#419372]/40 underline-offset-2 hover:text-[#1f5a43]">
+                            {story.name}
+                          </Link>
+                        </span>
+                      ))}
+                    </p>
+                  )}
+
                   {/* Try Avni Button */}
                   <div className="pt-2">
-                    <button className="px-6 py-3 border-2 border-[#419372] text-[#419372] font-anek font-semibold text-[16px] rounded-full hover:bg-[#419372] hover:text-white transition-all">
+                    <Link href="/signup" className="inline-block px-6 py-3 border-2 border-[#419372] text-[#419372] font-anek font-semibold text-[16px] rounded-full hover:bg-[#419372] hover:text-white transition-all">
                       Try Avni →
-                    </button>
+                    </Link>
                   </div>
                 </div>
 
                 {/* Image */}
                 <div className={`relative ${useCase.imagePosition === 'left' ? 'lg:order-1' : ''}`}>
-                    <div className="relative aspect-[4/3] rounded-[20px] overflow-hidden shadow-lg">
+                    <div className="relative aspect-[16/10] rounded-[20px] overflow-hidden shadow-lg">
                     <Image
                       src={useCase.image}
                       alt={useCase.title}
@@ -255,9 +267,5 @@ function UseCasesContent() {
 }
 
 export default function UseCasesPage() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <UseCasesContent />
-    </Suspense>
-  );
+  return <UseCasesContent />;
 }
