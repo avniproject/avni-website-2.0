@@ -7,6 +7,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import AuthorBox from '@/components/blog/AuthorBox';
+import { getPostAuthors } from '@/lib/authors';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { getBlogBySlug, getAllBlogSlugs } from '@/lib/markdown';
@@ -164,15 +166,7 @@ export default async function BlogPostPage({
             </div>
           )}
 
-          {/* Author Bio */}
-          <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-            <h3 className="font-anek font-semibold text-lg text-gray-900 mb-2">
-              About the Author
-            </h3>
-            <p className="text-gray-700">
-              {frontmatter.author || 'Avni Team'} is part of the Avni team, working to empower NGOs with digital tools for field operations.
-            </p>
-          </div>
+          <AuthorBox authors={getPostAuthors(frontmatter.author)} />
 
           {/* Share Buttons */}
           <div className="mt-8 flex items-center gap-4">

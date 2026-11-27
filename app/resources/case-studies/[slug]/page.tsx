@@ -7,6 +7,8 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import AuthorBox from '@/components/blog/AuthorBox';
+import { getPostAuthors } from '@/lib/authors';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
@@ -216,6 +218,8 @@ export default async function CaseStudyPage({
                   </div>
                 </div>
               )}
+
+              <AuthorBox authors={getPostAuthors(frontmatter.author)} />
             </article>
           </Container>
         </Section>

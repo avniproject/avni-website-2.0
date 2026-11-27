@@ -142,3 +142,8 @@ content:
         label: Short bio
         type: text
         description: One or two sentences
+      - name: aliases
+        label: Other spellings
+        type: string
+        list: true
+        description: Other ways this name appears on older posts (e.g. Md Taqi Afsar), so those posts show this profile
