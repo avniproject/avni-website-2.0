@@ -134,9 +134,8 @@ export default function DataProtectionPage() {
                 </div>
               </div>
               <figure className="relative">
-                {/* Soft shapes behind the photo, like the homepage hero */}
-                <div aria-hidden="true" className="absolute -top-8 -right-2 w-64 h-64 rounded-[40%] bg-[#FFD84D]/60 blur-xl" />
-                <div aria-hidden="true" className="absolute -bottom-6 -left-4 w-72 h-72 rounded-[45%] bg-[#fba47e]/50 blur-xl" />
+                {/* One soft green tint offset behind the photo */}
+                <div aria-hidden="true" className="absolute top-6 left-1/2 -translate-x-[44%] w-full max-w-[420px] aspect-[4/5] rounded-[28px] bg-[#E8F3EE]" />
                 <div className="relative aspect-[4/5] w-full max-w-[420px] mx-auto rounded-[28px] overflow-hidden shadow-xl ring-8 ring-white">
                   <Image
                     src="/img/data-protection/field-worker-phone.webp"
