@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
@@ -18,13 +19,26 @@ export interface ImpactStory {
 /**
  * Impact Stories
  * One story per sector: the sector's latest case study, chosen on the homepage
- * (app/page.tsx). Sectors without a case study get no tab.
+ * (app/page.tsx). Sectors without a case study get no tab. Stories move on by themselves
+ * every few seconds until someone hovers or picks a sector.
  */
 
+const ADVANCE_MS = 7000;
+
 export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
-  const [activeSector, setActiveSector] = useState(stories[0]?.sector);
-  const story = stories.find(s => s.sector === activeSector) ?? stories[0];
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused || stories.length < 2) return;
+    const timer = setTimeout(() => setIndex(i => (i + 1) % stories.length), ADVANCE_MS);
+    return () => clearTimeout(timer);
+  }, [index, paused, stories.length]);
+
+  const story = stories[index];
   if (!story) return null;
+  const activeSector = story.sector;
+  const go = (step: number) => { setIndex(i => (i + step + stories.length) % stories.length); setPaused(true); };
 
   return (
     <Section spacing="none" bg="gray" className="pt-10 md:pt-12 pb-14 md:pb-16">
@@ -44,22 +58,33 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
 
         {/* Sector Tabs */}
         <div className="flex justify-center gap-3 md:gap-4 mb-10 md:mb-12 flex-wrap">
-          {stories.map(({ sector }) => (
+          {stories.map(({ sector }, i) => (
             <button
               key={sector}
-              onClick={() => setActiveSector(sector)}
-              className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-anek font-medium text-xs md:text-sm leading-tight transition-all duration-300 ${
+              onClick={() => { setIndex(i); setPaused(true); }}
+              className={`relative overflow-hidden px-4 md:px-6 py-2 md:py-3 rounded-full font-anek font-medium text-xs md:text-sm leading-tight transition-all duration-300 ${
                 activeSector === sector
                   ? "bg-[#419372] text-white shadow-lg scale-105"
                   : "bg-white text-[#0b2540] hover:bg-[#419372]/10 hover:scale-102"
               }`}
             >
               {sector}
+              {/* Progress line while stories move on by themselves */}
+              {activeSector === sector && !paused && (
+                <span key={index} className="absolute left-0 bottom-0 h-[3px] bg-white/70 animate-[story-progress_7s_linear]" />
+              )}
             </button>
           ))}
         </div>
 
-        {/* Story Content with Animation */}
+        {/* Story, with arrows to the previous and next sector */}
+        <div className="relative" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+        <button onClick={() => go(-1)} aria-label="Previous story" className="hidden xl:flex absolute -left-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md items-center justify-center text-[#0b2540] hover:text-[#2a7559]">
+          <ChevronLeft size={20} />
+        </button>
+        <button onClick={() => go(1)} aria-label="Next story" className="hidden xl:flex absolute -right-14 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md items-center justify-center text-[#0b2540] hover:text-[#2a7559]">
+          <ChevronRight size={20} />
+        </button>
         <div 
           className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-[60px] items-center transition-all duration-500 ease-in-out"
           key={activeSector}
@@ -97,6 +122,15 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
             </Link>
           </div>
         </div>
+        </div>
+
+        {/* Dots on phones, where the sector tabs wrap */}
+        <div className="flex xl:hidden justify-center gap-2 mt-8">
+          {stories.map(({ sector }, i) => (
+            <button key={sector} onClick={() => { setIndex(i); setPaused(true); }} aria-label={`Show ${sector} story`}
+              className={`h-2 rounded-full transition-all ${i === index ? 'w-6 bg-[#419372]' : 'w-2 bg-[#D0D5DD]'}`} />
+          ))}
+        </div>
       </Container>
       
       <style jsx>{`
@@ -128,6 +162,11 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
         
         .animate-slideIn {
           animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes story-progress {
+          from { width: 0%; }
+          to { width: 100%; }
         }
       `}</style>
     </Section>

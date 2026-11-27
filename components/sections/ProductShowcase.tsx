@@ -1,7 +1,7 @@
 /**
  * Product Showcase
- * "What Avni Does" as tabs: each tab is a real problem, what changes with Avni and proof
- * from a partner, beside a real Avni screen in a phone or browser frame. Tabs advance on
+ * "What Avni Does" as tabs: each tab is something Avni does, with proof from a partner,
+ * beside a real Avni screen in a phone or browser frame. Tabs advance on
  * their own every few seconds until someone hovers or picks one.
  */
 
@@ -16,8 +16,7 @@ export interface ShowcaseItem {
   icon: LucideIcon;
   tone: string; // icon tile colours
   title: string;
-  problem: string;
-  change: string;
+  text: string;
   proof: string;
   href: string;
   media: { src: string; kind: 'video' | 'image'; frame: 'phone' | 'browser'; alt: string; caption: string };
@@ -101,8 +100,7 @@ export default function ProductShowcase({ items }: { items: ShowcaseItem[] }) {
               </button>
               {isActive && (
                 <div className="px-5 pb-5 pl-[72px] space-y-2">
-                  <p className="font-noto text-[15px] leading-relaxed text-[#667085]">{item.problem}</p>
-                  <p className="font-noto text-[15px] leading-relaxed font-medium text-[#0b2540]">{item.change}</p>
+                  <p className="font-noto text-[15px] leading-relaxed text-[#475467]">{item.text}</p>
                   <Link href={item.href} className="inline-flex items-start gap-1.5 pt-1 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
                     <ArrowRight size={15} className="flex-shrink-0 mt-0.5" /> {item.proof}
                   </Link>
