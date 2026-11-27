@@ -107,7 +107,7 @@ export default function RootLayout({
         <link 
           rel="preload" 
           as="image" 
-          href="/hero-main.webp" 
+          href="/hero-banner.webp" 
           type="image/webp"
         />
         
