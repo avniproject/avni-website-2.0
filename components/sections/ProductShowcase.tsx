@@ -28,7 +28,7 @@ const ADVANCE_MS = 8000;
 function PhoneFrame({ children }: { children: React.ReactNode }) {
   return (
     <div className="mx-auto w-[250px] md:w-[270px] rounded-[38px] bg-[#0b2540] p-2.5 shadow-2xl">
-      <div className="relative aspect-[400/712] rounded-[30px] overflow-hidden bg-white">{children}</div>
+      <div className="relative aspect-[400/638] rounded-[30px] overflow-hidden bg-white">{children}</div>
     </div>
   );
 }

@@ -22,7 +22,7 @@ const steps: ShowcaseItem[] = [
     change: 'With Avni they record each visit once, on their phone, even where there is no signal.',
     proof: 'Hasiru Dala: registrations doubled, from 3 to 6 people an hour',
     href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
-    media: { src: '/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app home screen with dashboard cards', caption: 'The field app’s home screen works offline (test data)' },
+    media: { src: '/img/home/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app home screen with dashboard cards', caption: 'The field app’s home screen works offline (test data)' },
   },
   {
     icon: HeartPulse,
@@ -32,7 +32,7 @@ const steps: ShowcaseItem[] = [
     change: 'Avni tells each worker who is due for a visit and flags who is at risk.',
     proof: 'SEWA Rural: the app now picks which children need a visit',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
-    media: { src: '/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/individual-dashboard-child.mp4', kind: 'video', frame: 'phone', alt: 'A child’s profile in the Avni app with scheduled and overdue visits', caption: 'A child’s profile with scheduled and overdue visits (test data)' },
+    media: { src: '/img/home/individual-dashboard-child.mp4', kind: 'video', frame: 'phone', alt: 'A child’s profile in the Avni app with scheduled and overdue visits', caption: 'A child’s profile with scheduled and overdue visits (test data)' },
   },
   {
     icon: BarChart3,
