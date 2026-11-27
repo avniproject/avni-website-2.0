@@ -22,11 +22,9 @@ tags:
 
 AppSheet has been designed to be more configurable and is meant for a wide variety of use cases than just frontline work. e.g. you can define your complete data model to as much complexity as you like. You can also define your workflows, and have multiple UX options for each type of screen. It is a no-code or a low-code platform. AppSheet allows for flexibility in choosing your database server. But let us look a bit deeper.
 
-
 Product components comparison
 ------------------------------------------------------------
 While AppSheet and Avni both provide an android app, web-based application designer, and data management API. AppSheet doesn't have an online / web interface for managing the same data. Avni does provide a web-based data management application. It has several use cases like on-behalf data entry from paper records, data correction, frontline work supplemented by facility-based work (e.g. a lab, or a clinic being part of the community health program). It comes with configurable views which can be used to print beneficiary certificates, id cards, so on.
-
 
 Service comparison
 ------------------------------------------------------------
@@ -34,13 +32,11 @@ It is important to contrast how AppSheet and Avni are offered as a service. AppS
 
 (Avni also allows for choice of analytics platform like AppSheet as most platforms support PostgreSQL database used by Avni).
 
-
 Configurability comparison
 ------------------------------------------------------------
 As we have mentioned at the top, AppSheet is more configurable than Avni. On the surface, more configurability seems desirable, but this comes at a heavy price. A more configurable platform requires deeper knowledge on the part of the platform implementer to configure the same. In simple terms both Avni and AppSheet are low code platforms - but Avni requires less coding and AppSheet requires more. This essentially is a tradeoff between configurability and the extent of knowledge/work to be done. Since Avni is designed for a specific use case ane hence it is intentionally less configurable to reduce the work that needs to be done by each project.
 
 If you are a low-code platform developer, who works for multiple domains, AppSheet is a better choice for you. But if you are a nonprofit organisation looking to digitise frontline programs, Avni is closer to your use case.
-
 
 Cost comparison
 ------------------------------------------------------------

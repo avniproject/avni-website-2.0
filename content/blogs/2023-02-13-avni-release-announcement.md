@@ -14,7 +14,6 @@ Release 3.37 is now live. This release includes App Stability, Whatsapp (Glific)
  
 Please note that this is a major release.
 
-
 ## Notable Changes
 ---------------------------------------------------------------------------
 
@@ -54,7 +53,6 @@ This is one of the most looked forward feature that we have been working on. In 
 - App Designer - Fix for supporting both skip answers and value in form element
 - App Designer - Fix for unable to open registration form for some organisations
 - App Designer - Fix for unable to open Advanced settings
-
 
 ### Component release notes
 Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.37.11) for more information.

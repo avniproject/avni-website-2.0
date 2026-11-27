@@ -12,7 +12,6 @@ A new release of Avni field app and Avni admin app is available.
 
 The latest version of the field app available on playstore is  **3.7.6.**
 
-
 **What's new:**
 
 This release brings you following 5 big features
@@ -27,7 +26,6 @@ To use the app designer one has to access the web app and log in using admin cre
   
 
 ![image.png](/img/app_designer_entry.webp)  
-
 
 **Groups**
 

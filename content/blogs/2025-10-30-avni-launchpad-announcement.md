@@ -13,7 +13,9 @@ image: /img/2025-10-30-avni-launchpad-announcement/launchpad_banner.webp
 tags: []
 ---
 <a href="https://forms.gle/zD2A4cPRtpdcczPe9" target="_blank" rel="noopener noreferrer">
-  <img src="/img/2025-10-30-avni-launchpad-announcement/launchpad_banner.webp"/>
+
+![](/img/2025-10-30-avni-launchpad-announcement/launchpad_banner.webp)
+
 </a>
 
 <br>

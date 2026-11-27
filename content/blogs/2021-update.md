@@ -61,19 +61,15 @@ Based on demand from the users and need on the ground we continued to add more f
 ----------------
 1. ASHWINI now has Avni integrated into their hospital management system Bahmni. The data seamlessly flows both ways. This will provide a holistic picture of each patient and better continuum of care for patients. We anticipate more such integrations with newer platforms in 2022.
 
-
 2. We conducted a few webinars where our partner organisations shared their learnings from the ground. The webinars received good participation and engagement. Do check out <a href="https://youtube.com/playlist?list=PLEy8ff0CKDBma3KoU5fmCJ5Te9zsiuG2a" target="_blank" rel="noopener noreferrer">Avni’s webinar playlist.</a> Given the current times, you may find 🎥 <a href="https://youtu.be/GbhaCzG3YqY" target="_blank" rel="noopener noreferrer"> Community based work and COVID19 : Learnings from the ground</a> very relevant.
 
 3. Going with the open source spirit, the Avni team participated in a 2 day <a href="https://forum.fossunited.org/t/foss-hack-2021-results/957" target="_blank" rel="noopener noreferrer">FOSS hackathon</a> to build a prototype for <a href="https://fossunited.org/" target="_blank" rel="noopener noreferrer">Canned Analytics</a> and won a prize too! 🏅 The prototype is rolled out to a few users and we are getting good feedback. We plan to work further on this feature in the coming year.
 
-
 4. Avni won a grant 💰 from Zerodha and <a href="https://fossunited.org/" target="_blank" rel="noopener noreferrer">FOSS United</a> to build Rule designer which would be a major step in enabling nonprofits to design their application without having to write code. We would be starting on this as the new year 2022 begins.
-
 
 5. In 2021, 76% of Avni expenses came from project revenue,with most of the product capabilities growth supported by existing and new users.The deficit was filled by grants.
 
 ![](/img/2021-update/avni-sustainability.webp)
-
 
 6. We also have a brand new short video introducing Avni, 🎥 Yay!!!! Do check it out.
 
@@ -84,6 +80,4 @@ In 2021, all of the Avni core team members continued to work remotely from their
 We’d like to use this opportunity to thank all those who have been with us in this journey - our users, partners, funders and well-wishers. Together we will continue to cross new milestones.
 
 As the risk of a new wave due to Omicron stares at all of us, <span style="color:#ff470f">we wish you, your family and the communities you serve a very safe 2022.</span>
-
-
 

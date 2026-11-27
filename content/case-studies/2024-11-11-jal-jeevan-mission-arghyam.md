@@ -15,16 +15,11 @@ tags:
   - Water
   - Government
 ---
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/1.webp">
-</div>
-
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/1.webp)
 
 The Jal Jeevan Mission (JJM), launched by the Government of India in 2019, aims to provide safe and adequate drinking water through individual household tap connections to every rural household by 2024. At its inception, only 3.23 crore (17%) rural households had tap water connections, but the mission has set an ambitious goal of adding nearly 16 crore additional households, benefiting over 19 crore rural families. As of August 2024, JJM has achieved significant progress, providing tap water connections to 11.82 crore more rural households, raising total coverage to over 15.07 crore households, or 77.98% of all rural households. The mission emphasizes a community-based approach, encouraging local ownership through contributions of cash, kind, or labor (shramdaan) and prioritizes sustainable water supply systems, infrastructure functionality, and resource maintenance. Additionally, it focuses on developing skilled human resources in construction, plumbing, water quality management, and catchment protection, creating a lasting impact on health, quality of life, and rural empowerment.
 
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/2.webp">
-</div>
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/2.webp)
 
 Arghyam supports JJM’s objectives in partnership with Civil Society Organizations (CSOs) and government departments, working to establish sustainable water supply systems across Indian states. With JJM’s remarkable national coverage expansion from 16% to over 78%, Arghyam has aligned its efforts through three thematic divisions: **Operations & Maintenance**, **Water Quality**, and **Source Sustainability**. These areas of focus help ensure the longevity and quality of rural water systems. Additionally, Arghyam runs the **India Water Portal (IWP)**, an online platform providing a space for academia, researchers, and practitioners to share insights, foster public discourse, and address issues in water, sanitation, and climate change, further advancing the mission’s transformative impact on India’s rural landscape.
 
@@ -122,45 +117,34 @@ mGramSeva will help them with unique username in the url parameters to map it wi
 
 ### Solution
 
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/3.webp">
-</div>
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/3.webp)
 
 1. **Data Integration:** We leveraged Dalgo to integrate data from multiple sources, including Avni and mGramSeva, streamlining data management.
 2. **Custom Connector:** Developed an in-house connector for mGramSeva, a unique feature that’s hard to find in other tools, enhancing our system’s versatility.
 3. **Unique URL Solution:** Addressed the multiple unique URL issue, which you can read more about [here], ensuring smoother navigation and access.
 4. **Scalable User Onboarding:** Using open-source versions of Superset allows us to onboard an unlimited number of users, with hosting on AWS as our only cost.
 
-
 ## Superset Visualization
 With the help of a unique URL an Anurakshak can see their activities. 
 
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/4.webp">
-</div>
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/5.webp">
-</div>
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/4.webp)
+
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/5.webp)
 
 ## Monitoring Pipeline
 User can check the status of their data pipeline here  
 Sync is running on the daily basis for avni and weekly for mGramSeva and if something fails users can receive a discord notification and an email notification on the failures. 
 
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/6.webp">
-</div>
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/6.webp)
 
 ## Data Quality Tests
 We have written a few test cases which can identify data problems in your data. Like not null, unique columns, and type checks for the column. 
 If something fails with the test cases you’ll be notified by the yellow line which you can see above.
 
-<div style="width: 100%">
-    <img src="/img/2024-11-11-jal-jeevan-mission-arghyam/7.webp">
-</div>
+![](/img/2024-11-11-jal-jeevan-mission-arghyam/7.webp)
 
 ## Conclusion 
 Keeping in mind the Arghyam strategy of leveraging the power of technology as an enabler and working on scale, we are trying to establish a sustainable PWS operation and maintenance model, which is amenable to govt and replicable and scalable through their system.
 
 Integrated dashboard of both these digital tools Avni & mGramseva try to address quite critical aspects of PWS operation and management by ensuring trusted data generation through the participation of frontline workers which could be utilised to improve decision making to strengthen the system for better accountability and transparency. For the frontline, this dashboard helps them to understand their performance by looking at one single dashboard that is readily available, sharable and retrievable and is not prone to physical damage to be misplaced or lost which are the main challenges they face while maintaining physical records.
-
 

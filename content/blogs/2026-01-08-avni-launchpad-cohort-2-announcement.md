@@ -14,7 +14,9 @@ image: >-
 tags: []
 ---
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfx2dywkTbQ7EJd_eTlv3G38xSAlSUroffSUW0JtJpv93wJww/viewform" target="_blank" rel="noopener noreferrer">
-  <img src="/img/2026-01-08-avni-launchpad-cohort-2-announcement/Avni-Launchpad-Cohort-2.webp"/>
+
+![](/img/2026-01-08-avni-launchpad-cohort-2-announcement/Avni-Launchpad-Cohort-2.webp)
+
 </a>
 
 <br>

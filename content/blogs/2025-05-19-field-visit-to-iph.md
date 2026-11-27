@@ -74,7 +74,5 @@ For anyone working in digital health, field exposure like this is essential. It 
 
 **We’re not just building apps—we’re enabling better health outcomes, one screen at a time.**
 
-<div style="width: 100%; max-width: 800px; padding: 48px;">  
-    <img src="/img/2025-05-19-siddharth-iph-blog/s2.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-05-19-siddharth-iph-blog/s2.webp)
+

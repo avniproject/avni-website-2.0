@@ -12,7 +12,6 @@ tags: []
 ---
 Major Release 4.0.0 is now live, it includes the following modifications to the Avni application
 
-
 ![Fine-grained access control in Avni](/img/Access-control-in-Avni.webp)
 
 ### Fine-grained access control in the Avni application

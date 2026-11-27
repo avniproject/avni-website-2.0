@@ -11,9 +11,7 @@ tags:
 ---
 ## _khamma Ghani !!_
 
-
 It was my first-time experience being part of a team offsite Sprint after joining Avni. I am very grateful to the organizer for conducting this kind of program.
-
 
 ## Getting to Know My Teammates Better
 
@@ -21,20 +19,17 @@ The very first, session was a team bonding session __'A day in the life of every
 
 ![Avni Team](/img/2023-07-18-Udaipur-Sprint-Vedant/avni-team.webp)
 
-
 ## Avni Functionalities
 
 This session was arranged by a senior team member. They gave a brief explanation of the functionalities of the Product and the tools and technology we used. It was a very informative session and helped me to understand the working of Avni.
 
 ![Pairing](/img/2023-07-18-Udaipur-Sprint-Vedant/pairing.webp)
 
-
 ## Field Visit
 
 I visited an NGO called __Aajeevika Bureau__ with my teammates. It was my first experience with an NGO. It helped me to understand the workings at the ground level and how Avni will help.
 
 ![Aajeevika Bureau Helpline](/img/2023-07-18-Udaipur-Sprint-Vedant/ajeevika.webp)
-
 
 ## Fun Activities and Place Visit
 

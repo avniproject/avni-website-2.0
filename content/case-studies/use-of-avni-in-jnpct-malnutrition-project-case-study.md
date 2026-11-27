@@ -16,7 +16,6 @@ tags:
 ---
 If you prefer watching over reading, do check out the [Avni webinar of January](https://youtu.be/4_nZ8Q4RKYA?t=833) where we shared this case study. Otherwise read on.
 
-
 ### About the organisation
 Jashoda Narottam Public Charity Trust ( JNPCT) is a non-profit organization working in the two tribal blocks of Valsad District (Gujarat) since the last 20 years. JNPCT mainly undertakes activities in the following areas: Health, Education, Soil and Water Conservation and income generation activity with farmers. 
 
@@ -39,7 +38,6 @@ Antenatal care
 - Promote hospital delivery.
 - Preparation for delivery (make clothes ready, documentation, money, vehicle, blood  etc.)
 
-
 Postnatal care
 - Early home visit of newborn and mother as per protocol ie. (0, 3, 7, 14, 21, 28, 35, 42, 60 days).
 - Examination of the newborn as per Integrated Management of Neonatal and Childhood Illness (IMNCI) guideline, morbidity identification and management.
@@ -59,7 +57,6 @@ Child Care
 
 The work is conducted in 62 villages by about 361 workers comprising field workers, supervisors, cluster in-charges and other supportive roles. 
 
-
 ![](/img/jnpct_case_study/jnpct_project_achievement.webp "Achievements of the project")
 
 ### Paper-based System
@@ -68,8 +65,6 @@ Like most organisations, we also started with a paper-based system comprising pr
 ![](/img/jnpct_case_study/jnpct_paper_format_1.webp "")
 ![](/img/jnpct_case_study/jnpct_paper_format_2.webp "")
 ![](/img/jnpct_case_study/jnpct_paper_format_3.webp "")
-
-
 
 #### Issues with the system
 The data from such individual records were recorded in a concise form into registers by supervisors. However deriving insights from these registers like identifying high risk was a very tedious exercise. 
@@ -110,7 +105,6 @@ Below are some of the screenshots from the app
 We have numerous reports created in the system so that we don’t have to do data crunching when information or insights are needed
 
 ![](/img/jnpct_case_study/jnpct_reports.webp "Reports")
-
 
 #### Benefits as we are seeing it
 

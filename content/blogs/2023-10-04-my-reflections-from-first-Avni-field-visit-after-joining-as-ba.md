@@ -30,14 +30,12 @@ So I decided to do a field visit to some of the oldest users of Avni - Sewa rura
 
 In Jhagadia, being associated with Sewa Rural comes with a unique privilege - a warm and heartfelt welcome from the community. This level of trust and acceptance is a testament to Sewa Rural's unwavering commitment to the region, nurtured over many years. The people here recognize that the Sewa Rural team is tirelessly dedicated to their betterment, and this trust forms the bedrock of their impactful work.  
 
-
 ### Adolescent Awareness Program and Avni
 Sewa Rural started an Adolescent Health programme in 2012 with the aim to reduce anaemia, regulate menstrual hygiene management (MHM) reproductive health awareness, and reduce school dropouts and drug addiction in Jhagadia block. Every year 3500 to 5000 adolescents are tracked at regular intervals. Dr Shobha Ben and team shared the achievements of the project so far. 
 
 Avni is being used in this programme since 2018. They seamlessly capture the health records of Adolescents directly on the Avni app and conduct follow-up visits according to each child's specific health indicators. The app generates suggestions based on the data entered, making their work more efficient and empowering them with confidence in providing guidance. Many calculations that were once done manually are now auto-calculated within the app, simplifying their tasks. 
 
 What left me truly astounded was the revelation that the Government of Gujarat had wholeheartedly embraced Sewa Rural's adolescent program in Techo, an app already in use there. Learnings from Avni’s rollout has helped faster setup of a robust module in techo. Dr. Shobha Ben also mentioned that they have been recommending other NGOs to adopt Avni, emphasizing how this transition has significantly benefited their operations.
-
 
 During our on-ground observations, we identified a potential challenge—higher data volumes affecting the performance of custom dashboards. We suggested we will discuss it with the team and get back with a solution.
 

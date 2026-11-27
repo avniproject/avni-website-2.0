@@ -28,10 +28,8 @@ tags:
 
 ## Mark attendance directly from the dashboard
 
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; background: #ffffff;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-06-30-june-release/mark-attendance-demo.webp" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+![](/img/2026-06-30-june-release/mark-attendance-demo.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="margin: 12px 0; line-height: 1.8;">App Designer now lets you add a <strong>"Mark attendance" card</strong> to any dashboard. Tapping it takes a field worker straight into the attendance sheet — no extra navigation needed.</p>
         <p style="margin: 12px 0; line-height: 1.8;">Administrators pick the Group Subject Type and Attendance Type when setting up the card, keeping it flexible for different programs.</p>
@@ -59,10 +57,8 @@ tags:
 
 ## Import cancelled visits and exited enrolments
 
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; background: #ffffff;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-06-30-june-release/import-cancelled-visits.webp" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+![](/img/2026-06-30-june-release/import-cancelled-visits.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="margin: 12px 0; line-height: 1.8;">Two new import modes let you bring <strong>historical visit cancellations</strong> and <strong>enrolment exits</strong> into Avni through bulk upload, instead of entering them one by one. Particularly useful when migrating from paper or a legacy system.</p>
         <p style="margin-top: 16px; font-size: 13px; font-weight: 600;"><a href="https://github.com/avniproject/avni-server/issues/988" target="_blank" style="color: #0066cc; text-decoration: none;">→ View technical details</a></p>
@@ -73,10 +69,8 @@ tags:
 
 ## Pull in read-only photos and files from earlier forms
 
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; background: #ffffff;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-06-30-june-release/read-only-media.webp" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+![](/img/2026-06-30-june-release/read-only-media.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="margin: 12px 0; line-height: 1.8;">A form can now <strong>display a photo or document uploaded in an earlier form</strong> — the same way it already surfaces other read-only data. Useful when a later step in a workflow needs to reference something captured earlier.</p>
         <p style="margin-top: 16px; font-size: 13px; font-weight: 600;"><a href="https://github.com/avniproject/avni-product/issues/1866" target="_blank" style="color: #0066cc; text-decoration: none;">→ View technical details</a></p>
@@ -87,10 +81,8 @@ tags:
 
 ## Group permission dependencies now cascade automatically
 
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; background: #ffffff;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-06-30-june-release/permission-cascade-demo.webp" style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+![](/img/2026-06-30-june-release/permission-cascade-demo.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="margin: 12px 0; line-height: 1.8;">When setting up user group permissions, enabling or disabling one permission now automatically adjusts all related permissions through the full dependency chain. For example, enabling <strong>"Add Member"</strong> automatically enables <strong>"View Subject"</strong>; disabling "View Subject" disables all downstream permissions like <strong>"Schedule Visit"</strong> or <strong>"Perform Visit"</strong>.</p>
         <p style="margin-top: 16px; font-size: 13px; font-weight: 600;"><a href="https://github.com/avniproject/avni-webapp/issues/1764" target="_blank" style="color: #0066cc; text-decoration: none;">→ View technical details</a></p>

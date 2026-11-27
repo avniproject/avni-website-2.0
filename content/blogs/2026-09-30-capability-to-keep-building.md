@@ -28,7 +28,7 @@ The organisations in the room were working on very different problems, but had a
 
 That question was at the core of everything and for everyone in the room.
 
-<img src="/img/2026-09-30-capability-to-keep-building/group-photo.webp" alt="Participants of the Tech4Dev workshop" style="display: block; width: 70%; max-width: 600px; height: auto; margin: 24px auto; border-radius: 6px;" />
+![Participants of the Tech4Dev workshop](/img/2026-09-30-capability-to-keep-building/group-photo.webp)
 
 ---
 
@@ -76,7 +76,7 @@ So there I was, presenting our growth plans to a room full of organisations I wa
 
 In retrospect, perhaps this was Arjun's another practical step towards reducing founder dependency. I'm not sure he intended it that way!
 
-<img src="/img/2026-09-30-capability-to-keep-building/presenting-samanvay-plan.webp" alt="Presenting Samanvay's plan at the workshop" style="display: block; width: 70%; max-width: 600px; height: auto; margin: 24px auto; border-radius: 6px;" />
+![Presenting Samanvay](/img/2026-09-30-capability-to-keep-building/presenting-samanvay-plan.webp)
 
 The presentation was a small moment, but I found myself thinking about how quickly this new ecosystem was starting to feel familiar. A few months earlier, I had mostly been listening and trying to understand the language and context. Now I was standing in front of the room explaining something that I was personally responsible for building.
 

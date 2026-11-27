@@ -96,7 +96,6 @@ Families with young children receive roasted groundnuts. Pregnant and lactating 
 
 ![Nutritional supplements](/img/2026-06-16-inside-ashwini-community-healthcare-nilgiris/ashwini-7.webp)
 
-
 As we spoke to the team, we realised how complex the challenge really is. Many families own only small pieces of land. Wild elephants and boars frequently destroy their crops. Vegetables are not commonly part of their daily diet. Even fortified rice supplied through government schemes is sometimes discarded because families mistake the darker grains for poor-quality rice.
 
 It reminded me that solving malnutrition isn't simply about providing food. It's about understanding behaviour, culture, beliefs, livelihoods, and economics.
@@ -162,7 +161,5 @@ Healthcare respects privacy.
 As I travelled back from Gudalur, I found myself thinking less about software and features, and more about the people who use them.
 
 Before this visit, Avni was simply a product I worked on. After this visit, it became something whose impact I could actually see.
-
-
 
 Those two days reminded me why we build what we build. And that is something I will carry with me for a very long time.

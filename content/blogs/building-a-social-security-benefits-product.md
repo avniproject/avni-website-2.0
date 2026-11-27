@@ -51,12 +51,7 @@ Organisations here work at a population scale, often in partnership with the gov
 
 NGOs often work on lists provided by the government to identify potential beneficiaries. Frequently, call centres and mass communication tools such as flyers and advertisements are used for outreach.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-14-building-a-social-security-benefit-product/1.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
-
+![](/img/2025-06-14-building-a-social-security-benefit-product/1.webp)
 
 ---
 
@@ -120,11 +115,7 @@ Saaras is a model 2 organisation that works across 5 states. They provide access
 
 12 of the 45 Saaras' basket of benefits are national schemes. 15 are for women only, 4 are for children, 2 for old people. For any beneficiary, there would be about 10-15 schemes available after the state, age, and gender filters are applied. This makes it a strong and practical filter the system can apply before the user verifies eligibility.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-14-building-a-social-security-benefit-product/3.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-14-building-a-social-security-benefit-product/3.webp)
 
 The beneficiary and the community worker then decide on the best possible scheme to apply for.
 
@@ -132,11 +123,7 @@ The beneficiary and the community worker then decide on the best possible scheme
 
 Saaras prefers a lightweight process on the app, leaving the complications of applying for a scheme to the users and the beneficiary. These users are knowledgeable in handling situations. All necessary actions are performed outside the app. Avni helps with maintaining status and gives reminders to follow-up where necessary.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-14-building-a-social-security-benefit-product/2.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-14-building-a-social-security-benefit-product/2.webp)
 
 ### Extending the system
 
@@ -144,11 +131,7 @@ The application needs space to grow primarily in two dimensions - the schemes th
 
 Avni allows both these dimensions to be managed through its web interface.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-14-building-a-social-security-benefit-product/4.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-14-building-a-social-security-benefit-product/4.webp)
 
 Relevant parameters of a scheme - the state, gender and age - are maintained in what we call "concepts". Schemes added automatically flow into the mobile app.
 

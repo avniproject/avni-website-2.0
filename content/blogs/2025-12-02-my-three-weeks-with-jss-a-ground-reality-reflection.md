@@ -22,7 +22,9 @@ tags:
 My time with [JSS](https://www.jssbilaspur.org/) began on the road to Karanjia, where the CPHC program is set to begin. The PHC visit offered an early sense of the realities aheadâ€”limited staff, stretched frontline teams, and basic infrastructure holding up a large share of community health work. Later that day, meeting villagers gave a more personal view of the challenges they face and the kind of support they feel could make a difference. That first day shaped the rest of the visit.
 
 <div style="max-width:600px; margin:auto; text-align:center;">
-  <img src="/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/seeing-healthcare.webp" style="width:100%; border-radius:6px;" />
+
+![](/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/seeing-healthcare.webp)
+
   <p><i>Seeing healthcare up close: Mobile Medical Unit providing essential services under a tree.</i></p>
 </div>
 
@@ -41,7 +43,9 @@ Back in the Anuppur office, I began what I had been looking forward to the mostâ
 I also spent considerable time with Ravi and Minal, who were central to many of the discussions. They worked with me closely during the Phulwari review meetings, led the conversations, and helped surface the practical issues that teams deal with. These sessions added depth to my understanding of how Avni is used across programs and where improvements could make a difference.
 
 <div style="max-width:600px; margin:auto; text-align:center;">
-  <img src="/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/jssblog3-COLLAGE.webp" style="width:100%; border-radius:6px;" />
+
+![](/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/jssblog3-COLLAGE.webp)
+
   <p><i>Moments from the field: Discussions with Ravi, Minal, and the team during Phulwari review meetings.</i></p>
 </div>
 
@@ -52,7 +56,9 @@ Time at the JSS campus added another layer of perspective. A day at the OPD, whe
 ### Lighter Moments That Balanced the Days
 
 <div style="max-width:600px; margin:auto; text-align:center;">
-  <img src="/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/lightr-moment.webp" style="width:100%; border-radius:6px;" />
+
+![](/img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/lightr-moment.webp)
+
   <p><i>A lighter moment: Enjoying local delicacies and the scenic surroundings during the trip.</i></p>
 </div>
 
@@ -68,7 +74,6 @@ Amid all the travel and conversations, a few lighter moments made the trip feel 
   </video>
   <p><i>Singing session at JSS</i></p>
 </div>
-
 
 <br/>
 

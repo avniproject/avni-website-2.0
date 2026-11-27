@@ -32,9 +32,7 @@ Two things that I found common:
 
 We started off discussing our most pressing challenges. There were quite a few interesting anecdotes that helped us understand the breadth of these challenges. There were cases where NGOs did not even know that there would be an organisation like Pacta that caters specifically to the legal problems unique to this sector. While some organisations like Samanvay and Civic Data Labs expressed the need for bandwidth (for competing priorities) and capability to be on top of relevant emerging technologies, Tattle seemed to have solved it with support from a mix of part-timers and full-timers. While some of us were struggling to grow our user-bases, Tamuku already has built a very wide network of NGOs through multiple channels (WhatsApp alerts, AIForNGOs platform, job-postings and fund-raising workshops) — although the use-case and the context is different for each of us.
 
-
 ![Seeing someone having solved the problems that others are facing gives us good hope that we can do it too — it was just a matter of time and focus.](/img/2026-06-20-t4d-ecosystem-partners-meet/partners-meet-2.webp)
-
 
 Some of the most common open-challenges that emerged were:
 
@@ -52,7 +50,6 @@ Post lunch, we got our brains together again on — Cohorts. We initially had di
 Again, everyone floated ideas and we discussed those. But we felt that we needed to spend some more time on it thinking, and then reach out based on what we would like to work on together.
 
 And we had a group photograph towards the end!! All Smiles!!
-
 
 ![T4D Ecosystem Partners Meet](/img/2026-06-20-t4d-ecosystem-partners-meet/partners-meet-1.webp)
 

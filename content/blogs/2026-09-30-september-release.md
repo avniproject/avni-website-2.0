@@ -30,11 +30,8 @@ tags:
 </div>
 </a>
 
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; background: #ffffff;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-09-30-september-release/rejection-reasons-summary@2x.webp"
-             alt="A summary screen listing submissions as Approved or Rejected, with the reasons for each rejection shown beside it">
-    </div>
+![A summary screen listing submissions as Approved or Rejected, with the reasons for each rejection shown beside it](/img/2026-09-30-september-release/rejection-reasons-summary@2x.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="font-size: 14px; color: #0066cc; font-weight: 600; margin: 0 0 8px 0;">See why records are sent back</p>
         <p style="margin: 12px 0; line-height: 1.8;">The answers flow into reports and integrations like any other form data. If the Rejection form asks for the reason as a list of options, a program manager can count how often each reason comes up.</p>

@@ -24,19 +24,13 @@ With this update, Avni can now be configured to skip downloading such data—hel
 
 [Read more about this feature here](https://avni.readme.io/docs/app-storage-management-and-sync-disable).
 
-<div style="width: 100%; max-width: 100x; padding: 30px;">  
-    <img src="/img/2025-07-30-avni-release-announcement/storage_management.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-07-30-avni-release-announcement/storage_management.webp)
 
 ### 🔹 Smarter Address Handling: Auto-Copy for New Group Members
 
 When adding a new member to a group, manually re-entering the group address often led to errors. To prevent this, Avni now auto-populates the address based on the group—improving data accuracy and saving time.
 
-<div style="width: 100%; max-width: 400px; padding: 20px; margin: 0 auto;">  
-    <img src="/img/2025-07-30-avni-release-announcement/autofill_address.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-07-30-avni-release-announcement/autofill_address.webp)
 
 ### 🔧 Other Improvements
 

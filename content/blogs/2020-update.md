@@ -26,7 +26,6 @@ We constantly listen to community program teams and improve the product based on
 
 And, many more small improvements! <span style="color:#ff470f">Avni is now simpler, powerful and much more capable.</span>
 
-
 Usage and Impact
 ------------------------------------------------------------
 ![](/img/2020-update/avni_update_impact_and_usage.webp)
@@ -40,7 +39,6 @@ Avni got used for newer domains and modules like Sanitation, Affordable Housing,
 In 2020, we also saw organisations move from using Avni for single programmes such as maternity to deeper integration of the field-work processes. This means moving all their community-based interventions to Avni. <span style="color:#ff470f">The promise of Avni to fulfil the role of the complete field-work app and a full-fledged beneficiary MIS for community-based organisations is becoming a reality.</span>
 
 Until 2019, Avni development was primarily funded by funding organisations. This year, several existing user organisations also came forward to contribute to the development of new features proposed by us. This demonstrated their confidence in the utility of Avni.
-
 
 User Stories
 ------------------------------------------------------------
@@ -56,13 +54,11 @@ We hope to see many more in the coming times!
 
 Check out these users stories, case studies and project updates on our blogs <a href="https://avniproject.org/blog" target="_blank" rel="noopener noreferrer">here</a> and Tech4Dev blogs <a href="" target="_blank" rel="noopener noreferrer">here</a>.
 
-
 Avni on cloud and Self-Serviceability
 ------------------------------------------------------------
 Before 2020 all of the implementations of Avni were done by the Avni core team at <a href="https://www.samanvayfoundation.org/" target="_blank" rel="noopener noreferrer">Samanvay</a>. Mid of 2020 we made Avni <a href="https://avniproject.org/blog/2020-05-25-avni-cloud-annoucement/" target="_blank" rel="noopener noreferrer">available as a self-serviceable platform on the cloud</a> with a very economical price and an <a href="https://avniproject.org/signup/?source=trial" target="_blank" rel="noopener noreferrer">easy sign-up process</a>. We have received 24 sign-ups since then.
 
 We also had 3 successful pilot projects where implementations were done by someone outside of the core Avni team at Samanvay, either an IT person at NGO or another tech partner. We received a lot of feedback and have come a long way on this path. Small changes in some existing projects are now done by users themselves, making them "atmanirbhar" :-)
-
 
 Looking forward to 2021
 ------------------------------------------------------------

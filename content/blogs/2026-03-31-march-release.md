@@ -36,10 +36,7 @@ For more details, refer to [avni-server#961](https://github.com/avniproject/avni
 
 The mobile app now greets users with a personalised welcome message — showing "Hi {first name}, Welcome!" in the top navigation bar instead of the generic "Home" text. This also supports translations and gracefully handles lengthy usernames by displaying only the first name.
 
-<div style="width: 100%; max-width: 400px; padding: 20px; margin: 0 auto;">
-    <img src="/img/2026-03-31-march-release/hello.webp"
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2026-03-31-march-release/hello.webp)
 
 To learn more, refer to the [Personalised Home Screen Title documentation](https://avni.readme.io/docs/guide-user-towards-register-button).
 

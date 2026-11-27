@@ -25,8 +25,6 @@ The first segment is well served by tools like ODK, KoboCollect, Google forms, e
 
 To explain this point we can compare it to something like creating websites (or web presence). One can either use Facebook/LinkedIn page (1) or develop one's own website (2). Avni in this analogy would be like Squarespace - it gives you more power than 1 and keeps your development cost down too. Avni keeps your hosting cost low too unlike SquareSpace :-), but that is not part of analogy here.
 
-
-
 Let us now turn our attention on how segment 2 should decide to choose, Avni or not. In our experience, the tradeoffs involved here are less well understood. When one compares a generic product, with what is possible via a custom solution a few factors are understood well:
 
 1. The customer gets full control of all the features now and in the future.

@@ -83,14 +83,12 @@ Sneha gave a brief presentation about their two-way conversation platform for so
 This was followed by a demo from Mahalakshme on the Avni Glific integration that Avni has been working on. Many of NGO partners found to be very interesting and had queries especially came on the consent part.
 Sanjeev and Siddhant from the project Tech4Dev team gave us insight on Development Data Platform initiative where they have been working on building a system that allows NGO to offload their data management. Under this they provide analysis dashboard and visualizations.Also, they would be piloting this before end of year in partnership with IDInsight and The Agency Fund.
 
-
 ### Icebreakers
 Apart from the serious sessions and talks, one interesting game that we played to start the post lunch session where everybody was supposed to repeat the line with their own fears - Wave se darr nhi lagta, ___ se lagta hai!! One of them was -
 
 “Lehro se darr nhi lagta, chehro se lagta hai” - Akash Patki
 
 We had such icebreakers and fun games within these two days which made everyone comfortable and interactive during the whole conference and helped us get to know each other better!
-
 
 ### Conference comes to closure with Retro
 We concluded the Avni conference with a round of retro from all the participants.The retro points which came during this were jolly, optimistic and emotional ones too..
@@ -100,13 +98,11 @@ Few major retro points that came were - It was good to know how other NGOs or or
 <pre>The last retro session..
 </pre>
 
-
 ### And finally some fun in Goa..
 One most exciting part of the day for the Avni team was these blue T-shirts with Avni logo embroidered on it!
 ![](/img/2023-01-12-avni-conference-goa/day-5/team_collage.webp)
 
 Last but not the least, by the evening the complete Avni team was on its toes to rock and we all headed to Colva beach. At one of the shacks we spent an extremely wonderful time which we are still cherishing.
-
 
 ----------------------------
 

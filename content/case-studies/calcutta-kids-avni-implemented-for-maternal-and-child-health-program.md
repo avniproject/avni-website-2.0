@@ -37,13 +37,13 @@ CHWs at CK, completely did away with the paper forms. This allows for program de
 
 <p align='center'>Counselling guidance for health worker</p>
 
-<img src="/img/screenshot-2019-12-12-at-6.44.01-pm.webp" alt="Counselling guidance for health worker" height="432" width="306" align='middle'>
+![Counselling guidance for health worker](/img/screenshot-2019-12-12-at-6.44.01-pm.webp)
 
 <br/>
 
 <p align='center'>Visit scheduled for health worker</p>
 
-<img src="/img/ck-visit-scheduling.webp" alt="Visit scheduled automatically for the health worker" height="432" width="306" align='middle'>
+![Visit scheduled automatically for the health worker](/img/ck-visit-scheduling.webp)
 
 <br/>
 

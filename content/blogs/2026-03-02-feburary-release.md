@@ -31,13 +31,15 @@ Avni's draft save feature now extends to program enrolments and their visits. If
     </div>
     <div style="text-align: center; flex: 1; min-width: 200px; max-width: 250px;">
         <strong>General Encounter Draft</strong>
-        <img src="/img/2026-03-02-feburary-release/ged.webp"
-             style="width: 100%; height: auto; display: block; margin-top: 8px;">
+
+![](/img/2026-03-02-feburary-release/ged.webp)
+
     </div>
     <div style="text-align: center; flex: 1; min-width: 200px; max-width: 250px;">
         <strong>Program Encounter Draft</strong>
-        <img src="/img/2026-03-02-feburary-release/ped.webp"
-             style="width: 100%; height: auto; display: block; margin-top: 8px;">
+
+![](/img/2026-03-02-feburary-release/ped.webp)
+
     </div>
 </div>
 
@@ -49,10 +51,7 @@ New field users often don't know what to do after their first sync completes, le
 
 To enable this, toggle on **"Guide users to Register button"** on the Organisation Details page in the webapp. Once enabled, the tooltip appears on the mobile app on first login:
 
-<div style="width: 100%; max-width: 400px; padding: 20px; margin: 0 auto;">
-    <img src="/img/2026-03-02-feburary-release/register.webp"
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2026-03-02-feburary-release/register.webp)
 
 To learn more, refer to the [Guide User Towards Register Button documentation](https://avni.readme.io/docs/guide-user-towards-register-button).
 

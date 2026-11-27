@@ -81,11 +81,8 @@ With this release this will be handled automatically by the platform.
 
 ---------------------------------------------------------------------------
 
-
 ### Enhancement and Bug Fixes
 - DEA - Support for Encounter Eligibility Check rule.
 - DEA - By default hide the voided subject in search result.
 - Mobile app - Offline dashboard changes does not sync.
-
-
 

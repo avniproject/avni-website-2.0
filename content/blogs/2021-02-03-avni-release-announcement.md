@@ -12,7 +12,6 @@ A new release of Avni field app and Avni admin app is available.
 
 The latest version of the field app available on playstore is  **3.10.0.**
 
-
 **What's new:**
 
 This release brings you the following big features and enhancements

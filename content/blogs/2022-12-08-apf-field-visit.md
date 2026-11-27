@@ -39,5 +39,4 @@ Then you will find your doubts and your self melt away."
 -One of the last notes left behind by Gandhi in 1948, expressing his deepest social thought.  
 Source: Mahatma Gandhi - The Last Phase, Vol. II (1958), p.65
 
-
 Next day, after having discussions with other partner NGOs, WOSCA and Disha who had also partnered with APF in the implementation of the nutrition programme, I left to Bengaluru seeking blessings from Lord Jagannath for the malnourished children and high risk pregnant women. I am not sure if my prayers were heard, but hope the issue that I have raised here is understood.

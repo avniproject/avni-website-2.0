@@ -17,9 +17,7 @@ image: >-
 tags:
   - Social Security
 ---
-<div style="width: 100%">
-    <img src="/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/community.webp">
-</div>
+![](/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/community.webp)
 
 ## About Project Potential
 [Project Potential](https://www.projectpotential.org/), based in Kishanganj, Bihar, was founded in 2014 with a vision to end poverty sustainably and inclusively in India’s poorest districts. The organization envisions enabling intergenerational social mobility by addressing systemic challenges in health, education, and employment.
@@ -40,15 +38,12 @@ To overcome these challenges, Project Potential has launched an integrated imple
 
 1 https://www.indiaspend.com/data-viz/three-charts-on-ayushman-bharats-achievements-and-shortfalls-878004
 
-
 ## Why Digitization is Needed
 In today’s data-driven world, reliable and accessible information is the cornerstone of effective decision-making—especially in healthcare. The paper-based system along with the limited use of Google Forms, which we were using for tracking healthcare access and beneficiary data, were often prone to errors, duplication, and inefficiency. These limitations resulted in missed opportunities to connect eligible individuals with vital health schemes like Ayushman Bharat Yojana (PMJAY).
 
 Digitization transforms these challenges into opportunities by streamlining data collection, ensuring real-time accessibility, and enhancing accuracy. In Kishanganj, one of India’s poorest regions, healthcare gaps are significant, making digital solutions indispensable for bridging the divide between policy and practice. By embracing digitization, we ensure that every eligible beneficiary can access the benefits they are entitled to.
 
-<div style="width: 100%">
-    <img src="/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/work.webp">
-</div>
+![](/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/work.webp)
 
 ## Exploring Tools for Digitization
 Before choosing Avni, we explored other tools for digitization. However, most options were either too rigid to adapt to our needs of working offline or required expensive customization. Avni stood out for its open-source nature, flexibility, and user-friendly design, allowing seamless integration with program requirements.
@@ -78,10 +73,8 @@ The journey of self-servicing Avni demonstrated how focused training, determined
 
 **Community Adaptation:** Transitioning from being trained to training others with limited exposure to digital tools required a strategically planned approach. The platform was piloted and tested multiple times to ensure its reliability. After fine-tuning it to meet the practical needs of program managers, field coordinators, panchayat coordinators, data operators, and ward mobilizers, the platform was ready for field implementation. This step ensured that the system was both relevant and user-friendly, enabling seamless data-driven decision-making.
 
+![](/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/self-service.webp)
 
-<div style="width: 100%">
-    <img src="/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/self-service.webp">
-</div>
 <br/>
 <span style="color:#ff470f">This self-service journey underscores the power of localized capacity building and collaboration in accelerating the adoption of digital tools for improving healthcare access. It stands as a testament to what can be achieved through teamwork, strategic support, and a commitment to innovation.</span>
 
@@ -99,9 +92,7 @@ Since implementing Avni, the program has achieved remarkable milestones:
 3. **Data Accuracy:** Digitized records have minimized errors and reduced instances of duplication or fraud.
 4. **Empowered Field Teams:** Local workers are equipped to manage processes independently, improving productivity.
 
-<div style="width: 100%">
-    <img src="/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/impact.webp">
-</div>
+![](/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/impact.webp)
 
 ## Impact Story: Changing Lives Through Health Cards
 One such story is of Ram, a 50-year-old resident of Hathiduba village of Besarbati Panchayat. He had been suffering from chronic health issues but could not afford treatment. During a health card registration drive, Ram’s family was registered under PMJAY using Avni. Within weeks, he underwent heart surgery at a hospital in Patna with 2 lakh utilisation from Ayushman card. Today, Ram is healthy and grateful for the access to quality healthcare that was made possible through this initiative. His story is a testament to the life-changing potential of digitised healthcare access.
@@ -121,9 +112,7 @@ Another Panchayat coordinator shares:
 
 *"Avni has made my work much easier. I can register beneficiaries and ensure they get their health cards on time. "*
 
-<div style="width: 100%">
-    <img src="/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/testimonial.webp">
-</div>
+![](/img/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/testimonial.webp)
 
 ## Planning for Other Projects
 Building on the initial success of the Health Access Program, we are excited to expand Avni’s application to other critical areas of community development. Future plans include:

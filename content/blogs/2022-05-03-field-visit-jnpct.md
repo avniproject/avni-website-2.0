@@ -23,8 +23,6 @@ In April Utkarsh Hathi and I did a 2 day visit to Jashoda Narottam Public Charit
 ![](/img/2022-05-03-field-visit-jnpct/map-of-valsad-district.webp)<pre>Valsad. Source : mygov.in</pre>
 ----------------------------
 
-
-
 Majority of the population in both the blocks suffer from poverty. In addition to that, these villages are relatively remote to access due to their geographic location. This has resulted in poor access to quality healthcare and prevalent customs and norms practised within the community make it harder to follow necessary practices for well-being. JNPCT have been concentrating their efforts on community awareness, clinical guidance and access to nearby hospitals through their interventions in community health.
 
 Dr. Sachin who is the technical lead for the program gave us insights on socio- geographical uniqueness of the region. The blocks of Dharampur and Kaprada region is hilly terrain where villages are more in the form of hamlets and households are distributed over some distance. Due to it being a hilly terrain and villages located at some distance from each other, there are some villages which get separated and become inaccessible during the monsoon.
@@ -40,18 +38,15 @@ After having a brief discussion about ongoing issues in application with cluster
 ![](/img/2022-05-03-field-visit-jnpct/bridge.webp)<pre>River we crossed to reach the village</pre>
 ----------------------------
 
-
 The first village we visited was Penda, a village that often gets separated from rest of the region during monsoons. It becomes quite difficult to access. Health workers inform the woman before the expected date of delivery to shift to a nearby village with better access. In cases when even that is not possible, the organisation has already provided training to midwives through the help of staff from ARCH (Action Research in Community Health), another organisation which has been working in the region on community health. This ensures avoidance of any critical situations. Here we interacted with sahelis and supervisors, also observed how they interact with beneficiaries and fill up the data in avni.
 
 ![](/img/2022-05-03-field-visit-jnpct/village-meet.webp)<pre>Discussion in village</pre>
 ----------------------------
 
-
 We had our lunch on the way to the second village Khadki which included delicious Rotis made of ragi and rice and a tasty pickle made of bamboo!
 
 ![](/img/2022-05-03-field-visit-jnpct/food.webp)<pre>Lunch on the way to second village</pre>
 ----------------------------
-
 
 During the visit, we learnt a very interesting practice of baby care called Kangaroo Mother care. This method is especially helpful for premature deliveries and low birth weight babies. In this method the mother is required to keep the child close to her in a way which ensures skin to skin contact. This is required to be done four to five times during a day for an hour or two. It reduces the chances of mortality, and severe illness and also increases the weight of children. What was even more fascinating for us was that in the tribal households even other members within the family do participate in the practice at times and reduce the burden on the mother.
 
@@ -61,7 +56,6 @@ Before returning to Dharampur we also visited to a beautiful place called Wilson
 
 ![](/img/2022-05-03-field-visit-jnpct/group-pic.webp)<pre>Mahendrabhai, Dr Sachin, Myself and Utkarsh from left to right</pre>
 ----------------------------
-
 
 The next morning we spent some time with Dr Sachin and Mahendrabhai understanding their concerns and feedback for the system.
  

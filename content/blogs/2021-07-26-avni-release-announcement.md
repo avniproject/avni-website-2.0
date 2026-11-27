@@ -12,7 +12,6 @@ Note: There is no update to the Android app.
 
 **What's new:**
 
-
 **Enhancements to Longitudinal Export**
 - Date filter for all types of report
 - Exclude records for which the concerned forms are not filled

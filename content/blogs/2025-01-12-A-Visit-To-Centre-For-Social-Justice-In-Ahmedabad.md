@@ -22,26 +22,25 @@ Earlier this month, I had the privilege of visiting the [Centre for Social Justi
 
 CSJ has been a beacon of hope for marginalised communities, working tirelessly to ensure justice and equity. Their objectives are centred around empowering individuals through legal aid, capacity building, and advocacy. During our discussions, the team highlighted the importance of their on-ground efforts in addressing systemic issues and enabling sustainable change.
 
-<div style="width: 70%">
-    <img src="/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/1.webp">
-</div><p align="center"><i>Spreading Awareness About Mahila Adhikar</i></p>
+![](/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/1.webp)
+
+<p align="center"><i>Spreading Awareness About Mahila Adhikar</i></p>
 
 ## Insights into Operations
 
 The visit allowed us to gain a comprehensive understanding of CSJ’s operational model. I learnt how CSJ plans the roster for each team across three different states. These activities consist of conducting new outreach and campaigns where they explain the rights of labourers, children, and women, and identify the legal battles individuals might wish to pursue. CSJ also supports individuals in their ongoing legal battles.  
 
-<div style="width: 80%">
-    <img src="/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/3.webp">
-</div><p align="center"><i>Outreach activity in marginalised Community</i></p>
+![](/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/3.webp)
+
+<p align="center"><i>Outreach activity in marginalised Community</i></p>
 
 From strategising field activities to managing case documentation, their meticulous approach ensures that every initiative is impactful. It was inspiring to witness how their team collaborates across various levels to address challenges effectively.
 
 ## The Data Cleaning Process
 
-<div style="width: 90%">
-    <img src="/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/2.webp">
-</div><p align="center"><i>Current Data Cleaning Process at CSJ</i></p>
+![](/img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/2.webp)
 
+<p align="center"><i>Current Data Cleaning Process at CSJ</i></p>
 
 One of the key highlights of our visit was delving into CSJ’s data cleaning process. I gained insights into how the process is carried out, starting with each team consisting of an average of four paralegals or lawyers who exchange data with one another to verify the case or claim theme, actions taken, and personal details. This ensures the legal details provided are accurate.  
 

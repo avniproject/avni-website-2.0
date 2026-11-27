@@ -14,7 +14,6 @@ Patch Release 3.37.12 is now live. This release includes Support translations in
 
 Please note that this is a patch release.
 
-
 ## Notable Changes
 ---------------------------------------------------------------------------
 
@@ -30,9 +29,6 @@ Now translations are supported in growth chart.
 - App Designer - Fixed JDBC error on saving some forms with voided Form-elements in app designer.
 
 ![](/img/2023-02-20-avni-release-announcement/jdbc_error_on_app_designer.webp)<pre>Error on saving form</pre>
-
-
-
 
 ### Component release notes
 Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.37.12) for more information.

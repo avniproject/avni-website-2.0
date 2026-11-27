@@ -34,13 +34,9 @@ ATECF focuses on revitalising ponds, lakes, and other water bodies that have bee
 helping to increase their storage capacity and improve access to water for rural communities.
 </p>
 
-<div style="width: 70%">
-    <img src="/img/2025-04-30-restoring-waterbodies-avni-atecf/R1.webp">
-</div>
-
+![](/img/2025-04-30-restoring-waterbodies-avni-atecf/R1.webp)
 
 It has been driving large-scale waterbody rejuvenation efforts across nine states in India, including Maharashtra, Rajasthan, Uttar Pradesh, and more.
-
 
 ## Need for Digitisation:
 
@@ -54,13 +50,9 @@ ATECF collaborated with Avni and started using the Avni Gramin App
 as a digital tool for data collection for their Community Resource Persons (CRPs) working in the field.
 </p>
 
-
 The Avni-Gramin App makes it easier to collect, store, and manage data related to waterbody restoration, such as silt removal, bund strengthening, and other critical interventions. The app’s simple interface and offline functionality ensure that even in areas with limited connectivity, data can still be recorded and updated.
 
-<div style="width: 70%">
-    <img src="/img/2025-04-30-restoring-waterbodies-avni-atecf/R3.webp">
-</div>
-
+![](/img/2025-04-30-restoring-waterbodies-avni-atecf/R3.webp)
 
 <h2>📹Case Study: ATECF Rejuvenating Water Bodies | Open-sourced Tool in Solving India's Water Crisis</h2>
 
@@ -68,14 +60,11 @@ The Avni-Gramin App makes it easier to collect, store, and manage data related t
   Click here to watch the video!
 </a>
 
-
 ## Avni-Gramin: Empowering Communities, Simplifying Data
 
 Avni-Gramin is an open-source, Android-based mobile app for recording real-time information about the various on-the-ground activities associated with a waterbody rejuvenation project. The app is a part of Avni, a digital tool that helps social impact organisations simplify workflows, track program progress, and make better decisions based on accurate, structured data.
 
-<div style="width: 70%">
-    <img src="/img/2025-04-30-restoring-waterbodies-avni-atecf/78.webp">
-</div>
+![](/img/2025-04-30-restoring-waterbodies-avni-atecf/78.webp)
 
 ### Key Features of Avni-Gramin:
 
@@ -87,7 +76,6 @@ Avni-Gramin is an open-source, Android-based mobile app for recording real-time 
 - **Mobile Number Uniqueness:** A check is done on mobile number uniqueness to identify potential duplicates or fraudulent entries.
 - **OTP Verification:** A One-Time Password (OTP) verification system ensures that all user data is secure and verified, enhancing the overall trustworthiness of the platform.
 - **Structured Data Entry:** Customisable forms make it easy to enter data in a structured and consistent manner, ensuring accuracy in reporting and decision-making.
-
 
 ## Integration of Avni and Dalgo: Expanding Reach
 
@@ -101,10 +89,7 @@ This integration allows for deeper insights into the data collected and facilita
 The synergy between Avni-Gramin and Dalgo offers comprehensive tracking, reporting, and analysis capabilities, ensuring that organisations can manage their projects efficiently and effectively.
 </p>
 
-
-<div style="width: 70%">
-    <img src="/img/2025-04-30-restoring-waterbodies-avni-atecf/R2.webp">
-</div>
+![](/img/2025-04-30-restoring-waterbodies-avni-atecf/R2.webp)
 
 ## Avni-Glific Integration:
 
@@ -138,9 +123,7 @@ Their combined approach is now gaining national and global recognition as a repl
 
 </p>
 
-<div style="width: 70%">
-    <img src="/img/2025-04-30-restoring-waterbodies-avni-atecf/ATECF_ES.webp">
-</div>
+![](/img/2025-04-30-restoring-waterbodies-avni-atecf/ATECF_ES.webp)
 
 ---
 
@@ -168,6 +151,5 @@ Schedule a call with us
 Subscribe to our newsletter to stay updated on new case studies, features, and implementation stories.
 </a>
 </p>
-
 
 ---

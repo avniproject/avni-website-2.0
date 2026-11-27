@@ -43,10 +43,8 @@ there have been a few developments on the Avni project that made us think more a
 3. Added a public beta release process for the Android app, where we do not have the ability to roll-back in case of issues. There will be time provided to use the app to ensure there are no glaring issues before it is pushed to production
 4. Added communication channels on Skype for [developers](https://join.skype.com/xiTU162DSJTd) and [users/implementers](https://join.skype.com/qFCxfcZ8paru)
 
-
 ### Eventually, we will
 
 need to do other things as well, to enable users have a better say in what needs to go into the product etc. Looking for feedback. Do join the Skype channel, and let the conversation begin.
-
 
 Update as on 14 Mar 2025: The communication channels have now been moved to Discord because Skype is shutting down. Please find us on Discord at https://discord.gg/4pcgcQW8pk

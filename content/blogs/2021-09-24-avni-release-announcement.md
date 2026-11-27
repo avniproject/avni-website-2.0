@@ -10,7 +10,6 @@ tags: []
 ---
 **What's new:**
 
-
 **File data type**
 
 Users will now be able to attach files like pdf, doc to upload test results, meeting minutes, etc.
@@ -18,7 +17,6 @@ Users will now be able to attach files like pdf, doc to upload test results, mee
 **Custom Icons**
 
 Now custom images can be provided to associate with different subject types like Individual, Household. These icons will show up at different places in the field app and data entry app. If the icons are not configured, default icons will show up.
-
 
 **Other Minor Enhancements**
 - Ability to show answers in form in alphabetical or custom order

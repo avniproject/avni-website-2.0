@@ -23,7 +23,6 @@ Once done, all users in your organisation will be shown the "Total" card in "Reg
 
 ![](/img/2023-02-22-avni-release-announcement/MyDashboardWithTotalOnSelectingProgram.webp)<pre>Total shown even after applying Program filter on enabling the feature for an organisation</pre>
 
-
 ### Component release notes
 Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.37.15) for more information.
 

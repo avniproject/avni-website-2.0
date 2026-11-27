@@ -15,11 +15,9 @@ The Avni May releases (v16.13.0 through v16.14.0) bring powerful new capabilitie
 ## Share completed forms instantly
 
 <a href="https://github.com/avniproject/avni-client/issues/1904" target="_blank" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.95'; this.style.transform='translateY(-2px); this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; cursor: pointer; background: #ffffff; transition: all 0.3s ease;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-05-31-may-release/share-feature.webp" 
-             style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+
+![](/img/2026-05-31-may-release/share-feature.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="font-size: 14px; color: #0066cc; font-weight: 600; margin: 0 0 8px 0;">Share forms with one tap</p>
         <p style="margin: 12px 0; line-height: 1.8;">Field workers can now <strong>share completed forms directly from their device</strong> — no more re-entering information. Forms can be sent as <strong>PDF</strong> or <strong>WhatsApp messages</strong>, making handoffs instant and effortless.</p>
@@ -34,11 +32,9 @@ The Avni May releases (v16.13.0 through v16.14.0) bring powerful new capabilitie
 ## Attendance tracking for group programs
 
 <a href="https://avni.readme.io/docs/attendance" target="_blank" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.95'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; cursor: pointer; background: #ffffff; transition: all 0.3s ease;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-05-31-may-release/attendance-feature.webp" 
-             style="width: 100%; height: auto; max-height: 400px; display: block; border-radius: 8px; object-fit: cover; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+
+![](/img/2026-05-31-may-release/attendance-feature.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="font-size: 14px; color: #0066cc; font-weight: 600; margin: 0 0 8px 0;">Track attendance with calendars</p>
         <p style="margin: 12px 0; line-height: 1.8;">Attendance is now a <strong>first-class feature for group-based programs</strong> like learning centres, with built-in calendar management.</p>
@@ -65,13 +61,15 @@ The Avni May releases (v16.13.0 through v16.14.0) bring powerful new capabilitie
         <div style="display: flex; flex-direction: column; gap: 12px;">
             <div>
                 <p style="font-weight: 600; text-align: center; margin-bottom: 8px; font-size: 12px; color: #666;">Configure DOB filter</p>
-                <img src="/img/2026-05-31-may-release/dob-filter-search.webp" 
-                     style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+![](/img/2026-05-31-may-release/dob-filter-search.webp)
+
             </div>
             <div>
                 <p style="font-weight: 600; text-align: center; margin-bottom: 8px; font-size: 12px; color: #666;">Results matched</p>
-                <img src="/img/2026-05-31-may-release/dob-filter-results.webp" 
-                     style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+
+![](/img/2026-05-31-may-release/dob-filter-results.webp)
+
             </div>
         </div>
     </div>

@@ -71,7 +71,6 @@ We chose LangGraph. In a month of focused work after that pivot, we had a workin
 - **Balance LLM and deterministic logic.** Not everything should be LLM-generated. LLM for intelligent deduction.
   Deterministic coding when the path is clear. Never give the LLM counting tasks. Always validate LLM output.
 
-
 **And one soft skill that turned out to matter just as much:**
 
 The final presentation was in front of funders and ecosystem partners — many of them non-technical.  The ability to translate the depth of the problem and the complexity of a solution into a story a non-technical listener can feel — and care about — is something I learnt and improvised based on inputs and feedback.
@@ -121,7 +120,9 @@ Technical sessions on guardrails and evals gave the cohort vocabulary and practi
 Each NGO team were assigned external mentors for periodic guidance.
 
 <div style="width:500px;max-width:100%;margin:0 auto;text-align:center;">
-<img src="/img/2026-06-23-ai-cohort-2-final/team_pic_with_mentor.webp" />
+
+![](/img/2026-06-23-ai-cohort-2-final/team_pic_with_mentor.webp)
+
 <p><i>Team with mentor, Vinay Sudhakaran on left</i></p>
 </div>
 

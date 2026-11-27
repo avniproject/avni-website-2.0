@@ -61,8 +61,11 @@ Avni and Glific have a different primary use case. Avni proves more useful when 
 I participated in the workshop 'Is a Chatbot Right for Your Programme?' Our group of six to seven people worked through a fictional case about Jeevan Sakhi and discussed whether a WhatsApp chatbot was the right response. We considered the problem, the volume of conversations, trust, ownership, sustainability and how success could be measured.
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
-  <img src="/img/2026-09-25-glific-connect-2026/case-study-1.webp" alt="The Jeevan Sakhi case study used for group discussion" style="width: 100%;">
-  <img src="/img/2026-09-25-glific-connect-2026/case-study-2.webp" alt="The Jeevan Sakhi case study used for group discussion" style="width: 100%;">
+
+![The Jeevan Sakhi case study used for group discussion](/img/2026-09-25-glific-connect-2026/case-study-1.webp)
+
+![The Jeevan Sakhi case study used for group discussion](/img/2026-09-25-glific-connect-2026/case-study-2.webp)
+
 </div>
 
 ![Workshop worksheet: scoring the use case](/img/2026-09-25-glific-connect-2026/worksheet@2x.webp)

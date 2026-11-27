@@ -15,9 +15,7 @@ tags:
 ## Gratitude and Acknowledgment
 I extend my sincere gratitude to the Avni team for organizing such an insightful and well-structured conference. I also deeply appreciate the participation of various NGOs and social sector leaders who dedicated their time and energy towards discussions that pave the way for a brighter future for marginalized communities.
 
-<div style="width: 70%">
-    <img src="/img/2025-02-03-reflections-and-learnings-from-avni-2025-conference/BhushanKothalkar.webp">
-</div>
+![](/img/2025-02-03-reflections-and-learnings-from-avni-2025-conference/BhushanKothalkar.webp)
 
 ## Key Insights and Learnings
 
@@ -40,13 +38,10 @@ To ensure wider adoption of Avni’s solutions, the following strategies emerged
 - Leveraging digital platforms for awareness-building and outreach.
 - Strengthening networks with funders and impact-driven alliances.
 
-
 ## Exploring Mahabalipuram
 Beyond the conference sessions and delightful cuisine, I had the privilege of visiting the Shore Temple, a UNESCO World Heritage Site. The temple’s intricate carvings and its picturesque location by the Bay of Bengal created a perfect blend of history, serenity, and inspiration.
 
-<div style="width: 100%">
-    <img src="/img/2025-02-03-reflections-and-learnings-from-avni-2025-conference/2.webp">
-</div>
+![](/img/2025-02-03-reflections-and-learnings-from-avni-2025-conference/2.webp)
 
 ## Final Reflections
 Leaving the conference with renewed motivation and a stronger bond with fellow NGOs, I realized that Avni is more than just an annual gathering—it is a movement driving meaningful change. A heartfelt thank you to Avni and all participating organizations for their unwavering dedication to uplifting underserved communities. Together, we move towards a more inclusive and impactful future.

@@ -21,7 +21,6 @@ During the month of April 2022, we visited SEWA Rural, a nonprofit organisation 
 ![](/img/2022-05-03-field-visit-SEWA-Rural/Jhagadia.webp)<pre>Jhagadia</pre>
 ----------------------------
 
-
 Tribal communities form the majority of the population of the region that SEWA Rural works in. The population has been dealing with poverty and challenges in accessing quality affordable healthcare due to poor infrastructure, inadequate government health facilities and prevalent customs and norms practised within the community. Considering the various challenges it was necessary for the organisation to have community awareness along with making primary as well as secondary and tertiary healthcare accessible and affordable.
 
 SEWA Rural runs a hospital in Jhagadia town. Dr. Maitri showed us around the hospital. The hospital has 250 beds.
@@ -47,7 +46,6 @@ After our visit to the village was completed, we returned to the campus where we
 
 ![](/img/2022-05-03-field-visit-SEWA-Rural/Narmada.webp)<pre>Narmada</pre>
 ----------------------------
-
 
 The Next day we had a meeting with Dr. Dhiren and field supervisors of SNCU to discuss existing issues they were facing with the app. The conversation here with a supervisor who has been working at the organisation for the last 20 years helped us understand the day to day challenges they face in helping the communities. Even today, of all the deliveries that are done at the Kasturba hospital, 30% result in infants with low birth weight or other illnesses. People at times come from as far as 200 to 300 kilometres to avail healthcare at the hospital from neighbouring locations such as Barwani and Nandurbar. These locations are underdeveloped as they are relatively geographically remote and do not have hospitals which can provide them quality care. SEWA Rural does that at a subsidised rate or does not charge in cases where people cannot afford it without compromising on quality of care.
 

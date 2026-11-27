@@ -87,7 +87,6 @@ Based on the regulatory requirements and features Avni provides, we recommend th
 
 ![](/img/2024-11-27-Aadhaar-what-you-need-to-know/masked_aadhaar.webp)
 
-
 ## Summary
 
 Many organisations have asked about the feasibility of storing Aadhaar information in Avni. Hopefully, this article introduces you to the regulations around use and storage of Aadhaar in data collection systems, the current capabilities of Avni and the nuances involved. 

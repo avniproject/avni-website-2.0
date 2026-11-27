@@ -17,7 +17,9 @@ tags:
   - Collaboration
 ---
 <div style="text-align:center;">
-  <img src="/img/2025-11-28-charcha-2025-reflections-ashok/1.webp" style="max-width:70%; border-radius:6px;" />
+
+![](/img/2025-11-28-charcha-2025-reflections-ashok/1.webp)
+
   <p><i>Group photo at Charcha 2025 with Jitesh Rustagi (Dhwani Rural Information Systems) and Dhananjay Rathi (Litmus Ink)</i></p>
 </div>
 
@@ -44,7 +46,9 @@ The second discussion centered on leadership readiness and digital skilling. Man
 What stood out to me was the willingness of participants to share real challenges: failed pilots, staff hesitation, infrastructure gaps. These unfiltered stories offered valuable insights into what it takes to build tech-forward NGOs that remain empathetic and grounded.
 
 <div style="text-align:center;">
-  <img src="/img/2025-11-28-charcha-2025-reflections-ashok/2.webp" style="max-width:70%; border-radius:6px;" />
+
+![](/img/2025-11-28-charcha-2025-reflections-ashok/2.webp)
+
   <p><i>Post-session conversation with Vedprakash Sharma, CEO, B-ABLE Foundation, on livelihoods and skills for impact.</i></p>
 </div>
 
@@ -65,7 +69,9 @@ These conversations reminded me that innovation in the social sector is not alwa
 Throughout the event, I moved across themes ranging from assistive technology and disabilities to livelihoods, inclusion, entrepreneurship, and rural development. The diversity of sessions and people made Charcha feel less like a conference and more like a living ecosystem of ideas.
 
 <div style="text-align:center;">
-  <img src="/img/2025-11-28-charcha-2025-reflections-ashok/3.webp" style="max-width:70%; border-radius:6px;" />
+
+![](/img/2025-11-28-charcha-2025-reflections-ashok/3.webp)
+
   <p><i>Networking with Shobhit Prakash, Head of Development at RNB Global University, discussing how Avni can support research studies and field data collection.</i></p>
 </div>
 
@@ -78,7 +84,9 @@ I also had opportunities to share Samanvay Foundation's work, especially how ope
 What made Charcha 2025 meaningful for me was not just the sessions—it was the spirit of openness, curiosity, and collaboration that connected them all. Every conversation, whether on data protection or community engagement, reinforced that technology is only as impactful as the trust it is built upon.
 
 <div style="text-align:center;">
-  <img src="/img/2025-11-28-charcha-2025-reflections-ashok/4.webp" style="max-width:70%; border-radius:6px;" />
+
+![](/img/2025-11-28-charcha-2025-reflections-ashok/4.webp)
+
   <p><i>In conversation with Ayushi, Founder of Unmute, and Bharath from The Spark Forum on tech, safety, and community voice.</i></p>
 </div>
 

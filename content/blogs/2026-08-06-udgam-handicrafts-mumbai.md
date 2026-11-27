@@ -30,7 +30,7 @@ And the day began in a very Mumbai way.
 
 August 6. I was sitting in an auto, rushing through Mumbai traffic, trying to reach Udgam on time while finishing a vada pav on the way.
 
-<img src="/img/2026-08-06-udgam-handicrafts-mumbai/udgam-1.webp" alt="On the way to Udgam, vada pav in hand" style="max-height: 300px; width: auto; max-width: 100%; display: block; margin: 0 auto;">
+![On the way to Udgam, vada pav in hand](/img/2026-08-06-udgam-handicrafts-mumbai/udgam-1.webp)
 
 At that point, my only thought was, *I hope I'm not late.*
 

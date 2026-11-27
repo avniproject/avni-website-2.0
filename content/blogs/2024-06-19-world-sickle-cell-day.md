@@ -16,7 +16,7 @@ tags:
   - Health
   - Knowledge
 ---
-<img src="/img/2024-06-18-world-sickle-cell-day/SCD.webp">
+![](/img/2024-06-18-world-sickle-cell-day/SCD.webp)
 
 ## Understanding Sickle Cell Disease
 Sickle Cell Disease (SCD) is a severe inherited blood disorder that affects the structure of haemoglobin within red blood cells. Instead of the usual round shape, these cells become crescent or “sickle”-shaped. This abnormal shape leads to blockages in blood vessels, causing intense pain, chronic anaemia, increased risk of infections, reduced growth and adverse effects on many organs like lungs, heart, kidneys, eyes, bones and the brain. 
@@ -29,7 +29,6 @@ Agencies worldwide are increasingly recognising the severity of SCD and prioriti
 In December 2008, the United Nations General Assembly designated June 19th as World Sickle Cell Awareness Day, identifying sickle cell disease as a global health issue. The resolution established this day to address a lack of awareness and improve healthcare access to people affected by the disease. The theme for this year's World Sickle Cell Day is "Hope Through Progress: Advancing Sickle Cell Care Globally". Every year on June 19, countries throughout the world unite to celebrate World Sickle Cell Day. The international awareness day is observed to increase public knowledge of SCD.    
 
 In India, the government has launched the <a href="https://sickle.nhm.gov.in/sickle2.0/home/about" target="_blank" rel="noopener noreferrer">National Sickle Cell Anaemia Control Program</a>, aiming to reduce the incidence and improve the management of SCD through widespread screening, early diagnosis, and comprehensive care. This program focuses on high-prevalence regions, particularly among tribal populations, and promotes awareness and education to reduce stigma and improve outcomes.
-
 
 ## How NGOs Help
 NGOs play a crucial role in bridging healthcare gaps for SCD patients, particularly in underserved and rural areas. Their contributions are multifaceted, including:

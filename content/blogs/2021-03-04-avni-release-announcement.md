@@ -12,7 +12,6 @@ A new release of Avni field app and Avni admin app is available.
 
 The latest version of the field app available on playstore is  **3.11.2.**
 
-
 **What's new:**
 
 The release brings you the following big features and enhancements
@@ -25,7 +24,6 @@ This feature allows projects to enable a workflow where a supervisor needs to ap
 ![](/img/2021-03-04-avni-release-announcement/approval.webp)  
 
 ![](/img/2021-03-04-avni-release-announcement/approval2.webp)  
-
 
 **Phone Number Verification**
 
@@ -40,7 +38,6 @@ Currently this feature is only supported for subject registration but if require
 
 ![](/img/2021-03-04-avni-release-announcement/draft.webp)  
 
-
 **Custom Dashboards**
 
 Avni now allows implementers to design their dashboards with custom sections and cards like the one in the Approval screenshot above and set one of them as the "Home" dashboard. 
@@ -52,7 +49,6 @@ Avni now allows implementers to write rules such that validations can be done ac
 **Metabase Upgrade**
 
 We have upgraded Metabase to the latest version. You may see some changes in the user interface. Metabase now supports pivot tables, waterfall charts, etc. Detailed notes can be found [here](https://github.com/metabase/metabase/releases/tag/v0.38.0).
-
 
 The release also includes some minor enhancements and bug fixes.
 More notes can be found [here](https://github.com/avniproject/avni-client/releases/tag/v3.11.0).  

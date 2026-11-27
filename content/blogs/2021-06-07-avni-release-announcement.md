@@ -12,7 +12,6 @@ A new release of Avni field app and Avni admin app is available.
 
 The latest version of the field app available on playstore is  **3.7.6.**
 
-
 **What's new:**
 
 In this release we bring to you another amazing feature which allows a project to plugin their own mini app into the Avni webapp. The feature enables Avni to have Custom prints like Progress reports, ID cards, etc.  Thanks to the JSS Sickle Cell project for supporting the development of this feature.

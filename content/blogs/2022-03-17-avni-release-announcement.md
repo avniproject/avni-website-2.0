@@ -17,16 +17,13 @@ Inline form groups are groups of form elements that show up together.
 They are useful for showing groups of questions for males/females etc. 
 Group options are displayed in a grid which makes the data entry and readability of the related questions easier.
 
-
 ![](/img/features/QuestionGroup-AD.webp)
 <span style="display:flex;justify-content:center;">App designer</span>
 <br>
 
-
 ![](/img/features/QuestionGroup-App.webp)
 <span style="display:flex;justify-content:center;">Mobile app</span>
 <br>
-
 
 ![](/img/features/QuestionGroup-DEA.webp)
 <span style="display:flex;justify-content:center;">Data entry app</span>

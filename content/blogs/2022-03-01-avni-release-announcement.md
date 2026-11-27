@@ -38,7 +38,6 @@ Below are some examples
 <span style="display:flex;justify-content:center;">Validation rule</span>
 <br>
 
-
 <video src="/img/features/RD_visit_scheduling.mp4" autoplay loop muted playsinline></video>
 <span style="display:flex;justify-content:center;">Visit scheduling rule</span>
 <br>
@@ -48,9 +47,6 @@ Below are some examples
 Analytics from data captured via Avni can be derived by connecting any BI tool e.g. Metabase to either Avni database or APIs. However, this has certain limitations Setting up analytics using these BI tool requirers the know-how of these tools. Many organisations using Avni don't have these expertise and they need to depend upon software partners to set this up for them. This has time and cost implications.
 
 So introducing Avni canned reports where it understands the domain and smartly gives out-of the box insights which can be a good starter for organisations to start reviewing and making sense of their data without any extra cost. It also gives ability to explore data based on dimensions and pre-defined filters required in the domain.
-
-
-
 
 ### Secure Media access from Reports
 Data in Avni is stored in two different data sources. The first is the postgres database, which are easily connected to the reporting servers that are being used by hosting. The second is an S3 database where media is stored.

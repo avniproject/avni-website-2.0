@@ -21,9 +21,7 @@ Established in Bangalore, India, **Hasiru Dala** (meaning “green force” in K
 
 ---
 
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-08-01-empowering-waste-pickers/123.webp">
-</div>
+![](/img/2025-08-01-empowering-waste-pickers/123.webp)
 
 ## 🧩 The Challenge: Paper-Based Chaos
 
@@ -68,9 +66,7 @@ The adoption of Avni has brought significant improvements across Hasiru Dala’s
 
 ---
 
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-08-01-empowering-waste-pickers/234.webp">
-</div>
+![](/img/2025-08-01-empowering-waste-pickers/234.webp)
 
 ## 🗣️ Testimonial from the Field
 

@@ -18,10 +18,9 @@ The tranquil town of **Mahabalipuram**, with its stunning coastline, set the per
 
 Avni, a community service and data collection platform, has become a lifeline for NGOs across diverse sectors, including Health, Education, Sanitation, Agriculture, Legal Aid, and many more. This workshop brought together many NGOs, including mine (IPH Bengaluru), to share updates, engage in hands-on activities, and discuss the future of tech-based, community-driven solutions. The event was a testament to how digital tools can enhance grassroots efforts and transform lives.  
 
-<div style="width: 70%">
-    <img src="/img/2025-01-29-avni-conf-2025-pooja-aggarwal/POOJAPOST.webp">
-</div><p align="center"><i></i></p>
+![](/img/2025-01-29-avni-conf-2025-pooja-aggarwal/POOJAPOST.webp)
 
+<p align="center"><i></i></p>
 
 ## Workshop Highlights  
 
@@ -53,9 +52,9 @@ It was insightful to learn about Avni’s recent updates, and the brainstorming 
 
 Beyond the conference rooms and delicious cuisine, I had the opportunity to explore the beauty and history of Shore Temple, a UNESCO World Heritage Site. Its intricate carvings and the serene Bay of Bengal backdrop provided a perfect mix of relaxation and inspiration.
 
-<div style="width: 40%">
-    <img src="/img/2025-01-29-avni-conf-2025-pooja-aggarwal/2.webp">
-</div><p align="center"><i></i></p>
+![](/img/2025-01-29-avni-conf-2025-pooja-aggarwal/2.webp)
+
+<p align="center"><i></i></p>
 
 ## Final Thoughts  
 As I left on the final day with renewed energy and a deeper connection to both my peer NGOs and the causes they champion, I realized that <span style="color:#ff470f">the Avni workshop is more than an annual event—it is a movement towards a more equitable and empowered world!</span>
@@ -65,10 +64,6 @@ As I left on the final day with renewed energy and a deeper connection to both m
 **Pooja Aggarwal (PhD)**  
 *Scientist, CTRITH (JSSMC, Mysuru)*  
 *Adjunct Faculty, IPH Bengaluru*  
-
-
-
-
 
 ## An introduction to how IPH Bengaluru using Avni platform
 `video: https://youtu.be/eV-dVnxrpGU?feature=shared`

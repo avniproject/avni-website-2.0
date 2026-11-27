@@ -46,7 +46,6 @@ Earlier you can skip the mobile number verification after three retries. This is
 
 ---------------------------------------------------------------------------
 
-
 ### Bug Fixes
 - Android app - Fix the app crashing if register+enrol option is enabled and there are subjects without program.
 - Server - Metadata zip to include sync attributes.

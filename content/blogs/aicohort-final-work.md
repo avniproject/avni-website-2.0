@@ -56,7 +56,6 @@ The two features that came together towards the end had very different journeys.
 Visit scheduling rules, however, was a different story. We had tried solving this with AI before, and once again, even during the cohort, we found ourselves stuck at the same familiar roadblock.  
 ![AI visit scheduling rules feature](/img/aicohort-final-work/second.webp)
 
-
 This is when [Himesh](https://www.linkedin.com/in/himeshr/) (Part of the Platform Team at Avni) suggested we look at how the implementation team had been approaching this problem. They were using real examples from existing organisations as reference points. We decided to try the same idea. We gathered real visit scheduling data, shared it with the AI, and this time, it worked.
 
 With a few refinements, the rules started coming out accurately. What followed was an incredibly productive final week, where both features came together and were ready to be shared with users.

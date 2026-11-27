@@ -25,12 +25,10 @@ Arjun, from our team kick-started the session with an introduction. He then gave
 
 ![](/img/2023-01-12-avni-conference-goa/day-4/arjun.webp)<pre>Arjun interacting with NGO persons</pre>
 
-
 ### Introduction And NGO Talks
 Introduction session was followed by client talks. Jan Swasthya Sahyog (JSS), Yenepoya (HDSS), Indus action (POWER) representatives Dr Ravindra Kurbude, Dr Abhay Nirgude and Madhuri Dhariwal respectively spoke about the use of Avni in their NGO work. They also highlighted the improvements needed for better functioning of the projects. Then we took a break for lunch.
 
 ![](/img/2023-01-12-avni-conference-goa/day-4/seminar_collage.webp)<pre>NGO Talks</pre>
-
 
 Post-lunch we had a short session on features developed for Avni in 2022 by Vinay. The features highlighted were:
 - Drafts-AutoSave
@@ -45,13 +43,10 @@ Post-lunch we had a short session on features developed for Avni in 2022 by Vina
 
 After which, there were presentations from representatives of LAHI, IHMP, Sewa Rural, LFE TEACH Tool and ATE Chandra foundation projects, who were Akash and Laxman and Saeed (all from Lahi), Dr.Pankaj and Appa (IHMP), Dr.Dhiren Modi (Sewa Rural), Vijaya (LFE Teach) and Hiralchandra Maru (ATE Chandra) respectively. They provided insights into their projects functioning and impact and also on usage of Avni application there-in. They also provided feedback on how to improve Avni further. We ended the session for that day at around 6 pm.
 
-
-
 ### Evening
 But the day did not end there. We took a walk on the beach watching the picturesque sunset. And also clicked some beach photos wearing our Avni special Goan shirts.
 
 ![](/img/2023-01-12-avni-conference-goa/day-4/sunset_collage.webp)<pre>Enjoying sunset on beach</pre>
-
 
 We finally ended our long busy day with a satiating dinner and a mind full of never-ending talks with clients and team members.
 

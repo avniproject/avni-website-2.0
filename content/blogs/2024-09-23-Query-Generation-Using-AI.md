@@ -20,16 +20,14 @@ In this blog we discuss how we are using AI to generate complex queries that go 
 
 Most Avni projects tend to require rich business intelligence (BI) dashboards and reports. The Samanvay team follows a standard process from requirements to delivery of these dashboards using SuperSet, Metabase, or sometimes proprietary BI platforms. The current process is somewhat as follows.
 
-<div style="width: 70%">
-    <img src="/img/2024-09-23-Query-Generation-Using-AI/current.webp">
-</div>
+![](/img/2024-09-23-Query-Generation-Using-AI/current.webp)
+
 <br/>
 
 Technically the second step above involves writing complex/large SQL queries and configuring the dashboard, dataset, chart and filters using the SuperSet web application. We have automated the process of generating SQLs from the spreadsheet/csv.
 
-<div style="width: 90%">
-    <img src="/img/2024-09-23-Query-Generation-Using-AI/with-ai.webp">
-</div>
+![](/img/2024-09-23-Query-Generation-Using-AI/with-ai.webp)
+
 <br/>
 
 We used [Cursor](https://www.cursor.com/) which is an AI powered IDE to do this. A sample generated output is [here.](https://github.com/avniproject/avni-website/blob/master/static/code-samples/ai-aggregate-query-gen-blog/anc-details.sql) The SQL generated is to be verified and functionally tested by the engineer. More detailed instruction is present in Avni docs [here](https://avni.readme.io/docs/ai-in-reporting).

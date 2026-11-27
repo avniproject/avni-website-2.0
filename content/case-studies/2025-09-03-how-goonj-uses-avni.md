@@ -30,10 +30,7 @@ Everything is sorted, repaired, or repurposed — damaged goods become parts, sc
 
 In villages, Goonj enables communities to take charge. People come together to fix ponds, paths, or public spaces. Once the work is done, kits are distributed **as rewards, not charity**. This turns urban surplus into a resource that builds ownership in rural communities while giving every donation renewed purpose.
 
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-09-03-how-goonj-uses-avni/goonj_1.webp">
-</div>
-
+![](/img/2025-09-03-how-goonj-uses-avni/goonj_1.webp)
 
 ## Why Digitisation Became Necessary
 For years, data collection was paper-based. Field teams submitted records to state offices and eventually to headquarters. At small scale, this worked, but as operations grew, delays of up to two months, duplication, and inconsistencies became common.  
@@ -52,9 +49,7 @@ Managing millions of kilograms of donated materials requires a seamless integrat
 
 Avni’s **offline-first capability** ensures field teams can record data without internet. Once connectivity is restored, the data syncs automatically, giving Salesforce near real-time visibility.
 
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-09-03-how-goonj-uses-avni/goonj_2.webp">
-</div>
+![](/img/2025-09-03-how-goonj-uses-avni/goonj_2.webp)
 
 ### How It Works
 A periodic batch process connects Salesforce and Avni through an integration job:
@@ -78,10 +73,8 @@ Digitisation has transformed operations:
 - Leadership now monitors activities **live**, and dashboards highlight trends instantly  
 - Planning is more **responsive**
 
+![](/img/2025-09-03-how-goonj-uses-avni/goonj_3.webp)
 
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-09-03-how-goonj-uses-avni/goonj_3.webp">
-</div>
 ## Lessons Learned
 Goonj’s journey highlighted the value of:
 - **Phased rollout**, both by geography and program type, to allow teams to adapt  

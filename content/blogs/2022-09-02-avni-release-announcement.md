@@ -15,8 +15,6 @@ tags: []
 ### Middle Name
 A middle name can now be configured for subjects of type "Person". The configuration option is available in the App Designer under the Subject Types menu. 
 
-
-
 ![](/img/2022-09-02-avni-release-announcement/middle_name_1.webp)
 
 ![](/img/2022-09-02-avni-release-announcement/middle_name_2.webp)
@@ -28,8 +26,6 @@ A middle name can now be configured for subjects of type "Person". The configura
 We have incorporated the Exotel call masking feature in Avni. The Exotel [website](https://exotel.com/use-cases/number-masking/) provides details about their call masking feature. 
 Once you purchase a number from Exotel, it can be configured in Avni to provide privacy to the users who call through the app. See [the documentation](https://avni.readme.io/docs/call-masking) for more information. 
 
-
-
 ---------------------------------------------------------------------------
 
 ### Tasks
@@ -40,17 +36,14 @@ Once you purchase a number from Exotel, it can be configured in Avni to provide 
 
 ![](/img/2022-09-02-avni-release-announcement/tasks_on_avni_client.webp)
 
-
 ---------------------------------------------------------------------------
 ### Customizable Menu
 
 With the customizable Menu option, you can now add links to documents, videos, Whatsapp etc on the "More" option in the Android app. See [here](https://avni.readme.io/docs/customizable-menu-items) for more details. 
 
-
 ![](/img/2022-09-02-avni-release-announcement/customizable_menu.webp)
 
 ---------------------------------------------------------------------------
-
 
 ## Other changes
 

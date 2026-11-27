@@ -18,9 +18,7 @@ tags:
 ---
 In the heart of rural India, education is getting a fresh makeover. It’s not just about reading and writing anymore; it’s about giving children the skills they need for life. The Collectives for Integrated Livelihood Initiatives (CInI), part of Tata Trusts, is leading this change, reaching over 250,000 students in rural and tribal areas in Odisha and Jharkhand. They blend traditional learning with practical experiences to help these children build a brighter future.
 
-<div style="width: 60%">
-    <img src="/img/2024-09-19-Scaling-Rural-Education/CInI-1.webp">
-</div>
+![](/img/2024-09-19-Scaling-Rural-Education/CInI-1.webp)
 
 ## CInI’s Vision: Empowering Through Education
 
@@ -34,9 +32,7 @@ CInI, started in 2007, aims to improve the lives of tribal households in Central
 
 CInI focuses on timely interventions to continuously improve the classroom environment and overall quality of education. It's amazing to see how these initiatives are shaping a self-sustaining future for these kids!
 
-<div style="width: 70%">
-    <img src="/img/2024-09-19-Scaling-Rural-Education/CInI-2.webp">
-</div>
+![](/img/2024-09-19-Scaling-Rural-Education/CInI-2.webp)
 
 ## Avni’s Role in Enhancing Education Outcomes
 
@@ -76,8 +72,6 @@ Here are some key personas using Avni in the field:
 
 As of July 2024, Avni is being used in three districts of Odisha and eight districts of Jharkhand. The platform supports over 2,500 schools, 4,500 school teachers, 490 Anganwadis, and 520 Anganwadi Workers, each of whom is now empowered to capture and act on data like never before.
 
-<div style="width: 50%">
-    <img src="/img/2024-09-19-Scaling-Rural-Education/CInI-4.webp">
-</div>
+![](/img/2024-09-19-Scaling-Rural-Education/CInI-4.webp)
 
 CInI and its more than 150 users are working on the ground to elevate the quality of education. By prioritising robust assessments, Academic Enrichment has recorded an average of 30%  improvement in language and in math. CInI has successfully set up more than 1200 libraries in the schools and Anganwadis so far.

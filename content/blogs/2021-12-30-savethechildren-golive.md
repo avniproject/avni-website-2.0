@@ -29,7 +29,6 @@ where millions of children are denied their rights because of who they are or wh
 Save the Children aims to put the most deprived and marginalised children first, and tackle
 the barriers to their survival, learning and protection.
 
-
 Assam Tea Plantation & Need for Child Protection
 -------------------------------------------------
 Assam’s tea industry is its biggest source of revenue, as the state is the largest producer of tea in India.
@@ -38,7 +37,6 @@ They are deprived of the most basic of amenities to give them an upward growth o
 As local communities are dependent largely on labour, their ability to find growth and more opportunity is limited.
 Children are the worst affected in this situation as they are not only forced to work and contribute to the family income
 but are also subject to dropping-out from schools due to poor educational infrastructure, trafficking, early marriage, domestic violence, abuse and exploitations.The issue requires a multi-dimensional approach engaging with communities, businesses, Government and civil society actors.
-
 
 Empowering the Children and Communities in Tea Plantations of Assam, India
 ------------------------------------------------------------
@@ -67,17 +65,14 @@ Our team at <a href="https://www.samanvayfoundation.org/" target="_blank" rel="n
 
 1. <span style="font-weight:bold"> Case Tracking and Management: </span> Vulnerable children Case Tracking (Case Management from identification to mainstreaming) – linked with Household Registration. Also tracking of beneficiaries for Social Security Schemes and other details.
 
-
 2. <span style="font-weight:bold"> Planning and Follow up visit scheduler (reminders, providing feedback to field staff and assigning tasks etc.)</span>
 
 3. <span style="font-weight:bold"> Dashboard and Monitoring: </span>  A dashboard for the programme team to see the progress made against the plan and the gaps
-
 
 Avni app is functional and is supported online and offline both on tablet/smart phones. We have the web based application available too. Initially app was suggested to be made in 2 languages (English and Assamese) but as the users were comfortable with English we skipped translating it into Assamese. The children and household records are uniquely linked, to avoid duplicate cases.
 
 Planning and development of the app was started in July 2021 and app was shared for first round of UAT in August 2021.
 In first week of October app was live on production.
-
 
 ![](/img/SaveTheChildren/stcatpMindmap.webp)
 

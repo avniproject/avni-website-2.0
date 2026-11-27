@@ -56,10 +56,15 @@ The programme has a rhythm to it. Sessions run four times a week per centre — 
 Each session follows the same shape: a short discussion on how the day has been, a warm-up, skills practice, game tactics, and space for counselling if something is on a child's mind. Afterwards, a 15-to-20-minute debrief — Himanshu runs this for the boys and Preeti for the girls — on how the session actually felt, not just how it went.
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
-  <img src="/img/2026-07-20-visiting-khelmel-raigarh/khelmel-4.webp" alt="Kho-kho practice at Krishnapur" style="width: 100%;">
-  <img src="/img/2026-07-20-visiting-khelmel-raigarh/khelmel-5.webp" alt="Kho-kho practice at Krishnapur" style="width: 100%;">
-  <img src="/img/2026-07-20-visiting-khelmel-raigarh/khelmel-6.webp" alt="Kho-kho practice at Krishnapur" style="width: 100%;">
-  <img src="/img/2026-07-20-visiting-khelmel-raigarh/khelmel-7.webp" alt="Kho-kho practice at Krishnapur" style="width: 100%;">
+
+![Kho-kho practice at Krishnapur](/img/2026-07-20-visiting-khelmel-raigarh/khelmel-4.webp)
+
+![Kho-kho practice at Krishnapur](/img/2026-07-20-visiting-khelmel-raigarh/khelmel-5.webp)
+
+![Kho-kho practice at Krishnapur](/img/2026-07-20-visiting-khelmel-raigarh/khelmel-6.webp)
+
+![Kho-kho practice at Krishnapur](/img/2026-07-20-visiting-khelmel-raigarh/khelmel-7.webp)
+
 </div>
 
 *Kho-kho practice at the government school ground, Krishnapur*

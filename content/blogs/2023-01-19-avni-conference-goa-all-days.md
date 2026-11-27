@@ -69,7 +69,6 @@ Avni 2022 Features list:
 - Custom menu-item
 - Change in password policy
 
-
 ![](/img/2023-01-12-avni-conference-goa/common/avni-conference-introduction.webp)<pre>Avni conference opening ceremony, words of wisdom by Arjun. Picture Courtesy : Sachin Kadam</pre>
 ----------------------------
 
@@ -77,12 +76,10 @@ Avni 2022 Features list:
 
 The day started with NGO talk and after that Vinay and Arjun shared a roadmap of 2023. Discussed how we can improve our app and performance. They share their point of view with us.
 
-
 ![](/img/2023-01-12-avni-conference-goa/common/avni-data-api-discussion.webp)<pre>Some super technical things. Picture Courtesy : Sachin Kadam</pre>
 ----------------------------
 
 Lastly It was a nice experience for all of us.Collected a lot of memories from this sprint. And meet a lot of people.
-
 
 ![](/img/2023-01-12-avni-conference-goa/common/avni-tshirt-group-photo.webp)<pre>Teams Avni, Glific and our partner NGOs at Varca Le Palms</pre>
 ----------------------------

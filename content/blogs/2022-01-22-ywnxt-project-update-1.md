@@ -42,7 +42,6 @@ The problem of analysing data still remained. Towards this, we hosted a central 
 
 The final architecture looks like the diagram below. Partner NGOs provide excel spreadsheets created either manually, or through their LMSes to PMU. This gets uploaded to a central data repository, and is available for analytics through dashboards and reports provided by Metabase.
 
-
 ![](/img/ywnxt/ywnxt-final-solution.webp)
 
 As of this writing,  one partner NGO who decided to use Avni is live and using the system. Their program/intervention is going on despite challenges posed by the closing down of schools due to Covid. The data from Avni will be exported in CSV format using its longitudinal export feature and imported into the central data repository.

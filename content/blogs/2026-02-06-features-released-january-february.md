@@ -29,17 +29,11 @@ With offline maps downloaded, field workers can navigate to saved locations even
 
 We’ve made it easier for users to share information about the issues they face. When a user encounters an issue, they can now click "Upload issue info" on the error alert that appears. This automatically uploads diagnostic logs to our server, helping us resolve issues faster.
 
-<div style="width: 100%; max-width: 400px; padding: 20px; margin: 0 auto;">  
-    <img src="/img/2026-02-06-features-released-january-february/error.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2026-02-06-features-released-january-february/error.webp)
 
 For situations where there's no error alert, users can access this feature by clicking "More" on the home page, then selecting "Upload app info." This ensures comprehensive support coverage for all types of issues. Refer [here](https://avni.readme.io/docs/troubleshooting-and-error-debugging#reporting-an-issue) for more details.
 
-<div style="width: 100%; max-width: 400px; padding: 20px; margin: 0 auto;">  
-    <img src="/img/2026-02-06-features-released-january-february/uploadappinfo.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2026-02-06-features-released-january-february/uploadappinfo.webp)
 
 ### ⚡ Enhancements in Data Upload
 

@@ -15,12 +15,9 @@ tags:
 ## AI Autopilot: set up an Avni app from a field-workflow specification
 
 <a href="https://github.com/avniproject/avni-webapp/issues/1702" target="_blank" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.95'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; cursor: pointer; background: #ffffff; transition: all 0.3s ease;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-08-31-august-release/avni-autopilot.webp"
-             alt="Avni Autopilot panel with a drop zone to upload the scoping/modelling specification document"
-             style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+
+![Avni Autopilot panel with a drop zone to upload the scoping/modelling specification document](/img/2026-08-31-august-release/avni-autopilot.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="font-size: 14px; color: #0066cc; font-weight: 600; margin: 0 0 8px 0;">From specification to working app</p>
         <p style="margin: 12px 0; line-height: 1.8;">Upload a specification document and Autopilot builds the app configuration for you — entities (subject types, programs, encounter types), forms, visit-schedule rules, form-element rules from the values in the document, and all form-level rules from the specification or via chat.</p>
@@ -35,12 +32,9 @@ tags:
 ## Configurable visibility for the auto-populated Visit Date
 
 <a href="https://github.com/avniproject/avni-client/issues/1971" target="_blank" style="text-decoration: none; color: inherit; display: block; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.95'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 24px rgba(0,102,204,0.15)';" onmouseout="this.style.opacity='1'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
-<div style="display: flex; gap: 40px; align-items: center; padding: 40px; margin-bottom: 20px; cursor: pointer; background: #ffffff; transition: all 0.3s ease;">
-    <div style="flex: 1; min-width: 250px;">
-        <img src="/img/2026-08-31-august-release/visitdate-visibility.webp"
-             alt="Settings screen with the Hide Visit Date toggle turned on"
-             style="width: 100%; height: auto; display: block; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </div>
+
+![Settings screen with the Hide Visit Date toggle turned on](/img/2026-08-31-august-release/visitdate-visibility.webp)
+
     <div style="flex: 1; min-width: 250px;">
         <p style="font-size: 14px; color: #0066cc; font-weight: 600; margin: 0 0 8px 0;">Hide or lock the Visit Date</p>
         <p style="margin: 12px 0; line-height: 1.8;">The Visit Date field, auto-populated on encounters, can now be configured per Encounter Type in App Designer — <strong>hideVisitDate</strong> to hide it from the form, and <strong>visitDateNonEditable</strong> to keep it read-only. In both cases, the date is still captured and saved in the background.</p>

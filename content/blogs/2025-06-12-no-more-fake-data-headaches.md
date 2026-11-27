@@ -38,11 +38,7 @@ For BI to deliver meaningful insights, the underlying data must feel authentic. 
 
 A single malformed value—like a comma in an unquoted field—can break Avni’s data importer, stalling development.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/1.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/1.webp)
 
 ## ChatGPT’s Comma Catastrophe
 
@@ -52,21 +48,13 @@ I crafted a detailed prompt for ChatGPT, based on a sample CSV with headers and 
 
 The full prompt was a beast, demanding valid Indian locations, logical ages, and proper date formats (DD-MM-YYYY). ChatGPT generated data, but uploading it to Avni was a disaster. The issue? Commas. CSVs use commas as delimiters, so an address like “Mumbai, Maharashtra” split into two columns, causing column mismatch errors. ChatGPT’s free tier limited my iterations, and manually quoting fields felt like punishment. I was stuck, and my BI reports were going nowhere.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/2.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/2.webp)
 
 ## Grok: Better, But Not Quite
 
 Next, I tried Grok, hoping its flexibility would fix the comma chaos. I fed it the same prompt, expecting cleaner CSVs. Grok was smarter, generating more consistent data—like proper Indian names (“Ravi Kumar”) and valid dates. But commas still tripped me up. Addresses like “Pune, Maharashtra” broke uploads, and I spent hours wrapping fields in quotes or swapping commas for semicolons. Grok’s prompts were also verbose, and it didn’t fully grasp Avni’s backend, like how locations must match locations.csv. My Metabase dashboards were still waiting.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/3.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/3.webp)
 
 ## Windsurf: A Better Approach
 
@@ -78,11 +66,7 @@ Windsurf’s prompts were a breeze. Instead of a page-long saga, I wrote:
 
 Windsurf wrapped fields like “Mumbai, Maharashtra” in quotes, nailed valid districts from locations.csv (exported via Admin > Locations), and produced realistic data—think “Priya Sharma, 32, Pune District.” Uploads to Avni worked on the first try, and my Metabase reports started coming to life, showing enrollment patterns and health metrics without a hitch.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/4.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/4.webp)
 
 ## Uploading Data via the Avni Web Console
 
@@ -96,11 +80,7 @@ So why the obsession with CSVs? Avni’s web console is built for bulk data impo
 
 The CSV requirement comes from Avni’s need for structured, machine-readable data. Each row represents a record, and columns must align perfectly with the data type’s fields—think Subject ID, Name, Location. A single unquoted comma in an address field could shift columns, breaking the upload. This is why Windsurf’s ability to quote fields was a lifesaver, ensuring my CSVs played nice with Avni’s web console and kept my BI reports on track.
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/5.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/5.webp)
 
 ## Scaling for BI with Limitless Credits
 
@@ -110,11 +90,7 @@ The process was seamless: export locations.csv, grab sample templates from Admin
 
 ---
 
-<div style="width: 100%; max-width: 800px; padding: 24px 0;">  
-    <img src="/img/2025-06-12-no-more-fake-data-headaches/6.webp" 
-         alt="" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-12-no-more-fake-data-headaches/6.webp)
 
 ## What I Learned (So You Don’t Have To)
 

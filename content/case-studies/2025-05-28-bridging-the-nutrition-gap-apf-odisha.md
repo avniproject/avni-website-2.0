@@ -16,9 +16,7 @@ logo: /logos/Azim-Premji-Foundation-logo.webp
 tags:
   - Health
 ---
-<div style="width: 30%; margin: auto; ">
-    <img src="/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/why-child-nutrition-matters.webp">
-</div>
+![](/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/why-child-nutrition-matters.webp)
 
 Child nutrition is a vital indicator of a nation’s health and development. While India has made significant strides in
 improving maternal and child health over the last decade, there is still a pressing need to address persistent gaps,
@@ -46,9 +44,7 @@ The **Azim Premji Foundation’s Odisha Nutrition Initiative** addresses these c
 spans from pregnancy through the first five years of a child's life. The initiative targets maternal and child nutrition
 through community-level engagement, regular monitoring, and technology-driven support systems.
 
-<div style="width: 30%; ">
-    <img src="/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/program-overview.webp">
-</div>
+![](/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/program-overview.webp)
 
 ### Why Technology Was Essential
 
@@ -132,10 +128,10 @@ and make data-driven decisions. Reports are built on an innovative BI tool \- Su
       <video src="/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/individual-dashboard.mp4" autoplay loop muted playsinline></video>
 </div>
 <div style="clear: both"></div>
-<div style="width: 90%">
-    <img src="/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/reports.webp">
-</div>  
 
+![](/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/reports.webp)
+
+  
 
 ## **Program Reach and Impact**
 
@@ -163,7 +159,6 @@ collection and real-time decision-making. Its offline-first design is especially
 limited connectivity. By enabling frontline workers to capture key data on maternal and child health and service
 delivery during home visits, growth monitoring sessions, and VHSNDs, AVNI facilitates the timely identification and
 follow-up of High-Risk Pregnancies (HRP) and undernourished children.” </i> \- **Ramesh Sahu, Program Manager**
-
 
 If you're interested in adopting a similar approach or want to learn more about how the Avni platform can support your initiatives:
 

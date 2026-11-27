@@ -11,7 +11,9 @@ image: >-
 tags: []
 ---
 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdOozSQIl8Ablh_9AH4EHu9l87_MEgsaL8shQL2cLvU2hlr5g/viewform" target="_blank" rel="noopener noreferrer">
-  <img src="/img/2026-09-09-avni-launchpad-cohort-4-announcement/launchpad-cohort-4-banner-deadline-extended.webp"/>
+
+![](/img/2026-09-09-avni-launchpad-cohort-4-announcement/launchpad-cohort-4-banner-deadline-extended.webp)
+
 </a>
 
 <br>
@@ -28,11 +30,7 @@ The earlier cohorts of Avni Launchpad brought together a diverse group of forwar
 
 These pilots helped teams move from paper-based processes and spreadsheets to digital systems for data collection, beneficiary tracking, monitoring, reporting and real-time program insights.
 
-<div style="width: 70%; max-width: 620px; margin: 24px auto;">
-  <img src="/img/2026-09-09-avni-launchpad-cohort-4-announcement/cohort-glimpses.webp"
-       alt="Glimpses from previous Avni Launchpad cohorts"
-       style="width: 100%; height: auto; display: block; border-radius: 8px;">
-</div>
+![Glimpses from previous Avni Launchpad cohorts](/img/2026-09-09-avni-launchpad-cohort-4-announcement/cohort-glimpses.webp)
 
 Building on these experiences, the West and East India Cohort is an opportunity to work more closely with organisations across both regions, including those serving rural, remote and low-connectivity communities, contexts for which Avni has been specifically designed.
 

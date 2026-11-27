@@ -12,7 +12,6 @@ Happy Diwali to you !!!
 
 Release 3.35 is now live. This release includes minor changes and bug fixes to the application. Notable changes are given below. Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.35.0) for more information. 
 
-
 ## Notable Changes
 ---------------------------------------------------------------------------
 
@@ -40,8 +39,6 @@ Include location types in metadata zip
 - https://github.com/avniproject/avni-webapp/releases/tag/v3.35.0
 - https://github.com/avniproject/integration-service/releases/tag/v3.35.0
 - https://github.com/avniproject/rules-server/releases/tag/v3.35.0
-
-
 
 ## What are we focussed on
 ---------------------------------------------------------------------------

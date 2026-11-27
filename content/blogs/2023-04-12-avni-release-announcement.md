@@ -12,7 +12,6 @@ tags: []
 ---
 Major Release 3.38.00 is now live, it includes following modifications to Avni application.
 
-
 ## Notable Changes
 ---------------------------------------------------------------------------
 
@@ -31,23 +30,19 @@ An organisation admin user can now search for the intended recipient, which coul
 and then "View" the messages "Sent" Or "Scheduled to be sent" to the recipient.<br>
 In-addition to being able to "Send" whatsapp messages to them.
 
-
 ##### Android-client
 We have also introduced functionality in Avni client to "View" "Sent and Received" messages for a "Subject / Individual".
 <video src="/img/2023-04-12-avni-release-announcement/clientSubjectViewMsgs.mp4" width="500px" autoplay loop muted playsinline></video><pre>View messages to Subject on Client</pre>
-
 
 ### Sync performance improvements for Approval workflow
 Earlier in Avni, we used to sync Approvals to all users of an organisation, irrespective of whether they have access to its related Subject / Individual. This could potentially lead to severe performance bottlenecks during sync for all Users of that organisation and also slow down the system for any user on that system.
 
 To overcome this, we have now introduced Scope-aware sync for Approvals, resulting in reduced load on system during sync and also improved sync experience for users of organisations with Approval workflow enabled for an Entity Type.
 
-
 ### Bulk assignment of Subjects to User
 Last year, we had introduced "Direct Assignment" as a mechanism to assign subjects to a user. This allows sync of subjects based on the user it is assigned to, instead of the older mechanisms of catchments. With this release, subjects can be assigned or unassigned in bulk. See video below for more information
 
 <video src="/img/2023-04-12-avni-release-announcement/BulkAssignment.mp4" autoplay loop muted playsinline></video><pre>Bulk assignment of subjects to User</pre>
-
 
 ### Immutable encounter support on web-app
 Immutable encounters is another feature that was introduced last year. It allows encounters that can be edited, and preserve the edit history over time. This history can be accessed in reports, but for the Android app user, it feels like editing an existing form/encounter. Last year, the feature was only available on the Field App. With this release, immutable encounters are available on the Data Entry Application (web)

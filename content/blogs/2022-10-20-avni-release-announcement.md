@@ -13,7 +13,6 @@ tags: []
 ---
 Release 3.34 is now live. This release includes minor changes and bug fixes to the application. Notable changes are given below. Please see the [detailed release notes](https://github.com/avniproject/avni-product/releases/tag/v3.34.0) for more information. 
 
-
 ## Notable Changes
 ---------------------------------------------------------------------------
 
@@ -22,7 +21,6 @@ Release 3.34 is now live. This release includes minor changes and bug fixes to t
 
 ![](/img/2022-09-30-avni-release-announcement/assignment.webp)
 
-
 - The landing page for the Data Entry Application has been shifted to the search screen
 - Hierarchical address selection on the Data Entry Application when registering a subject, or when filling form elements of type "Location"
 
@@ -30,11 +28,8 @@ Release 3.34 is now live. This release includes minor changes and bug fixes to t
 - Group information will now be available when adding new members
 - Include auth support on custom application menus. Auth credentials of the user can now be added when adding a new custom application menu, so that extensions configured on Avni can be triggered using this feature
 
-
 ### Bug fixes
 - There was an issue with deletion of visits/encounters on the subject dashboard. This has been fixed
-
-
 
 ## Next priorities in Avni
 ---------------------------------------------------------------------------

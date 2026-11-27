@@ -22,6 +22,7 @@ const { promisify } = require('util');
 const fs = require('fs');
 const path = require('path');
 const { blogSectors } = require('./blog-sector-rules');
+const { simplifyPostHtml } = require('./simplify-post-html');
 const matter = require('gray-matter');
 const sharp = require('sharp');
 
@@ -240,6 +241,8 @@ async function migrateBody(body, oldSite, file) {
   // The old site's YouTube shorthand `youtube: <id>` becomes an embed
   out = out.replace(/^`youtube:\s*([\w-]+)`\s*$/gm, (all, id) =>
     `<iframe class="video-embed" src="https://www.youtube.com/embed/${id}" title="YouTube video" loading="lazy" allowfullscreen></iframe>`);
+  // Plain markdown images instead of HTML wrappers, so the CMS editor shows pictures
+  out = simplifyPostHtml(out).body;
   // Case studies moved under /resources
   return out.replace(/(\]\(|href=["'])\/case-studies\b/g, '$1/resources/case-studies');
 }

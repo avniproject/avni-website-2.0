@@ -32,7 +32,6 @@ The location datatype was introduced in the Android Field-app for quite a while,
 ### Rule failure management
 When rules that figure out visit schedules, decisions etc fail, they are usually logged in a table within the Avni database. In this release, this has been brought to the App Designer interface so that implementers can now look at these failures and take necessary action. 
 
-
 ![](/img/2021-11-04-avni-release-announcement/rulefailures.webp)
 
 ---------------------------------------------------------------------------

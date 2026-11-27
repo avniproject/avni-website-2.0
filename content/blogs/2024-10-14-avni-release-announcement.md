@@ -11,13 +11,11 @@ readTime: 2 min read
 category: Avni News
 tags: []
 ---
-<div style="width: 70%">
-    <img src="/img/2024-10-14-avni-release-announcement/2.webp">
-</div>
+![](/img/2024-10-14-avni-release-announcement/2.webp)
+
 <br/>
 
 We are pleased to announce the release of Avni 10.0, which introduces important enhancements aimed at improving user interaction with dashboards, optimizing the performance of the Data Entry App (DEA), and simplifying the CSV upload process. These updates are designed to enhance efficiency, reduce errors, and streamline data management, particularly for large-scale projects.
-
 
 ### 1. Custom Dashboard and Filters:
 We’ve improved the way you interact with dashboards by enhancing filter options. 
@@ -34,12 +32,10 @@ Example: To create a report card that helps you to view all the overdue visits o
 </div>
 <br/>
 
-
 ---
 
 ### 2. Data Entry App (DEA) Enhancements:
 We've improved the performance of the Data Entry App (DEA), focusing on the search functionality and the profile pages. Previously, when dealing with a large number of records, searches and profile loads could be slow. Now, both are faster and more efficient, making it easier for users to quickly find the information they need and navigate between profiles. This means less waiting time and smoother data entry, especially for large-scale projects.
-
 
 ---
 
@@ -56,6 +52,4 @@ We’ve made the CSV upload process more intuitive and user-friendly. Error mess
 ---
 
 Stay tuned for more exciting improvements in future releases!
-
-
 

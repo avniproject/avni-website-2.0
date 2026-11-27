@@ -35,9 +35,7 @@ IHMP’s sexual and reproductive health interventions have reached over 127,000 
 girls, significantly increasing contraceptive use, delaying first pregnancies, and reducing maternal,
 neonatal and child morbidity and mortality.
 
-<div style="width: 70%">
-    <img src="/img/2025-05-02-ihmp-strengthening-adolescent-health/I1.webp">
-</div>
+![](/img/2025-05-02-ihmp-strengthening-adolescent-health/I1.webp)
 
 ## Problem Statement & Intervention 1: Addressing Health Risks Among Adolescent Girls
 
@@ -146,9 +144,7 @@ communication, counselling and motivation.
 - **Referrals**: The App facilitates timely identification of danger signs and morbidity
 leading to efficient referral, and supports effective linkage to health services.
 
-<div style="width: 70%">
-    <img src="/img/2025-05-02-ihmp-strengthening-adolescent-health/I2.webp">
-</div>
+![](/img/2025-05-02-ihmp-strengthening-adolescent-health/I2.webp)
 
 ## Impact and Outcomes
 
@@ -172,10 +168,7 @@ morbidity and maternal complications.
   </a>
 </p>
 
-
-<div style="width: 70%">
-    <img src="/img/2025-05-02-ihmp-strengthening-adolescent-health/I4.webp">
-</div>
+![](/img/2025-05-02-ihmp-strengthening-adolescent-health/I4.webp)
 
 ## Conclusion
 

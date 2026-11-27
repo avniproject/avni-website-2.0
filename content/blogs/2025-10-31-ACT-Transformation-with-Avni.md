@@ -16,9 +16,7 @@ tags:
   - User stories
   - Health
 ---
-<div style="width: 80%; margin: auto; ">
-    <img src="/img/2025-ACT-Transformation-with-Avni/ACT_team.webp">
-</div>
+![](/img/2025-ACT-Transformation-with-Avni/ACT_team.webp)
 
 ---
 
@@ -66,7 +64,7 @@ We saw improvements across the board:
 
 **4. More empowered staff:** – – field teams felt confident using technology.
 
-<img src="/img/2025-ACT-Transformation-with-Avni/act_field_pic.webp" style="max-height: 90px;"/>
+![](/img/2025-ACT-Transformation-with-Avni/act_field_pic.webp)
 
 ---
 

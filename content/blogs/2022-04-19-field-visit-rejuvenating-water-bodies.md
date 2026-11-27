@@ -52,7 +52,6 @@ The first steps of the desilting process is to take pre-measurements. A pre-pers
 
 After the tender coconut, we proceed to Grama Vikas for breakfast. In case you have not been there, the dosas are excellent. They also make nice pickles. I purchased a pack of ginger chutney that was served during breakfast. It was yummy.
 
-
 While we were busy with breakfast, desilting is in full progress at the site. Excavators lift silt and fill up tractors. Farmers cart them to their field. The farmers also contribute to the cost of excavators through a token amount per load (that is different at different locations). A tractor costs between Rs. 3000 and Rs. 4000 per day in rent and driver fees in this area. There is a lot of tomato, vegetable and ragi cultivation close to the lake, making it easier to find farmers willing to cart silt.
 
 I got to meet the supervisor for the Mulbagal lake, and folks at the Grama Vikas office. They showed me the log book used by supervisors to enter daily recording of silt excavation and carting. The book is exactly like the forms in Avni. It gets bright and hot during the day at the lake, which means using cell phones is hard. Entry into the phone happens when the supervisors get back to office after the field work. It is then approved by Grama Vikas staff.

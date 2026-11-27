@@ -12,7 +12,6 @@ tags: []
 ---
 Major Release 3.39.0 is now live, it includes following modifications to Avni application.
 
-
 ## Notable Changes
 
 ---------------------------------------------------------------------------

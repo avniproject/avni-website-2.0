@@ -18,7 +18,6 @@ tags:
 ---
 ![Udaipur airport to hotel mountain view](/img/2023-07-18-avni-sprint-udaipur-blog-by-Salil/Airport.webp)
 
-
 On the 9th of July 2023, as the rain greeted us upon our arrival in Udaipur, the excitement was palpable. With a sprint planning sheet in mind and a list of fun activities to look forward to, our journey from the Udaipur airport to the hotel was refreshing and set the tone for the days ahead.
 
 We kicked off the sprint with a delightful tea/coffee session, where all the sprint members, including our Tech4Dev colleagues, gathered for a small introductory round. Erica, Ankit, and Lobo took the opportunity to explain the organisational principles that Tech4Dev focuses on, along with the purpose and objectives of the sprint.

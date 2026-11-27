@@ -20,7 +20,6 @@ Maha PECOnet is a UNICEF Mumbai-facilitated network of volunteers, corporates, g
 
 Avni is used for Maha PECOnet as an overall MIS for the programme. While individual NGOs maintain their own data for their operations, it was hard to get a summary of the entire programme without significant effort. Avni filled this gap by providing coded forms to fill in data. All data collected would then be collated and displayed in a public dashboard. 
 
-
 Phases
 -------
 Avni for Maha PECOnet was implemented in two distinct phases. 
@@ -28,14 +27,12 @@ In the first phase, Avni was a survey collection system. Users surveyed differen
 
 Based on the surveys conducted, the right kind of intervention was introduced to each area. Interventions include awareness campaigns (mics, pamphlets, online awareness activities etc), relief supplies (ration, medical equipment, masks etc), training and WASH activities (tap installation, soap distribution etc). Recording the activities performed and developing the dashboard was part of the second phase. 
 
-
 Special needs
 -------------
 Being a combination of multiple organisations, Maha PECOnet requires coordination across multiple organisations. This means seamless data flow both from individual organisations to the coordination centre, and easy dissemination of data from the coordination centre to each organisation. It was also important to ensure data quality. To achieve this, we had to
 1. Ensure data collected by field workers are validated/approved. The approval feature of Avni was used here. 
 2. A public dashboard was used to ensure basic data is available for all (both participating organisations and the general public)
 3. Access controls were implemented so that users are able to do only activities that they are responsible for. This greatly streamlines the user interface of each user. For example, a person handling a VHHD can only enter data for VHHD days conducted. 
-
 
 The final app
 -------------
@@ -46,7 +43,6 @@ The final app
 ![](/img/covid-mis-case-study/dashboard-1.webp)
 
 ![](/img/covid-mis-case-study/dashboard-2.webp)
-
 
 **Showcase video**
 
@@ -61,14 +57,11 @@ See documentation ![here](https://avni.readme.io/docs/extension-points)
 **Splash Screen for Maha PECO net**
 ![](/img/covid-mis-case-study/splash.webp)
 
-
-
 Testimonial
 ------------
 ![](/img/covid-mis-case-study/shilpa_mirashi.webp)**Shilpa Mirashi
 Director, Indian Institute of Youth Welfare
 Nagpur**
-
 
 _The MIS and dashboard of Co-MARG MAHA peconet programme was successfully launched and was effective in data compilation, collation and final outcomes.( Nagpur rural). IIYW has used the Avni App and MIS after a focused training from project holders and IIYW found the Avni MIS very user friendly and qualitative.
 IIYW could use MIS daily and the team who handled the trainings were most skilled and extremely supportive. The MIS and dashboard brought more professionalism in handling the data and mainly to reproduce its impacts.

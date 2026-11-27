@@ -32,7 +32,6 @@ Soon after a healthy breakfast, some milkshake and a lot of enthusiasm with the 
 
 ![](/img/2023-01-12-avni-conference-goa/day-2/breakfast.webp)<pre>Breakfast</pre>
 
-
 ## Productive part of the day
 
 Most of the day was spent talking, discussing and having healthy arguments on various implementations through walkthroughs (A fun session indeed).

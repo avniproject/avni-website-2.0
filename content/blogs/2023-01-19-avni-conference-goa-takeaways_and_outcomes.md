@@ -54,7 +54,6 @@ During different discussions, I realised how working together as a community can
 - It was exciting to know the future plans that NGOs had, and how Avni can play a role in them. One was being able to adapt to the requirements of Ayushman Bharat Digital mission.
 - Scalability: ATE Chandra wanted to scale the tracking for silt removal using Avni, to 10K waterbodies in 2023 from 1K in 2022, and LAHI wanted to reach 1M students to steer their school to work transition. Accordingly, our Avni team also need to scale the technical infrastructure and make performance optimizations to accommodate the high traffic and data.
 
-
 ### Outcomes:
 #### Higher trust:
 Accommodating the NGOs expectations in the conference, sharing the next 1 year roadmap, collecting feedback on a continuous basis, combined retro of the sprint with the NGOs, I feel helped in ending the sprint with a high positive vibe.

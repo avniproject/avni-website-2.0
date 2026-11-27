@@ -21,10 +21,8 @@ Let's take a look at what's new.
 Earlier this year, we simplified the self-signup process on Avni. Now, we're taking it a step further with **Templates**—pre-built configurations for common use cases that you can apply with just a click.
 
 Whether you're working in healthcare, water management, or social welfare, these templates give you a head start:
-<div style="width: 100%; max-width: 100%; padding: 30px;">  
-    <img src="/img/2025-12-23-avni-release-announcement/Templates.webp" 
-         style="width: 100%; height: auto; max-width: 800px; display: block;">
-</div>
+
+![](/img/2025-12-23-avni-release-announcement/Templates.webp)
 
 We plan to continue adding more templates in the future to help cover more use cases.
 
@@ -36,17 +34,11 @@ We've also added two new AI-powered features:
 
 **Smart Form Suggestions** – As you design forms, Avni now provides helpful suggestions and warnings to ensure your forms are set up correctly.
 
-<div style="width: 100%; max-width: 100%; padding: 30px;">  
-    <img src="/img/2025-12-23-avni-release-announcement/FormValidationAIWarnings.webp" 
-         style="width: 100%; height: auto; max-width: 800px; display: block;">
-</div>
+![](/img/2025-12-23-avni-release-announcement/FormValidationAIWarnings.webp)
 
 **Automated Visit Scheduling** – Describe your visit scheduling needs in plain language, and the AI will generate the scheduling rules for you. No coding required!
 
-<div style="width: 100%; max-width: 100%; padding: 30px;">  
-    <img src="/img/2025-12-23-avni-release-announcement/CreateVisitScheduleRuleWithAI.webp" 
-         style="width: 100%; height: auto; max-width: 800px; display: block;">
-</div>
+![](/img/2025-12-23-avni-release-announcement/CreateVisitScheduleRuleWithAI.webp)
 
 We've received great feedback on these AI features from participants in our Avni Launchpad program, and we have an exciting roadmap for more AI-powered capabilities across app setup, data collection, and reporting.
 

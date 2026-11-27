@@ -14,10 +14,7 @@ category: Avni News
 tags:
   - release
 ---
-<div style="width: 100%; padding: 48px;">  
-    <img src="/img/2025-06-02-avni-release-announcement/generated-image.webp" 
-         style="width: 100%; height: auto; display: block;">
-</div>
+![](/img/2025-06-02-avni-release-announcement/generated-image.webp)
 
 We are thrilled to announce the release of Avni 13.0.0! This is a significant milestone for the Avni community, packed with powerful new features and critical enhancements that make our open-source platform more flexible, insightful, and easier to manage. 
 
@@ -29,13 +26,12 @@ One of the most requested features is here! Until now, program aggregate dashboa
 
 With the new feature, an organisation administrator can start the process of creating reports. Some default reports will be automatically available on the Metabase reporting system. Users can be created right on the Admin section of Avni. Existing users can be given permission to reports from here. Additional reports can be created if you choose on Metabase. 
 
-<div>
-    <div style="width: 48%; padding-right: 2vw; float: left">  
-        <img src="/img/2025-06-02-avni-release-announcement/metabase.webp">
-    </div>
-    <div style="width: 48%; float: left">  
-        <img src="/img/2025-06-02-avni-release-announcement/metabase2.webp">
-    </div>
+![](/img/2025-06-02-avni-release-announcement/metabase.webp)
+
+    
+
+![](/img/2025-06-02-avni-release-announcement/metabase2.webp)
+
     <div style="clear: both; display: table"></div>
 </div>
 
@@ -47,10 +43,7 @@ We’re excited to share that the bulk import functionality has now been complet
 
 This enhancement not only reduces friction during onboarding but also opens the door to faster rollouts for organisations needing to migrate existing program data into the system. Read more [here](https://avni.readme.io/docs/bulk-data-upload-v2). 
 
-<div style="width: 100%; max-width: 800px; padding: 48px;">  
-    <img src="/img/2025-06-02-avni-release-announcement/spreadsheet.webp" 
-         style="width: 100%; height: auto; max-width: 600px; display: block;">
-</div>
+![](/img/2025-06-02-avni-release-announcement/spreadsheet.webp)
 
 ### 3. Other Notable Improvements
 - **Verification of bundle uploads**: Production deployments through bundle uploads can now be verified through the bundle diff checker tool. This will be available whenever you upload a new bundle file

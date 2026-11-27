@@ -93,7 +93,6 @@ We started off with a collective group exercise building a Fact table that could
 4. Identifying the Numeric metrics (measurable values)
 5. Coming up with pseudo queries to determine the metrics by applying filters and aggregation functions on the fact table columns
 
-
 We then worked through an additional problem independently. This hands-on exercise further cemented the learning far better than any lecture could have.
 
 ![](/img/2025-11-12-dcp-3-module-2/BuildFactTableExercise.webp)<pre>Building a Fact Table for performant dashboards - Group exercise</pre>

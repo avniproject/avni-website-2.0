@@ -23,9 +23,7 @@ In the hills of the Dang, one of Gujarat's most remote districts, Purna Clinic i
 
 In just nine months:
 
-<div style="width: 80%; margin: auto; margin-top: 16px; margin-bottom: 24px;">
-    <img src="/img/2026-05-05-purna-clinic-tide-trust-dangs/programme-infograph.webp">
-</div>
+![](/img/2026-05-05-purna-clinic-tide-trust-dangs/programme-infograph.webp)
 
 All in a setting where many field workers had never used a smartphone before.
 
@@ -33,9 +31,7 @@ All in a setting where many field workers had never used a smartphone before.
 
 ## About the Programme
 
-<div style="width: 80%; margin: auto; margin-bottom: 24px;">
-    <img src="/img/2026-05-05-purna-clinic-tide-trust-dangs/purna-clinic-morzira.webp" alt="Purna Clinic, Morzira, Dang district, Gujarat">
-</div>
+![Purna Clinic, Morzira, Dang district, Gujarat](/img/2026-05-05-purna-clinic-tide-trust-dangs/purna-clinic-morzira.webp)
 
 Dang is one of the most remote districts in Gujarat, at the Gujarat–Maharashtra border, with a 95% tribal population. In Morzira village, **Purna Clinic** — run by [TIDE Trust](https://joyofhelping4u.com/wp-content/uploads/2023/11/Bhansali-trust-TIDE-project.pdf) — provides primary care to Bheel, Konkani, Kunbhi, and Gamit tribal communities across both states. The clinic sees 40–50 patients daily for everything from family medicine and physiotherapy to dental care and lab services, all at subsidised rates. Many of those patients are managing chronic conditions like hypertension and diabetes with limited access to district hospitals or government health schemes.
 
@@ -57,9 +53,7 @@ There was another layer to the challenge. Most of Purna's field workers had neve
 
 The programme went live on Avni on **4 August 2025**. The first two months were slow — 35 encounters in August, 49 in September — as the team got trained and the field workers found their footing with the app. Then in October, something shifted. Encounters jumped to **340 in a single month** as the field staff hit their stride and data collection scaled rapidly. Growth has continued every month since.
 
-<div style="width: 80%; margin: auto; margin-top: 16px; margin-bottom: 24px;">
-    <img src="/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp">
-</div>
+![](/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp)
 
 ---
 
@@ -103,7 +97,6 @@ If you're working on community health programmes and facing challenges with trac
 
 ---
 
-
 <p>
 📬 Reach out to us at <a href="mailto:avnipartnerships@samanvayfoundation.org">avnipartnerships@samanvayfoundation.org</a>
 </p>
@@ -119,5 +112,4 @@ Schedule a call with us
 Subscribe to our newsletter for more case studies and implementation stories.
 </a>
 </p>
-
 

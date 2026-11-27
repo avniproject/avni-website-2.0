@@ -15,9 +15,7 @@ image: >-
 tags:
   - Avni Conference 2025
 ---
-<div style="width: 70%">
-    <img src="/img/2025-03-03-exploring-tech4devs-impact-dalgo-sprint-avni-conference/Aditya-quote.webp">
-</div>
+![](/img/2025-03-03-exploring-tech4devs-impact-dalgo-sprint-avni-conference/Aditya-quote.webp)
 
 Taking over and understanding technology tools within the Sustainable Rural Development vertical at the **A.T.E. Chandra Foundation (ATECF)** has been a great learning experience. Organizations like **Project Tech4Dev** are revolutionizing how NGOs utilize data, ultimately helping them scale their impact.
 

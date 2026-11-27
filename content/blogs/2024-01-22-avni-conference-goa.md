@@ -24,7 +24,7 @@ The conference began with ice-breaker, where everyone introduced themselves and 
 ## NGO Presentations and Feedback
 Following this, each NGO showcased their work and how they were utilizing Avni in their programs. They also suggested where they are struggling or where platform can improve. This segment was particularly interesting as it provided ideas for improving program implementation by expanding Avni's scope or modifying its usage.
 
-<img src="/img/2024-06-03-avni-conference-goa/Avni-Conference-2024-NGOs-talk-collage.webp" height="400" width="250" align='middle'>
+![](/img/2024-06-03-avni-conference-goa/Avni-Conference-2024-NGOs-talk-collage.webp)
 
 ## Evening Activities
 We concluded the day around 6:00 pm, followed by a group picture.

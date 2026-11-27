@@ -19,7 +19,6 @@ The Media Viewer helps view all the media that you have uploaded in the app - pi
 
 See the [documentation](https://avni.readme.io/docs/media-viewer) for more details. Please take a look, and provide feedback. If you see anything missing, you can report it [here](https://github.com/avniproject/avni-media/issues). 
 
-
 <br>
 <br>
 <br>
@@ -50,10 +49,8 @@ In 4.0.0, we will be completing the first set of work for Access control of the 
 
 Additionally, there are some changes in the Avni processes, which includes release naming conventions, release processes, a public product roadmap handling and communications. The purpose of these changes is to provide more visibility into the inner workings of product releases. You can read more about it in [**this**](https://avniproject.org/blog/2023-07-07-opening-up/) blog .
 
-
 ### Special mentions
 Rudresh Shrotriya and Brajesh Kumar from [ColoredCow](https://coloredcow.com/) for their work on the Media Viewer.   
-
 
 ---------------------------------------------------------------------------
 ### Component release notes
