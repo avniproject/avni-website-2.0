@@ -147,8 +147,22 @@ export const sectors: Sector[] = [
   {
     name: 'Livelihood',
     description: [
-      'Livelihood programs struggle to track skill development progress, monitor job placements, and measure income improvements across diverse beneficiaries. Manual systems make it difficult to match candidates with opportunities, track training effectiveness, and demonstrate long-term economic impact to funders.',
-      'Avni transforms livelihood programming with digital trainee profiles, skill assessment tracking, and placement monitoring systems. Organizations can manage training batches, track attendance and performance, facilitate employer connections, monitor post-placement income growth, and generate impact reports showing employment rates and income improvements over time.',
+      'Livelihood programmes work with artisans, self-help groups, farmers and small producers over months and years. Keeping track of who was trained, what they produce, what material and support reached them, and how their work is growing is hard on paper and scattered spreadsheets, and harder still to show to funders.',
+      'With Avni, field teams register each person or group, record trainings, production, material and sales, and follow their progress over time, even offline. Programme teams see everything in one place, so the change in people’s livelihoods becomes something they can track and show.',
+    ],
+    programmes: [
+      {
+        name: 'Women artisans and handicraft enterprises',
+        examples: [
+          { name: 'Udgam Handicrafts', href: '/blog/2026-08-06-udgam-handicrafts-mumbai/' },
+        ],
+      },
+      {
+        name: 'Community development and material distribution',
+        examples: [
+          { name: 'Goonj', href: '/resources/case-studies/2025-09-03-how-goonj-uses-avni/' },
+        ],
+      },
     ],
   },
   {
