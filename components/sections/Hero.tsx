@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Play } from "lucide-react";
 import { VideoModal } from "@/components/ui";
 import Container from "@/components/ui/Container";
+import HeroStory from "@/components/sections/HeroStory";
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -34,8 +35,8 @@ export default function Hero() {
           </h1>
           
           {/* Subtitle */}
-          <p className="font-noto font-medium text-sm md:text-lg lg:text-xl leading-relaxed text-[#000000] mb-6 md:mb-8 lg:mb-[49px] max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
-            Empowering NGOs with simple, sustainable digital tools
+          <p className="font-noto text-base md:text-lg lg:text-xl leading-relaxed text-[#344054] mb-6 md:mb-8 lg:mb-[40px] max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+            Avni is the open-source app NGOs use to run field programmes: collect data on the phone, even offline, follow up every person, and see progress live.
           </p>
           
           {/* Buttons */}
@@ -104,6 +105,7 @@ export default function Hero() {
                 placeholder="empty"
               />
             </button>
+            <HeroStory />
           </div>
         </div>
       </div>
