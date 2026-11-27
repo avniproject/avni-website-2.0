@@ -12,7 +12,7 @@ export default function TrustedBy() {
         {/* Heading */}
         <div className="text-center mb-8 md:mb-12 lg:mb-[51px]">
           <h2 className="font-anek font-medium text-base md:text-lg lg:text-xl leading-tight text-[#fba47e] uppercase">
-            Trusted by 60+ NGOs
+            Trusted by 70+ organisations
           </h2>
         </div>
 
