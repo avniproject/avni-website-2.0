@@ -169,7 +169,7 @@ export const sectors: Sector[] = [
   {
     name: 'Waste Management',
     description: [
-      'Waste pickers keep cities clean, yet their work is often unrecognised and they miss out on IDs, welfare schemes and fair income. Organisations that support them need to keep track of people, documents and services across many sites, and paper records get lost and slow down follow-ups.',
+      'Waste pickers keep cities clean, yet their work often goes unrecognised. Many have no identity documents, so they are left out of government schemes and services. Organisations that support them need to keep track of people, documents and services across many sites, and paper records get lost and slow down follow-ups.',
       'With Avni, field teams register waste pickers with digital profiles, track access to services such as KYC and scheme enrolment, and follow up from the field, even offline. Dashboards and exports show progress across projects at a glance.',
     ],
     programmes: [
