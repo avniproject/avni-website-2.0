@@ -1,8 +1,6 @@
 /**
  * What Avni Does
- * A strip of real usage numbers, then Avni in three steps (build, collect, decide).
- * Numbers are from Avni's own posts (AI Cohort 2 final, June 2026); update them together
- * with the "Trusted by" line above the partner logos.
+ * Avni in three steps (build, collect, decide). Usage numbers are in the hero.
  */
 
 import Link from 'next/link';
@@ -10,13 +8,6 @@ import { ArrowRight, BarChart3, FilePenLine, Smartphone } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import FadeIn from '@/components/ui/FadeIn';
-
-const stats = [
-  { value: '70+', label: 'organisations' },
-  { value: '11M+', label: 'people reached' },
-  { value: '100M+', label: 'field visits recorded' },
-  { value: '11', label: 'sectors' },
-];
 
 const steps = [
   {
@@ -44,21 +35,6 @@ export default function WhatAvniDoes() {
     <Section spacing="lg">
       <Container>
         <div className="max-w-6xl mx-auto">
-          {/* Numbers */}
-          <FadeIn>
-            <dl className="grid grid-cols-2 md:grid-cols-4 gap-y-6 rounded-2xl bg-[#0b2540] px-6 py-7 md:py-8 mb-14 md:mb-20">
-              {stats.map(stat => (
-                <div key={stat.label} className="text-center md:border-r md:last:border-r-0 border-white/15">
-                  <dt className="sr-only">{stat.label}</dt>
-                  <dd>
-                    <span className="block font-anek font-bold text-3xl md:text-4xl text-white">{stat.value}</span>
-                    <span className="block font-noto text-sm text-white/70 mt-1">{stat.label}</span>
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </FadeIn>
-
           {/* Three steps */}
           <div className="text-center mb-10 md:mb-12">
             <p className="font-anek font-medium text-sm md:text-base text-[#fba47e] uppercase mb-3">WHAT AVNI DOES</p>
