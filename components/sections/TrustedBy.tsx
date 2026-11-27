@@ -7,10 +7,10 @@ import { partners } from "@/data";
 
 export default function TrustedBy() {
   return (
-    <Section spacing="md">
+    <Section spacing="none" className="pt-12 md:pt-16 pb-6 md:pb-8">
       <div className="w-full">
         {/* Heading */}
-        <div className="text-center mb-8 md:mb-12 lg:mb-[51px]">
+        <div className="text-center mb-8 md:mb-10">
           <h2 className="font-anek font-medium text-base md:text-lg lg:text-xl leading-tight text-[#fba47e] uppercase">
             Trusted by 60+ NGOs
           </h2>
