@@ -6,7 +6,6 @@ import Link from "next/link";
 import { Play } from "lucide-react";
 import { VideoModal } from "@/components/ui";
 import Container from "@/components/ui/Container";
-import HeroStory from "@/components/sections/HeroStory";
 
 export default function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -105,7 +104,6 @@ export default function Hero() {
                 placeholder="empty"
               />
             </button>
-            <HeroStory />
           </div>
         </div>
       </div>
