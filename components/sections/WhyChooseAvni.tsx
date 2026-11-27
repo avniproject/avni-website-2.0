@@ -1,86 +1,80 @@
 /**
- * Why Choose Avni Section
- * Exact Figma design implementation
+ * Why Choose Avni
+ * Four reasons, each with a matching icon, one line and a real proof point linking to its
+ * source (pricing, the 2025 review, Launchpad, field visits).
  */
 
-import Image from "next/image";
-import Container from "@/components/ui/Container";
-import Section from "@/components/ui/Section";
+import Link from 'next/link';
+import { ArrowRight, HandCoins, Handshake, MapPinned, MousePointerClick } from 'lucide-react';
+import Container from '@/components/ui/Container';
+import Section from '@/components/ui/Section';
+import FadeIn from '@/components/ui/FadeIn';
 
-const benefits = [
+const reasons = [
   {
-    id: "affordable",
-    title: "Affordable",
-    description: "Pricing suited for non-profits. It is 70% more affordable than alternatives.",
-    icon: "/icons/affordable.png",
+    icon: HandCoins,
+    tone: 'bg-[#E8F3EE] text-[#2a7559]',
+    title: 'Priced for non-profits',
+    text: 'Avni is open source, so there is no licence fee. You pay only for help and hosting, if you need them.',
+    proof: 'See plans, from free',
+    href: '/pricing',
   },
   {
-    id: "sustained-partnerships",
-    title: "Sustained Partnerships",
-    description: "Partners continue year-on-year. We walk alongside you in your journey.",
-    icon: "/icons/sustainable.png",
+    icon: MousePointerClick,
+    tone: 'bg-[#FFF1EA] text-[#C2410C]',
+    title: 'No coding needed',
+    text: 'Your team builds forms, visits and rules in a browser. We train you to do it yourself.',
+    proof: 'How Launchpad trains NGO teams',
+    href: '/blog/2026-04-01-avni-launchpad-experience/',
   },
   {
-    id: "setup-in-minutes",
-    title: "Setup In Minutes",
-    description: "No coding required. Intuitive interface designed with field workers.",
-    icon: "/icons/setup-in-minutes.png",
+    icon: Handshake,
+    tone: 'bg-[#E9EAF8] text-[#4F46A5]',
+    title: 'Partners who stay',
+    text: 'NGOs keep using Avni year after year, as their programmes grow.',
+    proof: '26 of 27 partners continued in 2025',
+    href: '/blog/2025-12-22-avni-in-2025/',
   },
   {
-    id: "local-support",
-    title: "Local Support",
-    description: "Same timezone, same context. Easily accessible team that understands ground realities",
-    icon: "/icons/local-support.png",
+    icon: MapPinned,
+    tone: 'bg-[#FFF8DB] text-[#A16207]',
+    title: 'A team that knows the field',
+    text: 'An India-based team in your time zone, who visit programmes on the ground.',
+    proof: 'Read our field visits',
+    href: '/blog/',
   },
 ];
 
 export default function WhyChooseAvni() {
   return (
-    <Section spacing="lg" className="bg-[#F5F5F5]">
+    <Section spacing="none" bg="gray" className="py-14 md:py-16">
       <Container>
-        {/* Header */}
-        <div className="text-center mb-12 md:mb-16 lg:mb-[60px]">
-          <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3 md:mb-4">
-            SUSTAINABLE TECHNOLOGY FOR NGOS
-          </p>
-          <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-4 md:mb-6">
-            Why Choose Avni?
-          </h2>
-          <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000] max-w-3xl mx-auto px-4">
-            Still managing field data on paper? Avni helps you go digital — easily, affordably, and with the support you need at every step. Here's how we make your transition smooth and effective:
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10 md:mb-12">
+            <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3">
+              SUSTAINABLE TECHNOLOGY FOR NGOS
+            </p>
+            <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540]">
+              Why Choose Avni?
+            </h2>
+          </div>
 
-        {/* Benefits Grid - 1→2→4 columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {benefits.map((benefit) => (
-            <div
-              key={benefit.id}
-              className="bg-white rounded-2xl p-6 md:p-8 text-center hover:shadow-lg transition-all duration-300"
-            >
-              {/* Icon */}
-              <div className="flex justify-center mb-4 md:mb-6">
-                <div className="relative w-16 h-16 md:w-20 md:h-20">
-                  <Image
-                    src={benefit.icon}
-                    alt={benefit.title}
-                    fill
-                    className="object-contain"
-                  />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+            {reasons.map(({ icon: Icon, tone, title, text, proof, href }, i) => (
+              <FadeIn key={title} delay={i * 100}>
+                <div className="h-full flex flex-col bg-white rounded-2xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                  <span className={`flex items-center justify-center w-12 h-12 rounded-xl mb-5 ${tone}`}>
+                    <Icon size={24} />
+                  </span>
+                  <h3 className="font-anek font-bold text-xl text-[#0b2540] mb-2">{title}</h3>
+                  <p className="font-noto text-[15px] leading-relaxed text-[#475467] mb-5">{text}</p>
+                  <Link href={href} className="mt-auto inline-flex items-center gap-1.5 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
+                    {proof} <ArrowRight size={14} />
+                  </Link>
                 </div>
-              </div>
-
-              {/* Title */}
-              <h3 className="font-anek font-bold text-lg md:text-xl leading-tight text-[#0b2540] mb-3 md:mb-4">
-                {benefit.title}
-              </h3>
-
-              {/* Description */}
-              <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000]">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
