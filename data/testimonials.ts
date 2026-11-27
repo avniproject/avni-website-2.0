@@ -1,49 +1,63 @@
 /**
- * Testimonials Data
- * Easy to add new testimonials - just add to the array
+ * Testimonials
+ * Real quotes from partners' staff, taken word for word from our case studies and blog
+ * posts (shortened only with "…"). Each links to the story it comes from. The homepage
+ * shows the first TESTIMONIALS_SHOWN.
  */
 
 export interface Testimonial {
   id: string;
   quote: string;
   name: string;
-  position: string;
-  organization: string;
-  image?: string; // Optional: path to person's image
-  videoThumbnail?: string; // Optional: path to video thumbnail
-  type: 'text' | 'video'; // Type of testimonial
-  stat?: string; // Optional: impact stat (e.g., "5000+ beneficiaries tracked")
+  role?: string;
+  organisation: string;
+  logo?: string;
+  href: string; // the case study or blog post the quote comes from
 }
+
+export const TESTIMONIALS_SHOWN = 3;
 
 export const testimonials: Testimonial[] = [
   {
-    id: "maitri",
-    quote: "Avni has transformed how we collect and manage field data. The offline-first approach is a game-changer for our remote health workers.",
-    name: "Maitri",
-    position: "Program Manager",
-    organization: "Health NGO",
-    image: "/images/testimonials/maitri.webp",
-    type: "text",
-    stat: "5000+ beneficiaries tracked",
+    id: 'hasiru-dala',
+    quote: 'Thanks to Avni, reporting, data quality checks, analysis, and many other processes have become much easier for us. … Avni is user-friendly and loaded with features.',
+    name: 'Charan Kumar',
+    role: 'Avni Admin and Data Supervisor',
+    organisation: 'Hasiru Dala',
+    logo: '/logos/HD-Main-Logo.webp',
+    href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
   },
   {
-    id: "noah",
-    quote: "The ease of use and customization options in Avni allowed us to digitize our entire education program in just 2 weeks.",
-    name: "Noah",
-    position: "Field Coordinator",
-    organization: "Education Initiative",
-    image: "/images/testimonials/noah.webp",
-    type: "text",
-    stat: "200+ schools digitized",
+    id: 'project-potential',
+    quote: 'With Avni, health card registration has become so streamlined. I can work offline, edit and track everything — right from eKYC to card distribution. This has reduced our workload significantly.',
+    name: 'Poornima',
+    role: 'Panchayat Coordinator',
+    organisation: 'Project Potential',
+    logo: '/logos/Project-Potential-logo.webp',
+    href: '/resources/case-studies/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/',
   },
   {
-    id: "shobhaben",
-    quote: "Even without internet, I can collect data from villages and sync later. Avni makes my work so much easier!",
-    name: "Shobhaben",
-    position: "Community Health Worker",
-    organization: "Rural Health Program",
-    image: "/images/testimonials/shobhaben.webp",
-    type: "text",
-    stat: "1000+ home visits tracked",
+    id: 'sewa-rural',
+    quote: 'Now I do not have to come to look at thousands of forms everyday, identify children which need to be visited and allocate the work among my peers as that is now done by the application.',
+    name: 'Jyotsana Ben',
+    organisation: 'SEWA Rural',
+    logo: '/logos/SEWA-Rural-logo.webp',
+    href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
+  },
+  {
+    id: 'iph-kollegal',
+    quote: 'Earlier, we relied on manual data entry, but now our team inputs everything directly through mobile devices — it’s become second nature. The paperwork has reduced drastically.',
+    name: 'Dr. Swati',
+    organisation: 'IPH, Kollegal',
+    href: '/blog/2025-06-12-field-visit-to-kollegal-government-hospital/',
+  },
+  {
+    id: 'maha-peconet',
+    quote: 'In 3 words, Avni MIS has been versatile, impactful and qualitative.',
+    name: 'Shilpa Mirashi',
+    role: 'Director',
+    organisation: 'Indian Institute of Youth Welfare, Nagpur (Maha PECOnet)',
+    logo: '/logos/Maharashtra-PECOnet-logo.webp',
+    href: '/resources/case-studies/mahapeconet-use-of-avni-in-covid-relief/',
   },
 ];
