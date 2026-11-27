@@ -26,8 +26,42 @@ export const sectors: Sector[] = [
   {
     name: 'Education',
     description: [
-      'Education-focused NGOs deal with challenges in tracking student attendance, learning progress, and teacher interventions — especially in rural or low-resource settings. Paper-based systems make it difficult to evaluate program effectiveness and scale successful models.',
-      'Avni simplifies education data management with digital classroom records, assessment tracking, and cohort monitoring. Real-time dashboards help organizations identify learning gaps early and improve program delivery across schools and community centers.',
+      'Education programmes run across schools, anganwadis and community learning centres, often in remote and tribal areas. When attendance, learning levels and teacher support are tracked on paper, it is hard to see which children are falling behind, which classrooms need help, and whether the programme is working.',
+      'With Avni, field teams record attendance, assessments and classroom observations on their phones, even offline, and follow each child or teacher over time. Programme managers and government partners see learning gaps across schools in real time and target support where it is needed, at the scale of a whole state.',
+    ],
+    programmes: [
+      {
+        name: 'Classroom observation and teacher development',
+        examples: [
+          { name: 'Leadership for Equity, Andhra Pradesh', href: '/resources/case-studies/classroom-observation-tool-for-andhra-pradesh/' },
+          { name: 'Teach Nagaland', href: '/blog/2024-12-20-avni-in-2024/' },
+        ],
+      },
+      {
+        name: 'Foundational literacy, numeracy and life skills',
+        examples: [
+          { name: 'CInI (Tata Trusts)', href: '/resources/case-studies/2024-09-19-Scaling-Rural-Education/' },
+        ],
+      },
+      {
+        name: 'Early childhood care and creches',
+        examples: [
+          { name: 'Mobile Creches', href: '/blog/2024-01-05-a-review-of-2023/' },
+          { name: 'BHS Phulwari', href: '/blog/2023-07-14-avni-sprint-udaipur-day-2/' },
+        ],
+      },
+      {
+        name: 'Community education for children',
+        examples: [
+          { name: 'Animedh Charitable Trust', href: '/blog/2025-10-31-ACT-Transformation-with-Avni/' },
+        ],
+      },
+      {
+        name: 'Health sessions in schools',
+        examples: [
+          { name: 'Sukhibhava Foundation', href: '/blog/2024-01-05-a-review-of-2023/' },
+        ],
+      },
     ],
   },
   {
