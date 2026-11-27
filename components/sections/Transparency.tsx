@@ -1,86 +1,45 @@
 /**
- * Transparency You Can Trust Section
- * Exact Figma design implementation
+ * Transparency You Can Trust (for donors)
+ * One dark band: the promise on the left, four short points on the right.
  */
 
-import Image from "next/image";
+import { Activity, Download, LucideIcon, ShieldCheck, Smartphone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 
-const features = [
-  {
-    id: "smarter-implementation",
-    title: "Smarter Implementation, Stronger Insights",
-    description: "Avni Helps You Streamline Programs And Capture Accurate Data For Monitoring And Evaluation.",
-    icon: "/icons/smarter-implementation.png",
-  },
-  {
-    id: "data-trust",
-    title: "Data You Can Trust",
-    description: "Gain Dependable Insights From Information Collected Through Your Team's Everyday Fieldwork.",
-    icon: "/icons/data-trust.png",
-  },
-  {
-    id: "see-impact",
-    title: "See Impact In Real Time",
-    description: "Turn Field Data Into Interactive Dashboards And Automated Reports That Highlight Progress Instantly.",
-    icon: "/icons/see-impact.png",
-  },
-  {
-    id: "seamless-data",
-    title: "Seamless Data Flow",
-    description: "Easily Export Your Data Or Connect Avni With Other Tools For Deeper Analysis And Collaboration.",
-    icon: "/icons/seamless-data.png",
-  },
+const points: { title: string; text: string; icon: LucideIcon }[] = [
+  { title: "Recorded at the doorstep", text: "Data is entered during the visit, not copied from registers later.", icon: Smartphone },
+  { title: "Checked as it is entered", text: "Validations and rules catch mistakes before they reach a report.", icon: ShieldCheck },
+  { title: "Progress, live", text: "Dashboards update as phones sync, with no waiting for month-end.", icon: Activity },
+  { title: "Yours to export", text: "Download the full data any time, or connect it to your own tools.", icon: Download },
 ];
 
 export default function Transparency() {
   return (
-    <Section spacing="lg" className="bg-white">
+    <Section spacing="none" className="py-10 md:py-12 [&_p]:hyphens-none">
       <Container>
-        {/* Header */}
-        <div className="text-center mb-12 md:mb-16 lg:mb-[60px]">
-          <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3 md:mb-4">
-            FOR DONORS
-          </p>
-          <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-4 md:mb-6">
-            Transparency You Can Trust
-          </h2>
-          <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000] max-w-3xl mx-auto px-4">
-            Avni gives funders <span className="bg-[#FFF4E6] px-1">real-time visibility and reliable data</span> — turning impact into measurable insight.
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto rounded-3xl bg-[#0b2540] px-7 py-10 md:px-12 md:py-12 grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-8 lg:gap-12 items-center">
+          <div>
+            <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3">For donors</p>
+            <h2 className="font-anek font-bold text-3xl md:text-4xl leading-tight text-white mb-3">Transparency You Can Trust</h2>
+            <p className="font-noto text-base leading-relaxed text-white/75">
+              Funders see what is happening on the ground as it happens, from data they can rely on.
+            </p>
+          </div>
 
-        {/* Features Grid - 1→2 columns */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-x-20 lg:gap-y-[60px]">
-          {features.map((feature) => (
-            <div key={feature.id} className="flex gap-4 md:gap-6 items-start">
-              {/* Icon */}
-              <div className="flex-shrink-0">
-                <div className="relative w-10 h-10 md:w-12 md:h-12">
-                  <Image
-                    src={feature.icon}
-                    alt={feature.title}
-                    fill
-                    className="object-contain"
-                  />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+            {points.map(({ title, text, icon: Icon }) => (
+              <li key={title} className="flex gap-3.5">
+                <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-[#7DD3B0]">
+                  <Icon size={20} />
+                </span>
+                <div>
+                  <h3 className="font-anek font-bold text-lg leading-snug text-white">{title}</h3>
+                  <p className="font-noto text-sm leading-relaxed text-white/70">{text}</p>
                 </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1">
-                {/* Title */}
-                <h3 className="font-anek font-bold text-lg md:text-xl leading-tight text-[#0b2540] mb-3">
-                  {feature.title}
-                </h3>
-
-                {/* Description */}
-                <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000]">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
-          ))}
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </Section>

@@ -1,113 +1,83 @@
 /**
  * Solutions That Power Your Programs
- * Exact Figma design implementation
+ * The five kinds of work Avni is used for, in one compact row; each links to its section on the Use Cases page.
  */
 
-import Image from "next/image";
 import Link from "next/link";
+import { ArrowRight, BarChart3, ClipboardList, LucideIcon, Stethoscope, UsersRound, Repeat } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
+import FadeIn from "@/components/ui/FadeIn";
 
-const solutions = [
+const solutions: { id: string; title: string; text: string; icon: LucideIcon; tone: string }[] = [
   {
     id: "case-management",
-    title: "Case Management",
-    description: "Track Individual And Household Progress Over Time With Organized, Field-Ready Case Records",
-    icon: "/icons/case-management.png",
-    cta: "Learn More >",
-    ctaLink: "/use-cases#case-management",
-  },
-  {
-    id: "reporting",
-    title: "Reporting",
-    description: "Generate Accurate, Real-Time Reports To Monitor Program Performance And Demonstrate Impact",
-    icon: "/icons/reporting.png",
-    cta: "Learn More >",
-    ctaLink: "/use-cases#reporting",
-  },
-  {
-    id: "cohort-research",
-    title: "Cohort Based Research Studies",
-    description: "Manage Longitudinal Studies With Structured Data Collection And Built-In Participant Tracking",
-    icon: "/icons/cohort-based.png",
-    cta: "Learn More >",
-    ctaLink: "/use-cases#cohort-studies",
+    title: "Case management",
+    text: "Follow each person or household over months, with visits scheduled for you.",
+    icon: UsersRound,
+    tone: "bg-[#E8F3EE] text-[#2a7559]",
   },
   {
     id: "surveys",
     title: "Surveys",
-    description: "Design And Deploy Quick, Customizable Surveys To Capture Feedback And Measure Outcomes",
-    icon: "/icons/surveys.png",
-    cta: "Sign Up For Early Access >",
-    ctaLink: "/signup",
+    text: "Run surveys across thousands of homes, offline, with skip logic and checks.",
+    icon: ClipboardList,
+    tone: "bg-[#FFF1EA] text-[#C4552B]",
   },
   {
-    id: "mobile-units",
-    title: "Mobile Medical Units & Camps",
-    description: "Empower Field Teams To Collect Data Offline During Visits And Community Camps With Ease",
-    icon: "/icons/mobile-units.png",
-    cta: "Request For Inquiry >",
-    ctaLink: "/contact",
+    id: "reporting",
+    title: "Reporting",
+    text: "Dashboards for field workers, managers and funders, from the same data.",
+    icon: BarChart3,
+    tone: "bg-[#E9EAF8] text-[#5452B8]",
+  },
+  {
+    id: "cohort-studies",
+    title: "Cohort studies",
+    text: "Visit the same people round after round, with every record linked.",
+    icon: Repeat,
+    tone: "bg-[#FFF8DB] text-[#A16207]",
+  },
+  {
+    id: "mobile-medical",
+    title: "Health camps",
+    text: "Every desk at a camp shares patient records, even with no internet.",
+    icon: Stethoscope,
+    tone: "bg-[#E6F4F8] text-[#1D7A94]",
   },
 ];
 
 export default function Solutions() {
   return (
-    <Section spacing="lg">
+    <Section spacing="none" className="pt-14 md:pt-16 pb-4 md:pb-6 [&_p]:hyphens-none">
       <Container>
-        {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-4 md:mb-6">
-            Solutions That Power Your Programs
-          </h2>
-          <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000] max-w-3xl mx-auto">
-            From case management to cohort studies, Avni adapts to diverse program needs — making data collection and monitoring effortless
-          </p>
-        </div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-8 md:mb-10">
+            <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-3">
+              Solutions That Power Your Programs
+            </h2>
+            <p className="font-noto text-base text-[#475467]">One app for the different kinds of work your programme does.</p>
+          </div>
 
-        {/* Solutions Grid - 1→2 columns */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-          {solutions.map((solution) => (
-            <div
-              key={solution.id}
-              className="bg-[#F5F5F5] rounded-2xl p-6 md:p-8 hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
-                {/* Icon */}
-                <div className="flex-shrink-0">
-                  <div className="relative w-12 h-12 md:w-16 md:h-16">
-                    <Image
-                      src={solution.icon}
-                      alt={solution.title}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  {/* Title */}
-                  <h3 className="font-anek font-bold text-lg md:text-xl leading-tight text-[#0b2540] mb-3">
-                    {solution.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-noto text-sm md:text-base leading-relaxed text-[#000000] mb-4">
-                    {solution.description}
-                  </p>
-
-                  {/* CTA Link */}
-                  <Link
-                    href={solution.ctaLink}
-                    className="font-noto font-bold text-sm leading-tight text-[#419372] hover:underline inline-flex items-center gap-1"
-                  >
-                    {solution.cta}
-                  </Link>
-                </div>
-              </div>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {solutions.map(({ id, title, text, icon: Icon, tone }, i) => (
+              <FadeIn key={id} delay={i * 80}>
+                <Link
+                  href={`/use-cases#${id}`}
+                  className="group h-full flex flex-col rounded-2xl border border-[#EAECF0] bg-white p-5 transition-all hover:border-[#B7DCCB] hover:shadow-md"
+                >
+                  <span className={`flex items-center justify-center w-11 h-11 rounded-xl mb-4 ${tone}`}>
+                    <Icon size={22} />
+                  </span>
+                  <h3 className="font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1.5">{title}</h3>
+                  <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{text}</p>
+                  <span className="mt-auto inline-flex items-center gap-1 font-noto text-sm font-medium text-[#2a7559]">
+                    See how <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                  </span>
+                </Link>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </Container>
     </Section>
