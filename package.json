@@ -14,7 +14,6 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev --turbo",
-    "cms": "decap-server",
     "build": "next build",
     "build:analyze": "ANALYZE=true next build",
     "type-check": "tsc --noEmit",
@@ -52,7 +51,6 @@
     "@types/react-dom": "^18",
     "@types/react-google-recaptcha": "^2.1.9",
     "autoprefixer": "^10.4.20",
-    "decap-server": "^3.11.6",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
     "eslint-config-prettier": "^9.1.0",

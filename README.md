@@ -134,12 +134,12 @@ npm run dev
 
 Visit [http://localhost:3000](http://localhost:3000)
 
-### Editing content locally (CMS)
+### Editing content (CMS)
 
-```bash
-npm run dev   # site at http://localhost:3000
-npm run cms   # in a second terminal; editor at http://localhost:3000/admin/index.html
-```
+Blogs and case studies are edited in **Pages CMS** (https://app.pagescms.org): sign in with
+GitHub, open `avniproject/avni-website-2.0`, pick the branch the site builds from. Saving
+commits to GitHub and Netlify rebuilds the site. Fields are defined in `.pages.yml`; they must
+match the frontmatter read in `lib/markdown.ts`.
 
 ### Production Deployment (Netlify)
 

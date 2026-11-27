@@ -1,5 +1,5 @@
-# Pages CMS (https://pagescms.org) trial: the same blog and case study fields as the
-# Decap editor in public/admin/config.yml. Field names must match lib/markdown.ts.
+# Pages CMS (https://pagescms.org): the website editor for blogs and case studies.
+# Field names must match the frontmatter read in lib/markdown.ts.
 
 media:
   input: public/img/uploads
