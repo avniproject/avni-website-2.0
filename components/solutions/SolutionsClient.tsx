@@ -67,21 +67,19 @@ export default function SolutionsClient({ caseStudies }: { caseStudies: Record<s
 
             {/* Mobile Horizontal Scroll */}
             <div className="lg:hidden overflow-x-auto pb-2 -mx-6 px-6 mb-8">
-              <div className="flex gap-2 min-w-max bg-white rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] p-3">
+              <div className="flex gap-2 min-w-max">
                 {solutions.map((solution) => (
                   <button
                     key={solution}
                     onClick={() => selectTab(solution)}
-                    className={`px-4 py-2 font-anek text-[15px] whitespace-nowrap transition-all relative ${
+                    aria-current={activeTab === solution ? 'true' : undefined}
+                    className={`px-4 py-2 rounded-full font-anek text-[15px] whitespace-nowrap transition-colors ${
                       activeTab === solution
-                        ? 'font-bold text-[#0a1f3d]'
-                        : 'font-medium text-[#5a6c7d]'
+                        ? 'bg-[#0b2540] text-white font-semibold'
+                        : 'bg-white text-[#344054] border border-[#D0D5DD] font-medium'
                     }`}
                   >
                     {solution}
-                    {activeTab === solution && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#FFD84D] rounded-full"></span>
-                    )}
                   </button>
                 ))}
               </div>
@@ -95,18 +93,14 @@ export default function SolutionsClient({ caseStudies }: { caseStudies: Record<s
                     <button
                       key={solution}
                       onClick={() => selectTab(solution)}
-                      className={`w-full text-left px-4 py-3 font-anek text-[16px] leading-[24px] transition-all ${
+                      aria-current={activeTab === solution ? 'true' : undefined}
+                      className={`w-full text-left px-4 py-3 rounded-[10px] border-l-4 font-anek text-[16px] leading-[24px] transition-all ${
                         activeTab === solution
-                          ? 'font-bold text-[#0a1f3d]'
-                          : 'font-medium text-[#5a6c7d] hover:text-[#0a1f3d]'
+                          ? 'bg-[#E8F3EE] border-[#419372] font-bold text-[#1f5a43]'
+                          : 'border-transparent font-medium text-[#5a6c7d] hover:bg-[#f7f9fc] hover:text-[#0a1f3d]'
                       }`}
                     >
-                      <span className="relative inline-block">
-                        {solution}
-                        {activeTab === solution && (
-                          <span className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#FFD84D]"></span>
-                        )}
-                      </span>
+                      {solution}
                     </button>
                   ))}
                 </nav>
