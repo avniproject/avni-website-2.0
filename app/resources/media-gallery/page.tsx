@@ -1,36 +1,31 @@
 /**
  * Media Gallery Page
- * Photo albums (data/media-gallery.ts), each photo linking to the blog post it comes from,
- * and the latest videos from the Avni YouTube channel (lib/youtube.ts).
+ * Photo albums (data/media-gallery.ts), each photo linking to the blog post it comes from.
  */
 
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, PlayCircle } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import FadeIn from '@/components/ui/FadeIn';
 import { galleryAlbums, GalleryPhoto } from '@/data/media-gallery';
-import { fetchVideos } from '@/lib/youtube';
 
 export const metadata: Metadata = {
   title: 'Media Gallery - Avni',
-  description: 'Photos and videos of Avni in the field, at community events, and of the team behind it.',
+  description: 'Photos of Avni in the field, at community events, and of the team behind it.',
   openGraph: {
     title: 'Media Gallery - Avni',
-    description: 'Photos and videos of Avni in the field, at community events, and of the team behind it.',
+    description: 'Photos of Avni in the field, at community events, and of the team behind it.',
     url: '/resources/media-gallery',
   },
   alternates: {
     canonical: '/resources/media-gallery',
   },
 };
-
-const VIDEOS_SHOWN = 8;
-const YOUTUBE_CHANNEL = 'https://www.youtube.com/@avniproject';
 
 function PhotoTile({ photo, large }: { photo: GalleryPhoto; large: boolean }) {
   return (
@@ -56,9 +51,7 @@ function PhotoTile({ photo, large }: { photo: GalleryPhoto; large: boolean }) {
   );
 }
 
-export default async function MediaGalleryPage() {
-  const videos = (await fetchVideos()).slice(0, VIDEOS_SHOWN);
-
+export default function MediaGalleryPage() {
   return (
     <>
       <Header />
@@ -78,7 +71,7 @@ export default async function MediaGalleryPage() {
                 Click a photo to read its story.
               </p>
               <nav aria-label="Albums" className="flex flex-wrap justify-center gap-2 md:gap-3">
-                {[...galleryAlbums.map(({ id, title }) => ({ id, title })), { id: 'videos', title: 'Videos' }].map(album => (
+                {galleryAlbums.map(album => (
                   <a
                     key={album.id}
                     href={`#${album.id}`}
@@ -111,45 +104,6 @@ export default async function MediaGalleryPage() {
           </Section>
         ))}
 
-        {/* Videos */}
-        {videos.length > 0 && (
-          <Section spacing="md" bg={galleryAlbums.length % 2 === 0 ? 'gray' : 'white'}>
-            <Container>
-              <div id="videos" className="max-w-6xl mx-auto scroll-mt-28">
-                <FadeIn>
-                  <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-8">
-                    <div>
-                      <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-2">Videos</h2>
-                      <p className="font-noto text-base text-[#475467]">Community meetups, features and stories from the Avni YouTube channel</p>
-                    </div>
-                    <a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-noto font-medium text-sm text-[#2a7559] hover:text-[#1f5a43]">
-                      All videos on YouTube <ArrowUpRight size={14} />
-                    </a>
-                  </div>
-                </FadeIn>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                  {videos.map(video => (
-                    <a key={video.id} href={video.url} target="_blank" rel="noopener noreferrer" className="group block">
-                      <span className="relative block aspect-video rounded-xl overflow-hidden bg-[#EAECF0]">
-                        {/* eslint-disable-next-line @next/next/no-img-element -- remote YouTube thumbnail */}
-                        <img src={`https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`} alt="" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
-                        <span className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/25 transition-colors">
-                          <PlayCircle size={40} className="text-white drop-shadow" />
-                        </span>
-                      </span>
-                      <span className="block font-noto text-xs text-[#667085] mt-2">
-                        {new Date(video.published).toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
-                      </span>
-                      <span className="font-anek font-semibold text-sm leading-snug text-[#0b2540] group-hover:text-[#2a7559] line-clamp-2">
-                        {video.title.replace(/\s*\|\s*Avni Project\s*$/i, '')}
-                      </span>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </Container>
-          </Section>
-        )}
       </main>
 
       <Footer />
