@@ -32,21 +32,16 @@ function PriceVisual() {
 }
 
 function BuilderVisual() {
+  // The real Avni web app form designer
   return (
-    <div className="flex items-center justify-center h-full px-6">
-      <div className="w-full max-w-[340px] rounded-2xl bg-white shadow-md overflow-hidden">
-        <div className="flex items-center gap-1.5 px-4 py-2 bg-[#F2F4F7] border-b border-[#EAECF0]">
+    <div className="h-full px-6 pt-6">
+      <div className="h-full flex flex-col rounded-t-xl bg-white shadow-md overflow-hidden">
+        <div className="flex items-center gap-1.5 px-3 py-2 bg-[#F2F4F7] border-b border-[#EAECF0]">
           <span className="w-2 h-2 rounded-full bg-[#F97066]" /><span className="w-2 h-2 rounded-full bg-[#FDB022]" /><span className="w-2 h-2 rounded-full bg-[#32D583]" />
-          <span className="ml-2 font-noto text-[11px] font-semibold text-[#667085]">Form designer · Home visit</span>
+          <span className="ml-2 font-noto text-[11px] text-[#98A2B3]">app.avniproject.org · App Designer</span>
         </div>
-        <div className="p-4 space-y-2">
-          {[['Name', 'Text'], ['Age', 'Number'], ['Pregnant?', 'Yes / No']].map(([q, t], i) => (
-            <div key={q} className={`flex justify-between items-center rounded-lg px-3 py-2 ${i === 2 ? 'bg-[#FFF1EA] ring-1 ring-[#F27A45]' : 'bg-[#F9FAFB]'}`}>
-              <span className="font-noto text-sm text-[#0b2540]">{q}</span>
-              <span className="font-noto text-xs text-[#98A2B3]">{t}</span>
-            </div>
-          ))}
-          <div className="rounded-lg border border-dashed border-[#D0D5DD] py-2 text-center font-noto text-xs text-[#98A2B3]">+ Add question</div>
+        <div className="relative flex-1">
+          <Image src="/img/home/form-designer.webp" alt="The Avni form designer in the web app, editing a question with its answers" fill sizes="(max-width: 768px) 90vw, 520px" className="object-cover object-left-top" />
         </div>
       </div>
     </div>
@@ -54,18 +49,23 @@ function BuilderVisual() {
 }
 
 function RetentionVisual() {
-  const r = 52, c = 2 * Math.PI * r, share = 26 / 27;
+  // One dot per partner at the start of 2025 (from the 2025 review): 26 stayed, 1 stepped away
   return (
-    <div className="flex items-center justify-center gap-8 h-full px-6">
-      <svg width="140" height="140" viewBox="0 0 140 140" aria-hidden="true">
-        <circle cx="70" cy="70" r={r} fill="none" stroke="#D9DAF4" strokeWidth="16" />
-        <circle cx="70" cy="70" r={r} fill="none" stroke="#6D6BD0" strokeWidth="16" strokeLinecap="round"
-          strokeDasharray={`${c * share} ${c}`} transform="rotate(-90 70 70)" />
-        <text x="70" y="78" textAnchor="middle" fontSize="26" fontWeight="700" fill="#0b2540">96%</text>
-      </svg>
-      <div>
-        <p className="font-anek font-bold text-5xl text-[#0b2540] leading-none">26 / 27</p>
-        <p className="font-noto text-sm text-[#475467] mt-2">partners continued<br />with Avni in 2025</p>
+    <div className="flex flex-col items-center justify-center gap-5 h-full px-6">
+      <div className="flex items-center gap-7">
+        <div className="grid grid-cols-9 gap-2" aria-hidden="true">
+          {Array.from({ length: 27 }, (_, i) => (
+            <span key={i} className={`w-4 h-4 rounded-full ${i < 26 ? 'bg-[#6D6BD0]' : 'border-2 border-[#B4B3E6]'}`} />
+          ))}
+        </div>
+        <div>
+          <p className="font-anek font-bold text-5xl text-[#0b2540] leading-none">26 / 27</p>
+          <p className="font-noto text-sm text-[#475467] mt-1.5">partners renewed in 2025</p>
+        </div>
+      </div>
+      <div className="flex items-center gap-3 rounded-full bg-white px-4 py-2 shadow-sm">
+        <span className="relative w-16 h-7"><Image src="/logos/ATECF-logo.webp" alt="ATE Chandra Foundation" fill sizes="64px" className="object-contain" /></span>
+        <span className="font-noto text-xs font-medium text-[#344054]">On Avni since 2020, now in India&apos;s Economic Survey</span>
       </div>
     </div>
   );
@@ -103,8 +103,8 @@ const reasons = [
     visual: RetentionVisual,
     visualBg: 'bg-[#E9EAF8]',
     title: 'Partners who stay',
-    text: 'NGOs keep using Avni year after year, as their programmes grow.',
-    proof: '26 of 27 partners continued in 2025',
+    text: 'Changing systems mid-programme is costly. With Avni you don\'t have to: partners stay for years and grow on it.',
+    proof: 'Read the 2025 review',
     href: '/blog/2025-12-22-avni-in-2025/',
   },
   {
