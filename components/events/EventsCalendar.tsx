@@ -258,9 +258,9 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
           <div className="lg:absolute lg:inset-0 flex flex-col bg-white rounded-2xl shadow-sm p-4 md:p-5">
             <h3 className="font-anek font-bold text-lg text-[#0b2540] mb-1">Meetup recordings</h3>
             <p className="font-noto text-xs text-[#667085] mb-4">Watch past community meetups on YouTube</p>
-            <ul className="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto -mx-1 px-1 pb-1 lg:flex-1 lg:min-h-0">
+            <ul className="flex lg:flex-col gap-4 lg:gap-0 overflow-x-auto lg:overflow-x-visible lg:overflow-y-auto -mx-1 px-1 pb-1 lg:flex-1 lg:min-h-0 lg:divide-y lg:divide-[#EAECF0]">
               {recordings.map(({ event, videoId }) => (
-                <li key={event.id} className="flex-shrink-0 w-56 lg:w-auto">
+                <li key={event.id} className="flex-shrink-0 w-56 lg:w-auto lg:py-4 lg:first:pt-0 lg:last:pb-0">
                   <a href={event.recordingUrl!} target="_blank" rel="noopener noreferrer" className="group block">
                     <span className="relative block aspect-video rounded-lg overflow-hidden bg-[#EAECF0]">
                       {/* eslint-disable-next-line @next/next/no-img-element -- remote YouTube thumbnail */}
