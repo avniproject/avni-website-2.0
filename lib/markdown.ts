@@ -46,6 +46,12 @@ function estimateReadTime(markdown: string): string {
 }
 
 // Article bodies can hold dozens of images; load them only as the reader scrolls
+// The CMS saves authors as a list; older posts have a single name
+function authorNames(author: unknown): string | undefined {
+  if (Array.isArray(author)) return author.filter(Boolean).join(' & ') || undefined;
+  return typeof author === 'string' && author ? author : undefined;
+}
+
 function lazyLoadImages(html: string): string {
   return html.replace(/<img (?![^>]*\bloading=)/g, '<img loading="lazy" decoding="async" ');
 }
@@ -101,6 +107,7 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
         featured: isFeatured, // Override with centralized config
         readTime: data.readTime || estimateReadTime(content), // posts written in the CMS don't set it
         date: toDateString(data.date),
+        author: authorNames(data.author),
       } as CaseStudyFrontmatter,
       content,
       htmlContent,
@@ -257,6 +264,7 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
         featured: isFeatured, // Override with centralized config
         readTime: data.readTime || estimateReadTime(content), // posts written in the CMS don't set it
         date: toDateString(data.date),
+        author: authorNames(data.author),
       } as BlogFrontmatter,
       content,
       htmlContent,

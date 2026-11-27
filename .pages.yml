@@ -1,9 +1,11 @@
 # Pages CMS (https://pagescms.org): the website editor for blogs and case studies.
 # Field names must match the frontmatter read in lib/markdown.ts.
 
+# The image library shows every post's images (one folder per post), so a thumbnail can be
+# picked from images already in the post instead of uploading it again
 media:
-  input: public/img/uploads
-  output: /img/uploads
+  input: public/img
+  output: /img
 
 content:
   - name: blog
@@ -31,9 +33,15 @@ content:
         label: Date
         type: date
       - name: author
-        label: Author
-        type: string
-        default: Avni Team
+        label: Authors
+        type: reference
+        description: Pick one or more people from the author directory. Not listed? Add them under Authors first.
+        options:
+          collection: authors
+          multiple: true
+          search: name
+          value: '{fields.name}'
+          label: '{fields.name}'
       - name: category
         label: Category
         type: select
@@ -49,7 +57,7 @@ content:
       - name: image
         label: Thumbnail
         type: image
-        description: Landscape photo, about 1200 x 750 px, shown on the blog card
+        description: Pick a photo already in the post (open its folder in the library) or upload one. Landscape, about 1200 x 750 px.
       - name: body
         label: Body
         type: rich-text
@@ -77,9 +85,15 @@ content:
         label: Date
         type: date
       - name: author
-        label: Author
-        type: string
-        default: Avni Team
+        label: Authors
+        type: reference
+        description: Pick one or more people from the author directory. Not listed? Add them under Authors first.
+        options:
+          collection: authors
+          multiple: true
+          search: name
+          value: '{fields.name}'
+          label: '{fields.name}'
       - name: sector
         label: Sector
         type: select
@@ -91,7 +105,40 @@ content:
       - name: image
         label: Thumbnail
         type: image
-        description: Landscape photo, shown on the case study card and the homepage
+        description: Pick a photo already in the case study (open its folder in the library) or upload one. Shown on the card and the homepage.
       - name: body
         label: Body
         type: rich-text
+
+  - name: authors
+    label: Authors
+    type: collection
+    path: content/authors
+    filename: '{primary}.md'
+    view:
+      fields: [name, organisation]
+      primary: name
+      sort: [name]
+    fields:
+      - name: name
+        label: Name
+        type: string
+        required: true
+      - name: role
+        label: Role
+        type: string
+      - name: organisation
+        label: Organisation
+        type: string
+      - name: linkedin
+        label: LinkedIn profile
+        type: string
+        description: Full link, e.g. https://www.linkedin.com/in/firstname-lastname/
+      - name: photo
+        label: Photo
+        type: image
+        description: Square photo, at least 400 x 400 px
+      - name: body
+        label: Short bio
+        type: text
+        description: One or two sentences
