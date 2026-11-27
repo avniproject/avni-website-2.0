@@ -110,7 +110,7 @@ export default function FeatureExplorer({ groups }: { groups: FeatureGroup[] }) 
                     {isOpen && <span className="block font-noto text-sm leading-relaxed text-[#475467] mt-2">{f.description}</span>}
                   </button>
                   {isOpen && f.link && (
-                    <a href={f.link.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 ml-4 mt-2 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
+                    <a href={f.link.href} {...(f.link.href.startsWith('/') ? {} : { target: '_blank', rel: 'noopener noreferrer' })} className="inline-flex items-center gap-1 ml-4 mt-2 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
                       {f.link.label} <ArrowUpRight size={14} />
                     </a>
                   )}

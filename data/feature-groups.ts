@@ -166,13 +166,26 @@ export const featureGroups: FeatureGroup[] = [
   {
     id: 'security',
     title: 'Keep data safe',
-    summary: 'Control who sees and changes what',
+    summary: 'Data stays in India, and you control who sees and changes what',
     features: [
       {
         id: 'access-control',
         title: 'Access control',
         description: 'Decide which user groups can view, register, edit or delete each kind of record. Log in with OTP.',
         media: [{ src: '/img/features/access-control.webp', alt: 'Access control settings for a user group' }],
+      },
+      {
+        id: 'data-in-india',
+        title: 'Data stored in India',
+        description: 'All data is stored in India, with backups at a second location in India, and encrypted on our servers. We are preparing Avni for India’s DPDP Act.',
+        media: [],
+        link: { label: 'Data protection and the DPDP Act', href: '/data-protection' },
+      },
+      {
+        id: 'audit-trail',
+        title: 'Every change recorded',
+        description: 'Each record shows who created it and who last changed it, and only users you authorise can download data in bulk.',
+        media: [],
       },
     ],
   },

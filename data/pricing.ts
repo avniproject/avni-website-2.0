@@ -93,7 +93,7 @@ export const plans: Plan[] = [
 export const hostingIncludes = [
   'Hosting of your app on the Avni cloud',
   'Regular upgrades of Avni and its components',
-  'Data backups',
+  'Data stored in India, encrypted, with backups',
   'Maintenance of your app on the Play Store',
   'Priority support for your field users',
   'Metabase or Superset for reports, pre-installed',
