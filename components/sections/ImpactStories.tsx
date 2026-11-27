@@ -5,11 +5,26 @@ import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
-import { sectors, impactStories, type Sector } from "@/data/impact-stories";
 
-export default function ImpactStories() {
-  const [activeSector, setActiveSector] = useState<Sector>("Education");
-  const story = impactStories[activeSector];
+export interface ImpactStory {
+  sector: string;
+  title: string;
+  summary: string;
+  href: string;
+  image?: string;
+  logo?: string;
+}
+
+/**
+ * Impact Stories
+ * One story per sector: the sector's latest case study, chosen on the homepage
+ * (app/page.tsx). Sectors without a case study get no tab.
+ */
+
+export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
+  const [activeSector, setActiveSector] = useState(stories[0]?.sector);
+  const story = stories.find(s => s.sector === activeSector) ?? stories[0];
+  if (!story) return null;
 
   return (
     <Section spacing="lg" className="bg-[#F5F5F5]">
@@ -29,7 +44,7 @@ export default function ImpactStories() {
 
         {/* Sector Tabs */}
         <div className="flex justify-center gap-3 md:gap-4 mb-12 md:mb-16 lg:mb-[60px] flex-wrap">
-          {sectors.map((sector) => (
+          {stories.map(({ sector }) => (
             <button
               key={sector}
               onClick={() => setActiveSector(sector)}
@@ -51,12 +66,16 @@ export default function ImpactStories() {
         >
           {/* Image */}
           <div className="relative w-full lg:w-[420px] aspect-video lg:aspect-[3/2] rounded-2xl lg:rounded-[24px] overflow-hidden shadow-xl flex-shrink-0 animate-fadeIn">
-            <Image
-              src={story.image}
-              alt={story.title}
-              fill
-              className="object-cover"
-            />
+            {story.image ? (
+              <Image src={story.image} alt="" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 420px" />
+            ) : story.logo ? (
+              // No photo: the partner's logo on white
+              <div className="absolute inset-0 bg-white flex items-center justify-center p-14">
+                <div className="relative w-full h-full">
+                  <Image src={story.logo} alt="" fill className="object-contain" sizes="320px" />
+                </div>
+              </div>
+            ) : null}
           </div>
 
           {/* Content */}
@@ -65,13 +84,16 @@ export default function ImpactStories() {
               {story.title}
             </h3>
             <p className="font-noto text-sm md:text-base lg:text-[16px] leading-relaxed lg:leading-[26px] text-[#000000] mb-6 md:mb-8 lg:mb-[32px]">
-              {story.description}
+              {story.summary}
             </p>
             <Link
-              href="/resources/case-studies"
+              href={story.href}
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-3 border-2 border-[#419372] text-[#419372] rounded-full md:rounded-[20px] font-anek font-medium text-sm md:text-base hover:bg-[#419372] hover:text-white transition-all"
             >
-              Read More →
+              Read the Case Study →
+            </Link>
+            <Link href="/resources/case-studies" className="inline-block ml-5 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
+              All case studies
             </Link>
           </div>
         </div>
