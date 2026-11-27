@@ -15,7 +15,7 @@ export interface Testimonial {
   href: string; // the case study or blog post the quote comes from
 }
 
-export const TESTIMONIALS_SHOWN = 3;
+export const TESTIMONIALS_SHOWN = 6;
 
 export const testimonials: Testimonial[] = [
   {
@@ -43,6 +43,14 @@ export const testimonials: Testimonial[] = [
     organisation: 'SEWA Rural',
     logo: '/logos/SEWA-Rural-logo.webp',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
+  },
+  {
+    id: 'animedh',
+    quote: 'For ACT, Avni has not just digitised data — it has strengthened our foundation for impact through greater efficiency and transparency.',
+    name: 'Nivedita Desai',
+    role: 'Managing Trustee',
+    organisation: 'Animedh Charitable Trust',
+    href: '/blog/2025-10-31-ACT-Transformation-with-Avni/',
   },
   {
     id: 'iph-kollegal',
