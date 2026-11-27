@@ -21,7 +21,8 @@ export interface ShowcaseItem {
   tags: string[];
   proof: string;
   href: string;
-  media: { src: string; kind: 'video' | 'image'; frame: 'phone' | 'browser'; alt: string; caption: string };
+  // frame 'card': a finished card image shown as it is; `extra` adds a second card overlapping it
+  media: { src: string; kind: 'video' | 'image'; frame: 'phone' | 'browser' | 'card'; alt: string; caption: string; extra?: { src: string; alt: string } };
 }
 
 const ADVANCE_MS = 8000;
@@ -49,13 +50,32 @@ function BrowserFrame({ children }: { children: React.ReactNode }) {
 }
 
 function Media({ media }: { media: ShowcaseItem['media'] }) {
+  if (media.frame === 'card') {
+    return (
+      <div className="relative mx-auto max-w-[300px]">
+        <Image key={media.src} src={media.src} alt={media.alt} width={720} height={757} className="w-full h-auto drop-shadow-2xl" />
+        {media.extra && (
+          <Image src={media.extra.src} alt={media.extra.alt} width={660} height={493} className="absolute -right-6 md:-right-12 -bottom-8 w-[62%] h-auto drop-shadow-2xl" />
+        )}
+      </div>
+    );
+  }
+
   const content = media.kind === 'video'
     ? <video key={media.src} src={media.src} aria-label={media.alt} autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover" />
     : media.frame === 'phone'
       ? <Image key={media.src} src={media.src} alt={media.alt} fill sizes="270px" className="object-cover" />
       : <Image key={media.src} src={media.src} alt={media.alt} width={1288} height={444} className="w-full h-auto" />;
 
-  return media.frame === 'phone' ? <PhoneFrame>{content}</PhoneFrame> : <BrowserFrame>{content}</BrowserFrame>;
+  if (media.frame === 'phone') return <PhoneFrame>{content}</PhoneFrame>;
+  return (
+    <div className="relative">
+      <BrowserFrame>{content}</BrowserFrame>
+      {media.extra && (
+        <Image src={media.extra.src} alt={media.extra.alt} width={660} height={493} className="absolute -right-4 md:-right-10 -top-12 md:-top-16 w-[34%] h-auto drop-shadow-2xl" />
+      )}
+    </div>
+  );
 }
 
 export default function ProductShowcase({ items }: { items: ShowcaseItem[] }) {

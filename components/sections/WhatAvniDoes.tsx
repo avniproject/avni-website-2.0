@@ -23,7 +23,7 @@ const steps: ShowcaseItem[] = [
     tags: ['Guided forms', 'Quality data at entry', 'Works offline', 'In their language'],
     proof: 'Hasiru Dala: registrations doubled, from 3 to 6 people an hour',
     href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
-    media: { src: '/img/home/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app home screen with dashboard cards', caption: 'The field app’s home screen works offline (test data)' },
+    media: { src: '/img/home/visit-card.webp', kind: 'image', frame: 'card', alt: 'A home visit form in Avni: values entered, a high-risk pregnancy flagged, synced', caption: 'A guided home visit: Avni flags the risk as values are entered (illustration)' },
   },
   {
     icon: HeartPulse,
@@ -34,7 +34,7 @@ const steps: ShowcaseItem[] = [
     tags: ['Risk alerts', 'Timely follow-ups', 'Built-in approvals', 'Dashboards on the go'],
     proof: 'SEWA Rural: the app now picks which children need a visit',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
-    media: { src: '/img/home/individual-dashboard-child.mp4', kind: 'video', frame: 'phone', alt: 'A child’s profile in the Avni app with scheduled and overdue visits', caption: 'A child’s profile with scheduled and overdue visits (test data)' },
+    media: { src: '/img/home/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app dashboard with high-risk pregnancy and SAM children counts', caption: 'The field dashboard: high-risk pregnancies and SAM children at a glance (test data)' },
   },
   {
     icon: BarChart3,
@@ -45,7 +45,7 @@ const steps: ShowcaseItem[] = [
     tags: ['Live insights', 'Funder-ready reports', 'Connected systems', 'Secure access'],
     proof: 'Purna Clinic: 22× more visits recorded within nine months',
     href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/',
-    media: { src: '/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp', kind: 'image', frame: 'browser', alt: 'Monthly visits recorded at Purna Clinic, growing month on month', caption: 'Monthly visits recorded at Purna Clinic, from a real Avni report' },
+    media: { src: '/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp', kind: 'image', frame: 'browser', alt: 'Monthly visits recorded at Purna Clinic, growing month on month', caption: 'Live counts and a real Avni report (Purna Clinic)', extra: { src: '/img/home/dash-card.webp', alt: 'Programme dashboard: high-risk pregnancies 33, +1 just now' } },
   },
 ];
 
