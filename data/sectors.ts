@@ -56,12 +56,6 @@ export const sectors: Sector[] = [
           { name: 'Animedh Charitable Trust', href: '/blog/2025-10-31-ACT-Transformation-with-Avni/' },
         ],
       },
-      {
-        name: 'Health sessions in schools',
-        examples: [
-          { name: 'Sukhibhava Foundation', href: '/blog/2024-01-05-a-review-of-2023/' },
-        ],
-      },
     ],
   },
   {
