@@ -1,6 +1,6 @@
 /**
  * Product Showcase
- * "What Avni Does" as tabs: each tab is something Avni does, with proof from a partner,
+ * "What Avni Does" as tabs: each tab is an audience, a benefit line and concept tags, with proof,
  * beside a real Avni screen in a phone or browser frame. Tabs advance on
  * their own every few seconds until someone hovers or picks one.
  */
@@ -15,8 +15,10 @@ import { ArrowRight, LucideIcon } from 'lucide-react';
 export interface ShowcaseItem {
   icon: LucideIcon;
   tone: string; // icon tile colours
+  audience: string;
   title: string;
   text: string;
+  tags: string[];
   proof: string;
   href: string;
   media: { src: string; kind: 'video' | 'image'; frame: 'phone' | 'browser'; alt: string; caption: string };
@@ -94,13 +96,21 @@ export default function ProductShowcase({ items }: { items: ShowcaseItem[] }) {
                 <span className={`flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl ${item.tone}`}>
                   <Icon size={20} />
                 </span>
-                <span className={`font-anek font-bold text-lg md:text-xl leading-snug ${isActive ? 'text-[#0b2540]' : 'text-[#475467]'}`}>
-                  {item.title}
+                <span>
+                  <span className="block font-noto text-xs font-semibold uppercase tracking-wider text-[#fba47e]">{item.audience}</span>
+                  <span className={`block font-anek font-bold text-lg md:text-xl leading-snug ${isActive ? 'text-[#0b2540]' : 'text-[#475467]'}`}>
+                    {item.title}
+                  </span>
                 </span>
               </button>
               {isActive && (
                 <div className="px-5 pb-5 pl-[72px] space-y-2">
                   <p className="font-noto text-[15px] leading-relaxed text-[#475467]">{item.text}</p>
+                  <ul className="flex flex-wrap gap-2 pt-1">
+                    {item.tags.map(tag => (
+                      <li key={tag} className="px-3 py-1 rounded-full bg-[#E8F3EE] font-noto text-xs font-medium text-[#1f5a43]">{tag}</li>
+                    ))}
+                  </ul>
                   <Link href={item.href} className="inline-flex items-start gap-1.5 pt-1 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
                     <ArrowRight size={15} className="flex-shrink-0 mt-0.5" /> {item.proof}
                   </Link>

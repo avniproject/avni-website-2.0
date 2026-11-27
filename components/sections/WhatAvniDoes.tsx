@@ -1,7 +1,7 @@
 /**
  * What Avni Does
- * Three things Avni does (with proof from a partner's story), shown as tabs beside real
- * Avni screens. Usage numbers are in the hero.
+ * What Avni does for each audience (one benefit line, concept tags, proof from a partner's
+ * story), shown as tabs beside real Avni screens. Usage numbers are in the hero.
  */
 
 'use client';
@@ -12,13 +12,15 @@ import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
 import ProductShowcase, { ShowcaseItem } from '@/components/sections/ProductShowcase';
 
-// Each tab: something Avni does, in plain words, with proof from a partner's story
+// Each tab: one audience, one benefit line, a few concept tags, and proof from a partner's story
 const steps: ShowcaseItem[] = [
   {
     icon: Smartphone,
     tone: 'bg-[#FFF1EA] text-[#C2410C]',
-    title: 'Collect data in the field, even offline',
-    text: 'Field workers register people and record every visit on their phone, with or without internet. Forms guide them step by step, in their own language.',
+    audience: 'For field workers',
+    title: 'Guided forms that make every visit count',
+    text: 'Field workers register people and record every visit on their phone, guided step by step, with or without internet.',
+    tags: ['Guided forms', 'Quality data at entry', 'Works offline', 'In their language'],
     proof: 'Hasiru Dala: registrations doubled, from 3 to 6 people an hour',
     href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
     media: { src: '/img/home/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app home screen with dashboard cards', caption: 'The field app’s home screen works offline (test data)' },
@@ -26,8 +28,10 @@ const steps: ShowcaseItem[] = [
   {
     icon: HeartPulse,
     tone: 'bg-[#E8F3EE] text-[#2a7559]',
-    title: 'Follow up every person, on time',
-    text: 'Avni schedules each next visit, shows every worker who is due, and flags anyone at risk, like a malnourished child or a high-risk pregnancy.',
+    audience: 'For supervisors',
+    title: 'Know who needs attention, every day',
+    text: 'Avni plans each next visit, shows who is due, and flags anyone at risk, like a malnourished child or a high-risk pregnancy.',
+    tags: ['Risk alerts', 'Timely follow-ups', 'Built-in approvals', 'Dashboards on the go'],
     proof: 'SEWA Rural: the app now picks which children need a visit',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
     media: { src: '/img/home/individual-dashboard-child.mp4', kind: 'video', frame: 'phone', alt: 'A child’s profile in the Avni app with scheduled and overdue visits', caption: 'A child’s profile with scheduled and overdue visits (test data)' },
@@ -35,8 +39,10 @@ const steps: ShowcaseItem[] = [
   {
     icon: BarChart3,
     tone: 'bg-[#E9EAF8] text-[#4F46A5]',
-    title: 'See your programme’s progress live',
-    text: 'Every visit reaches your dashboards as soon as a phone syncs, so managers track progress and report without waiting for spreadsheets.',
+    audience: 'For programme managers',
+    title: 'Decide on live, trusted data',
+    text: 'Every visit reaches your dashboards as soon as a phone syncs, ready for decisions and for reporting to funders.',
+    tags: ['Live insights', 'Funder-ready reports', 'Connected systems', 'Secure access'],
     proof: 'Purna Clinic: 22× more visits recorded within nine months',
     href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/',
     media: { src: '/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp', kind: 'image', frame: 'browser', alt: 'Monthly visits recorded at Purna Clinic, growing month on month', caption: 'Monthly visits recorded at Purna Clinic, from a real Avni report' },
