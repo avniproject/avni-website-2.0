@@ -146,3 +146,28 @@
   border: 0;
   border-radius: 0.5rem;
 }
+
+/* Tables in blog posts and case studies: header row, borders, scroll sideways on phones */
+.article-body table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  font-size: 0.95em;
+  margin: 2rem 0;
+}
+.article-body th,
+.article-body td {
+  border: 1px solid #EAECF0;
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+}
+.article-body th {
+  background: #F6FBF8;
+  color: #0b2540;
+  font-weight: 600;
+}
+.article-body tbody tr:nth-child(even) td {
+  background: #FCFCFD;
+}

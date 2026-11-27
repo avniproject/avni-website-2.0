@@ -8,6 +8,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
+import gfm from 'remark-gfm';
 import { FEATURED_CASE_STUDIES, FEATURED_BLOGS } from '@/config/featured-content';
 
 const caseStudiesDirectory = path.join(process.cwd(), 'content/case-studies');
@@ -93,6 +94,7 @@ export async function getCaseStudyBySlug(slug: string): Promise<CaseStudy | null
 
     // Convert markdown to HTML
     const processedContent = await remark()
+      .use(gfm) // tables, strikethrough, bare links
       .use(html, { sanitize: false })
       .process(content);
     const htmlContent = openExternalLinksInNewTab(lazyLoadImages(processedContent.toString()));
@@ -250,6 +252,7 @@ export async function getBlogBySlug(slug: string): Promise<Blog | null> {
 
     // Convert markdown to HTML
     const processedContent = await remark()
+      .use(gfm) // tables, strikethrough, bare links
       .use(html, { sanitize: false })
       .process(content);
     const htmlContent = openExternalLinksInNewTab(lazyLoadImages(processedContent.toString()));
