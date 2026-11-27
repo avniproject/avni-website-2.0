@@ -10,7 +10,7 @@ import { Fragment } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  ArrowRight, Check, Copy, Download, FileCheck2, History, Lock, MapPin, Server, ShieldAlert, Smartphone,
+  Check, Copy, Download, FileCheck2, History, Lock, MapPin, Server, ShieldAlert, Smartphone,
 } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -157,7 +157,7 @@ export default function DataProtectionPage() {
                 <span className="absolute -top-3 left-6 md:left-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0b2540] font-noto text-xs font-semibold text-white">
                   <MapPin size={13} /> India
                 </span>
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4 md:gap-2">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-start gap-4 md:gap-2">
                   {dataJourney.map((step, i) => (
                     <Fragment key={step.title}>
                       <FadeIn delay={i * 150} className="flex md:flex-col items-center md:text-center gap-4 md:gap-3">
@@ -170,10 +170,12 @@ export default function DataProtectionPage() {
                         </div>
                       </FadeIn>
                       {i < dataJourney.length - 1 && (
-                        <div className="hidden md:flex flex-col items-center gap-1 text-[#419372]">
-                          <Lock size={14} />
-                          <ArrowRight size={22} />
-                          <span className="font-noto text-[10px] uppercase tracking-wider text-[#98A2B3]">{i === 0 ? 'Sync' : 'Backup'}</span>
+                        // Connector: a dashed line with a small label on it
+                        <div className="hidden md:flex relative items-center w-36 lg:w-44 self-start mt-8" aria-hidden="true">
+                          <div className="w-full border-t-2 border-dashed border-[#B7DCCB]" />
+                          <span className="absolute left-1/2 -translate-x-1/2 inline-flex items-center gap-1 whitespace-nowrap rounded-full bg-white border border-[#B7DCCB] px-2.5 py-1 font-noto text-[11px] font-medium text-[#2a7559]">
+                            <Lock size={11} /> {i === 0 ? 'Encrypted sync' : 'Encrypted backup'}
+                          </span>
                         </div>
                       )}
                     </Fragment>
