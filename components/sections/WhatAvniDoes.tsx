@@ -34,7 +34,7 @@ const steps: ShowcaseItem[] = [
     tags: ['Risk alerts', 'Timely follow-ups', 'Built-in approvals', 'Dashboards on the go'],
     proof: 'SEWA Rural: the app now picks which children need a visit',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
-    media: { src: '/img/home/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app dashboard with high-risk pregnancy and SAM children counts', caption: 'The field dashboard: high-risk pregnancies and SAM children at a glance (test data)' },
+    media: { src: '/img/home/supervisor-card.webp', kind: 'image', frame: 'card', alt: 'A supervisor’s attention list in Avni: high-risk pregnancy, SAM child, overdue visit, visits to approve', caption: 'A supervisor’s list for the day: risks, overdue visits and approvals (illustration)' },
   },
   {
     icon: BarChart3,

@@ -53,7 +53,7 @@ function Media({ media }: { media: ShowcaseItem['media'] }) {
   if (media.frame === 'card') {
     return (
       <div className="relative mx-auto max-w-[300px]">
-        <Image key={media.src} src={media.src} alt={media.alt} width={720} height={757} className="w-full h-auto drop-shadow-2xl" />
+        <Image key={media.src} src={media.src} alt={media.alt} width={720} height={800} className="w-full h-auto drop-shadow-2xl" />
         {media.extra && (
           <Image src={media.extra.src} alt={media.extra.alt} width={660} height={493} className="absolute -right-6 md:-right-12 -bottom-8 w-[62%] h-auto drop-shadow-2xl" />
         )}
