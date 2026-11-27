@@ -27,10 +27,10 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
   if (!story) return null;
 
   return (
-    <Section spacing="lg" className="bg-[#F5F5F5]">
+    <Section spacing="none" bg="gray" className="pt-10 md:pt-12 pb-14 md:pb-16">
       <Container>
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16 lg:mb-[60px]">
+        <div className="text-center mb-8 md:mb-10">
           <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3 md:mb-4">
             AVNI SCALING ACROSS SECTORS
           </p>
@@ -43,7 +43,7 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
         </div>
 
         {/* Sector Tabs */}
-        <div className="flex justify-center gap-3 md:gap-4 mb-12 md:mb-16 lg:mb-[60px] flex-wrap">
+        <div className="flex justify-center gap-3 md:gap-4 mb-10 md:mb-12 flex-wrap">
           {stories.map(({ sector }) => (
             <button
               key={sector}

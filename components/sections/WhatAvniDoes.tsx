@@ -48,7 +48,7 @@ const steps: ShowcaseItem[] = [
 
 export default function WhatAvniDoes() {
   return (
-    <Section spacing="none" className="pt-10 md:pt-12 pb-16 md:pb-20">
+    <Section spacing="none" className="pt-10 md:pt-12 pb-8 md:pb-10">
       <Container>
         <div className="max-w-6xl mx-auto">
           {/* Three steps */}
@@ -61,7 +61,7 @@ export default function WhatAvniDoes() {
 
           <ProductShowcase items={steps} />
 
-          <div className="text-center mt-10">
+          <div className="text-center mt-8">
             <Link
               href="/features"
               className="inline-flex items-center gap-2 px-7 py-3 border-2 border-[#419372] text-[#2a7559] rounded-full font-anek font-semibold text-base hover:bg-[#419372] hover:text-white transition-colors"
