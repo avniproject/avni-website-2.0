@@ -85,7 +85,7 @@ export default async function CaseStudyPage({
 
       <main className="min-h-screen bg-white pt-[72px]">
         {/* Breadcrumb */}
-        <Section spacing="sm" className="bg-[#F5F5F5]">
+        <Section spacing="none" className="pt-6 md:pt-8">
           <Container>
             <nav className="flex items-center gap-2 text-sm font-noto">
               <Link href="/" className="text-gray-600 hover:text-[#419372] transition-colors">
@@ -102,7 +102,7 @@ export default async function CaseStudyPage({
         </Section>
 
         {/* Hero Section */}
-        <Section spacing="lg" className="bg-[#F5F5F5]">
+        <Section spacing="none" className="pt-8 md:pt-12">
           <Container>
             <div className="max-w-4xl mx-auto">
               {/* Logo */}
@@ -169,7 +169,7 @@ export default async function CaseStudyPage({
         </Section>
 
         {/* Content */}
-        <Section spacing="lg">
+        <Section spacing="none" className="pt-2 pb-16 md:pb-20">
           <Container>
             <article className="max-w-4xl mx-auto">
               {frontmatter.image && frontmatter.showCover && (
@@ -221,7 +221,7 @@ export default async function CaseStudyPage({
         </Section>
 
         {/* CTA Section */}
-        <Section spacing="lg" className="bg-[#F5F5F5]">
+        <Section spacing="lg" bg="gray">
           <Container>
             <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#419372] to-[#357a5e] rounded-[24px] p-8 md:p-12 text-center text-white">
               <h2 className="font-anek font-bold text-3xl md:text-4xl mb-4">
