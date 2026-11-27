@@ -6,12 +6,17 @@
  */
 
 import { Metadata } from 'next';
+import { Fragment } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Download, FileCheck2, History, MapPin, ShieldAlert, Smartphone, Lock, Check } from 'lucide-react';
+import {
+  ArrowRight, Check, Copy, Download, FileCheck2, History, Lock, MapPin, Server, ShieldAlert, Smartphone,
+} from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
+import FadeIn from '@/components/ui/FadeIn';
 
 export const metadata: Metadata = {
   title: 'Data Protection and the DPDP Act - Avni',
@@ -26,10 +31,14 @@ export const metadata: Metadata = {
   },
 };
 
-const inPlace = [
-  { icon: MapPin, title: 'Stored in India', detail: 'All data in Avni is stored in India, with backup copies at a second location in India.' },
-  { icon: Lock, title: 'Encrypted', detail: 'Data is encrypted on our servers. Field workers’ phones can be encrypted too.' },
-  { icon: Smartphone, title: 'Only what each worker needs', detail: 'A field worker’s phone holds only the records for their area.' },
+// The path data takes, shown as a diagram
+const dataJourney = [
+  { icon: Smartphone, title: 'Field worker’s phone', detail: 'Holds only the records for their area. Phones can be encrypted.' },
+  { icon: Server, title: 'Avni servers in India', detail: 'Data is encrypted on our servers.' },
+  { icon: Copy, title: 'Backup in India', detail: 'Copies kept at a second location, also in India.' },
+];
+
+const safeguards = [
   { icon: History, title: 'Every change recorded', detail: 'Each record shows who created it and who last changed it.' },
   { icon: Download, title: 'Controlled downloads', detail: 'Only users you authorise can download data in bulk.' },
   { icon: ShieldAlert, title: 'Incidents reported', detail: 'We report security incidents to CERT-In, and tell you quickly if your data is affected.' },
@@ -37,10 +46,10 @@ const inPlace = [
 
 const timeline = [
   { when: 'December 2026', what: 'Training our own team on the Act' },
-  { when: 'March 2027 (target)', what: 'Notice and consent in the app: on the phone, even offline, and on the web. Your team sets up your own notice.' },
+  { when: 'March 2027 (target)', what: 'Notice and consent in the app, on the phone even offline, and on the web' },
   { when: 'March 2027 (target)', what: 'Personal data kept out of our support tools: login emails move to India, and monitoring tools receive no personal data' },
-  { when: 'Before 13 May 2027', what: 'A contract update setting out what your organisation and Samanvay are each responsible for. Help to set up your notice and consent. We also aim to let your team record when a beneficiary withdraws consent.' },
-  { when: '13 May 2027', what: 'The DPDP Act takes full effect' },
+  { when: 'Before 13 May 2027', what: 'A contract update setting out what your organisation and Samanvay are each responsible for, and help to set up your notice and consent' },
+  { when: '13 May 2027', what: 'The DPDP Act takes full effect', milestone: true },
   { when: 'Second half of 2027', what: 'Avni can link to your organisation’s own consent system, if you keep data in other software too' },
 ];
 
@@ -51,123 +60,234 @@ const startNow = [
   'If a field worker’s phone is lost or stolen, tell us within a day so we can block that user’s access',
 ];
 
+// A drawing of the planned consent step, not a screenshot: the feature is still being built
+function ConsentMockup() {
+  return (
+    <div className="mx-auto w-[260px] rounded-[36px] bg-[#0b2540] p-3 shadow-2xl">
+      <div className="rounded-[28px] bg-white overflow-hidden">
+        <div className="bg-[#0b2540] px-4 pt-6 pb-3 text-white">
+          <p className="font-noto text-[11px] opacity-70">Register beneficiary</p>
+          <p className="font-anek font-semibold text-[15px]">Before you begin</p>
+        </div>
+        <div className="p-4 space-y-3">
+          <div className="rounded-xl bg-[#F6FBF8] border border-[#B7DCCB] p-3">
+            <p className="font-anek font-semibold text-[12px] text-[#1f5a43] mb-1">Notice from your organisation</p>
+            <div className="space-y-1.5">
+              <div className="h-1.5 rounded bg-[#B7DCCB] w-full" />
+              <div className="h-1.5 rounded bg-[#B7DCCB] w-[90%]" />
+              <div className="h-1.5 rounded bg-[#B7DCCB] w-[75%]" />
+            </div>
+          </div>
+          <p className="font-noto text-[11px] text-[#475467]">Consent given by</p>
+          <div className="flex gap-2">
+            <span className="flex-1 rounded-lg border-2 border-[#419372] bg-[#E8F3EE] py-1.5 text-center font-noto text-[11px] font-semibold text-[#1f5a43]">Beneficiary</span>
+            <span className="flex-1 rounded-lg border border-[#D0D5DD] py-1.5 text-center font-noto text-[11px] text-[#475467]">Parent / guardian</span>
+          </div>
+          <label className="flex items-start gap-2 font-noto text-[11px] text-[#344054]">
+            <span className="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded bg-[#419372] text-white"><Check size={11} /></span>
+            The notice was shown and consent was given
+          </label>
+          <div className="rounded-full bg-[#419372] py-2 text-center font-anek font-semibold text-[12px] text-white">Continue registration</div>
+          <p className="text-center font-noto text-[10px] text-[#98A2B3]">Works offline</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function DataProtectionPage() {
   return (
     <>
       <Header />
 
-      <main className="min-h-screen bg-[#F5F5F5] pt-[72px]">
-        <Section spacing="sm" className="bg-white py-8 md:py-12">
+      <main className="min-h-screen bg-white pt-[72px]">
+        {/* Hero: text beside a real field photo */}
+        <section className="bg-white">
           <Container>
-            <div className="text-center max-w-3xl mx-auto">
-              <p className="font-anek font-medium text-sm md:text-base leading-tight text-[#fba47e] uppercase mb-3">
-                DATA PROTECTION
-              </p>
-              <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540] mb-4">
-                Your Beneficiaries’ Data, Protected
-              </h1>
-              <p className="font-noto text-base md:text-lg leading-relaxed text-[#000000]/70">
-                How Avni protects personal data today, and how we are preparing with you for India’s Digital Personal
-                Data Protection (DPDP) Act, which takes full effect on 13 May 2027.
-              </p>
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-10 lg:gap-16 items-center py-10 md:py-16">
+              <div>
+                <p className="font-anek font-medium text-sm md:text-base leading-tight text-[#fba47e] uppercase mb-3">
+                  DATA PROTECTION
+                </p>
+                <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540] mb-5">
+                  Your Beneficiaries’ Data, Protected
+                </h1>
+                <p className="font-noto text-base md:text-lg leading-relaxed text-[#475467] mb-6">
+                  Field workers collect some of the most personal information there is: health, family, income. Here is
+                  how Avni protects it today, and how we are preparing with you for India’s Digital Personal Data
+                  Protection (DPDP) Act, which takes full effect on <strong className="text-[#0b2540]">13 May 2027</strong>.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['Stored in India', 'Encrypted', 'Access you control'].map(point => (
+                    <span key={point} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E8F3EE] font-noto text-sm font-medium text-[#1f5a43]">
+                      <Check size={15} /> {point}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <figure>
+                <div className="relative aspect-[4/5] w-full max-w-[420px] mx-auto rounded-[28px] overflow-hidden shadow-xl">
+                  <Image
+                    src="/img/data-protection/field-worker-phone.webp"
+                    alt="A health worker’s hands holding a phone with the Avni app"
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 90vw, 420px"
+                    className="object-cover"
+                  />
+                </div>
+                <figcaption className="max-w-[420px] mx-auto mt-3 font-noto text-xs text-[#98A2B3]">
+                  A community health worker at ASHWINI, Nilgiris, using Avni. Names on the screen are blurred.
+                </figcaption>
+              </figure>
             </div>
           </Container>
-        </Section>
+        </section>
 
-        {/* In place today */}
+        {/* Data journey */}
         <Section spacing="md" bg="gray">
           <Container>
             <div className="max-w-6xl mx-auto">
-              <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-8">In Place Today</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {inPlace.map(({ icon: Icon, title, detail }) => (
-                  <div key={title} className="bg-white rounded-2xl shadow-sm p-6">
-                    <div className="w-10 h-10 rounded-xl bg-[#E8F3EE] text-[#2a7559] flex items-center justify-center mb-4">
-                      <Icon size={20} />
+              <FadeIn>
+                <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-2">Where Your Data Lives</h2>
+                <p className="font-noto text-base text-[#475467] mb-10">From the field worker’s phone to our servers, it never leaves India.</p>
+              </FadeIn>
+
+              <div className="relative rounded-3xl bg-white shadow-sm p-6 md:p-10">
+                <span className="absolute -top-3 left-6 md:left-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0b2540] font-noto text-xs font-semibold text-white">
+                  <MapPin size={13} /> India
+                </span>
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] items-center gap-4 md:gap-2">
+                  {dataJourney.map((step, i) => (
+                    <Fragment key={step.title}>
+                      <FadeIn delay={i * 150} className="flex md:flex-col items-center md:text-center gap-4 md:gap-3">
+                        <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#E8F3EE] text-[#2a7559] flex items-center justify-center">
+                          <step.icon size={30} />
+                        </div>
+                        <div>
+                          <h3 className="font-anek font-semibold text-lg text-[#0b2540]">{step.title}</h3>
+                          <p className="font-noto text-sm leading-relaxed text-[#475467] md:max-w-[220px]">{step.detail}</p>
+                        </div>
+                      </FadeIn>
+                      {i < dataJourney.length - 1 && (
+                        <div className="hidden md:flex flex-col items-center gap-1 text-[#419372]">
+                          <Lock size={14} />
+                          <ArrowRight size={22} />
+                          <span className="font-noto text-[10px] uppercase tracking-wider text-[#98A2B3]">{i === 0 ? 'Sync' : 'Backup'}</span>
+                        </div>
+                      )}
+                    </Fragment>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
+                {safeguards.map(({ icon: Icon, title, detail }, i) => (
+                  <FadeIn key={title} delay={i * 120}>
+                    <div className="h-full bg-white rounded-2xl shadow-sm p-6">
+                      <Icon size={22} className="text-[#2a7559] mb-3" />
+                      <h3 className="font-anek font-semibold text-lg text-[#0b2540] mb-1">{title}</h3>
+                      <p className="font-noto text-sm leading-relaxed text-[#475467]">{detail}</p>
                     </div>
-                    <h3 className="font-anek font-semibold text-lg text-[#0b2540] mb-1">{title}</h3>
-                    <p className="font-noto text-sm leading-relaxed text-[#475467]">{detail}</p>
-                  </div>
+                  </FadeIn>
                 ))}
               </div>
             </div>
           </Container>
         </Section>
 
-        {/* Who is responsible */}
+        {/* Key statement */}
+        <section className="bg-[#0b2540] py-14 md:py-20">
+          <Container>
+            <FadeIn>
+              <p className="max-w-4xl mx-auto text-center font-anek font-semibold text-2xl md:text-4xl leading-snug text-white">
+                Your organisation decides what data to collect and why.{' '}
+                <span className="text-[#7FD1AE]">We look after it on your behalf, in India.</span>
+              </p>
+              <p className="max-w-3xl mx-auto text-center font-noto text-base text-white/70 mt-5">
+                Under the Act, your organisation has the main responsibilities, and Samanvay has responsibilities too,
+                because we process the data for you. It covers details that can identify a person, like a name or phone
+                number. If your programme records only things like water sources, buildings or stock, much of it may not apply.
+              </p>
+            </FadeIn>
+          </Container>
+        </section>
+
+        {/* Getting ready: timeline beside the consent drawing */}
         <Section spacing="md">
           <Container>
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-4">Who Is Responsible</h2>
-              <p className="font-noto text-base md:text-lg leading-relaxed text-[#344054] mb-4">
-                Your organisation decides what beneficiary data to collect and why, so it has the main responsibilities
-                under the Act. Samanvay also has responsibilities, because we process that data on your behalf in Avni.
-              </p>
-              <p className="font-noto text-base md:text-lg leading-relaxed text-[#344054]">
-                The Act covers details that can identify a person, such as a name or phone number, once they are in
-                digital form, including paper records entered into Avni or uploaded as a photo. If your programme records
-                only things like water sources, buildings or stock, much of it may not apply to you.
-              </p>
-            </div>
-          </Container>
-        </Section>
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-12 lg:gap-16">
+              <div>
+                <FadeIn>
+                  <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Getting Ready for the DPDP Act</h2>
+                  <p className="font-noto text-base text-[#475467] mb-8">
+                    The biggest change for most programmes: from May 2027, field workers show new beneficiaries a notice
+                    and get their consent before registering them. For a child, a parent or guardian gives consent.
+                  </p>
+                </FadeIn>
+                <ol className="relative border-l-2 border-[#B7DCCB] ml-2 space-y-7">
+                  {timeline.map((step, i) => (
+                    <li key={step.when + step.what} className="pl-6 relative">
+                      <span className={`absolute -left-[9px] top-1 w-4 h-4 rounded-full border-4 border-white ${step.milestone ? 'bg-[#F27A45] scale-125' : 'bg-[#419372]'}`} />
+                      <FadeIn delay={i * 80}>
+                        <p className={`font-anek font-semibold text-sm uppercase tracking-wider mb-1 ${step.milestone ? 'text-[#B4441A]' : 'text-[#2a7559]'}`}>{step.when}</p>
+                        <p className={`font-noto leading-relaxed ${step.milestone ? 'text-lg font-semibold text-[#0b2540]' : 'text-base text-[#344054]'}`}>{step.what}</p>
+                      </FadeIn>
+                    </li>
+                  ))}
+                </ol>
+                <p className="font-noto text-sm text-[#667085] mt-6">We’ll let you know early if any of these target dates change.</p>
+              </div>
 
-        {/* Timeline */}
-        <Section spacing="md" bg="gray">
-          <Container>
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-3">Getting Ready for the DPDP Act</h2>
-              <p className="font-noto text-base text-[#475467] mb-8">
-                The biggest change for most programmes: from May 2027, field workers show new beneficiaries a notice and
-                get their consent before registering them. For a child, a parent or guardian gives consent.
-              </p>
-              <ol className="relative border-l-2 border-[#B7DCCB] ml-2 space-y-7">
-                {timeline.map(step => (
-                  <li key={step.when + step.what} className="pl-6 relative">
-                    <span className="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-[#419372] border-4 border-[#F5F5F5]" />
-                    <p className="font-anek font-semibold text-sm uppercase tracking-wider text-[#2a7559] mb-1">{step.when}</p>
-                    <p className="font-noto text-base leading-relaxed text-[#344054]">{step.what}</p>
-                  </li>
-                ))}
-              </ol>
-              <p className="font-noto text-sm text-[#667085] mt-6">We’ll let you know early if any of these target dates change.</p>
+              <FadeIn className="lg:sticky lg:top-28 self-start">
+                <ConsentMockup />
+                <p className="text-center font-noto text-xs text-[#98A2B3] mt-4 max-w-[260px] mx-auto">
+                  How the consent step is planned to look. An illustration; the feature is in development.
+                </p>
+              </FadeIn>
             </div>
           </Container>
         </Section>
 
         {/* Start now */}
-        <Section spacing="md">
+        <Section spacing="md" bg="gray">
           <Container>
-            <div className="max-w-4xl mx-auto">
-              <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-6">What Your Organisation Can Start On Now</h2>
-              <ul className="space-y-4">
-                {startNow.map(item => (
-                  <li key={item} className="flex gap-3 font-noto text-base leading-relaxed text-[#344054]">
-                    <Check size={20} className="flex-shrink-0 text-[#419372] mt-1" />
-                    {item}
-                  </li>
+            <div className="max-w-6xl mx-auto">
+              <FadeIn>
+                <h2 className="font-anek font-bold text-3xl md:text-4xl text-[#0b2540] mb-8">What Your Organisation Can Start On Now</h2>
+              </FadeIn>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {startNow.map((item, i) => (
+                  <FadeIn key={item} delay={i * 100}>
+                    <div className="h-full flex gap-4 bg-white rounded-2xl shadow-sm p-6">
+                      <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#419372] text-white font-anek font-bold flex items-center justify-center">{i + 1}</span>
+                      <p className="font-noto text-base leading-relaxed text-[#344054]">{item}</p>
+                    </div>
+                  </FadeIn>
                 ))}
-              </ul>
+              </div>
             </div>
           </Container>
         </Section>
 
         {/* Contact */}
-        <Section spacing="md" bg="gray">
+        <Section spacing="md">
           <Container>
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
-              <FileCheck2 size={40} className="flex-shrink-0 text-[#419372]" />
-              <div className="flex-1">
-                <h2 className="font-anek font-bold text-2xl text-[#0b2540] mb-1">Questions about your programme?</h2>
-                <p className="font-noto text-base text-[#475467]">
-                  Write to{' '}
-                  <a href="mailto:avnisupport@samanvayfoundation.org" className="font-medium text-[#2a7559] underline underline-offset-2">avnisupport@samanvayfoundation.org</a>
-                  , or see the{' '}
-                  <Link href="/resources/faq" className="font-medium text-[#2a7559] underline underline-offset-2">FAQ</Link>.
-                  For what the law asks of your organisation in particular, your legal adviser is the best person to ask.
-                </p>
+            <FadeIn>
+              <div className="max-w-4xl mx-auto rounded-2xl border border-[#EAECF0] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+                <FileCheck2 size={40} className="flex-shrink-0 text-[#419372]" />
+                <div className="flex-1">
+                  <h2 className="font-anek font-bold text-2xl text-[#0b2540] mb-1">Questions about your programme?</h2>
+                  <p className="font-noto text-base text-[#475467]">
+                    Write to{' '}
+                    <a href="mailto:avnisupport@samanvayfoundation.org" className="font-medium text-[#2a7559] underline underline-offset-2">avnisupport@samanvayfoundation.org</a>
+                    , or see the{' '}
+                    <Link href="/resources/faq" className="font-medium text-[#2a7559] underline underline-offset-2">FAQ</Link>.
+                    For what the law asks of your organisation in particular, your legal adviser is the best person to ask.
+                  </p>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           </Container>
         </Section>
       </main>
