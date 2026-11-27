@@ -90,7 +90,7 @@ export default function Hero() {
               aria-label="Play Avni platform video"
             >
               <Image
-                src="/hero-banner.webp"
+                src="/hero-main.webp"
                 alt="A health worker using Avni on a tablet during a home visit"
                 width={600}
                 height={600}
