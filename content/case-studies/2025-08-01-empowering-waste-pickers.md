@@ -1,19 +1,14 @@
 ---
-title: >-
-  Empowering Waste Pickers Through Tech- How Hasiru Dala Scaled Impact Using
-  Avni
-slug: 2025-08-01-empowering-waste-pickers
-description: >-
-  In the bustling streets of Indian cities, waste often seems invisible. But
-  behind every clean neighbourhood is a group of people whose labour remains
-  largely...
-date: '2025-08-01'
-author: Avni Team
-readTime: 4 min read
+title: Empowering Waste Pickers Through Tech- How Hasiru Dala Scaled Impact Using Avni
+description: In the bustling streets of Indian cities, waste often seems
+  invisible. But behind every clean neighbourhood is a group of people whose
+  labour remains largely...
+date: 2025-08-01
+author:
+  - Avni Team
 sector: Waste Management
 logo: /logos/HD-Main-Logo.webp
-tags:
-  - Waste Management
+image: /img/2025-08-01-empowering-waste-pickers/123.webp
 ---
 In the bustling streets of Indian cities, waste often seems invisible. But behind every clean neighbourhood is a group of people whose labour remains largely unrecognised—the waste pickers.
 
@@ -48,7 +43,7 @@ The organisation implemented Avni across multiple projects to:
 - Register waste pickers and maintain detailed digital profiles  
 - Track access to services such as KYC completion, enrolment in government schemes, and benefits received  
 - Monitor training needs and delivery, including programs like Leadership Development, Solid Waste Management, and Entrepreneurship Training  
-- Ensure tailored interventions using data-driven insights to deliver support based on each individual’s needs  
+- Ensure tailored interventions using data-driven insights to deliver support based on each individual’s needs
 
 ---
 
@@ -62,7 +57,7 @@ The adoption of Avni has brought significant improvements across Hasiru Dala’s
 - 🎯 **Offline Dashboard Cards**: Teams can view field status at a glance within the Avni mobile app.  
 - 📥 **Efficient Reporting**: Longitudinal data exports and Superset dashboards simplify progress tracking.  
 - ⚡ **Increased Field Efficiency**: Registration speed doubled—from **3 to 6 individuals per hour**, enabling greater outreach.  
-- 👩‍💻 **Easy to Use**: Even field staff with limited digital literacy quickly adapted and now confidently use the app daily.  
+- 👩‍💻 **Easy to Use**: Even field staff with limited digital literacy quickly adapted and now confidently use the app daily.
 
 ---
 
@@ -71,18 +66,19 @@ The adoption of Avni has brought significant improvements across Hasiru Dala’s
 ## 🗣️ Testimonial from the Field
 
 > "Hasiru Dala has been using Avni for many years. We have come across many features that have proven to be useful for us — especially in the enumeration and profiling of waste pickers, tracking beneficiaries, and maintaining KYC and related details in one place.
-> 
+>
 > Thanks to Avni, reporting, data quality checks, analysis, and many other processes have become much easier for us. The approach to problem-solving, fulfilling requirements, and providing technical support is excellent.
-> 
+>
 > I sincerely thank the Samanvay Foundation for understanding the challenges faced by field facilitators and others who handle large volumes of data.
-> 
+>
 > Avni is user-friendly and loaded with features."
-> 
+>
 > — **Charan Kumar**, Avni Admin, Data Supervisor, Hasiru Dala
 
 ---
 
-## 🎥 Video Testimonials  
+## 🎥 Video Testimonials
+
 *Coming soon*
 
 ---
@@ -108,7 +104,7 @@ If you are part of an NGO or a community-focused organisation working on project
 - ✅ Ensure hassle-free and timely data collection  
 - 📈 Improve transparency and accountability in your projects  
 - 📊 Make informed decisions based on reliable data  
-- 🚀 Scale your operations with ease, even in remote or underserved areas  
+- 🚀 Scale your operations with ease, even in remote or underserved areas
 
 Join the growing number of organisations that are using Avni to make a difference in communities across India.
 
@@ -116,7 +112,8 @@ Whether you are working on waterbody rejuvenation, improving access to health se
 
 ---
 
-👉 **[Schedule a call with us](https://avniproject.org/)**  
+👉 **[Schedule a call with us**](https://avniproject.org/)  
 📬 **[Subscribe to our newsletter](https://avniproject.us17.list-manage.com/subscribe?u=5f3876f49a7603817af2856b9&id=c9fdedc9e7)** to stay updated on new case studies, features, and implementation stories.
 
 ---
+
