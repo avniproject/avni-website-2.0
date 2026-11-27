@@ -46,7 +46,15 @@ export default function Testimonials() {
                 {t.quote}
               </blockquote>
               <figcaption className="mt-6 pt-5 border-t border-[#EAECF0] flex items-center gap-3">
-                {t.logo && (
+                {t.photos ? (
+                  <div className="flex flex-shrink-0 -space-x-3">
+                    {t.photos.map(photo => (
+                      <div key={photo} className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white">
+                        <Image src={photo} alt="" fill sizes="48px" className="object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                ) : t.logo && (
                   <div className="relative flex-shrink-0 w-14 h-10">
                     <Image src={t.logo} alt="" fill sizes="56px" className="object-contain object-left" />
                   </div>
