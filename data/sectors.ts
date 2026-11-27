@@ -126,22 +126,80 @@ export const sectors: Sector[] = [
   {
     name: 'Water & Sanitation',
     description: [
-      'WASH programs face challenges in monitoring water quality, tracking infrastructure maintenance, and ensuring sustained behavior change across communities. Paper-based systems make it difficult to identify non-functional water points, track sanitation coverage, and measure program impact at scale.',
-      'Avni streamlines WASH program management with digital asset registers, automated maintenance schedules, and household-level tracking. Field teams can conduct water quality tests, monitor toilet construction, and track hygiene behavior adoption while program managers access real-time dashboards showing coverage gaps and infrastructure status.',
+      'Water and sanitation programmes build and look after physical assets, such as water bodies, household tap connections and toilets, across hundreds of villages and settlements. With work spread over many sites and seasons, it is hard to know on paper which work is done and verified, and whether the assets keep working.',
+      'With Avni, field teams record each site with photos and location, follow work like desilting or tap connections from start to finish, and capture household and community details along the way. Programme teams, partners and funders see progress across every site and district in one place.',
+    ],
+    programmes: [
+      {
+        name: 'Restoring water bodies',
+        examples: [
+          { name: 'ATECF', href: '/resources/case-studies/2025-04-30-restoring-waterbodies-avni-atecf/' },
+          { name: 'Dam desilting monitoring', href: '/resources/case-studies/dam-and-water-bodies-desilting-work-monitoring-1/' },
+        ],
+      },
+      {
+        name: 'Drinking water for every household',
+        examples: [
+          { name: 'Arghyam, Jal Jeevan Mission', href: '/resources/case-studies/2024-11-11-jal-jeevan-mission-arghyam/' },
+        ],
+      },
+      {
+        name: 'Sanitation and housing in urban slums',
+        examples: [
+          { name: 'Shelter Associates', href: '/blog/shelter-journey-remoulding-data-collection-paper-kobotoolbox-avni/' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Agriculture',
+    description: [
+      'Agriculture programmes support farmers across scattered villages and changing seasons, with inputs, training, water and soil improvement. Knowing which farmers were reached, what support they received and what changed on their land is hard to keep track of on paper.',
+      'With Avni, field teams register farmers and their land, record visits, trainings and support, and follow results season after season, even offline. Programme teams can see which farmers benefited and show the change on the ground.',
+    ],
+    programmes: [
+      {
+        name: 'Silt from water bodies for farmland',
+        examples: [
+          { name: 'ATECF', href: '/blog/2026-10-01-jal-chaupal-2026/' },
+        ],
+      },
     ],
   },
   {
     name: 'Waste Management',
     description: [
-      'Waste management initiatives struggle with inefficient collection routes, limited visibility into waste segregation practices, and difficulty tracking waste-picker livelihoods. Manual systems make it hard to optimize operations, ensure fair compensation, and demonstrate environmental impact to stakeholders.',
-      'Avni digitizes waste management with GPS-enabled route tracking, household-level waste segregation monitoring, and waste-picker welfare management. Organizations can track collection efficiency, measure recycling rates, manage payments to waste-pickers, and generate impact reports showing waste diverted from landfills and carbon emissions reduced.',
+      'Waste pickers keep cities clean, yet their work is often unrecognised and they miss out on IDs, welfare schemes and fair income. Organisations that support them need to keep track of people, documents and services across many sites, and paper records get lost and slow down follow-ups.',
+      'With Avni, field teams register waste pickers with digital profiles, track access to services such as KYC and scheme enrolment, and follow up from the field, even offline. Dashboards and exports show progress across projects at a glance.',
+    ],
+    programmes: [
+      {
+        name: 'Rights and services for waste pickers',
+        examples: [
+          { name: 'Hasiru Dala', href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/' },
+        ],
+      },
     ],
   },
   {
     name: 'Social Security',
     description: [
-      'Social protection programs face challenges in identifying eligible beneficiaries, preventing duplication, and ensuring timely benefit delivery — especially for vulnerable populations like elderly, disabled, and marginalized communities. Paper-based systems create delays, errors, and limited accountability in benefit distribution.',
-      'Avni enables efficient social security management with digital beneficiary databases, automated eligibility assessment, and benefit tracking workflows. Field workers can conduct household surveys, verify documents, and process applications while administrators monitor disbursement status, identify coverage gaps, and generate compliance reports for government and donor requirements.',
+      'Millions of eligible families miss out on government schemes, such as health insurance, ration cards and pensions, because of paperwork, low awareness and hard-to-reach offices. NGOs help them apply and follow up, often over many visits and many schemes.',
+      'With Avni, field workers find out which schemes a family is eligible for, track each application until the benefit is received, and follow up even offline. Organisations see how many people they have helped, with which schemes, and where applications are stuck.',
+    ],
+    programmes: [
+      {
+        name: 'Access to health insurance schemes',
+        examples: [
+          { name: 'Project Potential', href: '/resources/case-studies/2024-11-27-Project-Potential-Bihar-Health-Access-Digitisation-Case-study/' },
+        ],
+      },
+      {
+        name: 'Relief and entitlements in emergencies',
+        examples: [
+          { name: 'Maha PECOnet', href: '/resources/case-studies/mahapeconet-use-of-avni-in-covid-relief/' },
+        ],
+      },
     ],
   },
   {
@@ -166,17 +224,53 @@ export const sectors: Sector[] = [
     ],
   },
   {
+    name: 'Child Protection',
+    description: [
+      'Child protection programmes work with children at risk of labour, trafficking, child marriage and dropping out of school. Each child’s situation changes over time, and following them across families, schools and services is hard on paper.',
+      'With Avni, field workers keep a record for each child and family, note risks and follow-ups, and make sure no case is lost. Access control keeps sensitive information visible only to the people who need it.',
+    ],
+    programmes: [
+      {
+        name: 'Children in tea plantations',
+        examples: [
+          { name: 'Save the Children', href: '/blog/2021-12-30-savethechildren-golive/' },
+        ],
+      },
+    ],
+  },
+  {
     name: 'Legal Aid',
     description: [
-      'Legal aid organizations face challenges in managing high caseloads, tracking case progress across multiple hearings, and ensuring timely follow-ups with vulnerable clients. Paper-based systems create delays in accessing case history, difficulty coordinating between lawyers and paralegals, and limited visibility into program outcomes.',
-      'Avni streamlines legal aid delivery with digital case management, automated hearing reminders, and client communication tracking. Legal teams can maintain comprehensive case files, track court dates and documentation, coordinate with clients through SMS/call logs, and generate reports showing case resolution rates, types of legal issues addressed, and impact on beneficiary rights.',
+      'Legal aid organisations help people who cannot otherwise reach justice, such as survivors of violence, workers and marginalised communities. Each case moves through many steps over months or years, with documents, hearings and follow-ups that are easy to lose track of on paper.',
+      'With Avni, paralegals and field teams register cases, record each step and the next date, and follow up with clients from the field. Managers see every open case and where it stands.',
+    ],
+  },
+  {
+    name: 'Human Rights',
+    description: [
+      'Human rights organisations document violations, support survivors and help communities claim their rights. This work needs careful, consistent records collected in the field, often in places with poor connectivity and from people who must be protected.',
+      'With Avni, field teams document cases in a structured way, even offline, track support and follow-up, and control exactly who can see sensitive information. The organisation gets reliable evidence for advocacy and action.',
     ],
   },
   {
     name: 'Sports',
     description: [
-      'Grassroots sports programs struggle to track athlete development, monitor training attendance, and identify talent across diverse communities. Manual systems make it difficult to maintain performance records, coordinate tournaments, and demonstrate program impact in building athletic skills and life skills among youth.',
-      'Avni empowers sports programs with digital athlete profiles, training attendance tracking, and performance monitoring tools. Coaches can record fitness assessments, track skill progression, manage team selections, and coordinate events while program managers access dashboards showing participation rates, performance improvements, and tournament outcomes across different age groups and locations.',
+      'Sports-for-development programmes use games like netball and kho-kho to build confidence, life skills and gender equality, often with adolescent girls. Across hundreds of sessions and thousands of children in many places, attendance and progress are hard to track on spreadsheets.',
+      'With Avni, coaches record attendance and sessions, track each participant’s progress over time, and programmes measure their impact across cities. No child gets left behind because their records got lost.',
+    ],
+    programmes: [
+      {
+        name: 'Sports for gender equality',
+        examples: [
+          { name: 'Maitrayana', href: '/resources/case-studies/2025-07-31-scoring-for-equality/' },
+        ],
+      },
+      {
+        name: 'Kho-kho and play for children',
+        examples: [
+          { name: 'KhelMel', href: '/blog/2026-07-20-visiting-khelmel-raigarh/' },
+        ],
+      },
     ],
   },
 ];
