@@ -122,6 +122,31 @@ export default function SolutionsClient({ caseStudies }: { caseStudies: Record<s
                     {paragraph}
                   </p>
                 ))}
+
+                {currentContent.programmes && (
+                  <div className="pt-4">
+                    <h2 className="font-anek font-bold text-[20px] lg:text-[22px] text-[#0a1f3d] mb-4">
+                      Programmes running on Avni
+                    </h2>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {currentContent.programmes.map(programme => (
+                        <li key={programme.name} className="rounded-[12px] bg-[#f7f9fc] px-4 py-3">
+                          <p className="font-anek font-semibold text-[16px] text-[#0a1f3d]">{programme.name}</p>
+                          <p className="font-noto text-[14px] leading-[1.6] text-[#5a6c7d]">
+                            {programme.examples.map((example, i) => (
+                              <span key={example.name + example.href}>
+                                {i > 0 && ' · '}
+                                <Link href={example.href} className="font-medium text-[#2a7559] underline decoration-[#419372]/40 underline-offset-2 hover:text-[#1f5a43]">
+                                  {example.name}
+                                </Link>
+                              </span>
+                            ))}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
 

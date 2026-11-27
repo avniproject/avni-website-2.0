@@ -2,11 +2,24 @@
  * Sectors
  * Sectors on the Solutions page. Each sector's case studies are added automatically from
  * content/case-studies (matched on their `sector`). Edit the text here, sector by sector.
+ * `programmes` lists the kinds of programmes run on Avni, each linking to the organisations'
+ * case studies or blog posts.
  */
+
+export interface ProgrammeExample {
+  name: string;
+  href: string;
+}
+
+export interface Programme {
+  name: string;
+  examples: ProgrammeExample[];
+}
 
 export interface Sector {
   name: string;
   description: string[];
+  programmes?: Programme[];
 }
 
 export const sectors: Sector[] = [
@@ -20,8 +33,66 @@ export const sectors: Sector[] = [
   {
     name: 'Healthcare',
     description: [
-      'Community health programs struggle with fragmented patient data, inconsistent follow-ups, and limited visibility into health outcomes — especially in underserved areas. Manual record-keeping makes it difficult to track chronic conditions, maternal health, immunization schedules, and disease surveillance effectively.',
-      'Avni transforms healthcare delivery with digital patient profiles, automated visit scheduling, and real-time health monitoring. Field workers can track vital signs, medication adherence, and treatment outcomes while supervisors gain actionable insights through comprehensive dashboards and alerts for high-risk cases.',
+      'Community health programmes depend on frontline workers (ASHAs, ANMs and health volunteers) who visit families in remote villages and urban slums. On paper registers, follow-ups get missed, high-risk pregnancies and malnourished children are spotted too late, and programme managers wait weeks for numbers they need today.',
+      'With Avni, health workers register families, record every visit and are prompted when a pregnancy is high-risk, a child’s growth falters or a follow-up is due, even without internet. WHO growth charts and immunisation schedules are built in, and supervisors see every case in real time so they can act early.',
+    ],
+    programmes: [
+      {
+        name: 'Maternal and child health',
+        examples: [
+          { name: 'Calcutta Kids', href: '/resources/case-studies/calcutta-kids-avni-implemented-for-maternal-and-child-health-program/' },
+          { name: 'APF Odisha', href: '/resources/case-studies/2025-05-28-bridging-the-nutrition-gap-apf-odisha/' },
+          { name: 'ASHWINI', href: '/blog/how-avni-has-become-pillar-of-community-MIS-at-ASHWINI/' },
+        ],
+      },
+      {
+        name: 'Child malnutrition',
+        examples: [
+          { name: 'JNPCT', href: '/resources/case-studies/use-of-avni-in-jnpct-malnutrition-project-case-study/' },
+          { name: 'APF Odisha', href: '/resources/case-studies/2025-05-28-bridging-the-nutrition-gap-apf-odisha/' },
+        ],
+      },
+      {
+        name: 'Sickle cell screening and treatment',
+        examples: [
+          { name: 'Jan Swasthya Sahyog', href: '/resources/case-studies/avni-for-sickle-cell-disease-screening-and-treatment/' },
+          { name: 'ASHWINI', href: '/blog/how-avni-has-become-pillar-of-community-MIS-at-ASHWINI/' },
+        ],
+      },
+      {
+        name: 'Adolescent health and menstrual hygiene',
+        examples: [
+          { name: 'IHMP Pachod', href: '/resources/case-studies/2025-05-02-ihmp-strengthening-adolescent-health/' },
+          { name: 'SEWA Rural', href: '/blog/2024-06-25-digitising-adolescent-community-program-using-avni/' },
+        ],
+      },
+      {
+        name: 'NCD and cancer screening',
+        examples: [
+          { name: 'Yenepoya', href: '/blog/2024-06-20-yenepoya-visit/' },
+          { name: 'ASHWINI', href: '/blog/2026-06-16-inside-ashwini-community-healthcare-nilgiris/' },
+          { name: 'Purna Clinic', href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/' },
+        ],
+      },
+      {
+        name: 'Tuberculosis',
+        examples: [
+          { name: 'ASHWINI', href: '/blog/how-avni-has-become-pillar-of-community-MIS-at-ASHWINI/' },
+        ],
+      },
+      {
+        name: 'Eye care camps',
+        examples: [
+          { name: 'Project Chashma', href: '/resources/case-studies/2024-05-22-empowering-vision-care-chashma-tech4dev/' },
+        ],
+      },
+      {
+        name: 'Primary care in remote villages',
+        examples: [
+          { name: 'Purna Clinic', href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/' },
+          { name: 'Lok Biradari Prakalp', href: '/resources/case-studies/2019-09-02-prescription-tool/' },
+        ],
+      },
     ],
   },
   {
