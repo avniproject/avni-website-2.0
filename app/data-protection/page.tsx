@@ -31,17 +31,25 @@ export const metadata: Metadata = {
   },
 };
 
+// Accent colours from the site's palette (homepage oranges and yellows, newsletter lavender)
+const TONES = {
+  green: { tile: 'bg-[#E8F3EE] text-[#2a7559]', edge: 'border-t-[#419372]', solid: 'bg-[#419372]' },
+  orange: { tile: 'bg-[#FFF1EA] text-[#C2410C]', edge: 'border-t-[#F27A45]', solid: 'bg-[#F27A45]' },
+  yellow: { tile: 'bg-[#FFF8DB] text-[#A16207]', edge: 'border-t-[#F5C518]', solid: 'bg-[#E0A800]' },
+  lavender: { tile: 'bg-[#E9EAF8] text-[#4F46A5]', edge: 'border-t-[#7C7BD9]', solid: 'bg-[#6D6BD0]' },
+} as const;
+
 // The path data takes, shown as a diagram
 const dataJourney = [
-  { icon: Smartphone, title: 'Field worker’s phone', detail: 'Holds only the records for their area. Phones can be encrypted.' },
-  { icon: Server, title: 'Avni servers in India', detail: 'Data is encrypted on our servers.' },
-  { icon: Copy, title: 'Backup in India', detail: 'Copies kept at a second location, also in India.' },
+  { icon: Smartphone, tone: TONES.orange, title: 'Field worker’s phone', detail: 'Holds only the records for their area. Phones can be encrypted.' },
+  { icon: Server, tone: TONES.green, title: 'Avni servers in India', detail: 'Data is encrypted on our servers.' },
+  { icon: Copy, tone: TONES.lavender, title: 'Backup in India', detail: 'Copies kept at a second location, also in India.' },
 ];
 
 const safeguards = [
-  { icon: History, title: 'Every change recorded', detail: 'Each record shows who created it and who last changed it.' },
-  { icon: Download, title: 'Controlled downloads', detail: 'Only users you authorise can download data in bulk.' },
-  { icon: ShieldAlert, title: 'Incidents reported', detail: 'We report security incidents to CERT-In, and tell you quickly if your data is affected.' },
+  { icon: History, tone: TONES.green, title: 'Every change recorded', detail: 'Each record shows who created it and who last changed it.' },
+  { icon: Download, tone: TONES.yellow, title: 'Controlled downloads', detail: 'Only users you authorise can download data in bulk.' },
+  { icon: ShieldAlert, tone: TONES.orange, title: 'Incidents reported', detail: 'We report security incidents to CERT-In, and tell you quickly if your data is affected.' },
 ];
 
 const timeline = [
@@ -118,15 +126,18 @@ export default function DataProtectionPage() {
                   Protection (DPDP) Act, which takes full effect on <strong className="text-[#0b2540]">13 May 2027</strong>.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {['Stored in India', 'Encrypted', 'Access you control'].map(point => (
-                    <span key={point} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#E8F3EE] font-noto text-sm font-medium text-[#1f5a43]">
+                  {([['Stored in India', TONES.green], ['Encrypted', TONES.orange], ['Access you control', TONES.lavender]] as const).map(([point, tone]) => (
+                    <span key={point} className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full font-noto text-sm font-medium ${tone.tile}`}>
                       <Check size={15} /> {point}
                     </span>
                   ))}
                 </div>
               </div>
-              <figure>
-                <div className="relative aspect-[4/5] w-full max-w-[420px] mx-auto rounded-[28px] overflow-hidden shadow-xl">
+              <figure className="relative">
+                {/* Soft shapes behind the photo, like the homepage hero */}
+                <div aria-hidden="true" className="absolute -top-8 -right-2 w-64 h-64 rounded-[40%] bg-[#FFD84D]/60 blur-xl" />
+                <div aria-hidden="true" className="absolute -bottom-6 -left-4 w-72 h-72 rounded-[45%] bg-[#fba47e]/50 blur-xl" />
+                <div className="relative aspect-[4/5] w-full max-w-[420px] mx-auto rounded-[28px] overflow-hidden shadow-xl ring-8 ring-white">
                   <Image
                     src="/img/data-protection/field-worker-phone.webp"
                     alt="A health worker’s hands holding a phone with the Avni app"
@@ -136,7 +147,7 @@ export default function DataProtectionPage() {
                     className="object-cover"
                   />
                 </div>
-                <figcaption className="max-w-[420px] mx-auto mt-3 font-noto text-xs text-[#98A2B3]">
+                <figcaption className="relative max-w-[420px] mx-auto mt-3 font-noto text-xs text-[#98A2B3]">
                   A community health worker at ASHWINI, Nilgiris, using Avni. Names on the screen are blurred.
                 </figcaption>
               </figure>
@@ -161,7 +172,7 @@ export default function DataProtectionPage() {
                   {dataJourney.map((step, i) => (
                     <Fragment key={step.title}>
                       <FadeIn delay={i * 150} className="flex md:flex-col items-center md:text-center gap-4 md:gap-3">
-                        <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-[#E8F3EE] text-[#2a7559] flex items-center justify-center">
+                        <div className={`flex-shrink-0 w-16 h-16 rounded-2xl ${step.tone.tile} flex items-center justify-center`}>
                           <step.icon size={30} />
                         </div>
                         <div>
@@ -184,10 +195,12 @@ export default function DataProtectionPage() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
-                {safeguards.map(({ icon: Icon, title, detail }, i) => (
+                {safeguards.map(({ icon: Icon, tone, title, detail }, i) => (
                   <FadeIn key={title} delay={i * 120}>
-                    <div className="h-full bg-white rounded-2xl shadow-sm p-6">
-                      <Icon size={22} className="text-[#2a7559] mb-3" />
+                    <div className={`h-full bg-white rounded-2xl shadow-sm p-6 border-t-4 ${tone.edge}`}>
+                      <div className={`w-10 h-10 rounded-xl ${tone.tile} flex items-center justify-center mb-3`}>
+                        <Icon size={20} />
+                      </div>
                       <h3 className="font-anek font-semibold text-lg text-[#0b2540] mb-1">{title}</h3>
                       <p className="font-noto text-sm leading-relaxed text-[#475467]">{detail}</p>
                     </div>
@@ -262,7 +275,7 @@ export default function DataProtectionPage() {
                 {startNow.map((item, i) => (
                   <FadeIn key={item} delay={i * 100}>
                     <div className="h-full flex gap-4 bg-white rounded-2xl shadow-sm p-6">
-                      <span className="flex-shrink-0 w-9 h-9 rounded-full bg-[#419372] text-white font-anek font-bold flex items-center justify-center">{i + 1}</span>
+                      <span className={`flex-shrink-0 w-9 h-9 rounded-full ${[TONES.green, TONES.orange, TONES.lavender, TONES.yellow][i % 4].solid} text-white font-anek font-bold flex items-center justify-center`}>{i + 1}</span>
                       <p className="font-noto text-base leading-relaxed text-[#344054]">{item}</p>
                     </div>
                   </FadeIn>
@@ -276,7 +289,7 @@ export default function DataProtectionPage() {
         <Section spacing="md">
           <Container>
             <FadeIn>
-              <div className="max-w-4xl mx-auto rounded-2xl border border-[#EAECF0] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
+              <div className="max-w-4xl mx-auto rounded-2xl bg-[#E8F3EE] p-6 md:p-8 flex flex-col md:flex-row md:items-center gap-6">
                 <FileCheck2 size={40} className="flex-shrink-0 text-[#419372]" />
                 <div className="flex-1">
                   <h2 className="font-anek font-bold text-2xl text-[#0b2540] mb-1">Questions about your programme?</h2>
