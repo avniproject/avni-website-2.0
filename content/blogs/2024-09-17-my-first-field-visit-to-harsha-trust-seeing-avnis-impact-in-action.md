@@ -9,6 +9,8 @@ date: '2024-09-17'
 author: Shubhamita Kanungo
 readTime: 5 min read
 category: User Story
+sectors:
+  - Healthcare
 image: >-
   /img/2024-09-17-My-First-Field-Visit-to-Harsha-Trust-Seeing-Avni’s-Impact-in-Action/APF_blog_1.webp
 tags:

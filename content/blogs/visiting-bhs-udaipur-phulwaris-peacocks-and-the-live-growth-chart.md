@@ -9,6 +9,8 @@ date: '2026-07-14'
 author: Mohammed Taqi
 readTime: 10 min read
 category: Technical Story
+sectors:
+  - Healthcare
 image: >-
   /img/Visiting-BHS,-Udaipur:-Phulwaris,-Peacocks,-and-the-Live-Growth-Chart/hero.webp
 tags:

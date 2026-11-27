@@ -10,6 +10,8 @@ date: '2025-07-08'
 author: 'Pushpanathan.J (Kannan), ASHWINI Gudalur'
 readTime: 3 min read
 category: Knowledge
+sectors:
+  - Healthcare
 tags:
   - Health
 ---

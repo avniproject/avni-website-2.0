@@ -9,6 +9,8 @@ date: '2022-05-03'
 author: Utkarsh Hathi
 readTime: 5 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2022-05-03-field-visit-SEWA-Rural/Jhagadia.webp
 tags:
   - Health

@@ -9,6 +9,8 @@ date: '2020-12-15'
 author: ASHWINI CHP Team
 readTime: 6 min read
 category: User Story
+sectors:
+  - Healthcare
 image: >-
   /img/how-avni-has-become-pillar-of-community-MIS-at-ASHWINI/ASHWINI_Community_Pro_1.webp
 tags:

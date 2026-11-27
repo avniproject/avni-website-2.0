@@ -9,6 +9,8 @@ date: '2026-07-20'
 author: Syed Habeeb
 readTime: 7 min read
 category: User Story
+sectors:
+  - Sports
 image: /img/2026-07-20-visiting-khelmel-raigarh/khelmel-5.webp
 tags:
   - Data Collection

@@ -11,6 +11,8 @@ date: '2019-12-19'
 author: The Avni Team
 readTime: 2 min read
 category: Knowledge
+sectors:
+  - Healthcare
 image: /img/chw-work-complexity.webp
 tags:
   - Health

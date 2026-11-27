@@ -9,6 +9,8 @@ date: '2022-12-11'
 author: Maha Lakshme S
 readTime: 3 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2022-12-08-field-visit-APF/goldilocks_kepler_image.webp
 tags:
   - Health

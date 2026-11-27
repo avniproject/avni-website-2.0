@@ -9,6 +9,8 @@ date: '2024-11-08'
 author: Maha Lakshme S
 readTime: 5 min read
 category: User Story
+sectors:
+  - Livelihood
 image: /img/2024-11-08-from-privilege-to-purpose/turbine.webp
 tags:
   - Field Visit

@@ -8,6 +8,8 @@ date: '2023-07-07'
 author: Vinay Venu
 readTime: 2 min read
 category: Knowledge
+sectors:
+  - Education
 tags: []
 ---
 ### Hello

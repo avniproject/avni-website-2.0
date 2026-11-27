@@ -9,6 +9,8 @@ date: '2024-06-25'
 author: The Avni Team
 readTime: 3 min read
 category: Knowledge
+sectors:
+  - Healthcare
 image: >-
   /img/2024-06-25-digitising-adolescent-community-program-using-avni/adolescents.webp
 tags:

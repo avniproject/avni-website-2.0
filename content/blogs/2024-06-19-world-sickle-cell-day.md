@@ -9,6 +9,8 @@ date: '2024-06-19'
 author: Parth Halani
 readTime: 4 min read
 category: Knowledge
+sectors:
+  - Healthcare
 image: /img/2024-06-18-world-sickle-cell-day/SCD.webp
 tags:
   - Health

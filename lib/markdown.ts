@@ -198,6 +198,7 @@ export interface BlogFrontmatter {
   author?: string;
   readTime?: string;
   tags?: string[];
+  sectors?: string[]; // sectors the post is about, for the blog's sector filter
 }
 
 export interface Blog {

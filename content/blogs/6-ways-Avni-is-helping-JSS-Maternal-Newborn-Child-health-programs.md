@@ -8,6 +8,8 @@ date: '2020-09-30'
 author: Ravindra Kurbude
 readTime: 5 min read
 category: User Story
+sectors:
+  - Healthcare
 image: >-
   /img/6-ways-how-Avni-is-helping-JSS-MCH-Phulwari-programs/JSSCP_Ravi_Quote.webp
 tags:

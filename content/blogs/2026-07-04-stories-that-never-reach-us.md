@@ -8,6 +8,8 @@ date: '2026-07-04'
 author: Mohit Kumar
 readTime: 6 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2026-07-04-stories-that-never-reach-us/anuppur-5.webp
 tags:
   - Field Visit

@@ -12,6 +12,8 @@ date: '2025-05-19'
 author: Rishika Methi
 readTime: 3 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2025-06-12-field-visit-to-kollegal-government-hospital/R2.webp
 tags:
   - Public Health

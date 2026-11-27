@@ -4,19 +4,12 @@
  */
 
 import { CaseStudy } from './markdown';
+import { sectors } from '@/data/sectors';
 
-export const SECTORS = [
-  'Education',
-  'Healthcare',
-  'Water & Sanitation',
-  'Waste Management',
-  'Social Security',
-  'Livelihood',
-  'Legal Aid',
-  'Sports',
-] as const;
+// Same sectors, in the same order, as the Solutions page
+export const SECTORS = sectors.map(sector => sector.name);
 
-export type Sector = typeof SECTORS[number];
+export type Sector = string;
 
 /**
  * Filter case studies by selected sectors

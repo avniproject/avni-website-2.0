@@ -9,6 +9,8 @@ date: '2026-08-06'
 author: Anjali Bhagabati
 readTime: 9 min read
 category: User Story
+sectors:
+  - Livelihood
 image: /img/2026-08-06-udgam-handicrafts-mumbai/udgam-3.webp
 tags:
   - Field Visit

@@ -8,6 +8,8 @@ date: '2025-11-12'
 author: Himesh R
 readTime: 10 min read
 category: Technical Story
+sectors:
+  - Sports
 image: /img/2025-11-12-dcp-3-module-2/DCP_3_cohort.webp
 tags:
   - Data Collection

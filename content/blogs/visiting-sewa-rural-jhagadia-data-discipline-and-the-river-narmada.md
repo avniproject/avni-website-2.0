@@ -9,6 +9,8 @@ date: '2026-03-05'
 author: Mohammed Taqi
 readTime: 5 min read
 category: Technical Story
+sectors:
+  - Healthcare
 image: >-
   /img/Visiting-SEWA-Rural,-Jhagadia:-Data,-Discipline,-and-the-River-Narmada/fifth.webp
 tags:

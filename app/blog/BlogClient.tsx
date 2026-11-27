@@ -10,6 +10,7 @@ import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import BlogSearch from '@/components/blog/BlogSearch';
 import BlogFilter from '@/components/blog/BlogFilter';
+import CaseStudiesFilter from '@/components/case-studies/CaseStudiesFilter';
 import BlogCard from '@/components/blog/BlogCard';
 import FeaturedBlog from '@/components/blog/FeaturedBlog';
 import Pagination from '@/components/blog/Pagination';
@@ -25,6 +26,7 @@ const BLOGS_PER_PAGE = 6;
 export default function BlogClient({ featuredBlog, blogs }: BlogClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedSectors, setSelectedSectors] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
 
   // Handle search
@@ -50,9 +52,18 @@ export default function BlogClient({ featuredBlog, blogs }: BlogClientProps) {
       const matchesCategory = selectedCategories.length === 0 || 
         selectedCategories.includes(blog.frontmatter.category);
 
-      return matchesSearch && matchesCategory;
+      // Sector filter
+      const matchesSector = selectedSectors.length === 0 ||
+        (blog.frontmatter.sectors ?? []).some(sector => selectedSectors.includes(sector));
+
+      return matchesSearch && matchesCategory && matchesSector;
     });
-  }, [blogs, searchQuery, selectedCategories]);
+  }, [blogs, searchQuery, selectedCategories, selectedSectors]);
+
+  const handleSectorChange = useCallback((sectors: string[]) => {
+    setSelectedSectors(sectors);
+    setCurrentPage(1);
+  }, []);
 
   // Pagination
   const totalPages = Math.ceil(filteredBlogs.length / BLOGS_PER_PAGE);
@@ -89,11 +100,15 @@ export default function BlogClient({ featuredBlog, blogs }: BlogClientProps) {
                 <BlogSearch onSearch={handleSearch} />
               </div>
 
-              {/* Filter */}
-              <div className="md:w-auto">
+              {/* Filters */}
+              <div className="flex flex-col sm:flex-row gap-4 md:w-auto">
                 <BlogFilter
                   selectedCategories={selectedCategories}
                   onFilterChange={handleFilterChange}
+                />
+                <CaseStudiesFilter
+                  selectedSectors={selectedSectors}
+                  onFilterChange={handleSectorChange}
                 />
               </div>
             </div>

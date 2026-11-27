@@ -12,6 +12,8 @@ date: '2025-05-19'
 author: Siddharth Harsh Raj
 readTime: 2 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2025-05-19-siddharth-iph-blog/s2.webp
 tags:
   - Public Health

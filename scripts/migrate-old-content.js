@@ -21,6 +21,7 @@ const { execFile } = require('child_process');
 const { promisify } = require('util');
 const fs = require('fs');
 const path = require('path');
+const { blogSectors } = require('./blog-sector-rules');
 const matter = require('gray-matter');
 const sharp = require('sharp');
 
@@ -314,6 +315,8 @@ async function migrateFile(type, file, oldSite) {
   if (type === 'blog') {
     frontmatter.category = blogCategory(tags, frontmatter.title);
     report.categories[frontmatter.category] = (report.categories[frontmatter.category] || 0) + 1;
+    const sectors = blogSectors([frontmatter.title, tags.join(' '), body].join(' '), frontmatter.category);
+    if (sectors.length) frontmatter.sectors = sectors;
   } else {
     const override = CASE_STUDY_OVERRIDES[slug] || {};
     frontmatter.sector = override.sector || caseStudySector(tags);

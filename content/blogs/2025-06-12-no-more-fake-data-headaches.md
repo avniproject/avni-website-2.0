@@ -10,6 +10,8 @@ date: '2025-06-12'
 author: Pooja Harmalkar
 readTime: 7 min read
 category: Knowledge
+sectors:
+  - Healthcare
 tags:
   - Knowledge
 ---

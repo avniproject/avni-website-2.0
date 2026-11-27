@@ -8,6 +8,9 @@ date: '2025-10-31'
 author: 'Nivedita Desai, – Managing Trustee Animedh Charitable Trust (ACT)'
 readTime: 4 min read
 category: User Story
+sectors:
+  - Healthcare
+  - Education
 image: /img/2025-ACT-Transformation-with-Avni/ACT_team.webp
 tags:
   - User stories

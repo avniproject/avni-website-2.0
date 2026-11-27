@@ -8,6 +8,8 @@ date: '2024-06-20'
 author: Mohammed Taqi
 readTime: 8 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/yenepoya-visit-20-06-2024/Feature-image.webp
 tags:
   - Health

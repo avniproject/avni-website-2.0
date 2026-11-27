@@ -9,6 +9,8 @@ date: '2020-12-20'
 author: Smita Kale
 readTime: 7 min read
 category: User Story
+sectors:
+  - Water & Sanitation
 image: /img/shelter-remoulding-data-collection/SA_lokmanya_nagar_view.webp
 tags:
   - User stories

@@ -13,6 +13,8 @@ date: '2023-10-04'
 author: Salil Arora
 readTime: 7 min read
 category: User Story
+sectors:
+  - Healthcare
 image: >-
   /img/2023-10-04-my-reflections-from-first-Avni-field-visit-after-joining-as-ba/dharampur_arogya_saheli.webp
 tags:

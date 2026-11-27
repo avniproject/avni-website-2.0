@@ -51,6 +51,13 @@ collections:
         name: category
         widget: select
         options: [User Story, Technical Story, Knowledge, Avni News, Events]
+      - label: Sectors
+        name: sectors
+        widget: select
+        multiple: true
+        required: false
+        options: [Education, Healthcare, Water & Sanitation, Agriculture, Waste Management, Social Security, Livelihood, Child Protection, Legal Aid, Human Rights, Sports]
+        hint: The sectors this post is about, for the sector filter on the Blog page. Leave empty for posts about Avni as a whole, like events and announcements.
       - label: Tags
         name: tags
         widget: list
@@ -102,7 +109,7 @@ collections:
       - label: Sector
         name: sector
         widget: select
-        options: [Education, Healthcare, Water & Sanitation, Waste Management, Social Security, Livelihood, Legal Aid, Sports]
+        options: [Education, Healthcare, Water & Sanitation, Agriculture, Waste Management, Social Security, Livelihood, Child Protection, Legal Aid, Human Rights, Sports]
       - { label: Partner logo, name: logo, widget: image, required: false }
       - { label: Thumbnail, name: image, widget: image, required: false }
       - label: Show thumbnail at the top of the page

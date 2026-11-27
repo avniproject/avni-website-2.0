@@ -9,6 +9,8 @@ date: '2025-12-02'
 author: Md Taqi Afsar
 readTime: 4 min read
 category: User Story
+sectors:
+  - Healthcare
 image: >-
   /img/2025-12-02-my-three-weeks-with-jss-a-ground-reality-reflection/jss-card.webp
 tags:

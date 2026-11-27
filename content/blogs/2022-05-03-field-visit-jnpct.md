@@ -9,6 +9,8 @@ date: '2022-05-03'
 author: Sachin Kadam
 readTime: 5 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2022-05-03-field-visit-jnpct/map-of-valsad-district.webp
 tags:
   - Health

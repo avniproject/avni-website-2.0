@@ -8,6 +8,8 @@ date: '2022-01-22'
 author: Utkarsh Hathi
 readTime: 3 min read
 category: User Story
+sectors:
+  - Education
 image: /img/ywnxt/ywnxt-final-solution.webp
 tags:
   - Skill development and employment

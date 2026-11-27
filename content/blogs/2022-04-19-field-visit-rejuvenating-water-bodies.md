@@ -9,6 +9,8 @@ date: '2022-04-21'
 author: Vinay Venu
 readTime: 7 min read
 category: User Story
+sectors:
+  - Water & Sanitation
 image: /img/2022-04-19-field-visit-rejuvenating-water-bodies/lake1-pic.webp
 tags:
   - Water

@@ -9,6 +9,8 @@ date: '2025-06-14'
 author: Vinay Venu
 readTime: 6 min read
 category: Knowledge
+sectors:
+  - Social Security
 image: /img/2025-06-14-building-a-social-security-benefit-product/1.webp
 tags:
   - Social security

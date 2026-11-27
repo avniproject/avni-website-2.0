@@ -11,6 +11,8 @@ date: '2026-07-16'
 author: Syed Habeeb
 readTime: 10 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2026-07-16-visiting-jss-ganiyari/jss-6.webp
 tags:
   - Data Collection

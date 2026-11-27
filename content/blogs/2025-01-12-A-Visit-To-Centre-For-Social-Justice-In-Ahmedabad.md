@@ -9,6 +9,8 @@ date: '2025-01-12'
 author: Parth Halani
 readTime: 2 min read
 category: User Story
+sectors:
+  - Legal Aid
 image: /img/2025-01-12-A-Visit-To-Centre-For-Social-Justice-In-Ahmedabad/3.webp
 tags:
   - Health

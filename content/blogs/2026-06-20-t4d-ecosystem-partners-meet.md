@@ -9,6 +9,8 @@ date: '2026-06-20'
 author: Mohit Kumar
 readTime: 5 min read
 category: Knowledge
+sectors:
+  - Healthcare
 tags:
   - Knowledge
   - Social Sector

@@ -9,6 +9,8 @@ date: '2022-01-12'
 author: Nupoor Khandelwal
 readTime: 4 min read
 category: User Story
+sectors:
+  - Child Protection
 image: /img/SaveTheChildren/STCATP_banner.webp
 tags:
   - Child Protection

@@ -6,6 +6,8 @@ date: '2026-07-08'
 author: Mohit Kumar
 readTime: 6 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2026-07-08-building-hope-one-small-system-at-a-time/mainpat-3.webp
 tags:
   - Field Visit

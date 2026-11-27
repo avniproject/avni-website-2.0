@@ -11,6 +11,8 @@ date: '2026-03-05'
 author: Pooja Harmalkar
 readTime: 4 min read
 category: User Story
+sectors:
+  - Healthcare
 image: /img/2026-03-05-naya-savera-field-week-rajasthan/vlm-training-group-photo.webp
 tags:
   - User stories
