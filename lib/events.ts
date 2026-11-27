@@ -4,6 +4,8 @@
  * Events added to the calendar appear on the site after the next build.
  */
 
+import { fetchVideos, Video } from './youtube';
+
 export const EVENTS_CALENDAR_ID = 'c_1f28563b52f3a01f8f7ceee9c339700e8dbb256a398571f131db0ec351c214de@group.calendar.google.com';
 
 const ICAL_URL = `https://calendar.google.com/calendar/ical/${encodeURIComponent(EVENTS_CALENDAR_ID)}/public/basic.ics`;
@@ -105,40 +107,11 @@ export function parseIcal(ics: string): CalendarEvent[] {
 }
 
 /*
- * Recordings: past community meetups are matched to videos on the Avni YouTube channel.
- * YouTube's public feeds list the latest 15 videos of the channel and of the meetup playlist.
+ * Recordings: past community meetups are matched to videos on the Avni YouTube channel
+ * (lib/youtube.ts), uploaded within RECORDING_UPLOAD_WINDOW_DAYS after the meetup.
  */
-const YOUTUBE_FEEDS = [
-  'https://www.youtube.com/feeds/videos.xml?channel_id=UCShsfKJlw0B3B6Pg2DmQkSQ',
-  'https://www.youtube.com/feeds/videos.xml?playlist_id=PLEy8ff0CKDBl1qKXjYPFXH63MHnvogxyi', // Monthly Community Meetup
-];
 const RECORDING_UPLOAD_WINDOW_DAYS = 45;
 const MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
-
-interface Video { title: string; url: string; published: string }
-
-async function fetchVideos(): Promise<Video[]> {
-  const feeds = await Promise.all(YOUTUBE_FEEDS.map(async url => {
-    try {
-      const res = await fetch(url, { next: { revalidate: 3600 } });
-      return res.ok ? await res.text() : '';
-    } catch {
-      return '';
-    }
-  }));
-  const videos = new Map<string, Video>();
-  for (const xml of feeds) {
-    for (const [, entry] of xml.matchAll(/<entry>([\s\S]*?)<\/entry>/g)) {
-      const id = entry.match(/<yt:videoId>([^<]+)/)?.[1];
-      const title = entry.match(/<title>([^<]*)/)?.[1];
-      const published = entry.match(/<published>([^<]+)/)?.[1];
-      if (id && title && published) {
-        videos.set(id, { title: htmlToText(title), url: `https://www.youtube.com/watch?v=${id}`, published });
-      }
-    }
-  }
-  return [...videos.values()];
-}
 
 // A meetup's recording: a "meetup" video naming the meetup's month, uploaded soon after it
 function findRecording(event: CalendarEvent, videos: Video[]): string | null {
