@@ -16,84 +16,101 @@ const useCases = [
   {
     id: 'case-management',
     title: 'Case Management',
-    description: 'Track individuals, families, or groups with organized digital records accessible online and offline. Avni helps your team follow progress, ensure timely support, and manage programs efficiently.',
-    image: '/images/hero-image.jpg',
+    description: 'Follow every person, household or group over months and years, not just one form at a time. Register them once, enrol them in programmes, and record every visit, service and outcome against their profile. Avni schedules the next visit from your rules, flags who is due or at risk, and keeps the full history on the field worker’s phone, even offline.',
+    image: '/img/2024-09-17-My-First-Field-Visit-to-Harsha-Trust-Seeing-Avni’s-Impact-in-Action/APF_Blog_5.webp',
     features: [
-      'Beneficiary Registration',
-      'Visit Scheduling',
-      'Follow-Up Management',
-      'Progress Tracking',
-      'Automated Reminders',
-      'Case History'
+      'Individual And Household Profiles',
+      'Programme Enrolment And Exit',
+      'Automatic Visit Scheduling',
+      'Due And Overdue Visit Lists',
+      'Risk Flags And Recommendations',
+      'Full Case History, Offline'
     ],
     commonUseCases: [
-      'HEALTH PROGRAMS',
-      'SOCIAL WELFARE',
-      'LIVELIHOOD PROGRAMS',
-      'EDUCATION TRACKING'
+      'MATERNAL AND CHILD HEALTH',
+      'NUTRITION PROGRAMMES',
+      'SOCIAL SECURITY ACCESS',
+      'WASTE PICKER SUPPORT'
+    ],
+    stories: [
+      { name: 'Calcutta Kids', href: '/resources/case-studies/calcutta-kids-avni-implemented-for-maternal-and-child-health-program/' },
+      { name: 'Hasiru Dala', href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/' },
+      { name: 'Purna Clinic', href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/' }
     ],
     imagePosition: 'right'
   },
   {
     id: 'reporting',
     title: 'Reporting',
-    description: 'Turn field data into clear insights with automated dashboards and reports. Avni gives you real-time visibility to evaluate performance, share outcomes, and make data-driven decisions',
-    image: '/images/simplify-data.png',
+    description: 'All field data comes together in one place, so programme managers stop chasing spreadsheets. Field workers see their own numbers in dashboard cards on the phone, even offline. Managers and funders get dashboards in Metabase or Superset, set up on the Avni cloud, and anyone can download exports with each person’s full history for deeper analysis.',
+    image: '/img/shelter-remoulding-data-collection/SA_slum_data_dashboard_on_website.webp',
+    imageFit: 'contain',
     features: [
-      'Beneficiary Registration',
-      'Visit Scheduling',
-      'Follow-Up Management',
-      'Progress Tracking',
-      'Automated Reminders',
-      'Case History'
+      'Dashboards In Metabase Or Superset',
+      'Offline Dashboard Cards On The Phone',
+      'Longitudinal Data Exports',
+      'Filters By Location And Programme',
+      'API To Your Other Systems',
+      'Access Control On Reports'
     ],
     commonUseCases: [
-      'HEALTH PROGRAMS',
-      'SOCIAL WELFARE',
-      'LIVELIHOOD PROGRAMS',
-      'EDUCATION TRACKING'
+      'PROGRAMME MONITORING',
+      'FUNDER AND GOVERNMENT REPORTING',
+      'PUBLIC DASHBOARDS',
+      'IMPACT MEASUREMENT'
+    ],
+    stories: [
+      { name: 'Shelter Associates', href: '/blog/shelter-journey-remoulding-data-collection-paper-kobotoolbox-avni/' },
+      { name: 'Arghyam, Jal Jeevan Mission', href: '/resources/case-studies/2024-11-11-jal-jeevan-mission-arghyam/' }
     ],
     imagePosition: 'left'
   },
   {
     id: 'surveys',
     title: 'Surveys',
-    description: 'Track individuals, families, or groups with organized digital records accessible online and offline. Avni helps your team follow progress, ensure timely support, and manage programs efficiently.',
-    image: '/images/steer-programs.png',
+    description: 'Run one-time or repeated surveys across thousands of households, without internet. Build the questionnaire in the browser with skip logic and validations, send it to surveyors’ phones, and watch responses arrive as they sync. A survey can also become the starting point of a programme: the households you survey today are the people you follow up tomorrow.',
+    image: '/img/shelter-remoulding-data-collection/SA_surveyors_using_android_technology_for_data_collection.webp',
     features: [
-      'Beneficiary Registration',
-      'Visit Scheduling',
-      'Follow-Up Management',
-      'Progress Tracking',
-      'Automated Reminders',
-      'Case History'
+      'Questionnaires Built In The Browser',
+      'Skip Logic And Validations',
+      'Works Offline, Syncs Later',
+      'Photos And GPS Location',
+      'Several Languages',
+      'Follow Up Surveyed Households'
     ],
     commonUseCases: [
-      'HEALTH PROGRAMS',
-      'SOCIAL WELFARE',
-      'LIVELIHOOD PROGRAMS',
-      'EDUCATION TRACKING'
+      'HOUSEHOLD AND SLUM SURVEYS',
+      'BASELINE AND ENDLINE',
+      'EMERGENCY AND RELIEF',
+      'ELIGIBILITY SCREENING'
+    ],
+    stories: [
+      { name: 'Shelter Associates', href: '/blog/shelter-journey-remoulding-data-collection-paper-kobotoolbox-avni/' },
+      { name: 'Maha PECOnet', href: '/resources/case-studies/mahapeconet-use-of-avni-in-covid-relief/' }
     ],
     imagePosition: 'right'
   },
   {
     id: 'cohort-studies',
     title: 'Cohort Based Research Study',
-    description: 'Turn field data into clear insights with automated dashboards and reports. Avni gives you real-time visibility to evaluate performance, share outcomes, and make data-driven decisions',
-    image: '/images/build-trust.png',
+    description: 'Research studies follow the same people over time: a defined population visited again and again, with every visit linked to the person. Avni keeps each participant’s full record across rounds, schedules follow-ups, and lets you export the complete history for analysis. It is used to run health and demographic surveillance sites that support long-term studies.',
+    image: '/img/yenepoya-visit-20-06-2024/Continuum-of-care.webp',
     features: [
-      'Beneficiary Registration',
-      'Visit Scheduling',
-      'Follow-Up Management',
-      'Progress Tracking',
-      'Automated Reminders',
-      'Case History'
+      'Defined Study Population',
+      'Repeated Visits Linked To Each Person',
+      'Follow-Up Scheduling',
+      'Data Validations At Entry',
+      'Longitudinal Exports For Analysis',
+      'Role-Based Access To Data'
     ],
     commonUseCases: [
-      'HEALTH PROGRAMS',
-      'SOCIAL WELFARE',
-      'LIVELIHOOD PROGRAMS',
-      'EDUCATION TRACKING'
+      'HEALTH AND DEMOGRAPHIC SURVEILLANCE',
+      'LONGITUDINAL STUDIES',
+      'PROGRAMME EVALUATIONS',
+      'PUBLIC HEALTH RESEARCH'
+    ],
+    stories: [
+      { name: 'Yenepoya HDSS', href: '/blog/2024-06-20-yenepoya-visit/' }
     ],
     imagePosition: 'left'
   },
@@ -252,7 +269,7 @@ function UseCasesContent() {
                       src={useCase.image}
                       alt={useCase.title}
                       fill
-                      className="object-cover"
+                      className={'imageFit' in useCase && useCase.imageFit === 'contain' ? 'object-contain bg-white p-4' : 'object-cover'}
                     />
                   </div>
                 </div>
