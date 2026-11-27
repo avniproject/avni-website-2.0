@@ -133,20 +133,22 @@ export default function DataProtectionPage() {
                   ))}
                 </div>
               </div>
-              <figure className="relative">
-                {/* One soft green tint offset behind the photo */}
-                <div aria-hidden="true" className="absolute top-6 left-1/2 -translate-x-[44%] w-full max-w-[420px] aspect-[4/5] rounded-[28px] bg-[#E8F3EE]" />
-                <div className="relative aspect-[4/5] w-full max-w-[420px] mx-auto rounded-[28px] overflow-hidden shadow-xl ring-8 ring-white">
-                  <Image
-                    src="/img/data-protection/field-worker-phone.webp"
-                    alt="A health worker’s hands holding a phone with the Avni app"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 90vw, 420px"
-                    className="object-cover"
-                  />
+              <figure>
+                <div className="relative w-full max-w-[420px] mx-auto">
+                  {/* One soft green tile, offset behind the photo only */}
+                  <div aria-hidden="true" className="absolute inset-0 translate-x-4 translate-y-4 rounded-[28px] bg-[#E8F3EE]" />
+                  <div className="relative aspect-[4/5] w-full rounded-[28px] overflow-hidden shadow-xl">
+                    <Image
+                      src="/img/data-protection/field-worker-phone.webp"
+                      alt="A health worker’s hands holding a phone with the Avni app"
+                      fill
+                      priority
+                      sizes="(max-width: 1024px) 90vw, 420px"
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-                <figcaption className="relative max-w-[420px] mx-auto mt-3 font-noto text-xs text-[#98A2B3]">
+                <figcaption className="max-w-[420px] mx-auto mt-8 font-noto text-xs text-[#667085]">
                   A community health worker at ASHWINI, Nilgiris, using Avni. Names on the screen are blurred.
                 </figcaption>
               </figure>
