@@ -1,25 +1,28 @@
 /**
  * What Avni Does
- * Three real problems Avni solves, each with what changes and proof from a partner's story.
- * Usage numbers are in the hero.
+ * Three real problems Avni solves (what changes, proof from a partner's story), shown as
+ * tabs beside real Avni screens. Usage numbers are in the hero.
  */
+
+'use client';
 
 import Link from 'next/link';
 import { ArrowRight, BarChart3, HeartPulse, Smartphone } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Container from '@/components/ui/Container';
-import FadeIn from '@/components/ui/FadeIn';
+import ProductShowcase, { ShowcaseItem } from '@/components/sections/ProductShowcase';
 
 // Each card: a real problem, what changes with Avni, and proof from a partner's story
-const steps = [
+const steps: ShowcaseItem[] = [
   {
     icon: Smartphone,
     tone: 'bg-[#FFF1EA] text-[#C2410C]',
     title: 'No more nights copying registers',
     problem: 'Field workers fill paper registers all day, then copy them again in the evening.',
     change: 'With Avni they record each visit once, on their phone, even where there is no signal.',
-    proof: 'Purna Clinic: 22× more visits recorded within nine months',
-    href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/',
+    proof: 'Hasiru Dala: registrations doubled, from 3 to 6 people an hour',
+    href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
+    media: { src: '/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/offline-dashboard.mp4', kind: 'video', frame: 'phone', alt: 'The Avni field app home screen with dashboard cards', caption: 'The field app’s home screen works offline (test data)' },
   },
   {
     icon: HeartPulse,
@@ -29,6 +32,7 @@ const steps = [
     change: 'Avni tells each worker who is due for a visit and flags who is at risk.',
     proof: 'SEWA Rural: the app now picks which children need a visit',
     href: '/blog/2022-05-03-field-visit-sewa-rural-adolescent-and-sncu/',
+    media: { src: '/img/2025-05-28-bridging-the-nutrition-gap-apf-odisha/individual-dashboard-child.mp4', kind: 'video', frame: 'phone', alt: 'A child’s profile in the Avni app with scheduled and overdue visits', caption: 'A child’s profile with scheduled and overdue visits (test data)' },
   },
   {
     icon: BarChart3,
@@ -36,8 +40,9 @@ const steps = [
     title: 'Decide on today’s data, not last quarter’s',
     problem: 'Programme managers wait weeks for reports compiled by hand.',
     change: 'Every visit reaches your dashboards as soon as a phone syncs.',
-    proof: 'Hasiru Dala: registrations doubled, from 3 to 6 people an hour',
-    href: '/resources/case-studies/2025-08-01-empowering-waste-pickers/',
+    proof: 'Purna Clinic: 22× more visits recorded within nine months',
+    href: '/resources/case-studies/2026-05-05-purna-clinic-tide-trust-dangs/',
+    media: { src: '/img/2026-05-05-purna-clinic-tide-trust-dangs/encounters-growth-graph.webp', kind: 'image', frame: 'browser', alt: 'Monthly visits recorded at Purna Clinic, growing month on month', caption: 'Monthly visits recorded at Purna Clinic, from a real Avni report' },
   },
 ];
 
@@ -54,27 +59,7 @@ export default function WhatAvniDoes() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
-            {steps.map(({ icon: Icon, tone, title, problem, change, proof, href }, i) => (
-              <FadeIn key={title} delay={i * 150}>
-                <div className="h-full flex flex-col rounded-2xl border border-[#EAECF0] bg-white p-6 md:p-7">
-                  <span className={`flex items-center justify-center w-12 h-12 rounded-xl mb-5 ${tone}`}>
-                    <Icon size={24} />
-                  </span>
-                  <h3 className="font-anek font-bold text-xl md:text-2xl leading-snug text-[#0b2540] mb-3">{title}</h3>
-                  <p className="font-noto text-base leading-relaxed text-[#667085] mb-2">{problem}</p>
-                  <p className="font-noto text-base leading-relaxed text-[#0b2540] font-medium mb-5">{change}</p>
-                  <Link
-                    href={href}
-                    className="mt-auto flex items-start gap-2 rounded-xl bg-[#F6FBF8] px-4 py-3 font-noto text-sm text-[#1f5a43] hover:bg-[#E8F3EE] transition-colors"
-                  >
-                    <ArrowRight size={16} className="flex-shrink-0 mt-0.5" />
-                    <span>{proof}</span>
-                  </Link>
-                </div>
-              </FadeIn>
-            ))}
-          </div>
+          <ProductShowcase items={steps} />
 
           <div className="text-center mt-10">
             <Link
