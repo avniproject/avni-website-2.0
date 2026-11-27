@@ -91,7 +91,7 @@ export default function Hero() {
             >
               <Image
                 src="/hero-banner.webp"
-                alt="A health worker using Avni on a tablet during a home visit, with the visit record flagged as a high-risk pregnancy and the programme dashboard counting it"
+                alt="A health worker using Avni on a tablet during a home visit"
                 width={600}
                 height={600}
                 priority
