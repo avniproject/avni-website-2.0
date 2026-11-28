@@ -49,7 +49,7 @@ const solutions: { id: string; title: string; text: string; icon: LucideIcon; to
 
 export default function Solutions() {
   return (
-    <Section spacing="none" className="pt-14 md:pt-16 pb-4 md:pb-6 [&_p]:hyphens-none">
+    <Section spacing="none" bg="gray" className="py-14 md:py-16 [&_p]:hyphens-none">
       <Container>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-10">

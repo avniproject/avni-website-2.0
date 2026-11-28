@@ -119,7 +119,7 @@ const reasons = [
 
 export default function WhyChooseAvni() {
   return (
-    <Section spacing="none" bg="gray" className="py-14 md:py-16">
+    <Section spacing="none" className="py-14 md:py-16">
       <Container>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
@@ -134,7 +134,7 @@ export default function WhyChooseAvni() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {reasons.map(({ visual: Visual, visualBg, title, text, proof, href }, i) => (
               <FadeIn key={title} delay={i * 100}>
-                <div className="h-full flex flex-col bg-white rounded-3xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
+                <div className="h-full flex flex-col bg-[#F6F7F9] rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-lg">
                   {/* Text first, then the visual filling the rest of the card (as on wati.io) */}
                   <div className="p-7 md:p-8 pb-6">
                     <h3 className="font-anek font-bold text-2xl md:text-[28px] leading-snug text-[#0b2540] mb-2">{title}</h3>

@@ -17,7 +17,7 @@ const points: { title: string; text: string; icon: LucideIcon }[] = [
 
 export default function Transparency() {
   return (
-    <Section spacing="none" className="py-10 md:py-14 [&_p]:hyphens-none">
+    <Section spacing="none" className="py-14 md:py-16 [&_p]:hyphens-none">
       <Container>
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
