@@ -19,7 +19,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <Section spacing="none" bg="lavender" className="py-14 md:py-16 [&_p]:hyphens-none">
+    <Section spacing="none" bg="cream" className="py-14 md:py-16 [&_p]:hyphens-none">
       <Container>
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-10">

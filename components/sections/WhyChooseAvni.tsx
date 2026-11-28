@@ -42,8 +42,8 @@ function FieldVisual() {
 const featured = [
   {
     visual: BuilderVisual,
-    cardBg: 'bg-[#FFF6F0]',
-    visualBg: 'bg-[#FFE8D9]',
+    cardBg: 'bg-[#FFFAF7] border border-[#F7E6DA]',
+    visualBg: 'bg-[#FFF0E6]',
     title: 'No coding needed',
     text: 'Your team builds forms, visits and rules in a browser. We train you to do it yourself.',
     proof: 'How Launchpad trains NGO teams',
@@ -51,8 +51,8 @@ const featured = [
   },
   {
     visual: FieldVisual,
-    cardBg: 'bg-[#FFFAEB]',
-    visualBg: 'bg-[#FFF1C7]',
+    cardBg: 'bg-[#FFFDF6] border border-[#F3EACB]',
+    visualBg: 'bg-[#FFF6DA]',
     title: 'A team that knows the field',
     text: 'An India-based team in your time zone, who visit programmes on the ground.',
     proof: 'Read our field visits',
@@ -64,9 +64,8 @@ const compact = [
   {
     stat: '₹0',
     statLabel: 'licence fee',
-    card: 'bg-[#FFE8D9]',
+    card: 'bg-[#FFF5EE] border border-[#F7E1D2]',
     statColor: 'text-[#B8481F]',
-    blob: '#FDCDB0',
     title: 'Priced for non-profits',
     text: 'Open source. Pay only for help and hosting, if you need them.',
     proof: 'See plans, from free',
@@ -75,9 +74,8 @@ const compact = [
   {
     stat: '26 of 27',
     statLabel: 'partners renewed in 2025',
-    card: 'bg-[#E6E6FA]',
-    statColor: 'text-[#4B49B0]',
-    blob: '#CFCFF3',
+    card: 'bg-[#F1F7FB] border border-[#DCEAF3]',
+    statColor: 'text-[#1D6A8F]',
     title: 'Partners who stay',
     text: 'Changing systems mid-programme is costly. Our partners stay for years.',
     proof: 'Read the 2025 review',
@@ -126,7 +124,7 @@ export default function WhyChooseAvni() {
 
             {/* Two compact cards, stacked */}
             <div className="md:col-span-2 lg:col-span-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
-              {compact.map(({ stat, statLabel, card, statColor, blob, title, text, proof, href }, i) => (
+              {compact.map(({ stat, statLabel, card, statColor, title, text, proof, href }, i) => (
                 <FadeIn key={title} delay={200 + i * 100}>
                   <div className={`relative overflow-hidden h-full flex flex-col rounded-3xl p-7 transition-all duration-300 hover:shadow-lg ${card}`}>
                     <p className="relative mb-4">
