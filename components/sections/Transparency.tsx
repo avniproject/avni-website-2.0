@@ -1,9 +1,10 @@
 /**
  * Transparency You Can Trust (for donors)
- * The promise and four short points on the left, a programme dashboard card on the right.
+ * The promise and four short points on the left; on the right, a real public dashboard a partner runs on Avni data.
  */
 
 import Image from "next/image";
+import Link from "next/link";
 import { Activity, Download, LucideIcon, ShieldCheck, Smartphone } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
@@ -41,10 +42,20 @@ export default function Transparency() {
             </ul>
           </div>
 
-          {/* The dashboard a funder would see */}
-          <div className="rounded-3xl bg-gradient-to-br from-[#E8F3EE] to-[#F6FBF8] px-8 py-10 md:px-14 md:py-12 flex justify-center">
-            <Image src="/img/home/dash-card.webp" alt="A programme dashboard card in Avni, showing live counts" width={660} height={493} className="w-full max-w-[420px] h-auto drop-shadow-xl" />
-          </div>
+          {/* A real public dashboard: Shelter Associates, from their Avni data */}
+          <figure className="rounded-3xl bg-gradient-to-br from-[#E8F3EE] to-[#F6FBF8] p-6 md:p-8">
+            <div className="rounded-xl bg-white shadow-xl overflow-hidden border border-[#EAECF0]">
+              <div className="flex items-center gap-1.5 px-3 py-2 bg-[#F2F4F7] border-b border-[#EAECF0]">
+                <span className="w-2 h-2 rounded-full bg-[#F97066]" /><span className="w-2 h-2 rounded-full bg-[#FDB022]" /><span className="w-2 h-2 rounded-full bg-[#32D583]" />
+                <span className="ml-2 font-noto text-[11px] text-[#98A2B3]">shelter-associates.org · live dashboard</span>
+              </div>
+              <Image src="/img/home/shelter-dashboard.webp" alt="Shelter Associates' public dashboard: slums surveyed, households and quality-of-living scores for Kolhapur, Navi Mumbai and Panvel" width={1010} height={749} className="w-full h-auto" />
+            </div>
+            <figcaption className="text-center font-noto text-xs text-[#667085] mt-4">
+              Shelter Associates publishes live slum data from Avni on its website.{' '}
+              <Link href="/blog/shelter-journey-remoulding-data-collection-paper-kobotoolbox-avni/" className="font-medium text-[#2a7559] hover:text-[#1f5a43]">Read their story</Link>
+            </figcaption>
+          </figure>
         </div>
       </Container>
     </Section>
