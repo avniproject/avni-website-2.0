@@ -1,50 +1,98 @@
 /**
  * Solutions That Power Your Programs
- * The five kinds of work Avni is used for, in one compact row; each links to its section on the Use Cases page.
+ * The five kinds of work Avni is used for, in one compact row. Each card has a small illustration of that work
+ * (built in code, illustrative data) and links to its section on the Use Cases page.
  */
 
 import Link from "next/link";
-import { ArrowRight, BarChart3, ClipboardList, LucideIcon, Stethoscope, UsersRound, Repeat } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Section from "@/components/ui/Section";
 import FadeIn from "@/components/ui/FadeIn";
 
-const solutions: { id: string; title: string; text: string; icon: LucideIcon; tone: string }[] = [
-  {
-    id: "case-management",
-    title: "Case management",
-    text: "Follow each person or household over months, with visits scheduled for you.",
-    icon: UsersRound,
-    tone: "bg-[#E8F3EE] text-[#2a7559]",
-  },
-  {
-    id: "surveys",
-    title: "Surveys",
-    text: "Run surveys across thousands of homes, offline, with skip logic and checks.",
-    icon: ClipboardList,
-    tone: "bg-[#FFF1EA] text-[#C4552B]",
-  },
-  {
-    id: "reporting",
-    title: "Reporting",
-    text: "Dashboards for field workers, managers and funders, from the same data.",
-    icon: BarChart3,
-    tone: "bg-[#E9EAF8] text-[#5452B8]",
-  },
-  {
-    id: "cohort-studies",
-    title: "Cohort studies",
-    text: "Visit the same people round after round, with every record linked.",
-    icon: Repeat,
-    tone: "bg-[#FFF8DB] text-[#A16207]",
-  },
-  {
-    id: "mobile-medical",
-    title: "Health camps",
-    text: "Every desk at a camp shares patient records, even with no internet.",
-    icon: Stethoscope,
-    tone: "bg-[#E6F4F8] text-[#1D7A94]",
-  },
+// A person's visits over time: done, done, due next
+function CaseVisual() {
+  const visits: [string, 'done' | 'due'][] = [["Jan", "done"], ["Mar", "done"], ["May", "due"]];
+  return (
+    <div className="w-full rounded-xl bg-white p-3 shadow-sm">
+      <p className="font-noto text-[11px] font-semibold text-[#0b2540] mb-2.5">Meena, household 14</p>
+      <div className="relative flex justify-between">
+        <span className="absolute left-3 right-3 top-2.5 h-0.5 bg-[#B7DCCB]" />
+        {visits.map(([month, state]) => (
+          <span key={month} className="relative flex flex-col items-center gap-1">
+            <span className={`flex items-center justify-center w-5 h-5 rounded-full ${state === "done" ? "bg-[#419372] text-white" : "bg-white border-2 border-dashed border-[#419372]"}`}>
+              {state === "done" && <Check size={11} strokeWidth={3} />}
+            </span>
+            <span className={`font-noto text-[10px] ${state === "due" ? "font-semibold text-[#2a7559]" : "text-[#667085]"}`}>{state === "due" ? "Due" : month}</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Responses arriving as phones sync
+function SurveyVisual() {
+  return (
+    <div className="w-full rounded-xl bg-white p-3 shadow-sm">
+      <p className="font-noto text-[11px] text-[#667085]">Households surveyed</p>
+      <p className="font-anek font-bold text-2xl leading-none text-[#0b2540] mt-1">1,240 <span className="font-noto text-[11px] font-medium text-[#667085]">of 1,500</span></p>
+      <div className="h-1.5 rounded-full bg-[#FBE3D6] mt-2.5"><div className="h-full w-[83%] rounded-full bg-[#E07A4F]" /></div>
+    </div>
+  );
+}
+
+// A small chart
+function ReportVisual() {
+  return (
+    <div className="w-full rounded-xl bg-white p-3 shadow-sm">
+      <p className="font-noto text-[11px] text-[#667085] mb-2">Visits this month</p>
+      <div className="flex items-end gap-1.5 h-10">
+        {[45, 60, 40, 70, 55, 85].map((h, i) => (
+          <span key={i} className={`flex-1 rounded-sm ${i === 5 ? "bg-[#6D6BD0]" : "bg-[#D9DAF4]"}`} style={{ height: `${h}%` }} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// The same participant across study rounds
+function CohortVisual() {
+  return (
+    <div className="w-full rounded-xl bg-white p-3 shadow-sm">
+      <p className="font-noto text-[11px] font-semibold text-[#0b2540] mb-2.5">Participant P-0231</p>
+      <div className="flex gap-1.5">
+        {["Round 1", "Round 2", "Round 3"].map((r, i) => (
+          <span key={r} className={`flex-1 rounded-md py-1.5 text-center font-noto text-[10px] font-medium ${i < 2 ? "bg-[#FDF0B8] text-[#7A4D06]" : "border border-dashed border-[#E4C65B] text-[#A16207]"}`}>{r}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// One patient passing between desks at a camp
+function CampVisual() {
+  return (
+    <div className="w-full rounded-xl bg-white p-3 shadow-sm">
+      <p className="font-noto text-[11px] font-semibold text-[#0b2540] mb-2.5">Patient #27, no internet</p>
+      <div className="flex items-center justify-between">
+        {["Desk", "Doctor", "Meds"].map((d, i) => (
+          <span key={d} className="flex items-center">
+            <span className="rounded-md bg-[#D6EEF5] px-2 py-1 font-noto text-[10px] font-medium text-[#155E75]">{d}</span>
+            {i < 2 && <ArrowRight size={11} className="mx-1 text-[#1D7A94]" />}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const solutions = [
+  { id: "case-management", title: "Case management", text: "Follow each person or household over months, with visits scheduled for you.", visual: CaseVisual, panel: "bg-[#E8F3EE]" },
+  { id: "surveys", title: "Surveys", text: "Run surveys across thousands of homes, offline, with skip logic and checks.", visual: SurveyVisual, panel: "bg-[#FFF1EA]" },
+  { id: "reporting", title: "Reporting", text: "Dashboards for field workers, managers and funders, from the same data.", visual: ReportVisual, panel: "bg-[#E9EAF8]" },
+  { id: "cohort-studies", title: "Cohort studies", text: "Visit the same people round after round, with every record linked.", visual: CohortVisual, panel: "bg-[#FFF8DB]" },
+  { id: "mobile-medical", title: "Health camps", text: "Every desk at a camp shares patient records, even with no internet.", visual: CampVisual, panel: "bg-[#E6F4F8]" },
 ];
 
 export default function Solutions() {
@@ -60,20 +108,22 @@ export default function Solutions() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {solutions.map(({ id, title, text, icon: Icon, tone }, i) => (
+            {solutions.map(({ id, title, text, visual: Visual, panel }, i) => (
               <FadeIn key={id} delay={i * 80}>
                 <Link
                   href={`/use-cases#${id}`}
-                  className="group h-full flex flex-col rounded-2xl border border-[#EAECF0] bg-white p-5 transition-all hover:border-[#B7DCCB] hover:shadow-md"
+                  className="group h-full flex flex-col rounded-2xl bg-white p-2.5 transition-all hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  <span className={`flex items-center justify-center w-11 h-11 rounded-xl mb-4 ${tone}`}>
-                    <Icon size={22} />
-                  </span>
-                  <h3 className="font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1.5">{title}</h3>
-                  <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{text}</p>
-                  <span className="mt-auto inline-flex items-center gap-1 font-noto text-sm font-medium text-[#2a7559]">
-                    See how <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
-                  </span>
+                  <div className={`flex items-center h-32 rounded-xl px-4 ${panel}`}>
+                    <Visual />
+                  </div>
+                  <div className="flex flex-col flex-1 px-2.5 pt-4 pb-2.5">
+                    <h3 className="font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1.5">{title}</h3>
+                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{text}</p>
+                    <span className="mt-auto inline-flex items-center gap-1 font-noto text-sm font-medium text-[#2a7559]">
+                      See how <ArrowRight size={14} className="transition-transform group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
                 </Link>
               </FadeIn>
             ))}
