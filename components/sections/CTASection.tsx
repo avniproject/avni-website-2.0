@@ -11,14 +11,14 @@ import BookDemoLink from '@/components/ui/BookDemoLink';
 
 export default function CTASection() {
   return (
-    <Section spacing="xl" className="bg-white overflow-hidden">
+    <Section spacing="none" className="py-10 md:py-14 overflow-hidden">
       <Container>
         <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-16">
           {/* Left Side - Team Image with Organic Blob Background */}
-          <div className="relative flex-shrink-0 w-full lg:w-[700px] xl:w-[800px] aspect-[540/440]">
+          <div className="relative flex-shrink-0 w-full max-w-[560px] lg:w-[500px] xl:w-[540px] aspect-[707/540]">
             <div className="relative w-full h-full">
               <Image
-                src="/images/built2.png"
+                src="/images/built-team.webp"
                 alt="Built by Non-Profits, For Non-Profits - Field team working together"
                 fill
                 className="object-contain"
@@ -31,7 +31,7 @@ export default function CTASection() {
           <div className="flex-1 text-center lg:text-left">
             {/* Title */}
             <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-4 md:mb-6">
-              Built By Non-Profits, For Non-Profits
+              Built By Non-Profits, <span className="whitespace-nowrap">For Non-Profits</span>
             </h2>
 
             {/* Description */}
