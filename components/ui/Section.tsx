@@ -12,7 +12,7 @@ import { ReactNode } from 'react';
 
 interface SectionProps {
   children: ReactNode;
-  bg?: 'white' | 'gray' | 'dark' | 'primary';
+  bg?: 'white' | 'gray' | 'dark' | 'primary' | 'cream' | 'lavender';
   spacing?: 'none' | 'sm' | 'md' | 'lg' | 'xl';
   className?: string;
 }
@@ -22,6 +22,8 @@ const bgClasses = {
   gray: 'bg-[#F5F5F5]',
   dark: 'bg-[#1a1a1a] text-white',
   primary: 'bg-[#fcfcfc]',
+  cream: 'bg-[#FFF8F0]',
+  lavender: 'bg-[#F4F3FC]',
 };
 
 const spacingClasses = {

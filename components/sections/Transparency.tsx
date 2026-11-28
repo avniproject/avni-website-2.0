@@ -43,15 +43,15 @@ export default function Transparency() {
           </div>
 
           {/* A real public dashboard: Shelter Associates, from their Avni data */}
-          <figure className="rounded-3xl bg-gradient-to-br from-[#E8F3EE] to-[#F6FBF8] p-6 md:p-8">
-            <div className="rounded-xl bg-white shadow-xl overflow-hidden border border-[#EAECF0]">
+          <figure className="rounded-3xl bg-gradient-to-br from-[#FFEBDD] to-[#FFF7E0] p-6 md:p-8">
+            <div className="relative rounded-xl bg-white shadow-xl overflow-hidden border border-[#EAECF0]">
               <div className="flex items-center gap-1.5 px-3 py-2 bg-[#F2F4F7] border-b border-[#EAECF0]">
                 <span className="w-2 h-2 rounded-full bg-[#F97066]" /><span className="w-2 h-2 rounded-full bg-[#FDB022]" /><span className="w-2 h-2 rounded-full bg-[#32D583]" />
                 <span className="ml-2 font-noto text-[11px] text-[#98A2B3]">shelter-associates.org · live dashboard</span>
               </div>
               <Image src="/img/home/shelter-dashboard.webp" alt="Shelter Associates' public dashboard: slums surveyed, households and quality-of-living scores for Kolhapur, Navi Mumbai and Panvel" width={1010} height={749} className="w-full h-auto" />
             </div>
-            <figcaption className="text-center font-noto text-xs text-[#667085] mt-4">
+            <figcaption className="relative text-center font-noto text-xs text-[#667085] mt-4">
               Shelter Associates publishes live slum data from Avni on its website.{' '}
               <Link href="/blog/shelter-journey-remoulding-data-collection-paper-kobotoolbox-avni/" className="font-medium text-[#2a7559] hover:text-[#1f5a43]">Read their story</Link>
             </figcaption>

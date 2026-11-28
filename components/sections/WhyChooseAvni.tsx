@@ -42,7 +42,8 @@ function FieldVisual() {
 const featured = [
   {
     visual: BuilderVisual,
-    visualBg: 'bg-[#FFF1EA]',
+    cardBg: 'bg-[#FFF6F0]',
+    visualBg: 'bg-[#FFE8D9]',
     title: 'No coding needed',
     text: 'Your team builds forms, visits and rules in a browser. We train you to do it yourself.',
     proof: 'How Launchpad trains NGO teams',
@@ -50,7 +51,8 @@ const featured = [
   },
   {
     visual: FieldVisual,
-    visualBg: 'bg-[#FFF8DB]',
+    cardBg: 'bg-[#FFFAEB]',
+    visualBg: 'bg-[#FFF1C7]',
     title: 'A team that knows the field',
     text: 'An India-based team in your time zone, who visit programmes on the ground.',
     proof: 'Read our field visits',
@@ -62,7 +64,9 @@ const compact = [
   {
     stat: '₹0',
     statLabel: 'licence fee',
-    tone: 'bg-[#E8F3EE] text-[#2a7559]',
+    card: 'bg-[#FFE8D9]',
+    statColor: 'text-[#B8481F]',
+    blob: '#FDCDB0',
     title: 'Priced for non-profits',
     text: 'Open source. Pay only for help and hosting, if you need them.',
     proof: 'See plans, from free',
@@ -71,7 +75,9 @@ const compact = [
   {
     stat: '26 of 27',
     statLabel: 'partners renewed in 2025',
-    tone: 'bg-[#E9EAF8] text-[#5452B8]',
+    card: 'bg-[#E6E6FA]',
+    statColor: 'text-[#4B49B0]',
+    blob: '#CFCFF3',
     title: 'Partners who stay',
     text: 'Changing systems mid-programme is costly. Our partners stay for years.',
     proof: 'Read the 2025 review',
@@ -103,9 +109,9 @@ export default function WhyChooseAvni() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {/* Two large cards: text first, then the visual (as on wati.io) */}
-            {featured.map(({ visual: Visual, visualBg, title, text, proof, href }, i) => (
+            {featured.map(({ visual: Visual, cardBg, visualBg, title, text, proof, href }, i) => (
               <FadeIn key={title} delay={i * 100}>
-                <div className="h-full flex flex-col bg-[#F6F7F9] rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-lg">
+                <div className={`h-full flex flex-col rounded-3xl overflow-hidden ${cardBg} transition-all duration-300 hover:shadow-lg`}>
                   <div className="p-7 pb-6">
                     <h3 className="font-anek font-bold text-2xl md:text-[26px] leading-snug text-[#0b2540] mb-2">{title}</h3>
                     <p className="font-noto text-base leading-relaxed text-[#475467] mb-4">{text}</p>
@@ -120,16 +126,16 @@ export default function WhyChooseAvni() {
 
             {/* Two compact cards, stacked */}
             <div className="md:col-span-2 lg:col-span-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
-              {compact.map(({ stat, statLabel, tone, title, text, proof, href }, i) => (
+              {compact.map(({ stat, statLabel, card, statColor, blob, title, text, proof, href }, i) => (
                 <FadeIn key={title} delay={200 + i * 100}>
-                  <div className="h-full flex flex-col bg-[#F6F7F9] rounded-3xl p-7 transition-all duration-300 hover:shadow-lg">
-                    <div className={`self-start rounded-2xl px-4 py-2.5 mb-5 ${tone}`}>
-                      <span className="font-anek font-bold text-3xl leading-none">{stat}</span>
-                      <span className="ml-2 font-noto text-xs font-medium">{statLabel}</span>
-                    </div>
-                    <h3 className="font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1.5">{title}</h3>
-                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{text}</p>
-                    <div className="mt-auto"><ProofLink href={href}>{proof}</ProofLink></div>
+                  <div className={`relative overflow-hidden h-full flex flex-col rounded-3xl p-7 transition-all duration-300 hover:shadow-lg ${card}`}>
+                    <p className="relative mb-4">
+                      <span className={`block font-anek font-bold text-6xl leading-none ${statColor}`}>{stat}</span>
+                      <span className={`block font-noto text-sm font-semibold mt-1 ${statColor}`}>{statLabel}</span>
+                    </p>
+                    <h3 className="relative font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1">{title}</h3>
+                    <p className="relative font-noto text-sm leading-relaxed text-[#344054] mb-4">{text}</p>
+                    <div className="relative mt-auto"><ProofLink href={href}>{proof}</ProofLink></div>
                   </div>
                 </FadeIn>
               ))}

@@ -24,7 +24,7 @@ export default function Testimonials() {
   const shown = testimonials.slice(0, TESTIMONIALS_SHOWN);
 
   return (
-    <Section spacing="none" bg="gray" className="pt-14 md:pt-16 pb-10 md:pb-12">
+    <Section spacing="none" bg="cream" className="pt-14 md:pt-16 pb-10 md:pb-12">
       <Container>
         <div className="text-center mb-10 md:mb-14">
           <p className="font-anek font-semibold tracking-wide text-xs md:text-sm leading-tight text-[#B8481F] uppercase mb-3">

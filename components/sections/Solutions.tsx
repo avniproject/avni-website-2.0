@@ -19,9 +19,9 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <Section spacing="none" bg="gray" className="py-14 md:py-16 [&_p]:hyphens-none">
+    <Section spacing="none" bg="lavender" className="py-14 md:py-16 [&_p]:hyphens-none">
       <Container>
-        <div className="max-w-6xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-8 md:mb-10">
             <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-3">
               Solutions That Power Your Programs

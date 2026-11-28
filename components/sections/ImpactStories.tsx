@@ -41,7 +41,7 @@ export default function ImpactStories({ stories }: { stories: ImpactStory[] }) {
   const go = (step: number) => { setIndex(i => (i + step + stories.length) % stories.length); setPaused(true); };
 
   return (
-    <Section spacing="none" bg="gray" className="pt-10 md:pt-12 pb-14 md:pb-16">
+    <Section spacing="none" bg="cream" className="pt-10 md:pt-12 pb-14 md:pb-16">
       <Container>
         {/* Header */}
         <div className="text-center mb-8 md:mb-10">
