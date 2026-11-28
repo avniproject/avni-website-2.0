@@ -114,7 +114,7 @@ export default function DataProtectionPage() {
           <Container>
             <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-10 lg:gap-16 items-center py-10 md:py-16">
               <div>
-                <p className="font-anek font-medium text-sm md:text-base leading-tight text-[#fba47e] uppercase mb-3">
+                <p className="font-anek font-semibold tracking-wide text-sm md:text-base leading-tight text-[#B8481F] uppercase mb-3">
                   DATA PROTECTION
                 </p>
                 <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540] mb-5">

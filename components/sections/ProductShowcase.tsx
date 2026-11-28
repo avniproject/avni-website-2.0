@@ -117,7 +117,7 @@ export default function ProductShowcase({ items }: { items: ShowcaseItem[] }) {
                   <Icon size={20} />
                 </span>
                 <span>
-                  <span className="block font-noto text-xs font-semibold uppercase tracking-wider text-[#fba47e]">{item.audience}</span>
+                  <span className="block font-noto text-xs font-semibold uppercase tracking-wider text-[#B8481F]">{item.audience}</span>
                   <span className={`block font-anek font-bold text-lg md:text-xl leading-snug ${isActive ? 'text-[#0b2540]' : 'text-[#475467]'}`}>
                     {item.title}
                   </span>

@@ -25,7 +25,7 @@ export function SectionHeader({
   return (
     <div className={alignmentClass}>
       {label && (
-        <p className="font-anek font-medium text-[14px] leading-[20px] text-[#fba47e] uppercase mb-[16px]">
+        <p className="font-anek font-semibold tracking-wide text-[14px] leading-[20px] text-[#B8481F] uppercase mb-[16px]">
           {label}
         </p>
       )}

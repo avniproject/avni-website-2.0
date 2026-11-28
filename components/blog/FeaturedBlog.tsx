@@ -46,7 +46,7 @@ export default function FeaturedBlog({ blog }: FeaturedBlogProps) {
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M10 0L12.9389 6.90983L20 10L12.9389 13.0902L10 20L7.06107 13.0902L0 10L7.06107 6.90983L10 0Z" fill="#FBA47E" opacity="0.8"/>
             </svg>
-            <span className="font-anek font-medium text-sm text-[#fba47e] uppercase tracking-wide">
+            <span className="font-anek font-semibold tracking-wide text-sm text-[#B8481F] uppercase tracking-wide">
               Featured Blog
             </span>
           </div>

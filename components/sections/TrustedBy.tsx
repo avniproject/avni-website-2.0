@@ -11,7 +11,7 @@ export default function TrustedBy() {
       <div className="w-full">
         {/* Heading */}
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="font-anek font-medium text-base md:text-lg lg:text-xl leading-tight text-[#fba47e] uppercase">
+          <h2 className="font-anek font-semibold tracking-wide text-base md:text-lg lg:text-xl leading-tight text-[#B8481F] uppercase">
             Trusted by 60+ NGOs
           </h2>
         </div>

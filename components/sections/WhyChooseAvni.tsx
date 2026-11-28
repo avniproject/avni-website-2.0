@@ -123,7 +123,7 @@ export default function WhyChooseAvni() {
       <Container>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10 md:mb-12">
-            <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3">
+            <p className="font-anek font-semibold tracking-wide text-xs md:text-sm leading-tight text-[#B8481F] uppercase mb-3">
               SUSTAINABLE TECHNOLOGY FOR NGOS
             </p>
             <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540]">

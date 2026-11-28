@@ -16,7 +16,7 @@ export default function Hero() {
         {/* Hero Content */}
         <div className="w-full lg:w-1/2 order-2 lg:order-1">
           {/* Top badge */}
-          <p className="font-anek font-bold text-xs md:text-sm lg:text-base leading-tight text-[#fba47e] uppercase mb-4 md:mb-6 lg:mb-[26px] text-center lg:text-left">
+          <p className="font-anek font-bold text-xs md:text-sm lg:text-base leading-tight text-[#B8481F] uppercase mb-4 md:mb-6 lg:mb-[26px] text-center lg:text-left">
             OPEN SOURCE • MADE IN INDIA • AI Powered
           </p>
           

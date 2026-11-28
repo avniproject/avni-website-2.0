@@ -76,7 +76,7 @@ export default function PricingPage() {
         <Section spacing="sm" className="bg-white py-8 md:py-12">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
-              <p className="font-anek font-medium text-sm md:text-base leading-tight text-[#fba47e] uppercase mb-3">
+              <p className="font-anek font-semibold tracking-wide text-sm md:text-base leading-tight text-[#B8481F] uppercase mb-3">
                 PRICING
               </p>
               <h1 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-[#0b2540] mb-4">

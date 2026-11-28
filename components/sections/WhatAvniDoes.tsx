@@ -56,7 +56,7 @@ export default function WhatAvniDoes() {
         <div className="max-w-6xl mx-auto">
           {/* Three steps */}
           <div className="text-center mb-8 md:mb-10">
-            <p className="font-anek font-medium text-sm md:text-base text-[#fba47e] uppercase mb-3">WHAT AVNI DOES</p>
+            <p className="font-anek font-semibold tracking-wide text-sm md:text-base text-[#B8481F] uppercase mb-3">WHAT AVNI DOES</p>
             <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540]">
               From Field To Dashboard, In One App
             </h2>

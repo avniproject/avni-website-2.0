@@ -21,7 +21,7 @@ export default function Transparency() {
       <Container>
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
           <div>
-            <p className="font-anek font-medium text-xs md:text-sm leading-tight text-[#fba47e] uppercase mb-3">For donors</p>
+            <p className="font-anek font-semibold tracking-wide text-xs md:text-sm leading-tight text-[#B8481F] uppercase mb-3">For donors</p>
             <h2 className="font-anek font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-[#0b2540] mb-3">Transparency You Can Trust</h2>
             <p className="font-noto text-base leading-relaxed text-[#475467] mb-7">
               Funders see what is happening on the ground as it happens, from data they can rely on.

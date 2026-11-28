@@ -154,7 +154,7 @@ export default function EventsCalendar({ events }: EventsCalendarProps) {
             <span className="font-anek text-[11px] uppercase tracking-wider">{ist(nextEvent.start, { month: 'short' })}</span>
           </div>
           <div className="flex-1 min-w-0">
-            <p className="font-noto text-xs font-medium uppercase tracking-wider text-[#fba47e] mb-0.5">Next up</p>
+            <p className="font-noto text-xs font-semibold tracking-wide uppercase tracking-wider text-[#B8481F] mb-0.5">Next up</p>
             <p className="font-anek font-semibold text-lg leading-snug text-[#0b2540]">{nextEvent.title}</p>
             <p className="font-noto text-sm text-[#475467]">
               {ist(nextEvent.start, { weekday: 'long' })}, {shortTime(nextEvent.start)} IST · {nextEvent.location ?? 'Online'}
