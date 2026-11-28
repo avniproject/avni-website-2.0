@@ -1,7 +1,7 @@
 /**
  * Why Choose Avni
- * Four reasons in a 2 x 2 grid, each with a large illustration, one line and a real proof point linking to its
- * source (pricing, the 2025 review, Launchpad, field visits).
+ * A bento grid: two large cards with real visuals (the form designer, a field visit) and two compact
+ * cards stacked beside them that carry a single number (licence fee, partner renewals). Each links to its proof.
  */
 
 import Image from 'next/image';
@@ -10,26 +10,6 @@ import { ArrowRight, MapPinned } from 'lucide-react';
 import Container from '@/components/ui/Container';
 import Section from '@/components/ui/Section';
 import FadeIn from '@/components/ui/FadeIn';
-
-
-// Illustrations for each card (built in code, no image files), sized for a large panel
-function PriceVisual() {
-  return (
-    <div className="flex items-center justify-center gap-8 h-full px-6">
-      <div className="rounded-2xl bg-white px-8 py-6 shadow-md text-center">
-        <p className="font-noto text-xs uppercase tracking-wider text-[#667085]">Licence fee</p>
-        <p className="font-anek font-bold text-6xl text-[#2a7559] leading-none mt-2">₹0</p>
-      </div>
-      <ul className="space-y-3">
-        {['Open source', 'Free plan to start', 'Pay only for help and hosting'].map(t => (
-          <li key={t} className="flex items-center gap-2.5 font-noto text-sm font-medium text-[#344054]">
-            <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#419372] text-white text-xs flex items-center justify-center">✓</span>{t}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
 
 function BuilderVisual() {
   // The real Avni web app form designer
@@ -41,31 +21,8 @@ function BuilderVisual() {
           <span className="ml-2 font-noto text-[11px] text-[#98A2B3]">app.avniproject.org · App Designer</span>
         </div>
         <div className="relative flex-1">
-          <Image src="/img/home/form-designer.webp" alt="The Avni form designer in the web app, editing a question with its answers" fill sizes="(max-width: 768px) 90vw, 520px" className="object-cover object-left-top" />
+          <Image src="/img/home/form-designer.webp" alt="The Avni form designer in the web app, editing a question with its answers" fill sizes="(max-width: 768px) 90vw, 420px" className="object-cover object-left-top" />
         </div>
-      </div>
-    </div>
-  );
-}
-
-function RetentionVisual() {
-  // One dot per partner at the start of 2025 (from the 2025 review): 26 stayed, 1 stepped away
-  return (
-    <div className="flex flex-col items-center justify-center gap-5 h-full px-6">
-      <div className="flex items-center gap-7">
-        <div className="grid grid-cols-9 gap-2" aria-hidden="true">
-          {Array.from({ length: 27 }, (_, i) => (
-            <span key={i} className={`w-4 h-4 rounded-full ${i < 26 ? 'bg-[#6D6BD0]' : 'border-2 border-[#B4B3E6]'}`} />
-          ))}
-        </div>
-        <div>
-          <p className="font-anek font-bold text-5xl text-[#0b2540] leading-none">26 / 27</p>
-          <p className="font-noto text-sm text-[#475467] mt-1.5">partners renewed in 2025</p>
-        </div>
-      </div>
-      <div className="flex items-center gap-3 rounded-full bg-white px-4 py-2 shadow-sm">
-        <span className="relative w-16 h-7"><Image src="/logos/ATECF-logo.webp" alt="ATE Chandra Foundation" fill sizes="64px" className="object-contain" /></span>
-        <span className="font-noto text-xs font-medium text-[#344054]">On Avni since 2020, now in India&apos;s Economic Survey</span>
       </div>
     </div>
   );
@@ -74,7 +31,7 @@ function RetentionVisual() {
 function FieldVisual() {
   return (
     <div className="relative h-full overflow-hidden">
-      <Image src="/img/2023-10-04-my-reflections-from-first-Avni-field-visit-after-joining-as-ba/arogya_saheli_using_avni.webp" alt="" fill sizes="(max-width: 1024px) 100vw, 560px" className="object-cover" />
+      <Image src="/img/2023-10-04-my-reflections-from-first-Avni-field-visit-after-joining-as-ba/arogya_saheli_using_avni.webp" alt="" fill sizes="(max-width: 1024px) 100vw, 420px" className="object-cover" />
       <span className="absolute left-4 bottom-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 font-noto text-xs font-medium text-[#0b2540] shadow">
         <MapPinned size={14} className="text-[#A16207]" /> The Avni team on a field visit, Dharampur
       </span>
@@ -82,15 +39,7 @@ function FieldVisual() {
   );
 }
 
-const reasons = [
-  {
-    visual: PriceVisual,
-    visualBg: 'bg-[#E8F3EE]',
-    title: 'Priced for non-profits',
-    text: 'Avni is open source, so there is no licence fee. You pay only for help and hosting, if you need them.',
-    proof: 'See plans, from free',
-    href: '/pricing',
-  },
+const featured = [
   {
     visual: BuilderVisual,
     visualBg: 'bg-[#FFF1EA]',
@@ -98,14 +47,6 @@ const reasons = [
     text: 'Your team builds forms, visits and rules in a browser. We train you to do it yourself.',
     proof: 'How Launchpad trains NGO teams',
     href: '/blog/2026-04-01-avni-launchpad-experience/',
-  },
-  {
-    visual: RetentionVisual,
-    visualBg: 'bg-[#E9EAF8]',
-    title: 'Partners who stay',
-    text: 'Changing systems mid-programme is costly. With Avni you don\'t have to: partners stay for years and grow on it.',
-    proof: 'Read the 2025 review',
-    href: '/blog/2025-12-22-avni-in-2025/',
   },
   {
     visual: FieldVisual,
@@ -116,6 +57,35 @@ const reasons = [
     href: '/blog/',
   },
 ];
+
+const compact = [
+  {
+    stat: '₹0',
+    statLabel: 'licence fee',
+    tone: 'bg-[#E8F3EE] text-[#2a7559]',
+    title: 'Priced for non-profits',
+    text: 'Open source. Pay only for help and hosting, if you need them.',
+    proof: 'See plans, from free',
+    href: '/pricing',
+  },
+  {
+    stat: '26 of 27',
+    statLabel: 'partners renewed in 2025',
+    tone: 'bg-[#E9EAF8] text-[#5452B8]',
+    title: 'Partners who stay',
+    text: 'Changing systems mid-programme is costly. Our partners stay for years.',
+    proof: 'Read the 2025 review',
+    href: '/blog/2025-12-22-avni-in-2025/',
+  },
+];
+
+function ProofLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className="inline-flex items-center gap-1.5 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
+      {children} <ArrowRight size={14} />
+    </Link>
+  );
+}
 
 export default function WhyChooseAvni() {
   return (
@@ -131,24 +101,39 @@ export default function WhyChooseAvni() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {reasons.map(({ visual: Visual, visualBg, title, text, proof, href }, i) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {/* Two large cards: text first, then the visual (as on wati.io) */}
+            {featured.map(({ visual: Visual, visualBg, title, text, proof, href }, i) => (
               <FadeIn key={title} delay={i * 100}>
                 <div className="h-full flex flex-col bg-[#F6F7F9] rounded-3xl overflow-hidden transition-all duration-300 hover:shadow-lg">
-                  {/* Text first, then the visual filling the rest of the card (as on wati.io) */}
-                  <div className="p-7 md:p-8 pb-6">
-                    <h3 className="font-anek font-bold text-2xl md:text-[28px] leading-snug text-[#0b2540] mb-2">{title}</h3>
+                  <div className="p-7 pb-6">
+                    <h3 className="font-anek font-bold text-2xl md:text-[26px] leading-snug text-[#0b2540] mb-2">{title}</h3>
                     <p className="font-noto text-base leading-relaxed text-[#475467] mb-4">{text}</p>
-                    <Link href={href} className="inline-flex items-center gap-1.5 font-noto text-sm font-medium text-[#2a7559] hover:text-[#1f5a43]">
-                      {proof} <ArrowRight size={14} />
-                    </Link>
+                    <ProofLink href={href}>{proof}</ProofLink>
                   </div>
-                  <div className={`mt-auto mx-4 mb-4 rounded-2xl h-56 md:h-64 overflow-hidden ${visualBg}`}>
+                  <div className={`flex-1 min-h-60 md:min-h-64 mx-4 mb-4 rounded-2xl overflow-hidden ${visualBg}`}>
                     <Visual />
                   </div>
                 </div>
               </FadeIn>
             ))}
+
+            {/* Two compact cards, stacked */}
+            <div className="md:col-span-2 lg:col-span-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-5">
+              {compact.map(({ stat, statLabel, tone, title, text, proof, href }, i) => (
+                <FadeIn key={title} delay={200 + i * 100}>
+                  <div className="h-full flex flex-col bg-[#F6F7F9] rounded-3xl p-7 transition-all duration-300 hover:shadow-lg">
+                    <div className={`self-start rounded-2xl px-4 py-2.5 mb-5 ${tone}`}>
+                      <span className="font-anek font-bold text-3xl leading-none">{stat}</span>
+                      <span className="ml-2 font-noto text-xs font-medium">{statLabel}</span>
+                    </div>
+                    <h3 className="font-anek font-bold text-xl leading-snug text-[#0b2540] mb-1.5">{title}</h3>
+                    <p className="font-noto text-sm leading-relaxed text-[#475467] mb-4">{text}</p>
+                    <div className="mt-auto"><ProofLink href={href}>{proof}</ProofLink></div>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
